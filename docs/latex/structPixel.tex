@@ -1,0 +1,61 @@
+\doxysection{Pixel Struct Reference}
+\hypertarget{structPixel}{}\label{structPixel}\index{Pixel@{Pixel}}
+
+
+Represents a single RGB \doxylink{structPixel}{Pixel} in a raster image.  
+
+
+
+
+{\ttfamily \+\#include $<$Pixel.\+hpp$>$}
+
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \doxymbox{\hyperlink{structPixel_a47d65d4a410f57c46746ddedd709e177}{r}}
+\item 
+uint8\+\_\+t \doxymbox{\hyperlink{structPixel_aeab078b7768caf273f8fe1daffa50729}{g}}
+\item 
+uint8\+\_\+t \doxymbox{\hyperlink{structPixel_abc9f592730eddbfcb270a1974a498d78}{b}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a single RGB \doxylink{structPixel}{Pixel} in a raster image. 
+
+
+\begin{DoxyItemize}
+\item 
+\end{DoxyItemize}
+
+This structure encapsulates the red, green and blue color channels
+\begin{DoxyItemize}
+\item Architectural note on the data types:\+ We use {\ttfamily uint8\+\_\+t} (from $<$cstdint$>$), because in the 8 bits that we have given it represents the color channels in a perfect manor (0 -\/ 255) Also we use it because it is MUCH MORE memory efficient, if we were to use {\ttfamily int} or {\ttfamily unsigned} this would have cost us 4 bytes (32 bits) we hvae a 75\% effieciency increse only by using this variable instead of int 
+\end{DoxyItemize}
+
+\label{doc-variable-members}
+\Hypertarget{structPixel_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{structPixel_abc9f592730eddbfcb270a1974a498d78}\index{Pixel@{Pixel}!b@{b}}
+\index{b@{b}!Pixel@{Pixel}}
+\doxysubsubsection{\texorpdfstring{b}{b}}
+{\footnotesize\ttfamily \label{structPixel_abc9f592730eddbfcb270a1974a498d78} 
+uint8\+\_\+t Pixel::\+b}
+
+Blue color channel intensity (0-\/255) \Hypertarget{structPixel_aeab078b7768caf273f8fe1daffa50729}\index{Pixel@{Pixel}!g@{g}}
+\index{g@{g}!Pixel@{Pixel}}
+\doxysubsubsection{\texorpdfstring{g}{g}}
+{\footnotesize\ttfamily \label{structPixel_aeab078b7768caf273f8fe1daffa50729} 
+uint8\+\_\+t Pixel::\+g}
+
+Green color channel intensity (0-\/255) \Hypertarget{structPixel_a47d65d4a410f57c46746ddedd709e177}\index{Pixel@{Pixel}!r@{r}}
+\index{r@{r}!Pixel@{Pixel}}
+\doxysubsubsection{\texorpdfstring{r}{r}}
+{\footnotesize\ttfamily \label{structPixel_a47d65d4a410f57c46746ddedd709e177} 
+uint8\+\_\+t Pixel::\+r}
+
+Red color channel intensity (0-\/255) 
+
+The documentation for this struct was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+Raster-\/\+Image-\/\+Manipulation/\+\doxymbox{\hyperlink{Pixel_8hpp}{Pixel.\+hpp}}\end{DoxyCompactItemize}

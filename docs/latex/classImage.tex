@@ -1,0 +1,234 @@
+\doxysection{Image Class Reference}
+\hypertarget{classImage}{}\label{classImage}\index{Image@{Image}}
+
+
+abstract base class represening a raster image  
+
+
+
+
+{\ttfamily \+\#include $<$Image.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{classImage_ab5ca0ae10da321c9e443734a87dee15e}{Image}} (int w, int h, const std::\+string \&filename)
+\begin{DoxyCompactList}\small\item\em Constructor initializing core dimensions and filename. \end{DoxyCompactList}\item 
+virtual \doxymbox{\hyperlink{classImage_ac12bacfcfa4247af6e4ff8918fe84df0}{\texorpdfstring{$\sim$}{\string~}\+Image}} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor for proper polymorphic cleanup. \end{DoxyCompactList}\item 
+virtual void \doxymbox{\hyperlink{classImage_a30662edab526d0e5d611e446e3c55a3b}{save}} (const std::\+string \&filename) const =0
+\begin{DoxyCompactList}\small\item\em Saves the image to disk. \end{DoxyCompactList}\item 
+virtual \doxymbox{\hyperlink{classImage}{Image}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{classImage_a7096da2078bcfb53ba7f0bd1747dc150}{clone}} () const =0
+\begin{DoxyCompactList}\small\item\em Creates a deep copy of the image (Prototype pattern). \end{DoxyCompactList}\item 
+virtual void \doxymbox{\hyperlink{classImage_a997a88ec456aa24fd42660f9d4ba61cc}{print\+Session\+Info}} () const =0
+\begin{DoxyCompactList}\small\item\em Prints format-\/specific information for the session list. \end{DoxyCompactList}\item 
+virtual bool \doxymbox{\hyperlink{classImage_aa147c240bc2e886751768b2a3e38ff66}{is\+Grayscale}} () const =0
+\begin{DoxyCompactList}\small\item\em Checks if the image contains only grayscale pixels. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{classImage_a36bcae4838228d574738249a87dc4464}{get\+Width}} () const
+\begin{DoxyCompactList}\small\item\em Retrieves the image width. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{classImage_a1cd7587f88b6932b5269051d1ba08ff9}{get\+Height}} () const
+\begin{DoxyCompactList}\small\item\em Retrieves the image height. \end{DoxyCompactList}\item 
+const std::\+vector$<$ \doxymbox{\hyperlink{structPixel}{Pixel}} $>$ \& \doxymbox{\hyperlink{classImage_a827e8004aa9b7be85aa0f3003d3c4f86}{get\+Pixels}} () const
+\begin{DoxyCompactList}\small\item\em Provides read-\/only access to the pixel data. \end{DoxyCompactList}\item 
+std::\+vector$<$ \doxymbox{\hyperlink{structPixel}{Pixel}} $>$ \& \doxymbox{\hyperlink{classImage_a50610f29c821ee2b8bf53546e0e89b21}{get\+Pixels}} ()
+\begin{DoxyCompactList}\small\item\em Provides mutable access to the pixel data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \doxymbox{\hyperlink{classImage_ab8d12f635013c04159cd4d3d972bac88}{width}}
+\item 
+int \doxymbox{\hyperlink{classImage_a51df43db420c9c0b57536cb2dd36de5c}{height}}
+\item 
+std::\+string \doxymbox{\hyperlink{classImage_af5fe60ce5bfb340f439dadfbd1c3f74e}{original\+File\+Name}}
+\item 
+std::\+vector$<$ \doxymbox{\hyperlink{structPixel}{Pixel}} $>$ \doxymbox{\hyperlink{classImage_afdcb0becb5c16b16736675825a0f8545}{pixel\+Data}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+abstract base class represening a raster image 
+
+
+\begin{DoxyItemize}
+\item 
+\end{DoxyItemize}
+
+This class represents the polymorphic interface for all specific image formats (e.\+g. PPM -\/ Portable Pixmap Format \texorpdfstring{$\vert$}{|} PGM -\/ portable Grey map \texorpdfstring{$\vert$}{|} PBM -\/ Portable Bit\+Map \texorpdfstring{$\vert$}{|} BMP -\/ Bitmap) It encapsulates the core data (width, height and pixels) and defines virtual methods that derived classes must implement
+\begin{DoxyItemize}
+\item Architectural Note:\+ The {\ttfamily \doxylink{classImage_afdcb0becb5c16b16736675825a0f8545}{pixel\+Data}} is stored in a 1D vector rather than a 2D array This boosts performance when applying transformations to large images 
+\end{DoxyItemize}
+
+\label{doc-constructors}
+\Hypertarget{classImage_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classImage_ab5ca0ae10da321c9e443734a87dee15e}\index{Image@{Image}!Image@{Image}}
+\index{Image@{Image}!Image@{Image}}
+\doxysubsubsection{\texorpdfstring{Image()}{Image()}}
+{\footnotesize\ttfamily \label{classImage_ab5ca0ae10da321c9e443734a87dee15e} 
+Image::\+\+Image (\begin{DoxyParamCaption}\item[{int}]{w}{, }\item[{int}]{h}{, }\item[{const std::\+string \&}]{filename}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor initializing core dimensions and filename. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em w} & Width of the image. \\
+\hline
+{\em h} & Height of the image. \\
+\hline
+{\em filename} & Original filename of the loaded image. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classImage_ac12bacfcfa4247af6e4ff8918fe84df0}\index{Image@{Image}!````~Image@{\texorpdfstring{$\sim$}{\string~}Image}}
+\index{````~Image@{\texorpdfstring{$\sim$}{\string~}Image}!Image@{Image}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Image()}{\string~Image()}}
+{\footnotesize\ttfamily \label{classImage_ac12bacfcfa4247af6e4ff8918fe84df0} 
+virtual Image::\+\texorpdfstring{$\sim$}{\string~}\+Image (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+Virtual destructor for proper polymorphic cleanup. 
+
+
+
+\label{doc-func-members}
+\Hypertarget{classImage_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classImage_a7096da2078bcfb53ba7f0bd1747dc150}\index{Image@{Image}!clone@{clone}}
+\index{clone@{clone}!Image@{Image}}
+\doxysubsubsection{\texorpdfstring{clone()}{clone()}}
+{\footnotesize\ttfamily \label{classImage_a7096da2078bcfb53ba7f0bd1747dc150} 
+virtual \doxymbox{\hyperlink{classImage}{Image}} \texorpdfstring{$\ast$}{*} Image::\+clone (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Creates a deep copy of the image (Prototype pattern). 
+
+\begin{DoxyReturn}{Returns}
+Pointer to the newly cloned \doxylink{classImage}{Image} object. 
+\end{DoxyReturn}
+\Hypertarget{classImage_a1cd7587f88b6932b5269051d1ba08ff9}\index{Image@{Image}!getHeight@{getHeight}}
+\index{getHeight@{getHeight}!Image@{Image}}
+\doxysubsubsection{\texorpdfstring{getHeight()}{getHeight()}}
+{\footnotesize\ttfamily \label{classImage_a1cd7587f88b6932b5269051d1ba08ff9} 
+int Image::\+get\+Height (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retrieves the image height. 
+
+\begin{DoxyReturn}{Returns}
+Height in pixels. 
+\end{DoxyReturn}
+\Hypertarget{classImage_a50610f29c821ee2b8bf53546e0e89b21}\index{Image@{Image}!getPixels@{getPixels}}
+\index{getPixels@{getPixels}!Image@{Image}}
+\doxysubsubsection{\texorpdfstring{getPixels()}{getPixels()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classImage_a50610f29c821ee2b8bf53546e0e89b21} 
+std::\+vector$<$ \doxymbox{\hyperlink{structPixel}{Pixel}} $>$ \& Image::\+get\+Pixels (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Provides mutable access to the pixel data. 
+
+\begin{DoxyReturn}{Returns}
+Reference to the 1D pixel vector. 
+\end{DoxyReturn}
+\Hypertarget{classImage_a827e8004aa9b7be85aa0f3003d3c4f86}\index{Image@{Image}!getPixels@{getPixels}}
+\index{getPixels@{getPixels}!Image@{Image}}
+\doxysubsubsection{\texorpdfstring{getPixels()}{getPixels()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classImage_a827e8004aa9b7be85aa0f3003d3c4f86} 
+const std::\+vector$<$ \doxymbox{\hyperlink{structPixel}{Pixel}} $>$ \& Image::\+get\+Pixels (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Provides read-\/only access to the pixel data. 
+
+\begin{DoxyReturn}{Returns}
+Const reference to the 1D pixel vector. 
+\end{DoxyReturn}
+\Hypertarget{classImage_a36bcae4838228d574738249a87dc4464}\index{Image@{Image}!getWidth@{getWidth}}
+\index{getWidth@{getWidth}!Image@{Image}}
+\doxysubsubsection{\texorpdfstring{getWidth()}{getWidth()}}
+{\footnotesize\ttfamily \label{classImage_a36bcae4838228d574738249a87dc4464} 
+int Image::\+get\+Width (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retrieves the image width. 
+
+\begin{DoxyReturn}{Returns}
+Width in pixels. 
+\end{DoxyReturn}
+\Hypertarget{classImage_aa147c240bc2e886751768b2a3e38ff66}\index{Image@{Image}!isGrayscale@{isGrayscale}}
+\index{isGrayscale@{isGrayscale}!Image@{Image}}
+\doxysubsubsection{\texorpdfstring{isGrayscale()}{isGrayscale()}}
+{\footnotesize\ttfamily \label{classImage_aa147c240bc2e886751768b2a3e38ff66} 
+virtual bool Image::\+is\+Grayscale (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Checks if the image contains only grayscale pixels. 
+
+\begin{DoxyReturn}{Returns}
+True if grayscale, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{classImage_a997a88ec456aa24fd42660f9d4ba61cc}\index{Image@{Image}!printSessionInfo@{printSessionInfo}}
+\index{printSessionInfo@{printSessionInfo}!Image@{Image}}
+\doxysubsubsection{\texorpdfstring{printSessionInfo()}{printSessionInfo()}}
+{\footnotesize\ttfamily \label{classImage_a997a88ec456aa24fd42660f9d4ba61cc} 
+virtual void Image::\+print\+Session\+Info (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Prints format-\/specific information for the session list. 
+
+\Hypertarget{classImage_a30662edab526d0e5d611e446e3c55a3b}\index{Image@{Image}!save@{save}}
+\index{save@{save}!Image@{Image}}
+\doxysubsubsection{\texorpdfstring{save()}{save()}}
+{\footnotesize\ttfamily \label{classImage_a30662edab526d0e5d611e446e3c55a3b} 
+virtual void Image::\+save (\begin{DoxyParamCaption}\item[{const std::\+string \&}]{filename}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Saves the image to disk. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & The path where the new image should be saved. \\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-variable-members}
+\Hypertarget{classImage_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classImage_a51df43db420c9c0b57536cb2dd36de5c}\index{Image@{Image}!height@{height}}
+\index{height@{height}!Image@{Image}}
+\doxysubsubsection{\texorpdfstring{height}{height}}
+{\footnotesize\ttfamily \label{classImage_a51df43db420c9c0b57536cb2dd36de5c} 
+int Image::\+height\hspace{0.3cm}{\ttfamily [protected]}}
+
+\doxylink{classImage}{Image} height in pixels \Hypertarget{classImage_af5fe60ce5bfb340f439dadfbd1c3f74e}\index{Image@{Image}!originalFileName@{originalFileName}}
+\index{originalFileName@{originalFileName}!Image@{Image}}
+\doxysubsubsection{\texorpdfstring{originalFileName}{originalFileName}}
+{\footnotesize\ttfamily \label{classImage_af5fe60ce5bfb340f439dadfbd1c3f74e} 
+std::\+string Image::\+original\+File\+Name\hspace{0.3cm}{\ttfamily [protected]}}
+
+The source file name of the image \Hypertarget{classImage_afdcb0becb5c16b16736675825a0f8545}\index{Image@{Image}!pixelData@{pixelData}}
+\index{pixelData@{pixelData}!Image@{Image}}
+\doxysubsubsection{\texorpdfstring{pixelData}{pixelData}}
+{\footnotesize\ttfamily \label{classImage_afdcb0becb5c16b16736675825a0f8545} 
+std::\+vector$<$\doxymbox{\hyperlink{structPixel}{Pixel}}$>$ Image::\+pixel\+Data\hspace{0.3cm}{\ttfamily [protected]}}
+
+1D array of pixels representing the 2D image \Hypertarget{classImage_ab8d12f635013c04159cd4d3d972bac88}\index{Image@{Image}!width@{width}}
+\index{width@{width}!Image@{Image}}
+\doxysubsubsection{\texorpdfstring{width}{width}}
+{\footnotesize\ttfamily \label{classImage_ab8d12f635013c04159cd4d3d972bac88} 
+int Image::\+width\hspace{0.3cm}{\ttfamily [protected]}}
+
+We use protected so that the "{}children"{} can inherit the traits that the abstract class possesses had to watch a lot of videos to understand how to work with string, because for now we hvae been working with char\texorpdfstring{$\ast$}{*} only \doxylink{classImage}{Image} width in pixels 
+
+The documentation for this class was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+Raster-\/\+Image-\/\+Manipulation/\+\doxymbox{\hyperlink{Image_8hpp}{Image.\+hpp}}\end{DoxyCompactItemize}

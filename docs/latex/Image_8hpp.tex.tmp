@@ -1,0 +1,22 @@
+\doxysection{Raster-\/\+Image-\/\+Manipulation/\+\+Image.hpp File Reference}
+\hypertarget{Image_8hpp}{}\label{Image_8hpp}\index{Raster-\/Image-\/Manipulation/Image.hpp@{Raster-\/Image-\/Manipulation/Image.hpp}}
+
+
+Defines the abstract base class for all raster image formats.  
+
+
+{\ttfamily \+\#include $<$vector$>$}\newline
+{\ttfamily \+\#include $<$string$>$}\newline
+{\ttfamily \+\#include "{}Pixel.\+hpp"{}}\newline
+Include dependency graph for Image.\+hpp:\+
+% FIG 0
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \doxymbox{\hyperlink{classImage}{Image}}
+\begin{DoxyCompactList}\small\item\em abstract base class represening a raster image \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Defines the abstract base class for all raster image formats. 
+

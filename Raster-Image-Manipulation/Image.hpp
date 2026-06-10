@@ -12,10 +12,10 @@
 
 /**
  * @brief abstract base class represening a raster image
- * * @details This class represents the polymorphic interface for all specific image formats
+ * @details This class represents the polymorphic interface for all specific image formats
  * (e.g. PPM - Portable Pixmap Format | PGM - portable Grey map | PBM - Portable BitMap | BMP - Bitmap)
  * It encapsulates the core data (width, height and pixels) and defines virtual methods that derived classes must implement
- * * Architectural Note: 
+ * Architectural Note: 
  * The `pixelData` is stored in a 1D vector rather than a 2D array
  * This boosts performance when applying transformations to large images
  */
@@ -30,12 +30,14 @@ public:
      * @param filename Original filename of the loaded image.
      */
     Image(int w, int h, const std::string& filename) 
-        : width(w), height(h), originalFileName(filename) {}
+        : width(w), height(h), originalFilename(filename) {}
         
     /**
      * @brief Virtual destructor for proper polymorphic cleanup.
      */
     virtual ~Image() = default;
+
+    //METHODS
 
     /**
      * @brief Saves the image to disk.
@@ -59,6 +61,8 @@ public:
      * @return True if grayscale, false otherwise.
      */
     virtual bool isGrayscale() const = 0; 
+
+    //GETTERS
 
     /**
      * @brief Retrieves the image width.
@@ -84,13 +88,14 @@ public:
      */
     std::vector<Pixel>& getPixels() { return pixelData; }
 
-    /// We use protected so that the "children" can inherit the traits that the abstract class possesses
-    /// had to watch a lot of videos to understand how to work with string, because for now we hvae been working with char* only
+    // We use protected so that the "children" can inherit the traits that the abstract class possesses
+    // had to watch a lot of videos to understand how to work with string, because for now we hvae been working with char* only
 protected:
+
     int width; /**< Image width in pixels */
     int height; /**< Image height in pixels */
-    std::string originalFileName; /**< The source file name of the image */
+    std::string originalFilename; /**< The source file name of the image */
     std::vector<Pixel> pixelData; /**< 1D array of pixels representing the 2D image */
 };
 
-#endif
+#endif //IMAGE_HPP

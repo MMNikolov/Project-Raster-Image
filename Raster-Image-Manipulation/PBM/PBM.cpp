@@ -12,8 +12,6 @@
 
 static void skipComments(std::ifstream &file)
 {
-    char ch;
-
     while (file >> std::ws && file.peek() == '#')
     {
         std::string dummy;

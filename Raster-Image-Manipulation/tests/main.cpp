@@ -3,7 +3,7 @@
  * @brief Integration tests for verification of the PBM image parser framework.
  */
 
-#include "PBM/PBM.hpp"
+#include "../PBM/PBM.hpp"
 #include <iostream>
 #include <fstream>
 #include <cassert>

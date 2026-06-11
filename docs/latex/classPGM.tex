@@ -1,0 +1,167 @@
+\doxysection{PGM Class Reference}
+\hypertarget{classPGM}{}\label{classPGM}\index{PGM@{PGM}}
+
+
+Concrete class handling P2 ASCII Portable Graymap files.  
+
+
+
+
+{\ttfamily \+\#include $<$PGM.\+hpp$>$}
+
+
+
+Inheritance diagram for PGM:\+
+% FIG 0
+
+
+Collaboration diagram for PGM:\+
+% FIG 1
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{classPGM_ae32ff656cb739394f5ccd9d5545c672a}{PGM}} (const std::\+string \&filename)
+\begin{DoxyCompactList}\small\item\em Constructor that opens and parses a \doxylink{classPGM}{PGM} file from disk. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{classPGM_a4e60155c449379da91abe74364a9b748}{save}} (const std::\+string \&filename) const override
+\begin{DoxyCompactList}\small\item\em Saves the image to disk. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{classPGM}{PGM}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{classPGM_ae721c04ab0674597c58d1e0ce1ab576c}{clone}} () const override
+\begin{DoxyCompactList}\small\item\em Creates a deep copy of the image (Prototype pattern). \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{classPGM_ac8c9a8c14305f7a0a38568297ff9184e}{print\+Session\+Info}} () const override
+\begin{DoxyCompactList}\small\item\em Prints format-\/specific information for the session list. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{classPGM_a0cfb7b2db240ad1c66ec8719fac443d3}{is\+Grayscale}} () const override
+\begin{DoxyCompactList}\small\item\em Checks if the image contains only grayscale pixels. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \doxymbox{\hyperlink{classImage}{Image}}}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{classImage_ab5ca0ae10da321c9e443734a87dee15e}{Image}} (int w, int h, const std::\+string \&filename)
+\begin{DoxyCompactList}\small\item\em Constructor initializing core dimensions and filename. \end{DoxyCompactList}\item 
+virtual \doxymbox{\hyperlink{classImage_ac12bacfcfa4247af6e4ff8918fe84df0}{\texorpdfstring{$\sim$}{\string~}\+Image}} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor for proper polymorphic cleanup. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{classImage_a36bcae4838228d574738249a87dc4464}{get\+Width}} () const
+\begin{DoxyCompactList}\small\item\em Retrieves the image width. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{classImage_a1cd7587f88b6932b5269051d1ba08ff9}{get\+Height}} () const
+\begin{DoxyCompactList}\small\item\em Retrieves the image height. \end{DoxyCompactList}\item 
+const std::\+vector$<$ \doxymbox{\hyperlink{structPixel}{Pixel}} $>$ \& \doxymbox{\hyperlink{classImage_a827e8004aa9b7be85aa0f3003d3c4f86}{get\+Pixels}} () const
+\begin{DoxyCompactList}\small\item\em Provides read-\/only access to the pixel data. \end{DoxyCompactList}\item 
+std::\+vector$<$ \doxymbox{\hyperlink{structPixel}{Pixel}} $>$ \& \doxymbox{\hyperlink{classImage_a50610f29c821ee2b8bf53546e0e89b21}{get\+Pixels}} ()
+\begin{DoxyCompactList}\small\item\em Provides mutable access to the pixel data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \doxymbox{\hyperlink{classImage}{Image}}}
+\begin{DoxyCompactItemize}
+\item 
+int \doxymbox{\hyperlink{classImage_ab8d12f635013c04159cd4d3d972bac88}{width}}
+\item 
+int \doxymbox{\hyperlink{classImage_a51df43db420c9c0b57536cb2dd36de5c}{height}}
+\item 
+std::\+string \doxymbox{\hyperlink{classImage_a7d470cbdccf2c3e4971b03a8dca38ae7}{original\+Filename}}
+\item 
+std::\+vector$<$ \doxymbox{\hyperlink{structPixel}{Pixel}} $>$ \doxymbox{\hyperlink{classImage_afdcb0becb5c16b16736675825a0f8545}{pixel\+Data}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Concrete class handling P2 ASCII Portable Graymap files. 
+
+Handles gray shading images. Normalizes internal memory pixels to a standard 24-\/bit True Color representation across all three RGB channels. 
+
+\label{doc-constructors}
+\Hypertarget{classPGM_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classPGM_ae32ff656cb739394f5ccd9d5545c672a}\index{PGM@{PGM}!PGM@{PGM}}
+\index{PGM@{PGM}!PGM@{PGM}}
+\doxysubsubsection{\texorpdfstring{PGM()}{PGM()}}
+{\footnotesize\ttfamily \label{classPGM_ae32ff656cb739394f5ccd9d5545c672a} 
+PGM::\+\+PGM (\begin{DoxyParamCaption}\item[{const std::\+string \&}]{filename}{}\end{DoxyParamCaption})}
+
+
+
+Constructor that opens and parses a \doxylink{classPGM}{PGM} file from disk. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & Path to the source .pgm file. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std::\+invalid\+\_\+argument} & If the file cannot be opened or contains invalid formatting. \\
+\hline
+\end{DoxyExceptions}
+
+
+\label{doc-func-members}
+\Hypertarget{classPGM_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classPGM_ae721c04ab0674597c58d1e0ce1ab576c}\index{PGM@{PGM}!clone@{clone}}
+\index{clone@{clone}!PGM@{PGM}}
+\doxysubsubsection{\texorpdfstring{clone()}{clone()}}
+{\footnotesize\ttfamily \label{classPGM_ae721c04ab0674597c58d1e0ce1ab576c} 
+\doxymbox{\hyperlink{classPGM}{PGM}} \texorpdfstring{$\ast$}{*} PGM::\+clone (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Creates a deep copy of the image (Prototype pattern). 
+
+\begin{DoxyReturn}{Returns}
+Pointer to the newly cloned \doxylink{classImage}{Image} object. 
+\end{DoxyReturn}
+
+
+Implements \doxymbox{\hyperlink{classImage_a7096da2078bcfb53ba7f0bd1747dc150}{Image}}.
+
+\Hypertarget{classPGM_a0cfb7b2db240ad1c66ec8719fac443d3}\index{PGM@{PGM}!isGrayscale@{isGrayscale}}
+\index{isGrayscale@{isGrayscale}!PGM@{PGM}}
+\doxysubsubsection{\texorpdfstring{isGrayscale()}{isGrayscale()}}
+{\footnotesize\ttfamily \label{classPGM_a0cfb7b2db240ad1c66ec8719fac443d3} 
+bool PGM::\+is\+Grayscale (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Checks if the image contains only grayscale pixels. 
+
+\begin{DoxyReturn}{Returns}
+True if grayscale, false otherwise. 
+\end{DoxyReturn}
+
+
+Implements \doxymbox{\hyperlink{classImage_aa147c240bc2e886751768b2a3e38ff66}{Image}}.
+
+\Hypertarget{classPGM_ac8c9a8c14305f7a0a38568297ff9184e}\index{PGM@{PGM}!printSessionInfo@{printSessionInfo}}
+\index{printSessionInfo@{printSessionInfo}!PGM@{PGM}}
+\doxysubsubsection{\texorpdfstring{printSessionInfo()}{printSessionInfo()}}
+{\footnotesize\ttfamily \label{classPGM_ac8c9a8c14305f7a0a38568297ff9184e} 
+void PGM::\+print\+Session\+Info (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Prints format-\/specific information for the session list. 
+
+
+
+Implements \doxymbox{\hyperlink{classImage_a997a88ec456aa24fd42660f9d4ba61cc}{Image}}.
+
+\Hypertarget{classPGM_a4e60155c449379da91abe74364a9b748}\index{PGM@{PGM}!save@{save}}
+\index{save@{save}!PGM@{PGM}}
+\doxysubsubsection{\texorpdfstring{save()}{save()}}
+{\footnotesize\ttfamily \label{classPGM_a4e60155c449379da91abe74364a9b748} 
+void PGM::\+save (\begin{DoxyParamCaption}\item[{const std::\+string \&}]{filename}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Saves the image to disk. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & The path where the new image should be saved. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \doxymbox{\hyperlink{classImage_a30662edab526d0e5d611e446e3c55a3b}{Image}}.
+
+
+
+The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}
+\item 
+Raster-\/\+Image-\/\+Manipulation/\+\+PGM/\+\doxymbox{\hyperlink{PGM_8hpp}{PGM.\+hpp}}\item 
+Raster-\/\+Image-\/\+Manipulation/\+\+PGM/\+\doxymbox{\hyperlink{PGM_8cpp}{PGM.\+cpp}}\end{DoxyCompactItemize}

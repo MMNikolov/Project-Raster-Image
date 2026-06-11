@@ -9,6 +9,10 @@ abstract base class represening a raster image
 
 {\ttfamily \+\#include $<$Image.\+hpp$>$}
 
+
+
+Inheritance diagram for Image:\+
+% FIG 0
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -39,7 +43,7 @@ int \doxymbox{\hyperlink{classImage_ab8d12f635013c04159cd4d3d972bac88}{width}}
 \item 
 int \doxymbox{\hyperlink{classImage_a51df43db420c9c0b57536cb2dd36de5c}{height}}
 \item 
-std::\+string \doxymbox{\hyperlink{classImage_af5fe60ce5bfb340f439dadfbd1c3f74e}{original\+File\+Name}}
+std::\+string \doxymbox{\hyperlink{classImage_a7d470cbdccf2c3e4971b03a8dca38ae7}{original\+Filename}}
 \item 
 std::\+vector$<$ \doxymbox{\hyperlink{structPixel}{Pixel}} $>$ \doxymbox{\hyperlink{classImage_afdcb0becb5c16b16736675825a0f8545}{pixel\+Data}}
 \end{DoxyCompactItemize}
@@ -48,15 +52,7 @@ std::\+vector$<$ \doxymbox{\hyperlink{structPixel}{Pixel}} $>$ \doxymbox{\hyperl
 \doxysubsection{Detailed Description}
 abstract base class represening a raster image 
 
-
-\begin{DoxyItemize}
-\item 
-\end{DoxyItemize}
-
-This class represents the polymorphic interface for all specific image formats (e.\+g. PPM -\/ Portable Pixmap Format \texorpdfstring{$\vert$}{|} PGM -\/ portable Grey map \texorpdfstring{$\vert$}{|} PBM -\/ Portable Bit\+Map \texorpdfstring{$\vert$}{|} BMP -\/ Bitmap) It encapsulates the core data (width, height and pixels) and defines virtual methods that derived classes must implement
-\begin{DoxyItemize}
-\item Architectural Note:\+ The {\ttfamily \doxylink{classImage_afdcb0becb5c16b16736675825a0f8545}{pixel\+Data}} is stored in a 1D vector rather than a 2D array This boosts performance when applying transformations to large images 
-\end{DoxyItemize}
+This class represents the polymorphic interface for all specific image formats (e.\+g. PPM -\/ Portable Pixmap Format \texorpdfstring{$\vert$}{|} \doxylink{classPGM}{PGM} -\/ portable Grey map \texorpdfstring{$\vert$}{|} \doxylink{classPBM}{PBM} -\/ Portable Bit\+Map \texorpdfstring{$\vert$}{|} BMP -\/ Bitmap) It encapsulates the core data (width, height and pixels) and defines virtual methods that derived classes must implement Architectural Note:\+ The {\ttfamily \doxylink{classImage_afdcb0becb5c16b16736675825a0f8545}{pixel\+Data}} is stored in a 1D vector rather than a 2D array This boosts performance when applying transformations to large images 
 
 \label{doc-constructors}
 \Hypertarget{classImage_doc-constructors}
@@ -108,6 +104,10 @@ Creates a deep copy of the image (Prototype pattern).
 \begin{DoxyReturn}{Returns}
 Pointer to the newly cloned \doxylink{classImage}{Image} object. 
 \end{DoxyReturn}
+
+
+Implemented in \doxymbox{\hyperlink{classPBM_adf37e8569da7a98d1a5d2fa0a508e1ee}{PBM}}, and \doxymbox{\hyperlink{classPGM_ae721c04ab0674597c58d1e0ce1ab576c}{PGM}}.
+
 \Hypertarget{classImage_a1cd7587f88b6932b5269051d1ba08ff9}\index{Image@{Image}!getHeight@{getHeight}}
 \index{getHeight@{getHeight}!Image@{Image}}
 \doxysubsubsection{\texorpdfstring{getHeight()}{getHeight()}}
@@ -173,6 +173,10 @@ Checks if the image contains only grayscale pixels.
 \begin{DoxyReturn}{Returns}
 True if grayscale, false otherwise. 
 \end{DoxyReturn}
+
+
+Implemented in \doxymbox{\hyperlink{classPBM_a54b2255440d2e7d20222d659093ff4ac}{PBM}}, and \doxymbox{\hyperlink{classPGM_a0cfb7b2db240ad1c66ec8719fac443d3}{PGM}}.
+
 \Hypertarget{classImage_a997a88ec456aa24fd42660f9d4ba61cc}\index{Image@{Image}!printSessionInfo@{printSessionInfo}}
 \index{printSessionInfo@{printSessionInfo}!Image@{Image}}
 \doxysubsubsection{\texorpdfstring{printSessionInfo()}{printSessionInfo()}}
@@ -182,6 +186,10 @@ virtual void Image::\+print\+Session\+Info (\begin{DoxyParamCaption}{}{}\end{Dox
 
 
 Prints format-\/specific information for the session list. 
+
+
+
+Implemented in \doxymbox{\hyperlink{classPBM_a49ff63007313e0069249c9b3c2876147}{PBM}}, and \doxymbox{\hyperlink{classPGM_ac8c9a8c14305f7a0a38568297ff9184e}{PGM}}.
 
 \Hypertarget{classImage_a30662edab526d0e5d611e446e3c55a3b}\index{Image@{Image}!save@{save}}
 \index{save@{save}!Image@{Image}}
@@ -200,6 +208,10 @@ Saves the image to disk.
 \end{DoxyParams}
 
 
+Implemented in \doxymbox{\hyperlink{classPBM_aa945ad4a32abbe9a488e0805ec0d2e94}{PBM}}, and \doxymbox{\hyperlink{classPGM_a4e60155c449379da91abe74364a9b748}{PGM}}.
+
+
+
 \label{doc-variable-members}
 \Hypertarget{classImage_doc-variable-members}
 \doxysubsection{Member Data Documentation}
@@ -209,11 +221,11 @@ Saves the image to disk.
 {\footnotesize\ttfamily \label{classImage_a51df43db420c9c0b57536cb2dd36de5c} 
 int Image::\+height\hspace{0.3cm}{\ttfamily [protected]}}
 
-\doxylink{classImage}{Image} height in pixels \Hypertarget{classImage_af5fe60ce5bfb340f439dadfbd1c3f74e}\index{Image@{Image}!originalFileName@{originalFileName}}
-\index{originalFileName@{originalFileName}!Image@{Image}}
-\doxysubsubsection{\texorpdfstring{originalFileName}{originalFileName}}
-{\footnotesize\ttfamily \label{classImage_af5fe60ce5bfb340f439dadfbd1c3f74e} 
-std::\+string Image::\+original\+File\+Name\hspace{0.3cm}{\ttfamily [protected]}}
+\doxylink{classImage}{Image} height in pixels \Hypertarget{classImage_a7d470cbdccf2c3e4971b03a8dca38ae7}\index{Image@{Image}!originalFilename@{originalFilename}}
+\index{originalFilename@{originalFilename}!Image@{Image}}
+\doxysubsubsection{\texorpdfstring{originalFilename}{originalFilename}}
+{\footnotesize\ttfamily \label{classImage_a7d470cbdccf2c3e4971b03a8dca38ae7} 
+std::\+string Image::\+original\+Filename\hspace{0.3cm}{\ttfamily [protected]}}
 
 The source file name of the image \Hypertarget{classImage_afdcb0becb5c16b16736675825a0f8545}\index{Image@{Image}!pixelData@{pixelData}}
 \index{pixelData@{pixelData}!Image@{Image}}
@@ -227,7 +239,7 @@ std::\+vector$<$\doxymbox{\hyperlink{structPixel}{Pixel}}$>$ Image::\+pixel\+Dat
 {\footnotesize\ttfamily \label{classImage_ab8d12f635013c04159cd4d3d972bac88} 
 int Image::\+width\hspace{0.3cm}{\ttfamily [protected]}}
 
-We use protected so that the "{}children"{} can inherit the traits that the abstract class possesses had to watch a lot of videos to understand how to work with string, because for now we hvae been working with char\texorpdfstring{$\ast$}{*} only \doxylink{classImage}{Image} width in pixels 
+\doxylink{classImage}{Image} width in pixels 
 
 The documentation for this class was generated from the following file:\+\begin{DoxyCompactItemize}
 \item 

@@ -96,6 +96,11 @@ $(function(){initNavTree('classImage.html','','classImage-members'); });
  <a href="#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="Image_8hpp_source.html">Image.hpp</a>&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for Image:</div>
+<div class="dyncontent">
+<div class="center"><img src="classImage__inherit__graph.png" border="0" usemap="#aImage_inherit__map" loading="lazy" alt="Inheritance graph"/></div>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -124,17 +129,12 @@ Public Member Functions</h2></td></tr>
 Protected Attributes</h2></td></tr>
 <tr class="memitem:ab8d12f635013c04159cd4d3d972bac88" id="r_ab8d12f635013c04159cd4d3d972bac88"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#ab8d12f635013c04159cd4d3d972bac88">width</a></td></tr>
 <tr class="memitem:a51df43db420c9c0b57536cb2dd36de5c" id="r_a51df43db420c9c0b57536cb2dd36de5c"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a51df43db420c9c0b57536cb2dd36de5c">height</a></td></tr>
-<tr class="memitem:af5fe60ce5bfb340f439dadfbd1c3f74e" id="r_af5fe60ce5bfb340f439dadfbd1c3f74e"><td class="memItemLeft">std::string&#160;</td><td class="memItemRight"><a class="el" href="#af5fe60ce5bfb340f439dadfbd1c3f74e">originalFileName</a></td></tr>
+<tr class="memitem:a7d470cbdccf2c3e4971b03a8dca38ae7" id="r_a7d470cbdccf2c3e4971b03a8dca38ae7"><td class="memItemLeft">std::string&#160;</td><td class="memItemRight"><a class="el" href="#a7d470cbdccf2c3e4971b03a8dca38ae7">originalFilename</a></td></tr>
 <tr class="memitem:afdcb0becb5c16b16736675825a0f8545" id="r_afdcb0becb5c16b16736675825a0f8545"><td class="memItemLeft">std::vector&lt; <a class="el" href="structPixel.html">Pixel</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#afdcb0becb5c16b16736675825a0f8545">pixelData</a></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>abstract base class represening a raster image </p>
-<ul>
-<li></li>
-</ul>
-<p>This class represents the polymorphic interface for all specific image formats (e.g. PPM - Portable Pixmap Format | PGM - portable Grey map | PBM - Portable BitMap | BMP - Bitmap) It encapsulates the core data (width, height and pixels) and defines virtual methods that derived classes must implement</p><ul>
-<li>Architectural Note: The <span class="tt"><a class="el" href="#afdcb0becb5c16b16736675825a0f8545">pixelData</a></span> is stored in a 1D vector rather than a 2D array This boosts performance when applying transformations to large images </li>
-</ul>
+<p>This class represents the polymorphic interface for all specific image formats (e.g. PPM - Portable Pixmap Format | <a class="el" href="classPGM.html" title="Concrete class handling P2 ASCII Portable Graymap files.">PGM</a> - portable Grey map | <a class="el" href="classPBM.html" title="Concrete class handling P1 ASCII PBM files.">PBM</a> - Portable BitMap | BMP - Bitmap) It encapsulates the core data (width, height and pixels) and defines virtual methods that derived classes must implement Architectural Note: The <span class="tt"><a class="el" href="#afdcb0becb5c16b16736675825a0f8545">pixelData</a></span> is stored in a 1D vector rather than a 2D array This boosts performance when applying transformations to large images </p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ab5ca0ae10da321c9e443734a87dee15e" name="ab5ca0ae10da321c9e443734a87dee15e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab5ca0ae10da321c9e443734a87dee15e">&#9670;&#160;</a></span>Image()</h2>
@@ -233,6 +233,8 @@ Protected Attributes</h2></td></tr>
 
 <p>Creates a deep copy of the image (Prototype pattern). </p>
 <dl class="section return"><dt>Returns</dt><dd>Pointer to the newly cloned <a class="el" href="classImage.html" title="abstract base class represening a raster image">Image</a> object. </dd></dl>
+
+<p>Implemented in <a class="el" href="classPBM.html#adf37e8569da7a98d1a5d2fa0a508e1ee">PBM</a>, and <a class="el" href="classPGM.html#ae721c04ab0674597c58d1e0ce1ab576c">PGM</a>.</p>
 
 </div>
 </div>
@@ -374,6 +376,8 @@ Protected Attributes</h2></td></tr>
 <p>Checks if the image contains only grayscale pixels. </p>
 <dl class="section return"><dt>Returns</dt><dd>True if grayscale, false otherwise. </dd></dl>
 
+<p>Implemented in <a class="el" href="classPBM.html#a54b2255440d2e7d20222d659093ff4ac">PBM</a>, and <a class="el" href="classPGM.html#a0cfb7b2db240ad1c66ec8719fac443d3">PGM</a>.</p>
+
 </div>
 </div>
 <a id="a997a88ec456aa24fd42660f9d4ba61cc" name="a997a88ec456aa24fd42660f9d4ba61cc"></a>
@@ -400,6 +404,8 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Prints format-specific information for the session list. </p>
+
+<p>Implemented in <a class="el" href="classPBM.html#a49ff63007313e0069249c9b3c2876147">PBM</a>, and <a class="el" href="classPGM.html#ac8c9a8c14305f7a0a38568297ff9184e">PGM</a>.</p>
 
 </div>
 </div>
@@ -434,6 +440,8 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
+<p>Implemented in <a class="el" href="classPBM.html#aa945ad4a32abbe9a488e0805ec0d2e94">PBM</a>, and <a class="el" href="classPGM.html#a4e60155c449379da91abe74364a9b748">PGM</a>.</p>
+
 </div>
 </div>
 <a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
@@ -460,8 +468,8 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="af5fe60ce5bfb340f439dadfbd1c3f74e" name="af5fe60ce5bfb340f439dadfbd1c3f74e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af5fe60ce5bfb340f439dadfbd1c3f74e">&#9670;&#160;</a></span>originalFileName</h2>
+<a id="a7d470cbdccf2c3e4971b03a8dca38ae7" name="a7d470cbdccf2c3e4971b03a8dca38ae7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d470cbdccf2c3e4971b03a8dca38ae7">&#9670;&#160;</a></span>originalFilename</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -470,7 +478,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::string Image::originalFileName</td>
+          <td class="memname">std::string Image::originalFilename</td>
         </tr>
       </table>
   </td>
@@ -525,7 +533,7 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>We use protected so that the "children" can inherit the traits that the abstract class possesses had to watch a lot of videos to understand how to work with string, because for now we hvae been working with char* only <a class="el" href="classImage.html" title="abstract base class represening a raster image">Image</a> width in pixels </p>
+<p><a class="el" href="classImage.html" title="abstract base class represening a raster image">Image</a> width in pixels </p>
 
 </div>
 </div>

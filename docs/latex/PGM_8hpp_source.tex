@@ -1,0 +1,34 @@
+\doxysection{PGM.\+hpp}
+\hypertarget{PGM_8hpp_source}{}\label{PGM_8hpp_source}\index{Raster-\/Image-\/Manipulation/PGM/PGM.hpp@{Raster-\/Image-\/Manipulation/PGM/PGM.hpp}}
+\doxymbox{\hyperlink{PGM_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#ifndef\ PGM\_HPP}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#define\ PGM\_HPP}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{Image_8hpp}{../Image.hpp}}"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#define\ MAX\_VALUE\ 255}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{classPGM_ae32ff656cb739394f5ccd9d5545c672a}{PGM}}\ :\ \textcolor{keyword}{public}\ \doxymbox{\hyperlink{classImage_ab5ca0ae10da321c9e443734a87dee15e}{Image}}}
+\DoxyCodeLine{00021\ \{}
+\DoxyCodeLine{00022\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00028\ \ \ \ \ \doxymbox{\hyperlink{classPGM_ae32ff656cb739394f5ccd9d5545c672a}{PGM}}(\textcolor{keyword}{const}\ std::string\&\ filename);}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{comment}{//No\ need\ for\ a\ destructor\ as\ the\ std::string\ manages\ memory\ automatically}}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{classPGM_a4e60155c449379da91abe74364a9b748}{save}}(\textcolor{keyword}{const}\ std::string\&\ filename)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00033\ \ \ \ \ \doxymbox{\hyperlink{classPGM_ae32ff656cb739394f5ccd9d5545c672a}{PGM}}*\ \doxymbox{\hyperlink{classPGM_ae721c04ab0674597c58d1e0ce1ab576c}{clone}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{classPGM_ac8c9a8c14305f7a0a38568297ff9184e}{printSessionInfo}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{classPGM_a0cfb7b2db240ad1c66ec8719fac443d3}{isGrayscale}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00036\ \ \ \ \ }
+\DoxyCodeLine{00037\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{int}\ scalableValue;\ }
+\DoxyCodeLine{00039\ \};}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ PGM\_HPP}}
+
+\end{DoxyCode}

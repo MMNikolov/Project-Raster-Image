@@ -8,7 +8,6 @@
 
 #include "../Image.hpp"
 #include <iostream>
-#include <fstream>
 
 /**
  * @brief Concrete class handling P1 ASCII PBM files.

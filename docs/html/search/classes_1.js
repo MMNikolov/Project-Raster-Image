@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['pixel_0',['Pixel',['../structPixel.html',1,'']]]
+  ['pbm_0',['PBM',['../classPBM.html',1,'']]],
+  ['pgm_1',['PGM',['../classPGM.html',1,'']]],
+  ['pixel_2',['Pixel',['../structPixel.html',1,'']]]
 ];

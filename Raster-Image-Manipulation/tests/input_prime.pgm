@@ -1,0 +1,7 @@
+P2
+# Test scaling math with MaxVal = 100
+3 3
+100
+0 50 100
+50 100 50
+100 50 0

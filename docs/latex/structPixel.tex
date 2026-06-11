@@ -23,15 +23,7 @@ uint8\+\_\+t \doxymbox{\hyperlink{structPixel_abc9f592730eddbfcb270a1974a498d78}
 \doxysubsection{Detailed Description}
 Represents a single RGB \doxylink{structPixel}{Pixel} in a raster image. 
 
-
-\begin{DoxyItemize}
-\item 
-\end{DoxyItemize}
-
-This structure encapsulates the red, green and blue color channels
-\begin{DoxyItemize}
-\item Architectural note on the data types:\+ We use {\ttfamily uint8\+\_\+t} (from $<$cstdint$>$), because in the 8 bits that we have given it represents the color channels in a perfect manor (0 -\/ 255) Also we use it because it is MUCH MORE memory efficient, if we were to use {\ttfamily int} or {\ttfamily unsigned} this would have cost us 4 bytes (32 bits) we hvae a 75\% effieciency increse only by using this variable instead of int 
-\end{DoxyItemize}
+This structure encapsulates the red, green and blue color channels Architectural note on the data types:\+ We use {\ttfamily uint8\+\_\+t} (from $<$cstdint$>$), because in the 8 bits that we have given it represents the color channels in a perfect manor (0 -\/ 255) Also we use it because it is MUCH MORE memory efficient, if we were to use {\ttfamily int} or {\ttfamily unsigned} this would have cost us 4 bytes (32 bits) we hvae a 75\% effieciency increse only by using this variable instead of int 
 
 \label{doc-variable-members}
 \Hypertarget{structPixel_doc-variable-members}

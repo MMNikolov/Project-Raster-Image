@@ -46,6 +46,7 @@ PBM::PBM(const std::string &filename)
         throw std::invalid_argument("Cant have dimensions below zero");
     }
     
+    
     pixelData.resize(this->width * this->height);
 
     int val;

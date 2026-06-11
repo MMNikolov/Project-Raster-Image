@@ -1,0 +1,35 @@
+\doxysection{PBM.\+hpp}
+\hypertarget{PBM_8hpp_source}{}\label{PBM_8hpp_source}\index{Raster-\/Image-\/Manipulation/PBM/PBM.hpp@{Raster-\/Image-\/Manipulation/PBM/PBM.hpp}}
+\doxymbox{\hyperlink{PBM_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#ifndef\ PBM\_HPP}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#define\ PBM\_HPP}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{Image_8hpp}{../Image.hpp}}"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{classPBM_a8955dfcb9b0c9117b4b3738951fd3769}{PBM}}\ :\ \textcolor{keyword}{public}\ \doxymbox{\hyperlink{classImage_ab5ca0ae10da321c9e443734a87dee15e}{Image}}}
+\DoxyCodeLine{00019\ \{}
+\DoxyCodeLine{00020\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00026\ \ \ \ \ \doxymbox{\hyperlink{classPBM_a8955dfcb9b0c9117b4b3738951fd3769}{PBM}}(\textcolor{keyword}{const}\ std::string\&\ filename);}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{comment}{//no\ need\ for\ a\ destrcutor}}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{comment}{//\string~PBM();}}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{comment}{//overriden\ methods}}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{classPBM_aa945ad4a32abbe9a488e0805ec0d2e94}{save}}(\textcolor{keyword}{const}\ std::string\&\ filename)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00042\ \ \ \ \ \doxymbox{\hyperlink{classPBM_a8955dfcb9b0c9117b4b3738951fd3769}{PBM}}*\ \doxymbox{\hyperlink{classPBM_adf37e8569da7a98d1a5d2fa0a508e1ee}{clone}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{classPBM_a49ff63007313e0069249c9b3c2876147}{printSessionInfo}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{classPBM_a54b2255440d2e7d20222d659093ff4ac}{isGrayscale}}()\ \textcolor{keyword}{const\ override};\ }
+\DoxyCodeLine{00054\ \ \ \ \ }
+\DoxyCodeLine{00055\ \};}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ PBM\_HPP}}
+
+\end{DoxyCode}

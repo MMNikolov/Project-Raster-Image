@@ -11,7 +11,7 @@ var classImage =
     [ "printSessionInfo", "classImage.html#a997a88ec456aa24fd42660f9d4ba61cc", null ],
     [ "save", "classImage.html#a30662edab526d0e5d611e446e3c55a3b", null ],
     [ "height", "classImage.html#a51df43db420c9c0b57536cb2dd36de5c", null ],
-    [ "originalFileName", "classImage.html#af5fe60ce5bfb340f439dadfbd1c3f74e", null ],
+    [ "originalFilename", "classImage.html#a7d470cbdccf2c3e4971b03a8dca38ae7", null ],
     [ "pixelData", "classImage.html#afdcb0becb5c16b16736675825a0f8545", null ],
     [ "width", "classImage.html#ab8d12f635013c04159cd4d3d972bac88", null ]
 ];

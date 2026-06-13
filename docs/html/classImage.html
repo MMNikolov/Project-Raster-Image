@@ -134,7 +134,7 @@ Protected Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>abstract base class represening a raster image </p>
-<p>This class represents the polymorphic interface for all specific image formats (e.g. PPM - Portable Pixmap Format | <a class="el" href="classPGM.html" title="Concrete class handling P2 ASCII Portable Graymap files.">PGM</a> - portable Grey map | <a class="el" href="classPBM.html" title="Concrete class handling P1 ASCII PBM files.">PBM</a> - Portable BitMap | BMP - Bitmap) It encapsulates the core data (width, height and pixels) and defines virtual methods that derived classes must implement Architectural Note: The <span class="tt"><a class="el" href="#afdcb0becb5c16b16736675825a0f8545">pixelData</a></span> is stored in a 1D vector rather than a 2D array This boosts performance when applying transformations to large images </p>
+<p>This class represents the polymorphic interface for all specific image formats (e.g. <a class="el" href="classPPM.html" title="Concrete class handling P3 ASCII Portable Pixmap files.">PPM</a> - Portable Pixmap Format | <a class="el" href="classPGM.html" title="Concrete class handling P2 ASCII Portable Graymap files.">PGM</a> - portable Grey map | <a class="el" href="classPBM.html" title="Concrete class handling P1 ASCII PBM files.">PBM</a> - Portable BitMap | BMP - Bitmap) It encapsulates the core data (width, height and pixels) and defines virtual methods that derived classes must implement Architectural Note: The <span class="tt"><a class="el" href="#afdcb0becb5c16b16736675825a0f8545">pixelData</a></span> is stored in a 1D vector rather than a 2D array This boosts performance when applying transformations to large images </p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ab5ca0ae10da321c9e443734a87dee15e" name="ab5ca0ae10da321c9e443734a87dee15e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab5ca0ae10da321c9e443734a87dee15e">&#9670;&#160;</a></span>Image()</h2>
@@ -234,7 +234,7 @@ Protected Attributes</h2></td></tr>
 <p>Creates a deep copy of the image (Prototype pattern). </p>
 <dl class="section return"><dt>Returns</dt><dd>Pointer to the newly cloned <a class="el" href="classImage.html" title="abstract base class represening a raster image">Image</a> object. </dd></dl>
 
-<p>Implemented in <a class="el" href="classPBM.html#adf37e8569da7a98d1a5d2fa0a508e1ee">PBM</a>, and <a class="el" href="classPGM.html#ae721c04ab0674597c58d1e0ce1ab576c">PGM</a>.</p>
+<p>Implemented in <a class="el" href="classPBM.html#adf37e8569da7a98d1a5d2fa0a508e1ee">PBM</a>, <a class="el" href="classPGM.html#ae721c04ab0674597c58d1e0ce1ab576c">PGM</a>, and <a class="el" href="classPPM.html#a3c567ffbe74a7f6b174460f21b3e06a1">PPM</a>.</p>
 
 </div>
 </div>
@@ -376,7 +376,7 @@ Protected Attributes</h2></td></tr>
 <p>Checks if the image contains only grayscale pixels. </p>
 <dl class="section return"><dt>Returns</dt><dd>True if grayscale, false otherwise. </dd></dl>
 
-<p>Implemented in <a class="el" href="classPBM.html#a54b2255440d2e7d20222d659093ff4ac">PBM</a>, and <a class="el" href="classPGM.html#a0cfb7b2db240ad1c66ec8719fac443d3">PGM</a>.</p>
+<p>Implemented in <a class="el" href="classPBM.html#a54b2255440d2e7d20222d659093ff4ac">PBM</a>, <a class="el" href="classPGM.html#a0cfb7b2db240ad1c66ec8719fac443d3">PGM</a>, and <a class="el" href="classPPM.html#a6277b4084b70e97d19ad2c1a13d0aa76">PPM</a>.</p>
 
 </div>
 </div>
@@ -405,7 +405,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Prints format-specific information for the session list. </p>
 
-<p>Implemented in <a class="el" href="classPBM.html#a49ff63007313e0069249c9b3c2876147">PBM</a>, and <a class="el" href="classPGM.html#ac8c9a8c14305f7a0a38568297ff9184e">PGM</a>.</p>
+<p>Implemented in <a class="el" href="classPBM.html#a49ff63007313e0069249c9b3c2876147">PBM</a>, <a class="el" href="classPGM.html#ac8c9a8c14305f7a0a38568297ff9184e">PGM</a>, and <a class="el" href="classPPM.html#a2183b4fcb9cc962e0be5cec9a8f1df0c">PPM</a>.</p>
 
 </div>
 </div>
@@ -440,7 +440,7 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="classPBM.html#aa945ad4a32abbe9a488e0805ec0d2e94">PBM</a>, and <a class="el" href="classPGM.html#a4e60155c449379da91abe74364a9b748">PGM</a>.</p>
+<p>Implemented in <a class="el" href="classPBM.html#aa945ad4a32abbe9a488e0805ec0d2e94">PBM</a>, <a class="el" href="classPGM.html#a4e60155c449379da91abe74364a9b748">PGM</a>, and <a class="el" href="classPPM.html#a5de30ddbc26ddc98aeb42f7b188c84b0">PPM</a>.</p>
 
 </div>
 </div>

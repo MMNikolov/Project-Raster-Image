@@ -10,7 +10,10 @@ digraph "Raster-Image-Manipulation"
     dir_ce7819007512a113987216c94ce8e8e1 [shape=plaintext, label="Raster-Image-Manipulation"];
   dir_86e02bb52a42965cc34bd451619899f7 [label="PBM", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_86e02bb52a42965cc34bd451619899f7.html",tooltip=""];
   dir_959bdb954e45e153e6224ba65d951d0e [label="PGM", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_959bdb954e45e153e6224ba65d951d0e.html",tooltip=""];
+  dir_33c4f822d83a0d8b59e8d980802b52ef [label="PPM", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_33c4f822d83a0d8b59e8d980802b52ef.html",tooltip=""];
   dir_1843a0e54ed56caa2a584dca928a5937 [label="tests", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_1843a0e54ed56caa2a584dca928a5937.html",tooltip=""];
   }
-  dir_1843a0e54ed56caa2a584dca928a5937->dir_86e02bb52a42965cc34bd451619899f7 [headlabel="1", labeldistance=1.5 headhref="dir_000003_000000.html" href="dir_000003_000000.html" color="steelblue1" fontcolor="steelblue1"];
+  dir_1843a0e54ed56caa2a584dca928a5937->dir_33c4f822d83a0d8b59e8d980802b52ef [headlabel="1", labeldistance=1.5 headhref="dir_000004_000002.html" href="dir_000004_000002.html" color="steelblue1" fontcolor="steelblue1"];
+  dir_1843a0e54ed56caa2a584dca928a5937->dir_86e02bb52a42965cc34bd451619899f7 [headlabel="1", labeldistance=1.5 headhref="dir_000004_000000.html" href="dir_000004_000000.html" color="steelblue1" fontcolor="steelblue1"];
+  dir_1843a0e54ed56caa2a584dca928a5937->dir_959bdb954e45e153e6224ba65d951d0e [headlabel="1", labeldistance=1.5 headhref="dir_000004_000001.html" href="dir_000004_000001.html" color="steelblue1" fontcolor="steelblue1"];
 }

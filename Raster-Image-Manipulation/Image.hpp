@@ -11,6 +11,8 @@
 #include <fstream>
 #include "Pixel.hpp"
 
+#define MAX_VALUE 255
+
 /**
  * @brief abstract base class represening a raster image
  * @details This class represents the polymorphic interface for all specific image formats

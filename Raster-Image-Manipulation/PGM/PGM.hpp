@@ -9,8 +9,6 @@
 #include "../Image.hpp"
 #include <iostream>
 
-#define MAX_VALUE 255
-
 /**
  * @brief Concrete class handling P2 ASCII Portable Graymap files.
  * @details Handles gray shading images. Normalizes internal memory pixels 
@@ -29,9 +27,27 @@ public:
 
     //No need for a destructor as the std::string manages memory automatically
 
+    /**
+     * @brief Saves the current grayscale image state back to disk in P2 ASCII format.
+     * @param filename Path where the file will be written.
+     */
     void save(const std::string& filename) const override;
+
+    /**
+     * @brief Clones the current PGM object using a deep copy (Prototype Pattern).
+     * @return A pointer to the newly allocated polymorphic Image object.
+     */
     PGM* clone() const override;
+
+    /**
+     * @brief Prints the session state and format details exactly as required by the specification.
+     */
     void printSessionInfo() const override;
+
+    /**
+     * @brief Identifies if the format is grayscale.
+     * @return Constantly returns true since graymaps are strictly grayscale fields.
+     */
     bool isGrayscale() const override;
     
 private:

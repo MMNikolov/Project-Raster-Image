@@ -52,7 +52,7 @@ std::\+vector$<$ \doxymbox{\hyperlink{structPixel}{Pixel}} $>$ \doxymbox{\hyperl
 \doxysubsection{Detailed Description}
 abstract base class represening a raster image 
 
-This class represents the polymorphic interface for all specific image formats (e.\+g. PPM -\/ Portable Pixmap Format \texorpdfstring{$\vert$}{|} \doxylink{classPGM}{PGM} -\/ portable Grey map \texorpdfstring{$\vert$}{|} \doxylink{classPBM}{PBM} -\/ Portable Bit\+Map \texorpdfstring{$\vert$}{|} BMP -\/ Bitmap) It encapsulates the core data (width, height and pixels) and defines virtual methods that derived classes must implement Architectural Note:\+ The {\ttfamily \doxylink{classImage_afdcb0becb5c16b16736675825a0f8545}{pixel\+Data}} is stored in a 1D vector rather than a 2D array This boosts performance when applying transformations to large images 
+This class represents the polymorphic interface for all specific image formats (e.\+g. \doxylink{classPPM}{PPM} -\/ Portable Pixmap Format \texorpdfstring{$\vert$}{|} \doxylink{classPGM}{PGM} -\/ portable Grey map \texorpdfstring{$\vert$}{|} \doxylink{classPBM}{PBM} -\/ Portable Bit\+Map \texorpdfstring{$\vert$}{|} BMP -\/ Bitmap) It encapsulates the core data (width, height and pixels) and defines virtual methods that derived classes must implement Architectural Note:\+ The {\ttfamily \doxylink{classImage_afdcb0becb5c16b16736675825a0f8545}{pixel\+Data}} is stored in a 1D vector rather than a 2D array This boosts performance when applying transformations to large images 
 
 \label{doc-constructors}
 \Hypertarget{classImage_doc-constructors}
@@ -106,7 +106,7 @@ Pointer to the newly cloned \doxylink{classImage}{Image} object.
 \end{DoxyReturn}
 
 
-Implemented in \doxymbox{\hyperlink{classPBM_adf37e8569da7a98d1a5d2fa0a508e1ee}{PBM}}, and \doxymbox{\hyperlink{classPGM_ae721c04ab0674597c58d1e0ce1ab576c}{PGM}}.
+Implemented in \doxymbox{\hyperlink{classPBM_adf37e8569da7a98d1a5d2fa0a508e1ee}{PBM}}, \doxymbox{\hyperlink{classPGM_ae721c04ab0674597c58d1e0ce1ab576c}{PGM}}, and \doxymbox{\hyperlink{classPPM_a3c567ffbe74a7f6b174460f21b3e06a1}{PPM}}.
 
 \Hypertarget{classImage_a1cd7587f88b6932b5269051d1ba08ff9}\index{Image@{Image}!getHeight@{getHeight}}
 \index{getHeight@{getHeight}!Image@{Image}}
@@ -175,7 +175,7 @@ True if grayscale, false otherwise.
 \end{DoxyReturn}
 
 
-Implemented in \doxymbox{\hyperlink{classPBM_a54b2255440d2e7d20222d659093ff4ac}{PBM}}, and \doxymbox{\hyperlink{classPGM_a0cfb7b2db240ad1c66ec8719fac443d3}{PGM}}.
+Implemented in \doxymbox{\hyperlink{classPBM_a54b2255440d2e7d20222d659093ff4ac}{PBM}}, \doxymbox{\hyperlink{classPGM_a0cfb7b2db240ad1c66ec8719fac443d3}{PGM}}, and \doxymbox{\hyperlink{classPPM_a6277b4084b70e97d19ad2c1a13d0aa76}{PPM}}.
 
 \Hypertarget{classImage_a997a88ec456aa24fd42660f9d4ba61cc}\index{Image@{Image}!printSessionInfo@{printSessionInfo}}
 \index{printSessionInfo@{printSessionInfo}!Image@{Image}}
@@ -189,7 +189,7 @@ Prints format-\/specific information for the session list.
 
 
 
-Implemented in \doxymbox{\hyperlink{classPBM_a49ff63007313e0069249c9b3c2876147}{PBM}}, and \doxymbox{\hyperlink{classPGM_ac8c9a8c14305f7a0a38568297ff9184e}{PGM}}.
+Implemented in \doxymbox{\hyperlink{classPBM_a49ff63007313e0069249c9b3c2876147}{PBM}}, \doxymbox{\hyperlink{classPGM_ac8c9a8c14305f7a0a38568297ff9184e}{PGM}}, and \doxymbox{\hyperlink{classPPM_a2183b4fcb9cc962e0be5cec9a8f1df0c}{PPM}}.
 
 \Hypertarget{classImage_a30662edab526d0e5d611e446e3c55a3b}\index{Image@{Image}!save@{save}}
 \index{save@{save}!Image@{Image}}
@@ -208,7 +208,7 @@ Saves the image to disk.
 \end{DoxyParams}
 
 
-Implemented in \doxymbox{\hyperlink{classPBM_aa945ad4a32abbe9a488e0805ec0d2e94}{PBM}}, and \doxymbox{\hyperlink{classPGM_a4e60155c449379da91abe74364a9b748}{PGM}}.
+Implemented in \doxymbox{\hyperlink{classPBM_aa945ad4a32abbe9a488e0805ec0d2e94}{PBM}}, \doxymbox{\hyperlink{classPGM_a4e60155c449379da91abe74364a9b748}{PGM}}, and \doxymbox{\hyperlink{classPPM_a5de30ddbc26ddc98aeb42f7b188c84b0}{PPM}}.
 
 
 

@@ -82,7 +82,10 @@ void PBM::save(const std::string &filename) const
     
     file << "P1\n" << this->width << ' ' << this->height << '\n';
 
-    for (int i = 0; i < this->width * this->height; i++)
+    //we made a seperate variable consuming 4 more bytes, because through each itteration it has to do an arithmetic
+    //if we do this.width * this.height its much more inneficient
+    int count = this->width * this->height;
+    for (int i = 0; i < count; i++)
     {
         const Pixel& pixel = this->pixelData[i];
 

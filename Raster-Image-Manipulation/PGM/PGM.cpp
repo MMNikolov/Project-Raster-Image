@@ -50,7 +50,11 @@ PGM::PGM(const std::string &filename)
     pixelData.resize(this->width * this->height);
 
     int val;
-    for (int i = 0; i < this->width * this->height; i++)
+
+    //we made a seperate variable consuming 4 more bytes, because through each itteration it has to do an arithmetic
+    //if we do this.width * this.height its much more inneficient
+    int count = this->width * this->height;
+    for (int i = 0; i < count; i++)
     {
         if (!(file >> val))
         {

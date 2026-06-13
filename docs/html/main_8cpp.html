@@ -92,9 +92,11 @@ $(function(){initNavTree('main_8cpp.html','',''); });
 </div><!--header-->
 <div class="contents">
 
-<p>Integration tests for verification of the <a class="el" href="classPBM.html" title="Concrete class handling P1 ASCII PBM files.">PBM</a> image parser framework.  
+<p>Integration tests for validation of <a class="el" href="classPBM.html" title="Concrete class handling P1 ASCII PBM files.">PBM</a>, <a class="el" href="classPGM.html" title="Concrete class handling P2 ASCII Portable Graymap files.">PGM</a>, and <a class="el" href="classPPM.html" title="Concrete class handling P3 ASCII Portable Pixmap files.">PPM</a> image parser frameworks.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="PBM_8hpp_source.html">../PBM/PBM.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="PGM_8hpp_source.html">../PGM/PGM.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="PPM_8hpp_source.html">../PPM/PPM.hpp</a>&quot;</code><br />
 <code>#include &lt;iostream&gt;</code><br />
 <code>#include &lt;fstream&gt;</code><br />
 <code>#include &lt;cassert&gt;</code><br />
@@ -107,10 +109,13 @@ Include dependency graph for main.cpp:</div>
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a8e8db06f3b1b380f3088d5a2bc047c52" id="r_a8e8db06f3b1b380f3088d5a2bc047c52"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a8e8db06f3b1b380f3088d5a2bc047c52">generateDummyPBM</a> (const std::string &amp;filename)</td></tr>
+<tr class="memitem:a2c3616499951060b6870fcd9b73547c4" id="r_a2c3616499951060b6870fcd9b73547c4"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a2c3616499951060b6870fcd9b73547c4">generateDummyPGM</a> (const std::string &amp;filename)</td></tr>
+<tr class="memitem:a1bc36ed2f826428d355f5ce4fbd8db6d" id="r_a1bc36ed2f826428d355f5ce4fbd8db6d"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a1bc36ed2f826428d355f5ce4fbd8db6d">generateDummyPPMColor</a> (const std::string &amp;filename)</td></tr>
+<tr class="memitem:aa47392ed9973de96b87e0cfd023fcd65" id="r_aa47392ed9973de96b87e0cfd023fcd65"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aa47392ed9973de96b87e0cfd023fcd65">generateDummyPPMGray</a> (const std::string &amp;filename)</td></tr>
 <tr class="memitem:ae66f6b31b5ad750f1fe042a706a4e3d4" id="r_ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a> ()</td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Integration tests for verification of the <a class="el" href="classPBM.html" title="Concrete class handling P1 ASCII PBM files.">PBM</a> image parser framework. </p>
+<div class="textblock"><p>Integration tests for validation of <a class="el" href="classPBM.html" title="Concrete class handling P1 ASCII PBM files.">PBM</a>, <a class="el" href="classPGM.html" title="Concrete class handling P2 ASCII Portable Graymap files.">PGM</a>, and <a class="el" href="classPPM.html" title="Concrete class handling P3 ASCII Portable Pixmap files.">PPM</a> image parser frameworks. </p>
 </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
 <a id="a8e8db06f3b1b380f3088d5a2bc047c52" name="a8e8db06f3b1b380f3088d5a2bc047c52"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8e8db06f3b1b380f3088d5a2bc047c52">&#9670;&#160;</a></span>generateDummyPBM()</h2>
@@ -120,6 +125,57 @@ Functions</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">void generateDummyPBM </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>filename</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2c3616499951060b6870fcd9b73547c4" name="a2c3616499951060b6870fcd9b73547c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c3616499951060b6870fcd9b73547c4">&#9670;&#160;</a></span>generateDummyPGM()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void generateDummyPGM </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>filename</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1bc36ed2f826428d355f5ce4fbd8db6d" name="a1bc36ed2f826428d355f5ce4fbd8db6d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1bc36ed2f826428d355f5ce4fbd8db6d">&#9670;&#160;</a></span>generateDummyPPMColor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void generateDummyPPMColor </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>filename</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa47392ed9973de96b87e0cfd023fcd65" name="aa47392ed9973de96b87e0cfd023fcd65"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa47392ed9973de96b87e0cfd023fcd65">&#9670;&#160;</a></span>generateDummyPPMGray()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void generateDummyPPMGray </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>filename</em></span></td><td>)</td>
           <td></td>

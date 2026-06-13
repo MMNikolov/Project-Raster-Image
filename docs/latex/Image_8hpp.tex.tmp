@@ -18,8 +18,24 @@ This graph shows which files directly or indirectly include this file:\+
 \item 
 class \doxymbox{\hyperlink{classImage}{Image}}
 \begin{DoxyCompactList}\small\item\em abstract base class represening a raster image \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\+\#define \doxymbox{\hyperlink{Image_8hpp_a4ce3e2af80a76d816ab7f8567ec4a65a}{MAX\+\_\+\+VALUE}}~255
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 Defines the abstract base class for all raster image formats. 
+
+
+
+\label{doc-define-members}
+\Hypertarget{Image_8hpp_doc-define-members}
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{Image_8hpp_a4ce3e2af80a76d816ab7f8567ec4a65a}\index{Image.hpp@{Image.hpp}!MAX\_VALUE@{MAX\_VALUE}}
+\index{MAX\_VALUE@{MAX\_VALUE}!Image.hpp@{Image.hpp}}
+\doxysubsubsection{\texorpdfstring{MAX\_VALUE}{MAX\_VALUE}}
+{\footnotesize\ttfamily \label{Image_8hpp_a4ce3e2af80a76d816ab7f8567ec4a65a} 
+\+\#define MAX\+\_\+\+VALUE~255}
 

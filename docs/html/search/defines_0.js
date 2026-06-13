@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['max_5fvalue_0',['MAX_VALUE',['../PGM_8hpp.html#a4ce3e2af80a76d816ab7f8567ec4a65a',1,'PGM.hpp']]]
+  ['itterations_5fto_5fread_5fpixel_0',['ITTERATIONS_TO_READ_PIXEL',['../PPM_8hpp.html#a881c11ccd1b1a30c75eb0c04b2ef4969',1,'PPM.hpp']]]
 ];

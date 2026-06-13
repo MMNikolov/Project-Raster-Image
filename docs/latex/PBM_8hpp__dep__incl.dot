@@ -8,5 +8,5 @@ digraph "Raster-Image-Manipulation/PBM/PBM.hpp"
   Node1 -> Node2 [id="edge3_Node000001_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
   Node2 [id="Node000002",label="Raster-Image-Manipulation\l/PBM/PBM.cpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$PBM_8cpp.html",tooltip="Implements the PBM file parsing, serialization, and polymorphic behaviors."];
   Node1 -> Node3 [id="edge4_Node000001_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
-  Node3 [id="Node000003",label="Raster-Image-Manipulation\l/tests/main.cpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$main_8cpp.html",tooltip="Integration tests for verification of the PBM image parser framework."];
+  Node3 [id="Node000003",label="Raster-Image-Manipulation\l/tests/main.cpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$main_8cpp.html",tooltip="Integration tests for validation of PBM, PGM, and PPM image parser frameworks."];
 }

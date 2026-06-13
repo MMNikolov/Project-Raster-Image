@@ -9,5 +9,8 @@ var searchData=
   ['pixel_6',['Pixel',['../structPixel.html',1,'']]],
   ['pixel_2ehpp_7',['Pixel.hpp',['../Pixel_8hpp.html',1,'']]],
   ['pixeldata_8',['pixelData',['../classImage.html#afdcb0becb5c16b16736675825a0f8545',1,'Image']]],
-  ['printsessioninfo_9',['printSessionInfo',['../classImage.html#a997a88ec456aa24fd42660f9d4ba61cc',1,'Image::printSessionInfo()'],['../classPBM.html#a49ff63007313e0069249c9b3c2876147',1,'PBM::printSessionInfo()'],['../classPGM.html#ac8c9a8c14305f7a0a38568297ff9184e',1,'PGM::printSessionInfo()']]]
+  ['ppm_9',['PPM',['../classPPM.html',1,'PPM'],['../classPPM.html#ada118c725a1b103ac52d5eab43e7040a',1,'PPM::PPM()']]],
+  ['ppm_2ecpp_10',['PPM.cpp',['../PPM_8cpp.html',1,'']]],
+  ['ppm_2ehpp_11',['PPM.hpp',['../PPM_8hpp.html',1,'']]],
+  ['printsessioninfo_12',['printSessionInfo',['../classImage.html#a997a88ec456aa24fd42660f9d4ba61cc',1,'Image::printSessionInfo()'],['../classPBM.html#a49ff63007313e0069249c9b3c2876147',1,'PBM::printSessionInfo()'],['../classPGM.html#ac8c9a8c14305f7a0a38568297ff9184e',1,'PGM::printSessionInfo()'],['../classPPM.html#a2183b4fcb9cc962e0be5cec9a8f1df0c',1,'PPM::printSessionInfo()']]]
 ];

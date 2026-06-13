@@ -9,4 +9,6 @@ digraph "Image"
   Node2 [id="Node000002",label="PBM",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classPBM.html",tooltip="Concrete class handling P1 ASCII PBM files."];
   Node1 -> Node3 [id="edge2_Node000001_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
   Node3 [id="Node000003",label="PGM",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classPGM.html",tooltip="Concrete class handling P2 ASCII Portable Graymap files."];
+  Node1 -> Node4 [id="edge3_Node000001_Node000004",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node4 [id="Node000004",label="PPM",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classPPM.html",tooltip="Concrete class handling P3 ASCII Portable Pixmap files."];
 }

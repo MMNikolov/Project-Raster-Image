@@ -9,7 +9,7 @@
 #include <vector>
 #include <string>
 #include <fstream>
-#include "Pixel.hpp"
+#include "../Pixel.hpp"
 
 #define MAX_VALUE 255
 
@@ -32,8 +32,7 @@ public:
      * @param h Height of the image.
      * @param filename Original filename of the loaded image.
      */
-    Image(int w, int h, const std::string& filename) 
-        : width(w), height(h), originalFilename(filename) {}
+    Image(int w, int h, const std::string& filename);
         
     /**
      * @brief Virtual destructor for proper polymorphic cleanup.
@@ -90,6 +89,12 @@ public:
      * @return Reference to the 1D pixel vector.
      */
     std::vector<Pixel>& getPixels() { return pixelData; }
+
+    /**
+     * @brief Helper function to skip Netpbm style comment lines during file parsing.
+     * @param file The active input file stream.
+     */
+    static void skipComments(std::ifstream& filename);
 
     // We use protected so that the "children" can inherit the traits that the abstract class possesses
     // had to watch a lot of videos to understand how to work with string, because for now we hvae been working with char* only

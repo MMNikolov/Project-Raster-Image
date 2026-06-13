@@ -6,7 +6,7 @@
 #ifndef PPM_HPP
 #define PPM_HPP
 
-#include "../Image.hpp"
+#include "../Image/Image.hpp"
 #include <iostream>
 
 #define ITTERATIONS_TO_READ_PIXEL 3

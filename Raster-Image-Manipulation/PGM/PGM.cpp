@@ -1,19 +1,5 @@
 #include "PGM.hpp"
 
-/**
- * @brief Helper function to skip Netpbm style comment lines during file parsing.
- * @param file The active input file stream.
- */
-
-static void skipComments(std::ifstream &file)
-{
-    while (file >> std::ws && file.peek() == '#')
-    {
-        std::string dummy;
-        std::getline(file, dummy);
-    }
-}
-
 PGM::PGM(const std::string &filename)
     : Image(0, 0, filename), scalableValue(MAX_VALUE)
 {

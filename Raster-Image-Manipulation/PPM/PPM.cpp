@@ -1,19 +1,5 @@
 #include "PPM.hpp"
 
-/**
- * @brief Helper function to skip Netpbm style comment lines during file parsing.
- * @param file The active input file stream.
- */
-
-static void skipComments(std::ifstream &file)
-{
-    while (file >> std::ws && file.peek() == '#')
-    {
-        std::string dummy;
-        std::getline(file, dummy);
-    }
-}
-
 PPM::PPM(const std::string &filename)
     : Image(0, 0, filename), maxColorValue(MAX_VALUE)
 {
@@ -64,7 +50,7 @@ PPM::PPM(const std::string &filename)
             {
                 throw std::invalid_argument("Invalid pixel space");
             }
-            else if (val < 0 || val > MAX_VALUE)
+            else if (val < 0 || val > maxColorValue)
             {
                 throw std::invalid_argument("Cant have pixels out of this range");
             }

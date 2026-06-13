@@ -1,6 +1,0 @@
-P3
-# Test grayscale PPM (Color format holding only gray pixels)
-2 2
-255
-100 100 100    200 200 200
-50 50 50        255 255 255

@@ -6,7 +6,7 @@
 #ifndef PGM_HPP
 #define PGM_HPP
 
-#include "../Image.hpp"
+#include "../Image/Image.hpp"
 #include <iostream>
 
 /**

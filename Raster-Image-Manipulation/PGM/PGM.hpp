@@ -8,6 +8,7 @@
 
 #include "../Image/Image.hpp"
 #include <iostream>
+#include <cstdlib>
 
 /**
  * @brief Concrete class handling P2 ASCII Portable Graymap files.
@@ -49,6 +50,21 @@ public:
      * @return Constantly returns true since graymaps are strictly grayscale fields.
      */
     bool isGrayscale() const override;
+
+    /**
+     * @brief Inverts the colors of the grayscale image
+     */
+    void makeNegative() override;
+
+    /**
+     * @brief Does nothing here.
+     */
+    void makeGrayscale() override;
+
+    /**
+     * @brief makes the grayscale image purely white and black pixel filled
+     */
+    void makeMonochrome() override;
     
 private:
     int scalableValue; ///< Maximum gray value parameter parsed from the file header */

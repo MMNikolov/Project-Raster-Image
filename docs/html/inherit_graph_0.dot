@@ -5,11 +5,5 @@ digraph "Graphical Class Hierarchy"
   edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
   node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
   rankdir="LR";
-  Node0 [id="Node000000",label="Image",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classImage.html",tooltip="abstract base class represening a raster image"];
-  Node0 -> Node1 [id="edge1_Node000000_Node000001",dir="back",color="steelblue1",style="solid",tooltip=" "];
-  Node1 [id="Node000001",label="PBM",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classPBM.html",tooltip="Concrete class handling P1 ASCII PBM files."];
-  Node0 -> Node2 [id="edge2_Node000000_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
-  Node2 [id="Node000002",label="PGM",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classPGM.html",tooltip="Concrete class handling P2 ASCII Portable Graymap files."];
-  Node0 -> Node3 [id="edge3_Node000000_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
-  Node3 [id="Node000003",label="PPM",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classPPM.html",tooltip="Concrete class handling P3 ASCII Portable Pixmap files."];
+  Node0 [id="Node000000",label="CommandParser",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classCommandParser.html",tooltip="Handles user console input, tokenizes input text, and drives the session state machine."];
 }

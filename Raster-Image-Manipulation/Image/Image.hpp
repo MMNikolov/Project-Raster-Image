@@ -64,6 +64,19 @@ public:
      */
     virtual bool isGrayscale() const = 0; 
 
+    /**
+     * @brief Inverts the color intensities of the active image pixels.
+     */
+    virtual void makeNegative() = 0;
+    /**
+     * @brief Makes the image in the given session grayscale
+     */
+    virtual void makeGrayscale() = 0;
+    /**
+     * @brief Makes the image in the given session monochrome
+     */
+    virtual void makeMonochrome() = 0;
+
     //GETTERS
 
     /**

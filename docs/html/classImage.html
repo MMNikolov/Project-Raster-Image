@@ -116,6 +116,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a997a88ec456aa24fd42660f9d4ba61cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints format-specific information for the session list.  <br /></td></tr>
 <tr class="memitem:aa147c240bc2e886751768b2a3e38ff66" id="r_aa147c240bc2e886751768b2a3e38ff66"><td class="memItemLeft">virtual bool&#160;</td><td class="memItemRight"><a class="el" href="#aa147c240bc2e886751768b2a3e38ff66">isGrayscale</a> () const =0</td></tr>
 <tr class="memdesc:aa147c240bc2e886751768b2a3e38ff66"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the image contains only grayscale pixels.  <br /></td></tr>
+<tr class="memitem:a06ae731d5b7c0e00791f561ed98d8d69" id="r_a06ae731d5b7c0e00791f561ed98d8d69"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a06ae731d5b7c0e00791f561ed98d8d69">makeNegative</a> ()=0</td></tr>
+<tr class="memdesc:a06ae731d5b7c0e00791f561ed98d8d69"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inverts the color intensities of the active image pixels.  <br /></td></tr>
+<tr class="memitem:a1b903992477c59996ecbdc66531a6217" id="r_a1b903992477c59996ecbdc66531a6217"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a1b903992477c59996ecbdc66531a6217">makeGrayscale</a> ()=0</td></tr>
+<tr class="memdesc:a1b903992477c59996ecbdc66531a6217"><td class="mdescLeft">&#160;</td><td class="mdescRight">Makes the image in the given session grayscale.  <br /></td></tr>
+<tr class="memitem:af09ea6ef3e5bb5fe7f760719dbdc5113" id="r_af09ea6ef3e5bb5fe7f760719dbdc5113"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#af09ea6ef3e5bb5fe7f760719dbdc5113">makeMonochrome</a> ()=0</td></tr>
+<tr class="memdesc:af09ea6ef3e5bb5fe7f760719dbdc5113"><td class="mdescLeft">&#160;</td><td class="mdescRight">Makes the image in the given session monochrome.  <br /></td></tr>
 <tr class="memitem:a36bcae4838228d574738249a87dc4464" id="r_a36bcae4838228d574738249a87dc4464"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a36bcae4838228d574738249a87dc4464">getWidth</a> () const</td></tr>
 <tr class="memdesc:a36bcae4838228d574738249a87dc4464"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the image width.  <br /></td></tr>
 <tr class="memitem:a1cd7587f88b6932b5269051d1ba08ff9" id="r_a1cd7587f88b6932b5269051d1ba08ff9"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a1cd7587f88b6932b5269051d1ba08ff9">getHeight</a> () const</td></tr>
@@ -124,6 +130,11 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a827e8004aa9b7be85aa0f3003d3c4f86"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides read-only access to the pixel data.  <br /></td></tr>
 <tr class="memitem:a50610f29c821ee2b8bf53546e0e89b21" id="r_a50610f29c821ee2b8bf53546e0e89b21"><td class="memItemLeft">std::vector&lt; <a class="el" href="structPixel.html">Pixel</a> &gt; &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a50610f29c821ee2b8bf53546e0e89b21">getPixels</a> ()</td></tr>
 <tr class="memdesc:a50610f29c821ee2b8bf53546e0e89b21"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides mutable access to the pixel data.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a9951c40759db74a5536f88a033bf725f" id="r_a9951c40759db74a5536f88a033bf725f"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a9951c40759db74a5536f88a033bf725f">skipComments</a> (std::ifstream &amp;filename)</td></tr>
+<tr class="memdesc:a9951c40759db74a5536f88a033bf725f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper function to skip Netpbm style comment lines during file parsing.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pro-attribs" class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -141,9 +152,6 @@ Protected Attributes</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">Image::Image </td>
@@ -161,11 +169,6 @@ Protected Attributes</h2></td></tr>
           <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>filename</em></span>&#160;)</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>Constructor initializing core dimensions and filename. </p>
@@ -380,6 +383,93 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a1b903992477c59996ecbdc66531a6217" name="a1b903992477c59996ecbdc66531a6217"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b903992477c59996ecbdc66531a6217">&#9670;&#160;</a></span>makeGrayscale()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Image::makeGrayscale </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Makes the image in the given session grayscale. </p>
+
+<p>Implemented in <a class="el" href="classPBM.html#abdcca87870a9f002f4c056f67b96ecb7">PBM</a>, <a class="el" href="classPGM.html#a962272f69dd50f108d98dbb30285b37b">PGM</a>, and <a class="el" href="classPPM.html#aece890249ac4624317814f93232ed348">PPM</a>.</p>
+
+</div>
+</div>
+<a id="af09ea6ef3e5bb5fe7f760719dbdc5113" name="af09ea6ef3e5bb5fe7f760719dbdc5113"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af09ea6ef3e5bb5fe7f760719dbdc5113">&#9670;&#160;</a></span>makeMonochrome()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Image::makeMonochrome </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Makes the image in the given session monochrome. </p>
+
+<p>Implemented in <a class="el" href="classPBM.html#a072fd036e2a81b9a329ad7e3b7b4c288">PBM</a>, <a class="el" href="classPGM.html#a22dd96d2741714e8b0dc44e512db61c6">PGM</a>, and <a class="el" href="classPPM.html#a22cccdf8810877675c5894d89f2ed032">PPM</a>.</p>
+
+</div>
+</div>
+<a id="a06ae731d5b7c0e00791f561ed98d8d69" name="a06ae731d5b7c0e00791f561ed98d8d69"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06ae731d5b7c0e00791f561ed98d8d69">&#9670;&#160;</a></span>makeNegative()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Image::makeNegative </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Inverts the color intensities of the active image pixels. </p>
+
+<p>Implemented in <a class="el" href="classPBM.html#a1471cc00dfda2b2ec5deb8803523df1f">PBM</a>, <a class="el" href="classPGM.html#a1b7868211654b881a9bda9e554f795ce">PGM</a>, and <a class="el" href="classPPM.html#a5ac0e83dd0da3ab1905c08b38b4613c4">PPM</a>.</p>
+
+</div>
+</div>
 <a id="a997a88ec456aa24fd42660f9d4ba61cc" name="a997a88ec456aa24fd42660f9d4ba61cc"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a997a88ec456aa24fd42660f9d4ba61cc">&#9670;&#160;</a></span>printSessionInfo()</h2>
 
@@ -441,6 +531,39 @@ Protected Attributes</h2></td></tr>
 </dl>
 
 <p>Implemented in <a class="el" href="classPBM.html#aa945ad4a32abbe9a488e0805ec0d2e94">PBM</a>, <a class="el" href="classPGM.html#a4e60155c449379da91abe74364a9b748">PGM</a>, and <a class="el" href="classPPM.html#a5de30ddbc26ddc98aeb42f7b188c84b0">PPM</a>.</p>
+
+</div>
+</div>
+<a id="a9951c40759db74a5536f88a033bf725f" name="a9951c40759db74a5536f88a033bf725f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9951c40759db74a5536f88a033bf725f">&#9670;&#160;</a></span>skipComments()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Image::skipComments </td>
+          <td>(</td>
+          <td class="paramtype">std::ifstream &amp;</td>          <td class="paramname"><span class="paramname"><em>filename</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Helper function to skip Netpbm style comment lines during file parsing. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">file</td><td>The active input file stream. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -537,8 +660,9 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following file:<ul>
-<li>Raster-Image-Manipulation/<a class="el" href="Image_8hpp_source.html">Image.hpp</a></li>
+<hr/>The documentation for this class was generated from the following files:<ul>
+<li>Raster-Image-Manipulation/Image/<a class="el" href="Image_8hpp_source.html">Image.hpp</a></li>
+<li>Raster-Image-Manipulation/Image/<a class="el" href="Image_8cpp.html">Image.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

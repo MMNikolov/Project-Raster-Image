@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['pbm_0',['PBM',['../classPBM.html#a8955dfcb9b0c9117b4b3738951fd3769',1,'PBM']]],
-  ['pgm_1',['PGM',['../classPGM.html#ae32ff656cb739394f5ccd9d5545c672a',1,'PGM']]],
-  ['ppm_2',['PPM',['../classPPM.html#ada118c725a1b103ac52d5eab43e7040a',1,'PPM']]],
-  ['printsessioninfo_3',['printSessionInfo',['../classImage.html#a997a88ec456aa24fd42660f9d4ba61cc',1,'Image::printSessionInfo()'],['../classPBM.html#a49ff63007313e0069249c9b3c2876147',1,'PBM::printSessionInfo()'],['../classPGM.html#ac8c9a8c14305f7a0a38568297ff9184e',1,'PGM::printSessionInfo()'],['../classPPM.html#a2183b4fcb9cc962e0be5cec9a8f1df0c',1,'PPM::printSessionInfo()']]]
+  ['opensession_0',['openSession',['../classSessionManager.html#a89570b816473332398db01b3da81ec04',1,'SessionManager']]],
+  ['operator_3d_1',['operator=',['../classSessionManager.html#ae13bd61f8819d0d6dc8b95347c972327',1,'SessionManager']]]
 ];

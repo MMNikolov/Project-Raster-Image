@@ -29,7 +29,13 @@ void \doxymbox{\hyperlink{classPBM_aa945ad4a32abbe9a488e0805ec0d2e94}{save}} (co
 void \doxymbox{\hyperlink{classPBM_a49ff63007313e0069249c9b3c2876147}{print\+Session\+Info}} () const override
 \begin{DoxyCompactList}\small\item\em Prints the session state and format details of this file. \end{DoxyCompactList}\item 
 bool \doxymbox{\hyperlink{classPBM_a54b2255440d2e7d20222d659093ff4ac}{is\+Grayscale}} () const override
-\begin{DoxyCompactList}\small\item\em Identifies if the format is grayscale. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Identifies if the format is grayscale. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{classPBM_a1471cc00dfda2b2ec5deb8803523df1f}{make\+Negative}} () override
+\begin{DoxyCompactList}\small\item\em Inverts the black and white fields of the monochrome image. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{classPBM_abdcca87870a9f002f4c056f67b96ecb7}{make\+Grayscale}} () override
+\begin{DoxyCompactList}\small\item\em Does nothing here. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{classPBM_a072fd036e2a81b9a329ad7e3b7b4c288}{make\+Monochrome}} () override
+\begin{DoxyCompactList}\small\item\em Does nothing here. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \doxymbox{\hyperlink{classImage}{Image}}}
 \begin{DoxyCompactItemize}
 \item 
@@ -46,6 +52,11 @@ const std::\+vector$<$ \doxymbox{\hyperlink{structPixel}{Pixel}} $>$ \& \doxymbo
 std::\+vector$<$ \doxymbox{\hyperlink{structPixel}{Pixel}} $>$ \& \doxymbox{\hyperlink{classImage_a50610f29c821ee2b8bf53546e0e89b21}{get\+Pixels}} ()
 \begin{DoxyCompactList}\small\item\em Provides mutable access to the pixel data. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Static Public Member Functions inherited from \doxymbox{\hyperlink{classImage}{Image}}}
+\begin{DoxyCompactItemize}
+\item 
+static void \doxymbox{\hyperlink{classImage_a9951c40759db74a5536f88a033bf725f}{skip\+Comments}} (std::\+ifstream \&filename)
+\begin{DoxyCompactList}\small\item\em Helper function to skip Netpbm style comment lines during file parsing. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Protected Attributes inherited from \doxymbox{\hyperlink{classImage}{Image}}}
 \begin{DoxyCompactItemize}
 \item 
@@ -125,6 +136,48 @@ Constantly returns true since monochrome is a subset of grayscale.
 
 
 Implements \doxymbox{\hyperlink{classImage_aa147c240bc2e886751768b2a3e38ff66}{Image}}.
+
+\Hypertarget{classPBM_abdcca87870a9f002f4c056f67b96ecb7}\index{PBM@{PBM}!makeGrayscale@{makeGrayscale}}
+\index{makeGrayscale@{makeGrayscale}!PBM@{PBM}}
+\doxysubsubsection{\texorpdfstring{makeGrayscale()}{makeGrayscale()}}
+{\footnotesize\ttfamily \label{classPBM_abdcca87870a9f002f4c056f67b96ecb7} 
+void PBM::\+make\+Grayscale (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Does nothing here. 
+
+
+
+Implements \doxymbox{\hyperlink{classImage_a1b903992477c59996ecbdc66531a6217}{Image}}.
+
+\Hypertarget{classPBM_a072fd036e2a81b9a329ad7e3b7b4c288}\index{PBM@{PBM}!makeMonochrome@{makeMonochrome}}
+\index{makeMonochrome@{makeMonochrome}!PBM@{PBM}}
+\doxysubsubsection{\texorpdfstring{makeMonochrome()}{makeMonochrome()}}
+{\footnotesize\ttfamily \label{classPBM_a072fd036e2a81b9a329ad7e3b7b4c288} 
+void PBM::\+make\+Monochrome (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Does nothing here. 
+
+
+
+Implements \doxymbox{\hyperlink{classImage_af09ea6ef3e5bb5fe7f760719dbdc5113}{Image}}.
+
+\Hypertarget{classPBM_a1471cc00dfda2b2ec5deb8803523df1f}\index{PBM@{PBM}!makeNegative@{makeNegative}}
+\index{makeNegative@{makeNegative}!PBM@{PBM}}
+\doxysubsubsection{\texorpdfstring{makeNegative()}{makeNegative()}}
+{\footnotesize\ttfamily \label{classPBM_a1471cc00dfda2b2ec5deb8803523df1f} 
+void PBM::\+make\+Negative (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Inverts the black and white fields of the monochrome image. 
+
+
+
+Implements \doxymbox{\hyperlink{classImage_a06ae731d5b7c0e00791f561ed98d8d69}{Image}}.
 
 \Hypertarget{classPBM_a49ff63007313e0069249c9b3c2876147}\index{PBM@{PBM}!printSessionInfo@{printSessionInfo}}
 \index{printSessionInfo@{printSessionInfo}!PBM@{PBM}}

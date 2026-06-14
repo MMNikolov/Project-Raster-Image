@@ -51,7 +51,7 @@ PGM::PGM(const std::string &filename)
             throw std::invalid_argument("Cant have pixels out of this range");
         }
         
-        u_int8_t normalisedValue = static_cast<u_int8_t>((val * MAX_VALUE) / scalableValue);
+        uint8_t normalisedValue = static_cast<uint8_t>((val * MAX_VALUE) / scalableValue);
 
         pixelData[i] = { normalisedValue, normalisedValue, normalisedValue};
     }
@@ -97,4 +97,40 @@ void PGM::printSessionInfo() const
 bool PGM::isGrayscale() const
 {
     return true;
+}
+
+void PGM::makeNegative()
+{
+    int size = this->width * this->height;
+    for (int i = 0; i < size; i++)
+    {
+        this->pixelData[i].b = (MAX_VALUE - this->pixelData[i].b);
+        this->pixelData[i].r = (MAX_VALUE - this->pixelData[i].r);
+        this->pixelData[i].g = (MAX_VALUE - this->pixelData[i].g);
+    }
+    
+}
+
+//does nothing
+//--------------------------
+void PGM::makeGrayscale()
+{
+    return;
+}
+//--------------------------
+
+void PGM::makeMonochrome()
+{
+    int size = this->width * this->height;
+    for (int i = 0; i < size; i++)
+    {
+        //we can take one of the cholors because everysingle one is the same color intensity
+        if (this->pixelData[i].b > 127)
+        {
+            this->pixelData[i] = {MAX_VALUE, MAX_VALUE, MAX_VALUE};
+            continue;
+        }
+        
+        this->pixelData[i] = {0, 0, 0};
+    }
 }

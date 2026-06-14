@@ -23,13 +23,19 @@ Collaboration diagram for PGM:\+
 \doxymbox{\hyperlink{classPGM_ae32ff656cb739394f5ccd9d5545c672a}{PGM}} (const std::\+string \&filename)
 \begin{DoxyCompactList}\small\item\em Constructor that opens and parses a \doxylink{classPGM}{PGM} file from disk. \end{DoxyCompactList}\item 
 void \doxymbox{\hyperlink{classPGM_a4e60155c449379da91abe74364a9b748}{save}} (const std::\+string \&filename) const override
-\begin{DoxyCompactList}\small\item\em Saves the image to disk. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Saves the current grayscale image state back to disk in P2 ASCII format. \end{DoxyCompactList}\item 
 \doxymbox{\hyperlink{classPGM}{PGM}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{classPGM_ae721c04ab0674597c58d1e0ce1ab576c}{clone}} () const override
-\begin{DoxyCompactList}\small\item\em Creates a deep copy of the image (Prototype pattern). \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Clones the current \doxylink{classPGM}{PGM} object using a deep copy (Prototype Pattern). \end{DoxyCompactList}\item 
 void \doxymbox{\hyperlink{classPGM_ac8c9a8c14305f7a0a38568297ff9184e}{print\+Session\+Info}} () const override
-\begin{DoxyCompactList}\small\item\em Prints format-\/specific information for the session list. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Prints the session state and format details exactly as required by the specification. \end{DoxyCompactList}\item 
 bool \doxymbox{\hyperlink{classPGM_a0cfb7b2db240ad1c66ec8719fac443d3}{is\+Grayscale}} () const override
-\begin{DoxyCompactList}\small\item\em Checks if the image contains only grayscale pixels. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Identifies if the format is grayscale. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{classPGM_a1b7868211654b881a9bda9e554f795ce}{make\+Negative}} () override
+\begin{DoxyCompactList}\small\item\em Inverts the colors of the grayscale image. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{classPGM_a962272f69dd50f108d98dbb30285b37b}{make\+Grayscale}} () override
+\begin{DoxyCompactList}\small\item\em Does nothing here. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{classPGM_a22dd96d2741714e8b0dc44e512db61c6}{make\+Monochrome}} () override
+\begin{DoxyCompactList}\small\item\em makes the grayscale image purely white and black pixel filled \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \doxymbox{\hyperlink{classImage}{Image}}}
 \begin{DoxyCompactItemize}
 \item 
@@ -46,6 +52,11 @@ const std::\+vector$<$ \doxymbox{\hyperlink{structPixel}{Pixel}} $>$ \& \doxymbo
 std::\+vector$<$ \doxymbox{\hyperlink{structPixel}{Pixel}} $>$ \& \doxymbox{\hyperlink{classImage_a50610f29c821ee2b8bf53546e0e89b21}{get\+Pixels}} ()
 \begin{DoxyCompactList}\small\item\em Provides mutable access to the pixel data. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Static Public Member Functions inherited from \doxymbox{\hyperlink{classImage}{Image}}}
+\begin{DoxyCompactItemize}
+\item 
+static void \doxymbox{\hyperlink{classImage_a9951c40759db74a5536f88a033bf725f}{skip\+Comments}} (std::\+ifstream \&filename)
+\begin{DoxyCompactList}\small\item\em Helper function to skip Netpbm style comment lines during file parsing. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Protected Attributes inherited from \doxymbox{\hyperlink{classImage}{Image}}}
 \begin{DoxyCompactItemize}
 \item 
@@ -100,10 +111,10 @@ Constructor that opens and parses a \doxylink{classPGM}{PGM} file from disk.
 
 
 
-Creates a deep copy of the image (Prototype pattern). 
+Clones the current \doxylink{classPGM}{PGM} object using a deep copy (Prototype Pattern). 
 
 \begin{DoxyReturn}{Returns}
-Pointer to the newly cloned \doxylink{classImage}{Image} object. 
+A pointer to the newly allocated polymorphic \doxylink{classImage}{Image} object. 
 \end{DoxyReturn}
 
 
@@ -117,14 +128,56 @@ bool PGM::\+is\+Grayscale (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) c
 
 
 
-Checks if the image contains only grayscale pixels. 
+Identifies if the format is grayscale. 
 
 \begin{DoxyReturn}{Returns}
-True if grayscale, false otherwise. 
+Constantly returns true since graymaps are strictly grayscale fields. 
 \end{DoxyReturn}
 
 
 Implements \doxymbox{\hyperlink{classImage_aa147c240bc2e886751768b2a3e38ff66}{Image}}.
+
+\Hypertarget{classPGM_a962272f69dd50f108d98dbb30285b37b}\index{PGM@{PGM}!makeGrayscale@{makeGrayscale}}
+\index{makeGrayscale@{makeGrayscale}!PGM@{PGM}}
+\doxysubsubsection{\texorpdfstring{makeGrayscale()}{makeGrayscale()}}
+{\footnotesize\ttfamily \label{classPGM_a962272f69dd50f108d98dbb30285b37b} 
+void PGM::\+make\+Grayscale (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Does nothing here. 
+
+
+
+Implements \doxymbox{\hyperlink{classImage_a1b903992477c59996ecbdc66531a6217}{Image}}.
+
+\Hypertarget{classPGM_a22dd96d2741714e8b0dc44e512db61c6}\index{PGM@{PGM}!makeMonochrome@{makeMonochrome}}
+\index{makeMonochrome@{makeMonochrome}!PGM@{PGM}}
+\doxysubsubsection{\texorpdfstring{makeMonochrome()}{makeMonochrome()}}
+{\footnotesize\ttfamily \label{classPGM_a22dd96d2741714e8b0dc44e512db61c6} 
+void PGM::\+make\+Monochrome (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+makes the grayscale image purely white and black pixel filled 
+
+
+
+Implements \doxymbox{\hyperlink{classImage_af09ea6ef3e5bb5fe7f760719dbdc5113}{Image}}.
+
+\Hypertarget{classPGM_a1b7868211654b881a9bda9e554f795ce}\index{PGM@{PGM}!makeNegative@{makeNegative}}
+\index{makeNegative@{makeNegative}!PGM@{PGM}}
+\doxysubsubsection{\texorpdfstring{makeNegative()}{makeNegative()}}
+{\footnotesize\ttfamily \label{classPGM_a1b7868211654b881a9bda9e554f795ce} 
+void PGM::\+make\+Negative (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Inverts the colors of the grayscale image. 
+
+
+
+Implements \doxymbox{\hyperlink{classImage_a06ae731d5b7c0e00791f561ed98d8d69}{Image}}.
 
 \Hypertarget{classPGM_ac8c9a8c14305f7a0a38568297ff9184e}\index{PGM@{PGM}!printSessionInfo@{printSessionInfo}}
 \index{printSessionInfo@{printSessionInfo}!PGM@{PGM}}
@@ -134,7 +187,7 @@ void PGM::\+print\+Session\+Info (\begin{DoxyParamCaption}{}{}\end{DoxyParamCapt
 
 
 
-Prints format-\/specific information for the session list. 
+Prints the session state and format details exactly as required by the specification. 
 
 
 
@@ -148,11 +201,11 @@ void PGM::\+save (\begin{DoxyParamCaption}\item[{const std::\+string \&}]{filena
 
 
 
-Saves the image to disk. 
+Saves the current grayscale image state back to disk in P2 ASCII format. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em filename} & The path where the new image should be saved. \\
+{\em filename} & Path where the file will be written. \\
 \hline
 \end{DoxyParams}
 

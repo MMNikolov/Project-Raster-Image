@@ -13,7 +13,7 @@ PPM::PPM(const std::string &filename)
     file >> magicNumber;
     if (magicNumber != "P3")
     {
-        throw std::invalid_argument("Expected magic Number to be P2");
+        throw std::invalid_argument("Expected magic Number to be P3");
     }
     
     skipComments(file);
@@ -42,7 +42,7 @@ PPM::PPM(const std::string &filename)
     int count = this->width * this->height;
     for (int i = 0; i < count; i++)
     {
-        u_int8_t colors[ITTERATIONS_TO_READ_PIXEL];
+        uint8_t colors[ITTERATIONS_TO_READ_PIXEL];
 
         for (int j = 0; j < ITTERATIONS_TO_READ_PIXEL; j++)
         {
@@ -55,7 +55,7 @@ PPM::PPM(const std::string &filename)
                 throw std::invalid_argument("Cant have pixels out of this range");
             }
 
-            colors[j] = static_cast<u_int8_t>((val * MAX_VALUE) / maxColorValue);
+            colors[j] = static_cast<uint8_t>((val * MAX_VALUE) / maxColorValue);
         }
 
         this->pixelData[i] = {colors[0], colors[1], colors[2]};
@@ -112,4 +112,47 @@ bool PPM::isGrayscale() const
         }
     }
     return true;
+}
+
+void PPM::makeNegative()
+{
+    int size = this->width * this->height;
+    for (int i = 0; i < size; i++)
+    {
+        this->pixelData[i].r = MAX_VALUE - this->pixelData[i].r;
+        this->pixelData[i].g = MAX_VALUE - this->pixelData[i].g;
+        this->pixelData[i].b = MAX_VALUE - this->pixelData[i].b;
+    }
+    
+}
+
+void PPM::makeGrayscale()
+{
+    int size = this->width * this->height;
+    
+    for (int i = 0; i < size; i++)
+    {
+        u_int8_t average = static_cast<u_int8_t>((this->pixelData[i].r + this->pixelData[i].b + this->pixelData[i].g) / 3);
+        this->pixelData[i] = {average, average, average};
+    }
+    
+}
+
+void PPM::makeMonochrome()
+{
+    int size = this->width * this->height;
+    
+    for (int i = 0; i < size; i++)
+    {
+        u_int8_t average = static_cast<u_int8_t>((this->pixelData[i].r + this->pixelData[i].b + this->pixelData[i].g) / 3);
+
+        //we chose 127, beacuase this is the threshhold of when the pixel can be identified as a black or white pixel
+        if (average > 127)
+        {
+            this->pixelData[i] = {MAX_VALUE, MAX_VALUE, MAX_VALUE};
+            continue;
+        }
+        
+        this->pixelData[i] = {0, 0, 0};
+    }
 }

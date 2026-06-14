@@ -7,28 +7,36 @@
 \DoxyCodeLine{00006\ \textcolor{preprocessor}{\#ifndef\ PPM\_HPP}}
 \DoxyCodeLine{00007\ \textcolor{preprocessor}{\#define\ PPM\_HPP}}
 \DoxyCodeLine{00008\ }
-\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{Image_8hpp}{../Image.hpp}}"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{Image_8hpp}{../Image/Image.hpp}}"{}}}
 \DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <iostream>}}
 \DoxyCodeLine{00011\ }
 \DoxyCodeLine{00012\ \textcolor{preprocessor}{\#define\ ITTERATIONS\_TO\_READ\_PIXEL\ 3}}
 \DoxyCodeLine{00013\ }
-\DoxyCodeLine{00017\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{classPPM_ada118c725a1b103ac52d5eab43e7040a}{PPM}}\ :\ \textcolor{keyword}{public}\ \doxymbox{\hyperlink{classImage_ab5ca0ae10da321c9e443734a87dee15e}{Image}}}
-\DoxyCodeLine{00018\ \{}
-\DoxyCodeLine{00019\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00024\ \ \ \ \ \doxymbox{\hyperlink{classPPM_ada118c725a1b103ac52d5eab43e7040a}{PPM}}(\textcolor{keyword}{const}\ std::string\&\ filename);}
-\DoxyCodeLine{00025\ }
-\DoxyCodeLine{00026\ \ \ \ \ \textcolor{comment}{//no\ destructor}}
-\DoxyCodeLine{00027\ }
-\DoxyCodeLine{00028\ \ \ \ \ \textcolor{comment}{//overriden\ methods}}
-\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{classPPM_a5de30ddbc26ddc98aeb42f7b188c84b0}{save}}(\textcolor{keyword}{const}\ std::string\&\ filename)\ \textcolor{keyword}{const\ override};}
-\DoxyCodeLine{00030\ \ \ \ \ \doxymbox{\hyperlink{classPPM_ada118c725a1b103ac52d5eab43e7040a}{PPM}}*\ \doxymbox{\hyperlink{classPPM_a3c567ffbe74a7f6b174460f21b3e06a1}{clone}}()\ \textcolor{keyword}{const\ override};}
-\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{classPPM_a2183b4fcb9cc962e0be5cec9a8f1df0c}{printSessionInfo}}()\ \textcolor{keyword}{const\ override};}
-\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{classPPM_a6277b4084b70e97d19ad2c1a13d0aa76}{isGrayscale}}()\ \textcolor{keyword}{const\ override};}
-\DoxyCodeLine{00033\ \ \ \ \ }
-\DoxyCodeLine{00034\ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{int}\ maxColorValue;\ }
-\DoxyCodeLine{00036\ \};}
-\DoxyCodeLine{00037\ }
-\DoxyCodeLine{00038\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//PPM\_HPP}}
+\DoxyCodeLine{00019\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{classPPM_ada118c725a1b103ac52d5eab43e7040a}{PPM}}\ :\ \textcolor{keyword}{public}\ \doxymbox{\hyperlink{classImage_ab5ca0ae10da321c9e443734a87dee15e}{Image}}}
+\DoxyCodeLine{00020\ \{}
+\DoxyCodeLine{00021\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00027\ \ \ \ \ \doxymbox{\hyperlink{classPPM_ada118c725a1b103ac52d5eab43e7040a}{PPM}}(\textcolor{keyword}{const}\ std::string\&\ filename);}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{comment}{//no\ destructor}}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{comment}{//overriden\ methods}}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{classPPM_a5de30ddbc26ddc98aeb42f7b188c84b0}{save}}(\textcolor{keyword}{const}\ std::string\&\ filename)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00043\ \ \ \ \ \doxymbox{\hyperlink{classPPM_ada118c725a1b103ac52d5eab43e7040a}{PPM}}*\ \doxymbox{\hyperlink{classPPM_a3c567ffbe74a7f6b174460f21b3e06a1}{clone}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{classPPM_a2183b4fcb9cc962e0be5cec9a8f1df0c}{printSessionInfo}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{classPPM_a6277b4084b70e97d19ad2c1a13d0aa76}{isGrayscale}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{classPPM_a5ac0e83dd0da3ab1905c08b38b4613c4}{makeNegative}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{classPPM_aece890249ac4624317814f93232ed348}{makeGrayscale}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{classPPM_a22cccdf8810877675c5894d89f2ed032}{makeMonochrome}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00070\ \ \ \ \ }
+\DoxyCodeLine{00071\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keywordtype}{int}\ maxColorValue;\ }
+\DoxyCodeLine{00073\ \};}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00075\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//PPM\_HPP}}
 
 \end{DoxyCode}

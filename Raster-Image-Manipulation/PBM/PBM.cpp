@@ -114,3 +114,28 @@ bool PBM::isGrayscale() const
 {
     return true;
 }
+
+void PBM::makeNegative()
+{
+    int size = this->width * this->height;
+    for (int i = 0; i < size; i++)
+    {
+        this->pixelData[i].r = 255 - this->pixelData[i].r;
+        this->pixelData[i].g = 255 - this->pixelData[i].g;
+        this->pixelData[i].b = 255 - this->pixelData[i].b;
+    }
+    
+}
+
+//these two do nothing
+//------------------------------
+void PBM::makeGrayscale()
+{
+    return;
+}
+
+void PBM::makeMonochrome()
+{
+    return;
+}
+//------------------------------

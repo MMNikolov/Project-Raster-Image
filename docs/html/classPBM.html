@@ -119,6 +119,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a49ff63007313e0069249c9b3c2876147"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints the session state and format details of this file.  <br /></td></tr>
 <tr class="memitem:a54b2255440d2e7d20222d659093ff4ac" id="r_a54b2255440d2e7d20222d659093ff4ac"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a54b2255440d2e7d20222d659093ff4ac">isGrayscale</a> () const override</td></tr>
 <tr class="memdesc:a54b2255440d2e7d20222d659093ff4ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Identifies if the format is grayscale.  <br /></td></tr>
+<tr class="memitem:a1471cc00dfda2b2ec5deb8803523df1f" id="r_a1471cc00dfda2b2ec5deb8803523df1f"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a1471cc00dfda2b2ec5deb8803523df1f">makeNegative</a> () override</td></tr>
+<tr class="memdesc:a1471cc00dfda2b2ec5deb8803523df1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inverts the black and white fields of the monochrome image.  <br /></td></tr>
+<tr class="memitem:abdcca87870a9f002f4c056f67b96ecb7" id="r_abdcca87870a9f002f4c056f67b96ecb7"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#abdcca87870a9f002f4c056f67b96ecb7">makeGrayscale</a> () override</td></tr>
+<tr class="memdesc:abdcca87870a9f002f4c056f67b96ecb7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Does nothing here.  <br /></td></tr>
+<tr class="memitem:a072fd036e2a81b9a329ad7e3b7b4c288" id="r_a072fd036e2a81b9a329ad7e3b7b4c288"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a072fd036e2a81b9a329ad7e3b7b4c288">makeMonochrome</a> () override</td></tr>
+<tr class="memdesc:a072fd036e2a81b9a329ad7e3b7b4c288"><td class="mdescLeft">&#160;</td><td class="mdescRight">Does nothing here.  <br /></td></tr>
 <tr class="inherit_header pub_methods_classImage"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classImage')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Member Functions inherited from <a class="el" href="classImage.html">Image</a></td></tr>
 <tr class="memitem:ab5ca0ae10da321c9e443734a87dee15e inherit pub_methods_classImage" id="r_ab5ca0ae10da321c9e443734a87dee15e"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="classImage.html#ab5ca0ae10da321c9e443734a87dee15e">Image</a> (int w, int h, const std::string &amp;filename)</td></tr>
 <tr class="memdesc:ab5ca0ae10da321c9e443734a87dee15e inherit pub_methods_classImage"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor initializing core dimensions and filename.  <br /></td></tr>
@@ -135,6 +141,9 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-inherited" class="groupheader"><a id="inherited" name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pub_static_methods_classImage"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_static_methods_classImage')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Static Public Member Functions inherited from <a class="el" href="classImage.html">Image</a></td></tr>
+<tr class="memitem:a9951c40759db74a5536f88a033bf725f inherit pub_static_methods_classImage" id="r_a9951c40759db74a5536f88a033bf725f"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="classImage.html#a9951c40759db74a5536f88a033bf725f">skipComments</a> (std::ifstream &amp;filename)</td></tr>
+<tr class="memdesc:a9951c40759db74a5536f88a033bf725f inherit pub_static_methods_classImage"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper function to skip Netpbm style comment lines during file parsing.  <br /></td></tr>
 <tr class="inherit_header pro_attribs_classImage"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_attribs_classImage')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Protected Attributes inherited from <a class="el" href="classImage.html">Image</a></td></tr>
 <tr class="memitem:ab8d12f635013c04159cd4d3d972bac88 inherit pro_attribs_classImage" id="r_ab8d12f635013c04159cd4d3d972bac88"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="classImage.html#ab8d12f635013c04159cd4d3d972bac88">width</a></td></tr>
 <tr class="memitem:a51df43db420c9c0b57536cb2dd36de5c inherit pro_attribs_classImage" id="r_a51df43db420c9c0b57536cb2dd36de5c"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="classImage.html#a51df43db420c9c0b57536cb2dd36de5c">height</a></td></tr>
@@ -234,6 +243,93 @@ Additional Inherited Members</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>Constantly returns true since monochrome is a subset of grayscale. </dd></dl>
 
 <p>Implements <a class="el" href="classImage.html#aa147c240bc2e886751768b2a3e38ff66">Image</a>.</p>
+
+</div>
+</div>
+<a id="abdcca87870a9f002f4c056f67b96ecb7" name="abdcca87870a9f002f4c056f67b96ecb7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abdcca87870a9f002f4c056f67b96ecb7">&#9670;&#160;</a></span>makeGrayscale()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PBM::makeGrayscale </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Does nothing here. </p>
+
+<p>Implements <a class="el" href="classImage.html#a1b903992477c59996ecbdc66531a6217">Image</a>.</p>
+
+</div>
+</div>
+<a id="a072fd036e2a81b9a329ad7e3b7b4c288" name="a072fd036e2a81b9a329ad7e3b7b4c288"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a072fd036e2a81b9a329ad7e3b7b4c288">&#9670;&#160;</a></span>makeMonochrome()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PBM::makeMonochrome </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Does nothing here. </p>
+
+<p>Implements <a class="el" href="classImage.html#af09ea6ef3e5bb5fe7f760719dbdc5113">Image</a>.</p>
+
+</div>
+</div>
+<a id="a1471cc00dfda2b2ec5deb8803523df1f" name="a1471cc00dfda2b2ec5deb8803523df1f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1471cc00dfda2b2ec5deb8803523df1f">&#9670;&#160;</a></span>makeNegative()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PBM::makeNegative </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Inverts the black and white fields of the monochrome image. </p>
+
+<p>Implements <a class="el" href="classImage.html#a06ae731d5b7c0e00791f561ed98d8d69">Image</a>.</p>
 
 </div>
 </div>

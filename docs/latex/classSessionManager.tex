@@ -1,0 +1,139 @@
+\doxysection{Session\+Manager Class Reference}
+\hypertarget{classSessionManager}{}\label{classSessionManager}\index{SessionManager@{SessionManager}}
+
+
+{\ttfamily \+\#include $<$Session\+Manager.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{classSessionManager_acc0ba9a385a5d78b9602d5ecb0525006}{Session\+Manager}} ()
+\begin{DoxyCompactList}\small\item\em Constructor initializing default inactive states. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{classSessionManager_ab82682c10235caa7e3de64a48d2a71d2}{Session\+Manager}} (const \doxymbox{\hyperlink{classSessionManager}{Session\+Manager}} \&other)=delete
+\item 
+\doxymbox{\hyperlink{classSessionManager}{Session\+Manager}} \& \doxymbox{\hyperlink{classSessionManager_ae13bd61f8819d0d6dc8b95347c972327}{operator=}} (const \doxymbox{\hyperlink{classSessionManager}{Session\+Manager}} \&other)=delete
+\item 
+\doxymbox{\hyperlink{classSessionManager_acf9860a47b8c54e5f13210715e784621}{\texorpdfstring{$\sim$}{\string~}\+Session\+Manager}} ()
+\begin{DoxyCompactList}\small\item\em Destructor guaranteeing memory cleanup. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{classSessionManager_a89570b816473332398db01b3da81ec04}{open\+Session}} (const std::\+string \&filepath)
+\begin{DoxyCompactList}\small\item\em Requests an image from the factory and takes ownership of its allocation. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{classSessionManager_ac4737ce42b43c3baf491514d66accf63}{close\+Session}} ()
+\begin{DoxyCompactList}\small\item\em Safely deletes the active image resource and resets the tracking state. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{classSessionManager_a3073b753a642355b5482d836baa9bdfe}{save\+Session}} () const
+\begin{DoxyCompactList}\small\item\em Serializes the active image back to its original file path. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{classSessionManager_a255a83cac467a93adfefe523c869f54a}{save\+Session\+As}} (const std::\+string \&filepath)
+\begin{DoxyCompactList}\small\item\em Serializes the active image to a new location and updates the tracking file path. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{classSessionManager_aedb195d79eaa7ed6d4ff6c00430e5cea}{is\+Active}} () const
+\item 
+const std::\+string \& \doxymbox{\hyperlink{classSessionManager_a5397ebe611127be5f13ce401b2c86894}{get\+Filename}} () const
+\end{DoxyCompactItemize}
+
+
+\label{doc-constructors}
+\Hypertarget{classSessionManager_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classSessionManager_acc0ba9a385a5d78b9602d5ecb0525006}\index{SessionManager@{SessionManager}!SessionManager@{SessionManager}}
+\index{SessionManager@{SessionManager}!SessionManager@{SessionManager}}
+\doxysubsubsection{\texorpdfstring{SessionManager()}{SessionManager()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classSessionManager_acc0ba9a385a5d78b9602d5ecb0525006} 
+Session\+Manager::\+\+Session\+Manager (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Constructor initializing default inactive states. 
+
+\Hypertarget{classSessionManager_ab82682c10235caa7e3de64a48d2a71d2}\index{SessionManager@{SessionManager}!SessionManager@{SessionManager}}
+\index{SessionManager@{SessionManager}!SessionManager@{SessionManager}}
+\doxysubsubsection{\texorpdfstring{SessionManager()}{SessionManager()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classSessionManager_ab82682c10235caa7e3de64a48d2a71d2} 
+Session\+Manager::\+\+Session\+Manager (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{classSessionManager}{Session\+Manager}} \&}]{other}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\Hypertarget{classSessionManager_acf9860a47b8c54e5f13210715e784621}\index{SessionManager@{SessionManager}!````~SessionManager@{\texorpdfstring{$\sim$}{\string~}SessionManager}}
+\index{````~SessionManager@{\texorpdfstring{$\sim$}{\string~}SessionManager}!SessionManager@{SessionManager}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}SessionManager()}{\string~SessionManager()}}
+{\footnotesize\ttfamily \label{classSessionManager_acf9860a47b8c54e5f13210715e784621} 
+Session\+Manager::\+\texorpdfstring{$\sim$}{\string~}\+Session\+Manager (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Destructor guaranteeing memory cleanup. 
+
+
+
+\label{doc-func-members}
+\Hypertarget{classSessionManager_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classSessionManager_ac4737ce42b43c3baf491514d66accf63}\index{SessionManager@{SessionManager}!closeSession@{closeSession}}
+\index{closeSession@{closeSession}!SessionManager@{SessionManager}}
+\doxysubsubsection{\texorpdfstring{closeSession()}{closeSession()}}
+{\footnotesize\ttfamily \label{classSessionManager_ac4737ce42b43c3baf491514d66accf63} 
+void Session\+Manager::\+close\+Session (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Safely deletes the active image resource and resets the tracking state. 
+
+\Hypertarget{classSessionManager_a5397ebe611127be5f13ce401b2c86894}\index{SessionManager@{SessionManager}!getFilename@{getFilename}}
+\index{getFilename@{getFilename}!SessionManager@{SessionManager}}
+\doxysubsubsection{\texorpdfstring{getFilename()}{getFilename()}}
+{\footnotesize\ttfamily \label{classSessionManager_a5397ebe611127be5f13ce401b2c86894} 
+const std::\+string \& Session\+Manager::\+get\+Filename (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classSessionManager_aedb195d79eaa7ed6d4ff6c00430e5cea}\index{SessionManager@{SessionManager}!isActive@{isActive}}
+\index{isActive@{isActive}!SessionManager@{SessionManager}}
+\doxysubsubsection{\texorpdfstring{isActive()}{isActive()}}
+{\footnotesize\ttfamily \label{classSessionManager_aedb195d79eaa7ed6d4ff6c00430e5cea} 
+bool Session\+Manager::\+is\+Active (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classSessionManager_a89570b816473332398db01b3da81ec04}\index{SessionManager@{SessionManager}!openSession@{openSession}}
+\index{openSession@{openSession}!SessionManager@{SessionManager}}
+\doxysubsubsection{\texorpdfstring{openSession()}{openSession()}}
+{\footnotesize\ttfamily \label{classSessionManager_a89570b816473332398db01b3da81ec04} 
+void Session\+Manager::\+open\+Session (\begin{DoxyParamCaption}\item[{const std::\+string \&}]{filepath}{}\end{DoxyParamCaption})}
+
+
+
+Requests an image from the factory and takes ownership of its allocation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filepath} & The source path of the target image file. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classSessionManager_ae13bd61f8819d0d6dc8b95347c972327}\index{SessionManager@{SessionManager}!operator=@{operator=}}
+\index{operator=@{operator=}!SessionManager@{SessionManager}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \label{classSessionManager_ae13bd61f8819d0d6dc8b95347c972327} 
+\doxymbox{\hyperlink{classSessionManager}{Session\+Manager}} \& Session\+Manager::\+operator= (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{classSessionManager}{Session\+Manager}} \&}]{other}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\Hypertarget{classSessionManager_a3073b753a642355b5482d836baa9bdfe}\index{SessionManager@{SessionManager}!saveSession@{saveSession}}
+\index{saveSession@{saveSession}!SessionManager@{SessionManager}}
+\doxysubsubsection{\texorpdfstring{saveSession()}{saveSession()}}
+{\footnotesize\ttfamily \label{classSessionManager_a3073b753a642355b5482d836baa9bdfe} 
+void Session\+Manager::\+save\+Session (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Serializes the active image back to its original file path. 
+
+\Hypertarget{classSessionManager_a255a83cac467a93adfefe523c869f54a}\index{SessionManager@{SessionManager}!saveSessionAs@{saveSessionAs}}
+\index{saveSessionAs@{saveSessionAs}!SessionManager@{SessionManager}}
+\doxysubsubsection{\texorpdfstring{saveSessionAs()}{saveSessionAs()}}
+{\footnotesize\ttfamily \label{classSessionManager_a255a83cac467a93adfefe523c869f54a} 
+void Session\+Manager::\+save\+Session\+As (\begin{DoxyParamCaption}\item[{const std::\+string \&}]{filepath}{}\end{DoxyParamCaption})}
+
+
+
+Serializes the active image to a new location and updates the tracking file path. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filepath} & The new destination path on disk. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}
+\item 
+Raster-\/\+Image-\/\+Manipulation/\+\+Session/\+\doxymbox{\hyperlink{SessionManager_8hpp}{Session\+Manager.\+hpp}}\item 
+Raster-\/\+Image-\/\+Manipulation/\+\+Session/\+\doxymbox{\hyperlink{SessionManager_8cpp}{Session\+Manager.\+cpp}}\end{DoxyCompactItemize}

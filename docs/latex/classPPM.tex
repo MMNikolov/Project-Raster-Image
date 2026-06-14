@@ -21,15 +21,21 @@ Collaboration diagram for PPM:\+
 \begin{DoxyCompactItemize}
 \item 
 \doxymbox{\hyperlink{classPPM_ada118c725a1b103ac52d5eab43e7040a}{PPM}} (const std::\+string \&filename)
-\begin{DoxyCompactList}\small\item\em Constructor that opens and parses a \doxylink{classPPM}{PPM} file from disk. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Constructor that opens, validates, and parses a \doxylink{classPPM}{PPM} file from disk. \end{DoxyCompactList}\item 
 void \doxymbox{\hyperlink{classPPM_a5de30ddbc26ddc98aeb42f7b188c84b0}{save}} (const std::\+string \&filename) const override
-\begin{DoxyCompactList}\small\item\em Saves the image to disk. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Saves the current color image state back to disk in P3 ASCII format. \end{DoxyCompactList}\item 
 \doxymbox{\hyperlink{classPPM}{PPM}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{classPPM_a3c567ffbe74a7f6b174460f21b3e06a1}{clone}} () const override
-\begin{DoxyCompactList}\small\item\em Creates a deep copy of the image (Prototype pattern). \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Clones the current \doxylink{classPPM}{PPM} object using a deep copy (Prototype Pattern). \end{DoxyCompactList}\item 
 void \doxymbox{\hyperlink{classPPM_a2183b4fcb9cc962e0be5cec9a8f1df0c}{print\+Session\+Info}} () const override
-\begin{DoxyCompactList}\small\item\em Prints format-\/specific information for the session list. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Prints the session state and format details exactly as required by the specification. \end{DoxyCompactList}\item 
 bool \doxymbox{\hyperlink{classPPM_a6277b4084b70e97d19ad2c1a13d0aa76}{is\+Grayscale}} () const override
-\begin{DoxyCompactList}\small\item\em Checks if the image contains only grayscale pixels. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Scans individual pixels to determine if the active image is monochrome or gray. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{classPPM_a5ac0e83dd0da3ab1905c08b38b4613c4}{make\+Negative}} () override
+\begin{DoxyCompactList}\small\item\em Inverts the \doxylink{classPPM}{PPM} color intensity channels (MAX\+\_\+\+VALUE -\/ r/\+g/\+b). \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{classPPM_aece890249ac4624317814f93232ed348}{make\+Grayscale}} () override
+\begin{DoxyCompactList}\small\item\em finds the average of the three sums and assigns a single value; \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{classPPM_a22cccdf8810877675c5894d89f2ed032}{make\+Monochrome}} () override
+\begin{DoxyCompactList}\small\item\em Makes the \doxylink{classPPM}{PPM} monochrome depending on if the pixel has a higher color channel intensity than 127. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \doxymbox{\hyperlink{classImage}{Image}}}
 \begin{DoxyCompactItemize}
 \item 
@@ -46,6 +52,11 @@ const std::\+vector$<$ \doxymbox{\hyperlink{structPixel}{Pixel}} $>$ \& \doxymbo
 std::\+vector$<$ \doxymbox{\hyperlink{structPixel}{Pixel}} $>$ \& \doxymbox{\hyperlink{classImage_a50610f29c821ee2b8bf53546e0e89b21}{get\+Pixels}} ()
 \begin{DoxyCompactList}\small\item\em Provides mutable access to the pixel data. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Static Public Member Functions inherited from \doxymbox{\hyperlink{classImage}{Image}}}
+\begin{DoxyCompactItemize}
+\item 
+static void \doxymbox{\hyperlink{classImage_a9951c40759db74a5536f88a033bf725f}{skip\+Comments}} (std::\+ifstream \&filename)
+\begin{DoxyCompactList}\small\item\em Helper function to skip Netpbm style comment lines during file parsing. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Protected Attributes inherited from \doxymbox{\hyperlink{classImage}{Image}}}
 \begin{DoxyCompactItemize}
 \item 
@@ -62,6 +73,8 @@ std::\+vector$<$ \doxymbox{\hyperlink{structPixel}{Pixel}} $>$ \doxymbox{\hyperl
 \doxysubsection{Detailed Description}
 Concrete class handling P3 ASCII Portable Pixmap files. 
 
+Manages full 24-\/bit color processing by storing distinct individual Red, Green, and Blue color channel data streams for every coordinate mapped. 
+
 \label{doc-constructors}
 \Hypertarget{classPPM_doc-constructors}
 \doxysubsection{Constructor \& Destructor Documentation}
@@ -73,13 +86,18 @@ PPM::\+\+PPM (\begin{DoxyParamCaption}\item[{const std::\+string \&}]{filename}{
 
 
 
-Constructor that opens and parses a \doxylink{classPPM}{PPM} file from disk. 
+Constructor that opens, validates, and parses a \doxylink{classPPM}{PPM} file from disk. 
 
 
 \begin{DoxyParams}{Parameters}
 {\em filename} & Path to the source .ppm file. \\
 \hline
 \end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std::\+invalid\+\_\+argument} & If the file stream fails or channel data is out of bounds. \\
+\hline
+\end{DoxyExceptions}
 
 
 \label{doc-func-members}
@@ -93,10 +111,10 @@ Constructor that opens and parses a \doxylink{classPPM}{PPM} file from disk.
 
 
 
-Creates a deep copy of the image (Prototype pattern). 
+Clones the current \doxylink{classPPM}{PPM} object using a deep copy (Prototype Pattern). 
 
 \begin{DoxyReturn}{Returns}
-Pointer to the newly cloned \doxylink{classImage}{Image} object. 
+A pointer to the newly allocated polymorphic \doxylink{classImage}{Image} object. 
 \end{DoxyReturn}
 
 
@@ -110,14 +128,56 @@ bool PPM::\+is\+Grayscale (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) c
 
 
 
-Checks if the image contains only grayscale pixels. 
+Scans individual pixels to determine if the active image is monochrome or gray. 
 
-\begin{DoxyReturn}{Returns}
-True if grayscale, false otherwise. 
+Runs a evaluation pass through the pixel sequence. Returns true only if every single color coordinate has an identical mix across its R, G, and B components. \begin{DoxyReturn}{Returns}
+True if the image contains exclusively grayscale shades, false if true color is present. 
 \end{DoxyReturn}
 
 
 Implements \doxymbox{\hyperlink{classImage_aa147c240bc2e886751768b2a3e38ff66}{Image}}.
+
+\Hypertarget{classPPM_aece890249ac4624317814f93232ed348}\index{PPM@{PPM}!makeGrayscale@{makeGrayscale}}
+\index{makeGrayscale@{makeGrayscale}!PPM@{PPM}}
+\doxysubsubsection{\texorpdfstring{makeGrayscale()}{makeGrayscale()}}
+{\footnotesize\ttfamily \label{classPPM_aece890249ac4624317814f93232ed348} 
+void PPM::\+make\+Grayscale (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+finds the average of the three sums and assigns a single value; 
+
+
+
+Implements \doxymbox{\hyperlink{classImage_a1b903992477c59996ecbdc66531a6217}{Image}}.
+
+\Hypertarget{classPPM_a22cccdf8810877675c5894d89f2ed032}\index{PPM@{PPM}!makeMonochrome@{makeMonochrome}}
+\index{makeMonochrome@{makeMonochrome}!PPM@{PPM}}
+\doxysubsubsection{\texorpdfstring{makeMonochrome()}{makeMonochrome()}}
+{\footnotesize\ttfamily \label{classPPM_a22cccdf8810877675c5894d89f2ed032} 
+void PPM::\+make\+Monochrome (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Makes the \doxylink{classPPM}{PPM} monochrome depending on if the pixel has a higher color channel intensity than 127. 
+
+
+
+Implements \doxymbox{\hyperlink{classImage_af09ea6ef3e5bb5fe7f760719dbdc5113}{Image}}.
+
+\Hypertarget{classPPM_a5ac0e83dd0da3ab1905c08b38b4613c4}\index{PPM@{PPM}!makeNegative@{makeNegative}}
+\index{makeNegative@{makeNegative}!PPM@{PPM}}
+\doxysubsubsection{\texorpdfstring{makeNegative()}{makeNegative()}}
+{\footnotesize\ttfamily \label{classPPM_a5ac0e83dd0da3ab1905c08b38b4613c4} 
+void PPM::\+make\+Negative (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Inverts the \doxylink{classPPM}{PPM} color intensity channels (MAX\+\_\+\+VALUE -\/ r/\+g/\+b). 
+
+
+
+Implements \doxymbox{\hyperlink{classImage_a06ae731d5b7c0e00791f561ed98d8d69}{Image}}.
 
 \Hypertarget{classPPM_a2183b4fcb9cc962e0be5cec9a8f1df0c}\index{PPM@{PPM}!printSessionInfo@{printSessionInfo}}
 \index{printSessionInfo@{printSessionInfo}!PPM@{PPM}}
@@ -127,7 +187,7 @@ void PPM::\+print\+Session\+Info (\begin{DoxyParamCaption}{}{}\end{DoxyParamCapt
 
 
 
-Prints format-\/specific information for the session list. 
+Prints the session state and format details exactly as required by the specification. 
 
 
 
@@ -141,11 +201,11 @@ void PPM::\+save (\begin{DoxyParamCaption}\item[{const std::\+string \&}]{filena
 
 
 
-Saves the image to disk. 
+Saves the current color image state back to disk in P3 ASCII format. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em filename} & The path where the new image should be saved. \\
+{\em filename} & Path where the file will be written. \\
 \hline
 \end{DoxyParams}
 

@@ -28,6 +28,12 @@ virtual void \doxymbox{\hyperlink{classImage_a997a88ec456aa24fd42660f9d4ba61cc}{
 \begin{DoxyCompactList}\small\item\em Prints format-\/specific information for the session list. \end{DoxyCompactList}\item 
 virtual bool \doxymbox{\hyperlink{classImage_aa147c240bc2e886751768b2a3e38ff66}{is\+Grayscale}} () const =0
 \begin{DoxyCompactList}\small\item\em Checks if the image contains only grayscale pixels. \end{DoxyCompactList}\item 
+virtual void \doxymbox{\hyperlink{classImage_a06ae731d5b7c0e00791f561ed98d8d69}{make\+Negative}} ()=0
+\begin{DoxyCompactList}\small\item\em Inverts the color intensities of the active image pixels. \end{DoxyCompactList}\item 
+virtual void \doxymbox{\hyperlink{classImage_a1b903992477c59996ecbdc66531a6217}{make\+Grayscale}} ()=0
+\begin{DoxyCompactList}\small\item\em Makes the image in the given session grayscale. \end{DoxyCompactList}\item 
+virtual void \doxymbox{\hyperlink{classImage_af09ea6ef3e5bb5fe7f760719dbdc5113}{make\+Monochrome}} ()=0
+\begin{DoxyCompactList}\small\item\em Makes the image in the given session monochrome. \end{DoxyCompactList}\item 
 int \doxymbox{\hyperlink{classImage_a36bcae4838228d574738249a87dc4464}{get\+Width}} () const
 \begin{DoxyCompactList}\small\item\em Retrieves the image width. \end{DoxyCompactList}\item 
 int \doxymbox{\hyperlink{classImage_a1cd7587f88b6932b5269051d1ba08ff9}{get\+Height}} () const
@@ -36,6 +42,11 @@ const std::\+vector$<$ \doxymbox{\hyperlink{structPixel}{Pixel}} $>$ \& \doxymbo
 \begin{DoxyCompactList}\small\item\em Provides read-\/only access to the pixel data. \end{DoxyCompactList}\item 
 std::\+vector$<$ \doxymbox{\hyperlink{structPixel}{Pixel}} $>$ \& \doxymbox{\hyperlink{classImage_a50610f29c821ee2b8bf53546e0e89b21}{get\+Pixels}} ()
 \begin{DoxyCompactList}\small\item\em Provides mutable access to the pixel data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \doxymbox{\hyperlink{classImage_a9951c40759db74a5536f88a033bf725f}{skip\+Comments}} (std::\+ifstream \&filename)
+\begin{DoxyCompactList}\small\item\em Helper function to skip Netpbm style comment lines during file parsing. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -61,7 +72,7 @@ This class represents the polymorphic interface for all specific image formats (
 \index{Image@{Image}!Image@{Image}}
 \doxysubsubsection{\texorpdfstring{Image()}{Image()}}
 {\footnotesize\ttfamily \label{classImage_ab5ca0ae10da321c9e443734a87dee15e} 
-Image::\+\+Image (\begin{DoxyParamCaption}\item[{int}]{w}{, }\item[{int}]{h}{, }\item[{const std::\+string \&}]{filename}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+Image::\+\+Image (\begin{DoxyParamCaption}\item[{int}]{w}{, }\item[{int}]{h}{, }\item[{const std::\+string \&}]{filename}{}\end{DoxyParamCaption})}
 
 
 
@@ -177,6 +188,48 @@ True if grayscale, false otherwise.
 
 Implemented in \doxymbox{\hyperlink{classPBM_a54b2255440d2e7d20222d659093ff4ac}{PBM}}, \doxymbox{\hyperlink{classPGM_a0cfb7b2db240ad1c66ec8719fac443d3}{PGM}}, and \doxymbox{\hyperlink{classPPM_a6277b4084b70e97d19ad2c1a13d0aa76}{PPM}}.
 
+\Hypertarget{classImage_a1b903992477c59996ecbdc66531a6217}\index{Image@{Image}!makeGrayscale@{makeGrayscale}}
+\index{makeGrayscale@{makeGrayscale}!Image@{Image}}
+\doxysubsubsection{\texorpdfstring{makeGrayscale()}{makeGrayscale()}}
+{\footnotesize\ttfamily \label{classImage_a1b903992477c59996ecbdc66531a6217} 
+virtual void Image::\+make\+Grayscale (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Makes the image in the given session grayscale. 
+
+
+
+Implemented in \doxymbox{\hyperlink{classPBM_abdcca87870a9f002f4c056f67b96ecb7}{PBM}}, \doxymbox{\hyperlink{classPGM_a962272f69dd50f108d98dbb30285b37b}{PGM}}, and \doxymbox{\hyperlink{classPPM_aece890249ac4624317814f93232ed348}{PPM}}.
+
+\Hypertarget{classImage_af09ea6ef3e5bb5fe7f760719dbdc5113}\index{Image@{Image}!makeMonochrome@{makeMonochrome}}
+\index{makeMonochrome@{makeMonochrome}!Image@{Image}}
+\doxysubsubsection{\texorpdfstring{makeMonochrome()}{makeMonochrome()}}
+{\footnotesize\ttfamily \label{classImage_af09ea6ef3e5bb5fe7f760719dbdc5113} 
+virtual void Image::\+make\+Monochrome (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Makes the image in the given session monochrome. 
+
+
+
+Implemented in \doxymbox{\hyperlink{classPBM_a072fd036e2a81b9a329ad7e3b7b4c288}{PBM}}, \doxymbox{\hyperlink{classPGM_a22dd96d2741714e8b0dc44e512db61c6}{PGM}}, and \doxymbox{\hyperlink{classPPM_a22cccdf8810877675c5894d89f2ed032}{PPM}}.
+
+\Hypertarget{classImage_a06ae731d5b7c0e00791f561ed98d8d69}\index{Image@{Image}!makeNegative@{makeNegative}}
+\index{makeNegative@{makeNegative}!Image@{Image}}
+\doxysubsubsection{\texorpdfstring{makeNegative()}{makeNegative()}}
+{\footnotesize\ttfamily \label{classImage_a06ae731d5b7c0e00791f561ed98d8d69} 
+virtual void Image::\+make\+Negative (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Inverts the color intensities of the active image pixels. 
+
+
+
+Implemented in \doxymbox{\hyperlink{classPBM_a1471cc00dfda2b2ec5deb8803523df1f}{PBM}}, \doxymbox{\hyperlink{classPGM_a1b7868211654b881a9bda9e554f795ce}{PGM}}, and \doxymbox{\hyperlink{classPPM_a5ac0e83dd0da3ab1905c08b38b4613c4}{PPM}}.
+
 \Hypertarget{classImage_a997a88ec456aa24fd42660f9d4ba61cc}\index{Image@{Image}!printSessionInfo@{printSessionInfo}}
 \index{printSessionInfo@{printSessionInfo}!Image@{Image}}
 \doxysubsubsection{\texorpdfstring{printSessionInfo()}{printSessionInfo()}}
@@ -210,6 +263,21 @@ Saves the image to disk.
 
 Implemented in \doxymbox{\hyperlink{classPBM_aa945ad4a32abbe9a488e0805ec0d2e94}{PBM}}, \doxymbox{\hyperlink{classPGM_a4e60155c449379da91abe74364a9b748}{PGM}}, and \doxymbox{\hyperlink{classPPM_a5de30ddbc26ddc98aeb42f7b188c84b0}{PPM}}.
 
+\Hypertarget{classImage_a9951c40759db74a5536f88a033bf725f}\index{Image@{Image}!skipComments@{skipComments}}
+\index{skipComments@{skipComments}!Image@{Image}}
+\doxysubsubsection{\texorpdfstring{skipComments()}{skipComments()}}
+{\footnotesize\ttfamily \label{classImage_a9951c40759db74a5536f88a033bf725f} 
+void Image::\+skip\+Comments (\begin{DoxyParamCaption}\item[{std::\+ifstream \&}]{filename}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Helper function to skip Netpbm style comment lines during file parsing. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & The active input file stream. \\
+\hline
+\end{DoxyParams}
 
 
 \label{doc-variable-members}
@@ -241,6 +309,7 @@ int Image::\+width\hspace{0.3cm}{\ttfamily [protected]}}
 
 \doxylink{classImage}{Image} width in pixels 
 
-The documentation for this class was generated from the following file:\+\begin{DoxyCompactItemize}
+The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}
 \item 
-Raster-\/\+Image-\/\+Manipulation/\+\doxymbox{\hyperlink{Image_8hpp}{Image.\+hpp}}\end{DoxyCompactItemize}
+Raster-\/\+Image-\/\+Manipulation/\+\+Image/\+\doxymbox{\hyperlink{Image_8hpp}{Image.\+hpp}}\item 
+Raster-\/\+Image-\/\+Manipulation/\+\+Image/\+\doxymbox{\hyperlink{Image_8cpp}{Image.\+cpp}}\end{DoxyCompactItemize}

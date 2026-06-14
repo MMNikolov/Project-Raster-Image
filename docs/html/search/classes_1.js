@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['pbm_0',['PBM',['../classPBM.html',1,'']]],
-  ['pgm_1',['PGM',['../classPGM.html',1,'']]],
-  ['pixel_2',['Pixel',['../structPixel.html',1,'']]],
-  ['ppm_3',['PPM',['../classPPM.html',1,'']]]
+  ['image_0',['Image',['../classImage.html',1,'']]],
+  ['imagefactory_1',['ImageFactory',['../classImageFactory.html',1,'']]]
 ];

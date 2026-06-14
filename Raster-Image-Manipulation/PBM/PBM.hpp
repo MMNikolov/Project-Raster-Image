@@ -51,7 +51,19 @@ public:
      * @return Constantly returns true since monochrome is a subset of grayscale.
      */
     bool isGrayscale() const override; 
-    
+
+    /**
+     * @brief Inverts the black and white fields of the monochrome image.
+     */
+    void makeNegative() override;
+    /**
+     * @brief Does nothing here.
+     */
+    void makeGrayscale() override;
+    /**
+     * @brief Does nothing here.
+     */
+    void makeMonochrome() override;
 };
 
 #endif // PBM_HPP

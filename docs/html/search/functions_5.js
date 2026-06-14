@@ -1,4 +1,7 @@
 var searchData=
 [
-  ['save_0',['save',['../classImage.html#a30662edab526d0e5d611e446e3c55a3b',1,'Image::save()'],['../classPBM.html#aa945ad4a32abbe9a488e0805ec0d2e94',1,'PBM::save()'],['../classPGM.html#a4e60155c449379da91abe74364a9b748',1,'PGM::save()'],['../classPPM.html#a5de30ddbc26ddc98aeb42f7b188c84b0',1,'PPM::save()']]]
+  ['pbm_0',['PBM',['../classPBM.html#a8955dfcb9b0c9117b4b3738951fd3769',1,'PBM']]],
+  ['pgm_1',['PGM',['../classPGM.html#ae32ff656cb739394f5ccd9d5545c672a',1,'PGM']]],
+  ['ppm_2',['PPM',['../classPPM.html#ada118c725a1b103ac52d5eab43e7040a',1,'PPM']]],
+  ['printsessioninfo_3',['printSessionInfo',['../classImage.html#a997a88ec456aa24fd42660f9d4ba61cc',1,'Image::printSessionInfo()'],['../classPBM.html#a49ff63007313e0069249c9b3c2876147',1,'PBM::printSessionInfo()'],['../classPGM.html#ac8c9a8c14305f7a0a38568297ff9184e',1,'PGM::printSessionInfo()'],['../classPPM.html#a2183b4fcb9cc962e0be5cec9a8f1df0c',1,'PPM::printSessionInfo()']]]
 ];

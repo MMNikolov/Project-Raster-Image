@@ -1,0 +1,75 @@
+\doxysection{Raster-\/\+Image-\/\+Manipulation/\+tests/\+\+Test\+Formats\+And\+Factory.cpp File Reference}
+\hypertarget{TestFormatsAndFactory_8cpp}{}\label{TestFormatsAndFactory_8cpp}\index{Raster-\/Image-\/Manipulation/tests/TestFormatsAndFactory.cpp@{Raster-\/Image-\/Manipulation/tests/TestFormatsAndFactory.cpp}}
+
+
+Comprehensive verification framework for image formats and runtime generation.  
+
+
+{\ttfamily \+\#include "{}../\+\+Factory/\+\+Image\+Factory.\+hpp"{}}\newline
+{\ttfamily \+\#include $<$iostream$>$}\newline
+{\ttfamily \+\#include $<$fstream$>$}\newline
+{\ttfamily \+\#include $<$cassert$>$}\newline
+{\ttfamily \+\#include $<$stdexcept$>$}\newline
+Include dependency graph for Test\+Formats\+And\+Factory.\+cpp:\+
+% FIG 0
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{TestFormatsAndFactory_8cpp_a32e682bcb389ebcb4a84501deac7cde8}{write\+Test\+Asset}} (const std::\+string \&path, const std::\+string \&raw\+Data)
+\item 
+void \doxymbox{\hyperlink{TestFormatsAndFactory_8cpp_af5116cc0b5cddaa494f64bfd30df77cb}{run\+Pbm\+Suite}} ()
+\item 
+void \doxymbox{\hyperlink{TestFormatsAndFactory_8cpp_ad2050c40e8f4c49c14fab05071522387}{run\+Pgm\+Suite}} ()
+\item 
+void \doxymbox{\hyperlink{TestFormatsAndFactory_8cpp_a952691c7de8a5a89ce11e97ae4e0d6ed}{run\+Ppm\+Suite}} ()
+\item 
+void \doxymbox{\hyperlink{TestFormatsAndFactory_8cpp_a899e9ef2a53b01227c6f1b302b4503f5}{run\+Exception\+Suite}} ()
+\item 
+int \doxymbox{\hyperlink{TestFormatsAndFactory_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Comprehensive verification framework for image formats and runtime generation. 
+
+
+
+\label{doc-func-members}
+\Hypertarget{TestFormatsAndFactory_8cpp_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{TestFormatsAndFactory_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\index{TestFormatsAndFactory.cpp@{TestFormatsAndFactory.cpp}!main@{main}}
+\index{main@{main}!TestFormatsAndFactory.cpp@{TestFormatsAndFactory.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{TestFormatsAndFactory_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4} 
+int main (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{TestFormatsAndFactory_8cpp_a899e9ef2a53b01227c6f1b302b4503f5}\index{TestFormatsAndFactory.cpp@{TestFormatsAndFactory.cpp}!runExceptionSuite@{runExceptionSuite}}
+\index{runExceptionSuite@{runExceptionSuite}!TestFormatsAndFactory.cpp@{TestFormatsAndFactory.cpp}}
+\doxysubsubsection{\texorpdfstring{runExceptionSuite()}{runExceptionSuite()}}
+{\footnotesize\ttfamily \label{TestFormatsAndFactory_8cpp_a899e9ef2a53b01227c6f1b302b4503f5} 
+void run\+Exception\+Suite (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{TestFormatsAndFactory_8cpp_af5116cc0b5cddaa494f64bfd30df77cb}\index{TestFormatsAndFactory.cpp@{TestFormatsAndFactory.cpp}!runPbmSuite@{runPbmSuite}}
+\index{runPbmSuite@{runPbmSuite}!TestFormatsAndFactory.cpp@{TestFormatsAndFactory.cpp}}
+\doxysubsubsection{\texorpdfstring{runPbmSuite()}{runPbmSuite()}}
+{\footnotesize\ttfamily \label{TestFormatsAndFactory_8cpp_af5116cc0b5cddaa494f64bfd30df77cb} 
+void run\+Pbm\+Suite (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{TestFormatsAndFactory_8cpp_ad2050c40e8f4c49c14fab05071522387}\index{TestFormatsAndFactory.cpp@{TestFormatsAndFactory.cpp}!runPgmSuite@{runPgmSuite}}
+\index{runPgmSuite@{runPgmSuite}!TestFormatsAndFactory.cpp@{TestFormatsAndFactory.cpp}}
+\doxysubsubsection{\texorpdfstring{runPgmSuite()}{runPgmSuite()}}
+{\footnotesize\ttfamily \label{TestFormatsAndFactory_8cpp_ad2050c40e8f4c49c14fab05071522387} 
+void run\+Pgm\+Suite (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{TestFormatsAndFactory_8cpp_a952691c7de8a5a89ce11e97ae4e0d6ed}\index{TestFormatsAndFactory.cpp@{TestFormatsAndFactory.cpp}!runPpmSuite@{runPpmSuite}}
+\index{runPpmSuite@{runPpmSuite}!TestFormatsAndFactory.cpp@{TestFormatsAndFactory.cpp}}
+\doxysubsubsection{\texorpdfstring{runPpmSuite()}{runPpmSuite()}}
+{\footnotesize\ttfamily \label{TestFormatsAndFactory_8cpp_a952691c7de8a5a89ce11e97ae4e0d6ed} 
+void run\+Ppm\+Suite (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{TestFormatsAndFactory_8cpp_a32e682bcb389ebcb4a84501deac7cde8}\index{TestFormatsAndFactory.cpp@{TestFormatsAndFactory.cpp}!writeTestAsset@{writeTestAsset}}
+\index{writeTestAsset@{writeTestAsset}!TestFormatsAndFactory.cpp@{TestFormatsAndFactory.cpp}}
+\doxysubsubsection{\texorpdfstring{writeTestAsset()}{writeTestAsset()}}
+{\footnotesize\ttfamily \label{TestFormatsAndFactory_8cpp_a32e682bcb389ebcb4a84501deac7cde8} 
+void write\+Test\+Asset (\begin{DoxyParamCaption}\item[{const std::\+string \&}]{path}{, }\item[{const std::\+string \&}]{raw\+Data}{}\end{DoxyParamCaption})}
+

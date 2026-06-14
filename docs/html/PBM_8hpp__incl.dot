@@ -6,7 +6,7 @@ digraph "Raster-Image-Manipulation/PBM/PBM.hpp"
   node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
   Node1 [id="Node000001",label="Raster-Image-Manipulation\l/PBM/PBM.hpp",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="Defines the concrete PBM (Portable BitMap) image format parser and serializer."];
   Node1 -> Node2 [id="edge1_Node000001_Node000002",color="steelblue1",style="solid",tooltip=" "];
-  Node2 [id="Node000002",label="../Image.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$Image_8hpp.html",tooltip="Defines the abstract base class for all raster image formats."];
+  Node2 [id="Node000002",label="../Image/Image.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$Image_8hpp.html",tooltip="Defines the abstract base class for all raster image formats."];
   Node2 -> Node3 [id="edge2_Node000002_Node000003",color="steelblue1",style="solid",tooltip=" "];
   Node3 [id="Node000003",label="vector",height=0.2,width=0.4,color="grey60", fillcolor="#E0E0E0", style="filled",tooltip=" "];
   Node2 -> Node4 [id="edge3_Node000002_Node000004",color="steelblue1",style="solid",tooltip=" "];
@@ -14,7 +14,7 @@ digraph "Raster-Image-Manipulation/PBM/PBM.hpp"
   Node2 -> Node5 [id="edge4_Node000002_Node000005",color="steelblue1",style="solid",tooltip=" "];
   Node5 [id="Node000005",label="fstream",height=0.2,width=0.4,color="grey60", fillcolor="#E0E0E0", style="filled",tooltip=" "];
   Node2 -> Node6 [id="edge5_Node000002_Node000006",color="steelblue1",style="solid",tooltip=" "];
-  Node6 [id="Node000006",label="Pixel.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$Pixel_8hpp.html",tooltip="Defines the atomic Pixel structure used across the image manipulation project."];
+  Node6 [id="Node000006",label="../Pixel.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$Pixel_8hpp.html",tooltip="Defines the atomic Pixel structure used across the image manipulation project."];
   Node6 -> Node7 [id="edge6_Node000006_Node000007",color="steelblue1",style="solid",tooltip=" "];
   Node7 [id="Node000007",label="cstdint",height=0.2,width=0.4,color="grey60", fillcolor="#E0E0E0", style="filled",tooltip=" "];
   Node1 -> Node8 [id="edge7_Node000001_Node000008",color="steelblue1",style="solid",tooltip=" "];

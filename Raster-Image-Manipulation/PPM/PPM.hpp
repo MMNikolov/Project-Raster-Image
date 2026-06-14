@@ -54,6 +54,19 @@ public:
      * @return True if the image contains exclusively grayscale shades, false if true color is present.
      */
     bool isGrayscale() const override;
+
+    /**
+     * @brief Inverts the PPM color intensity channels (MAX_VALUE - r/g/b)
+     */
+    void makeNegative() override;
+    /**
+     * @brief finds the average of the three sums and assigns a single value;
+     */
+    void makeGrayscale() override;
+    /**
+     * @brief Makes the PPM monochrome depending on if the pixel has a higher color channel intensity than 127.
+     */
+    void makeMonochrome() override;
     
 private:
     int maxColorValue; /**< Maximum color intensity range parsed from the header */

@@ -1,77 +1,156 @@
 #include "SessionManager.hpp"
 
-//the correct use of std::string needs to be an empty string, not like the char* = nullptr
 SessionManager::SessionManager()
-    : currentImage(nullptr), currentFilename(""), isSessionActive(false)
-{}
+    : currentActiveId(-1), idCounter(1), activeSessions()
+{
+}
 
 SessionManager::~SessionManager()
 {
-    if (currentImage != nullptr)
-    {
-        free();
-    }
-}
-
-void SessionManager::openSession(const std::string &filepath)
-{
-    if (isSessionActive)
-    {
-        throw std::invalid_argument("Cannot open another session when the current one is in progress!");
-    }
-    
-    this->currentImage = ImageFactory::createImage(filepath);
-    //everything is good here, because std::string handles its copy ctor :D
-    this->currentFilename = filepath;
-    this->isSessionActive = true;
-
-    std::cout << "Succesdully opened the session" << this->currentFilename << '\n';
-}
-
-void SessionManager::closeSession()
-{
-    if (!isSessionActive)
-    {
-        throw std::invalid_argument("There is no current session to close :D");
-    }
-    
     free();
-
-    this->currentImage = nullptr;
-    this->currentFilename = "";
-    this->isSessionActive = false;
-
-    std::cout << "Succesdully closed the session" << this->currentFilename << '\n';
 }
 
-void SessionManager::saveSession() const
+void SessionManager::loadSession(const std::vector<std::string> &filepaths)
 {
-    if (!isSessionActive)
+    if (filepaths.empty())
     {
-        throw std::invalid_argument("Cant save a session when there is nothing in it :D");
+        throw std::invalid_argument("Cant have a load session functionality if there isnt a file path");
     }
-    
-    //polymorphic save
-    this->currentImage->save(this->currentFilename);
 
-    std::cout << "Succesdully saved (default) the session" << this->currentFilename << '\n';
+    Session *newSession = new Session(idCounter);
+    size_t filepathsCount = filepaths.size();
+
+    try
+    {
+        for (size_t i = 0; i < filepathsCount; i++)
+        {
+            Image *img = ImageFactory::createImage(filepaths[i]);
+            newSession->addImage(img);
+        }
+    }
+    catch (const std::exception &e)
+    {
+        // we are doing a rethrow to delete the dynamic memory safely and then rethrow the exception to catch it again :D
+        delete newSession;
+        throw;
+    }
+
+    activeSessions.push_back(newSession);
+    std::cout << "Session with ID: " << idCounter << " started\n";
+
+    this->currentActiveId = idCounter;
+    idCounter++;
 }
 
-void SessionManager::saveSessionAs(const std::string &filepath)
+void SessionManager::switchSession(int sessionId)
 {
-    if (!isSessionActive)
+    if (findSessionIndex(sessionId) == -1)
     {
-        throw std::invalid_argument("Cant save a session when there is nothing in it :D");
+        throw std::invalid_argument("Couldnt find the session id");
     }
-    
-    this->currentImage->save(filepath);
-    // Once again the copy ctor of the std::string handles the situation
-    this->currentFilename = filepath;
 
-    std::cout << "Succesdully saved (by FilePath) the session" << this->currentFilename << '\n';
+    this->currentActiveId = sessionId;
+    std::cout << "Switched active focus to session " << sessionId << "\n";
+}
+
+void SessionManager::closeSessionById(int sessionId)
+{
+    int index = findSessionIndex(sessionId);
+    if (index == -1)
+    {
+        throw std::invalid_argument("Couldnt find the session id");
+    }
+
+    delete activeSessions[index];
+    activeSessions.erase(activeSessions.begin() + index);
+
+    if (this->currentActiveId == sessionId)
+    {
+        if (!activeSessions.empty())
+        {
+            this->currentActiveId = activeSessions[0]->getId();
+            std::cout << "Active focus automatically shifted to session " << this->currentActiveId << "\n";
+        }
+        else
+        {
+            this->currentActiveId = -1;
+        }
+    }
+    std::cout << "Session " << sessionId << " closed successfully.\n";
+}
+
+void SessionManager::makeNegative()
+{
+    if (this->currentActiveId == -1)
+    {
+        throw std::invalid_argument("Cant make somehing negative if it isnt there");
+    }
+
+    int index = findSessionIndex(this->currentActiveId);
+    this->activeSessions[index]->makeNegative();
+}
+
+void SessionManager::makeGrayscale()
+{
+    if (this->currentActiveId == -1)
+    {
+        throw std::invalid_argument("Cant make somehing grayscale if it isnt there");
+    }
+
+    int index = findSessionIndex(this->currentActiveId);
+    this->activeSessions[index]->makeGrayscale();
+}
+
+void SessionManager::makeMonochrome()
+{
+    if (this->currentActiveId == -1)
+    {
+        throw std::invalid_argument("Cant make somehing monochrome if it isnt there");
+    }
+
+    int index = findSessionIndex(this->currentActiveId);
+    this->activeSessions[index]->makeMonochrome();
+}
+
+void SessionManager::printCurrentSessionInfo() const
+{
+    if (this->currentActiveId == -1)
+    {
+        std::cout << "No active sessions running in workspace engine.\n";
+        return;
+    }
+
+    int index = findSessionIndex(this->currentActiveId);
+    std::cout << "Files in session with ID 1:\n";
+    this->activeSessions[index]->printSessionInfo();
+}
+
+int SessionManager::findSessionIndex(int sessionId) const
+{
+    if (sessionId < 0)
+    {
+        throw std::invalid_argument("Cant have a sessionId that is lower then 0");
+    }
+
+    size_t count = this->activeSessions.size();
+    for (size_t i = 0; i < count; i++)
+    {
+        if (this->activeSessions[i]->getId() == sessionId)
+        {
+            return static_cast<int>(i);
+        }
+    }
+
+    return -1;
 }
 
 void SessionManager::free()
 {
-    delete this->currentImage;
+    size_t count = activeSessions.size();
+
+    for (size_t i = 0; i < count; i++)
+    {
+        delete this->activeSessions[i];
+    }
+    activeSessions.clear();
 }

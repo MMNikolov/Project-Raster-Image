@@ -107,7 +107,7 @@ PBM *PBM::clone() const
 
 void PBM::printSessionInfo() const
 {
-    std::cout << originalFilename << "\n portable bitmap format \n";
+    std::cout << originalFilename << " portable bitmap format \n";
 }
 
 bool PBM::isGrayscale() const

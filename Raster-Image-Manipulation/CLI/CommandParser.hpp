@@ -1,6 +1,6 @@
 /**
  * @file CommandParser.hpp
- * @brief Defines the interactive command-line interface parser for the image engine.
+ * @brief Defines the interactive command-line interface parser for the multi-session image engine.
  */
 
 #ifndef COMMAND_PARSER_HPP
@@ -10,23 +10,23 @@
 #include <sstream>
 
 /**
- * @brief Handles user console input, tokenizes input text, and drives the session state machine.
+ * @brief Handles user console input line tokenization and drives the multi-session state machine.
  */
 class CommandParser
 {
 public: 
     /**
-     * @brief Constructor initializing the command engine subsystem.
+     * @brief Constructor initializing the command engine interface.
      */
     CommandParser();
 
     /**
-     * @brief Launches the infinite terminal line processing loop.
+     * @brief Launches the main text processing console loop.
      */
     void run();
 
 private:
-    SessionManager session; /**< The central state manager holding active image resources */
+    SessionManager manager; /**< The global session registry coordinating active tabs */
 };
 
 #endif // COMMAND_PARSER_HPP

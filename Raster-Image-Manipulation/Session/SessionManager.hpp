@@ -1,67 +1,66 @@
 /**
  * @file SessionManager.hpp
- * @brief Handles active engine state processing and image lifecycle ownership.
+ * @brief Coordinates multiple concurrent image processing workspaces and routes user commands.
  */
 
 #ifndef SESSION_MANAGER_HPP
 #define SESSION_MANAGER_HPP
 
-#include "../Image/Image.hpp"
-#include "../Factory/ImageFactory.hpp"
+#include "Session.hpp"
 
 class SessionManager
 {
 public:
     /**
-     * @brief Constructor initializing default inactive states.
+     * @brief Constructor initializing the session registry with an inactive default state.
      */
     SessionManager();
 
+    /**
+     * @brief Destructor guaranteeing deallocation of all active sessions and their images.
+     */
+    ~SessionManager();
+
+    // Disable copy semantics to protect ownership of deep session pointer buffers
     SessionManager(const SessionManager& other) = delete;
     SessionManager& operator=(const SessionManager& other) = delete;
 
     /**
-     * @brief Destructor guaranteeing memory cleanup.
+     * @brief Spawns a new Session container, loads all target file paths, and switches focus to it.
+     * @param filepaths List of strings representing paths to the target images.
      */
-    ~SessionManager();
-
-    //METHODS
+    void loadSession(const std::vector<std::string>& filepaths);
 
     /**
-     * @brief Requests an image from the factory and takes ownership of its allocation.
-     * @param filepath The source path of the target image file.
+     * @brief Shifts active focus to a different loaded session workspace by its unique ID.
+     * @param sessionId The targeted identifier integer.
      */
-    void openSession(const std::string& filepath);
+    void switchSession(int sessionId);
 
     /**
-     * @brief Safely deletes the active image resource and resets the tracking state.
+     * @brief Closes a targeted session workspace and releases all its embedded allocations.
+     * @param sessionId The targeted identifier integer to terminate.
      */
-    void closeSession();
+    void closeSessionById(int sessionId);
 
-    /**
-     * @brief Serializes the active image back to its original file path.
-     */
-    void saveSession() const;
-
-    /**
-     * @brief Serializes the active image to a new location and updates the tracking file path.
-     * @param filepath The new destination path on disk.
-     */
-    void saveSessionAs(const std::string& filepath);
-
-    // GETTERS
-    bool isActive() const { return isSessionActive; }
-    const std::string& getFilename() const { return currentFilename; }
+    // Command Routing Proxies (Forwards execution straight to the currently focused active session)
+    void makeNegative();
+    void makeGrayscale();
+    void makeMonochrome();
+    void printCurrentSessionInfo() const;
 
 private:
-    Image* currentImage;          /**< Polymorphic pointer to the active image resource */
-    std::string currentFilename;  /**< Tracks the current file path on disk */
-    bool isSessionActive;         /**< State flag indicating if a session is currently running */
+    std::vector<Session*> activeSessions; /**< Collection of all concurrent workspace instances */
+    int currentActiveId;                 /**< ID of the session currently focused (-1 if none exist) */
+    int idCounter;                       /**< Monotonically increasing ID ticker generator */
 
 private:
     /**
-     * @brief Internal clean-up routine to delete loaded image resources safely.
+     * @brief Helper to locate the index of a session within the vector tracking array.
+     * @return The index slot if found, or -1 if the ID does not match any open session.
      */
+    int findSessionIndex(int sessionId) const;
+
     void free();
 };
 

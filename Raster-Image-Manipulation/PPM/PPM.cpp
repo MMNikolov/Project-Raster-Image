@@ -98,7 +98,7 @@ PPM *PPM::clone() const
 
 void PPM::printSessionInfo() const
 {
-    std::cout << originalFilename << "\n portable pixmap format \n";
+    std::cout << originalFilename << " portable pixmap format \n";
 }
 
 bool PPM::isGrayscale() const

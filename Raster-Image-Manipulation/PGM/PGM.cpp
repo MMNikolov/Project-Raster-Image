@@ -91,7 +91,7 @@ PGM *PGM::clone() const
 
 void PGM::printSessionInfo() const
 {
-    std::cout << originalFilename << "\n portable greymap format \n";
+    std::cout << originalFilename << " portable greymap format \n";
 }
 
 bool PGM::isGrayscale() const

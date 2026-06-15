@@ -1,8 +1,9 @@
 #include "CommandParser.hpp"
 
 CommandParser::CommandParser()
-    : session()
-{}
+    : manager()
+{
+}
 
 void CommandParser::run()
 {
@@ -14,47 +15,92 @@ void CommandParser::run()
         std::cout << "Image-engine> ";
         if (!std::getline(std::cin, line))
         {
-            break; 
+            break;
         }
 
-        //stringsstream is a beautiful beautiful and beautiful library that allows
-        //string to int conversion
-        //int to string conversion
-        //It lets us take a string and extract data from it (like from cin), It also lets us build strings by inserting data into it (like into cout). 
+        // stringsstream is a beautiful beautiful and beautiful library that allows
+        // string to int conversion
+        // int to string conversion
+        // It lets us take a string and extract data from it (like from cin), It also lets us build strings by inserting data into it (like into cout).
         std::stringstream ss(line);
         std::string command;
         if (!(ss >> command))
         {
             continue;
         }
-        
+
         try
         {
-            if (command == "open")
+            if (command == "load")
             {
-                std::string filepath;
-                if (!(ss >> filepath))
+                std::vector<std::string> filepaths;
+                std::string path;
+                if (ss >> path)
                 {
-                    throw std::invalid_argument("Missing parameter. Synthax open <filepath>");
+                    filepaths.push_back(path);
                 }
-                this->session.openSession(filepath);
+
+                if (filepaths.empty())
+                {
+                    throw std::invalid_argument("Missing parameters. Syntax: load <file1> <file2> ...");
+                }
+                this->manager.loadSession(filepaths);
+            }
+            else if (command == "switch")
+            {
+                int targetId;
+                if (!(ss >> targetId))
+                {
+                    throw std::invalid_argument("Missing the targetId parameter");
+                }
+
+                this->manager.switchSession(targetId);
             }
             else if (command == "close")
             {
-                this->session.closeSession();
-            }
-            else if (command == "save")
-            {
-                this->session.saveSession();
-            }
-            else if (command == "saveas")
-            {
-                std::string filepath;
-                if (!(ss >> filepath))
+                int targetId;
+                if (!(ss >> targetId))
                 {
-                    throw std::invalid_argument("Cant read the filepath where u want to save the file");
+                    throw std::invalid_argument("Missing the targetId parameter");
                 }
-                this->session.saveSessionAs(filepath);
+
+                this->manager.closeSessionById(targetId);
+            }
+            else if (command == "negative")
+            {
+                this->manager.makeNegative();
+            }
+            else if (command == "monochrome")
+            {
+                this->manager.makeMonochrome();
+            }
+            else if (command == "grayscale")
+            {
+                this->manager.makeGrayscale();
+            }
+            else if (command == "list")
+            {
+                std::string subCommand;
+                if (ss >> subCommand && subCommand == "session")
+                {
+                    this->manager.printCurrentSessionInfo();
+                }
+                else
+                {
+                    std::cout << "Unknown command configuration. Did you mean 'list session'?\n";
+                }
+            }
+            else if (command == "session")
+            {
+                std::string subCommand;
+                if (ss >> subCommand && subCommand == "info")
+                {
+                    this->manager.printCurrentSessionInfo();
+                }
+                else
+                {
+                    std::cout << "Unknown command configuration. Did you mean 'session info'?\n";
+                }
             }
             else if (command == "exit")
             {
@@ -66,12 +112,12 @@ void CommandParser::run()
                 std::cout << "Unknown operational command token. Choose from: open, close, save, saveas, exit\n";
             }
         }
-        catch(const std::exception& e)
+        catch (const std::exception &e)
         {
             std::cerr << "Session aborted" << e.what() << '\n';
         }
     }
 }
 
-//sources used:
-// - https://www.geeksforgeeks.org/cpp/stringstream-c-applications/
+// sources used:
+//  - https://www.geeksforgeeks.org/cpp/stringstream-c-applications/

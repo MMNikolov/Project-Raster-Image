@@ -7,5 +7,6 @@ var annotated_dup =
     [ "PGM", "classPGM.html", "classPGM" ],
     [ "Pixel", "structPixel.html", "structPixel" ],
     [ "PPM", "classPPM.html", "classPPM" ],
+    [ "Session", "classSession.html", "classSession" ],
     [ "SessionManager", "classSessionManager.html", "classSessionManager" ]
 ];

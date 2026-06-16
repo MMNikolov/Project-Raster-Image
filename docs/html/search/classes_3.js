@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['sessionmanager_0',['SessionManager',['../classSessionManager.html',1,'']]]
+  ['session_0',['Session',['../classSession.html',1,'']]],
+  ['sessionmanager_1',['SessionManager',['../classSessionManager.html',1,'']]]
 ];

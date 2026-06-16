@@ -1,12 +1,9 @@
 var searchData=
 [
-  ['image_0',['Image',['../classImage.html',1,'Image'],['../classImage.html#ab5ca0ae10da321c9e443734a87dee15e',1,'Image::Image()']]],
-  ['image_2ecpp_1',['Image.cpp',['../Image_8cpp.html',1,'']]],
-  ['image_2ehpp_2',['Image.hpp',['../Image_8hpp.html',1,'']]],
-  ['imagefactory_3',['ImageFactory',['../classImageFactory.html',1,'']]],
-  ['imagefactory_2ecpp_4',['ImageFactory.cpp',['../ImageFactory_8cpp.html',1,'']]],
-  ['imagefactory_2ehpp_5',['ImageFactory.hpp',['../ImageFactory_8hpp.html',1,'']]],
-  ['isactive_6',['isActive',['../classSessionManager.html#aedb195d79eaa7ed6d4ff6c00430e5cea',1,'SessionManager']]],
-  ['isgrayscale_7',['isGrayscale',['../classImage.html#aa147c240bc2e886751768b2a3e38ff66',1,'Image::isGrayscale()'],['../classPBM.html#a54b2255440d2e7d20222d659093ff4ac',1,'PBM::isGrayscale()'],['../classPGM.html#a0cfb7b2db240ad1c66ec8719fac443d3',1,'PGM::isGrayscale()'],['../classPPM.html#a6277b4084b70e97d19ad2c1a13d0aa76',1,'PPM::isGrayscale()']]],
-  ['itterations_5fto_5fread_5fpixel_8',['ITTERATIONS_TO_READ_PIXEL',['../PPM_8hpp.html#a881c11ccd1b1a30c75eb0c04b2ef4969',1,'PPM.hpp']]]
+  ['g_0',['g',['../structPixel.html#aeab078b7768caf273f8fe1daffa50729',1,'Pixel']]],
+  ['getheight_1',['getHeight',['../classImage.html#a1cd7587f88b6932b5269051d1ba08ff9',1,'Image']]],
+  ['getid_2',['getId',['../classSession.html#a1a9232e627b902f1ea1701f92423fddb',1,'Session']]],
+  ['getimages_3',['getImages',['../classSession.html#a6774642c043fc37402c37aee184f6455',1,'Session']]],
+  ['getpixels_4',['getPixels',['../classImage.html#a827e8004aa9b7be85aa0f3003d3c4f86',1,'Image::getPixels() const'],['../classImage.html#a50610f29c821ee2b8bf53546e0e89b21',1,'Image::getPixels()']]],
+  ['getwidth_5',['getWidth',['../classImage.html#a36bcae4838228d574738249a87dc4464',1,'Image']]]
 ];

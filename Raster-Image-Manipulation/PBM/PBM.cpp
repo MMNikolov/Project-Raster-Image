@@ -139,3 +139,24 @@ void PBM::makeMonochrome()
     return;
 }
 //------------------------------
+
+void PBM::rotateLeft()
+{
+    int newWidth = this->height;
+    int newHeight = this->width;
+
+    
+}
+
+void PBM::rotateRight()
+{
+}
+
+void PBM::flipTop()
+{
+}
+
+void PBM::flipLeft()
+{
+
+}

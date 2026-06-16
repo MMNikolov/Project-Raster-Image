@@ -68,6 +68,11 @@ public:
      */
     void makeMonochrome() override;
     
+    void rotateLeft() override;
+    void rotateRight() override;
+    void flipTop() override;
+    void flipLeft() override;
+
 private:
     int maxColorValue; /**< Maximum color intensity range parsed from the header */
 };

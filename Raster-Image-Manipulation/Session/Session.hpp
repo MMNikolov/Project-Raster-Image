@@ -10,6 +10,10 @@
 #include "../Factory/ImageFactory.hpp"
 #include <iostream>
 
+/**
+ * @class Session
+ * @brief Handles isolated image transformations and historical tracking for a single workspace window.
+ */
 class Session
 {
 public:
@@ -54,17 +58,53 @@ public:
      */
     void printSessionInfo() const;
 
+    //UNDO AND REDO FUNCTIONALITIES
+
+    /**
+     * @brief Reverts the last transformation applied in this workspace session.
+     */
+    void undo();
+
+    /**
+     * @brief Re-applies the last undone transformation in this workspace session.
+     */
+    void redo();
+
     // GETTERS
     int getId() const { return sessionId; }
+
+    /**
+     * @brief Provides read-only access to the internal image collection tracking vector.
+     * @return Const reference to the polymorphic image pointer vector.
+     */
     const std::vector<Image*>& getImages() const { return loadedImages; }
 
 private:
-    int sessionId;
-    std::vector<Image*> loadedImages;
-    size_t count;
+    int sessionId;                      /**< Unique session identification number */
+    std::vector<Image*> loadedImages;   /**< Collection of image resources in this workspace */
+    size_t count;                       /**< Helper tracker counting total active images */
+
+    //UNDO AND REDO FUNCTIONALITIES 
+    std::vector<std::vector<Image*>> undoHistory;   /**< History stack tracking deep copies for undo actions */
+    std::vector<std::vector<Image*>> redoHistory;   /**< History stack tracking deep copies for redo actions */
 
 private:
+    /**
+     * @brief Fully deallocates all embedded image memory and clears out state vector tracking grids.
+     */
     void free();
+
+    /**
+     * @brief Generates a deep clone vector list copy of the current image storage buffer array.
+     * @return New independent vector holding deep allocated copies of the image pool.
+     */
+    std::vector<Image*> cloneCurrentState() const;
+
+    /**
+     * @brief Safely clears and drops polymorphic heap structures packed inside an image array.
+     * @param images Targeted tracking array to scrub and reset.
+     */
+    void clearImageVector(std::vector<Image*>& images);
 };
 
 #endif // SESSION_HPP

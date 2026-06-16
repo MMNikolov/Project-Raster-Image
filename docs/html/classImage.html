@@ -122,6 +122,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a1b903992477c59996ecbdc66531a6217"><td class="mdescLeft">&#160;</td><td class="mdescRight">Makes the image in the given session grayscale.  <br /></td></tr>
 <tr class="memitem:af09ea6ef3e5bb5fe7f760719dbdc5113" id="r_af09ea6ef3e5bb5fe7f760719dbdc5113"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#af09ea6ef3e5bb5fe7f760719dbdc5113">makeMonochrome</a> ()=0</td></tr>
 <tr class="memdesc:af09ea6ef3e5bb5fe7f760719dbdc5113"><td class="mdescLeft">&#160;</td><td class="mdescRight">Makes the image in the given session monochrome.  <br /></td></tr>
+<tr class="memitem:a19ca2022e9c332b442a56a9794d36d1f" id="r_a19ca2022e9c332b442a56a9794d36d1f"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a19ca2022e9c332b442a56a9794d36d1f">rotateLeft</a> ()=0</td></tr>
+<tr class="memitem:a0e626dfede70af2d8e18b72bcd1c23db" id="r_a0e626dfede70af2d8e18b72bcd1c23db"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a0e626dfede70af2d8e18b72bcd1c23db">rotateRight</a> ()=0</td></tr>
+<tr class="memitem:a183cb2f2085ca1cfefed1de580d3aeea" id="r_a183cb2f2085ca1cfefed1de580d3aeea"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a183cb2f2085ca1cfefed1de580d3aeea">flipTop</a> ()=0</td></tr>
+<tr class="memitem:ae7b6af2af7ff0a037955602f9a23bac5" id="r_ae7b6af2af7ff0a037955602f9a23bac5"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#ae7b6af2af7ff0a037955602f9a23bac5">flipLeft</a> ()=0</td></tr>
 <tr class="memitem:a36bcae4838228d574738249a87dc4464" id="r_a36bcae4838228d574738249a87dc4464"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a36bcae4838228d574738249a87dc4464">getWidth</a> () const</td></tr>
 <tr class="memdesc:a36bcae4838228d574738249a87dc4464"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the image width.  <br /></td></tr>
 <tr class="memitem:a1cd7587f88b6932b5269051d1ba08ff9" id="r_a1cd7587f88b6932b5269051d1ba08ff9"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a1cd7587f88b6932b5269051d1ba08ff9">getHeight</a> () const</td></tr>
@@ -238,6 +242,60 @@ Protected Attributes</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>Pointer to the newly cloned <a class="el" href="classImage.html" title="abstract base class represening a raster image">Image</a> object. </dd></dl>
 
 <p>Implemented in <a class="el" href="classPBM.html#adf37e8569da7a98d1a5d2fa0a508e1ee">PBM</a>, <a class="el" href="classPGM.html#ae721c04ab0674597c58d1e0ce1ab576c">PGM</a>, and <a class="el" href="classPPM.html#a3c567ffbe74a7f6b174460f21b3e06a1">PPM</a>.</p>
+
+</div>
+</div>
+<a id="ae7b6af2af7ff0a037955602f9a23bac5" name="ae7b6af2af7ff0a037955602f9a23bac5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae7b6af2af7ff0a037955602f9a23bac5">&#9670;&#160;</a></span>flipLeft()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Image::flipLeft </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="classPBM.html#a23030b232906134be932494d239563ae">PBM</a>, <a class="el" href="classPGM.html#a52e3d45b4cc1e42b2d0d89f346674af0">PGM</a>, and <a class="el" href="classPPM.html#aef92ea0949d2a04fedd78f15e5a3f6c2">PPM</a>.</p>
+
+</div>
+</div>
+<a id="a183cb2f2085ca1cfefed1de580d3aeea" name="a183cb2f2085ca1cfefed1de580d3aeea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a183cb2f2085ca1cfefed1de580d3aeea">&#9670;&#160;</a></span>flipTop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Image::flipTop </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="classPBM.html#a97e282a81b9c1a9aaa360da6db9bdddd">PBM</a>, <a class="el" href="classPGM.html#a19fdd2c084d8dd2478a6f249f6ba2f02">PGM</a>, and <a class="el" href="classPPM.html#ab9f5fc47db3102a6deb5f989f10c5e59">PPM</a>.</p>
 
 </div>
 </div>
@@ -496,6 +554,60 @@ Protected Attributes</h2></td></tr>
 <p>Prints format-specific information for the session list. </p>
 
 <p>Implemented in <a class="el" href="classPBM.html#a49ff63007313e0069249c9b3c2876147">PBM</a>, <a class="el" href="classPGM.html#ac8c9a8c14305f7a0a38568297ff9184e">PGM</a>, and <a class="el" href="classPPM.html#a2183b4fcb9cc962e0be5cec9a8f1df0c">PPM</a>.</p>
+
+</div>
+</div>
+<a id="a19ca2022e9c332b442a56a9794d36d1f" name="a19ca2022e9c332b442a56a9794d36d1f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a19ca2022e9c332b442a56a9794d36d1f">&#9670;&#160;</a></span>rotateLeft()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Image::rotateLeft </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="classPBM.html#a7ae1bfb3223ed7580fbf8180a2c09ffd">PBM</a>, <a class="el" href="classPGM.html#a87463d26eee1acb172e08d259acc0acd">PGM</a>, and <a class="el" href="classPPM.html#a28f729186cdfe73302089ca4be3d4723">PPM</a>.</p>
+
+</div>
+</div>
+<a id="a0e626dfede70af2d8e18b72bcd1c23db" name="a0e626dfede70af2d8e18b72bcd1c23db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e626dfede70af2d8e18b72bcd1c23db">&#9670;&#160;</a></span>rotateRight()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Image::rotateRight </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="classPBM.html#a7c613a5e222438e4037b4935511313bb">PBM</a>, <a class="el" href="classPGM.html#a8024965df52fce1479e5c89f24acbafc">PGM</a>, and <a class="el" href="classPPM.html#ab1137bad35c5616fde2109b172860587">PPM</a>.</p>
 
 </div>
 </div>

@@ -8,5 +8,6 @@ var hierarchy =
     ] ],
     [ "ImageFactory", "classImageFactory.html", null ],
     [ "Pixel", "structPixel.html", null ],
+    [ "Session", "classSession.html", null ],
     [ "SessionManager", "classSessionManager.html", null ]
 ];

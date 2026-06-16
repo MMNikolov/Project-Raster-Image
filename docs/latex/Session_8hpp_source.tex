@@ -1,0 +1,65 @@
+\doxysection{Session.\+hpp}
+\hypertarget{Session_8hpp_source}{}\label{Session_8hpp_source}\index{Raster-\/Image-\/Manipulation/Session/Session.hpp@{Raster-\/Image-\/Manipulation/Session/Session.hpp}}
+\doxymbox{\hyperlink{Session_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#ifndef\ SESSION\_HPP}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#define\ SESSION\_HPP}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{Image_8hpp}{../Image/Image.hpp}}"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{ImageFactory_8hpp}{../Factory/ImageFactory.hpp}}"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{classSession_abab35e01a7bde2179964f3c070a5e6de}{Session}}}
+\DoxyCodeLine{00018\ \{}
+\DoxyCodeLine{00019\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00024\ \ \ \ \ \doxymbox{\hyperlink{classSession_abab35e01a7bde2179964f3c070a5e6de}{Session}}(\textcolor{keywordtype}{int}\ sessionId);}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{comment}{//disable\ copy\ semantic}}
+\DoxyCodeLine{00027\ \ \ \ \ \doxymbox{\hyperlink{classSession_ae7feb48f68be002e288bbab74b63afdb}{Session}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{classSession_abab35e01a7bde2179964f3c070a5e6de}{Session}}\&\ other)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00028\ \ \ \ \ \doxymbox{\hyperlink{classSession_abab35e01a7bde2179964f3c070a5e6de}{Session}}\&\ \doxymbox{\hyperlink{classSession_a9b9df432bb38141e8b3c273a98ebfc44}{operator=}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{classSession_abab35e01a7bde2179964f3c070a5e6de}{Session}}\&\ other)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00033\ \ \ \ \ \doxymbox{\hyperlink{classSession_a8753bb9dee966b7d39abc9b7237cd665}{\string~Session}}();}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{classSession_a050d49df9af40cb6a5d8d511b5e2e05f}{addImage}}(\doxymbox{\hyperlink{classImage}{Image}}*\ img);}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{classSession_a44a7d994d8c55973365d94da49fcf376}{makeNegative}}();}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{classSession_ad690821c0ba1e2999b60f24d6eda9348}{makeGrayscale}}();}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{classSession_a87bc8a6e8c0495fbc646b3ba77f98999}{makeMonochrome}}();}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{classSession_a30b15b932b1ef6573fbafee75a6e69dd}{printSessionInfo}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{comment}{//UNDO\ AND\ REDO\ FUNCTIONALITIES}}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{classSession_a3775cf47da8f5bdd929816d6d1e2d2c3}{undo}}();}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{classSession_ab615c2ae32f73fa42496233146da6f19}{redo}}();}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{comment}{//\ GETTERS}}
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{classSession_a1a9232e627b902f1ea1701f92423fddb}{getId}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ sessionId;\ \}}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{keyword}{const}\ std::vector<Image*>\&\ \doxymbox{\hyperlink{classSession_a6774642c043fc37402c37aee184f6455}{getImages}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ loadedImages;\ \}}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00082\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keywordtype}{int}\ sessionId;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00084\ \ \ \ \ std::vector<Image*>\ loadedImages;\ \ \ }
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ count;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{comment}{//UNDO\ AND\ REDO\ FUNCTIONALITIES\ }}
+\DoxyCodeLine{00088\ \ \ \ \ std::vector<std::vector<Image*>>\ undoHistory;\ \ \ }
+\DoxyCodeLine{00089\ \ \ \ \ std::vector<std::vector<Image*>>\ redoHistory;\ \ \ }
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00091\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{keywordtype}{void}\ free();}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00101\ \ \ \ \ std::vector<Image*>\ cloneCurrentState()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00107\ \ \ \ \ \textcolor{keywordtype}{void}\ clearImageVector(std::vector<Image*>\&\ images);}
+\DoxyCodeLine{00108\ \};}
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00110\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ SESSION\_HPP}}
+
+\end{DoxyCode}

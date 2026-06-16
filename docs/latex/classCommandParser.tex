@@ -2,7 +2,7 @@
 \hypertarget{classCommandParser}{}\label{classCommandParser}\index{CommandParser@{CommandParser}}
 
 
-Handles user console input, tokenizes input text, and drives the session state machine.  
+Handles user console input line tokenization and drives the multi-\/session state machine.  
 
 
 
@@ -13,13 +13,13 @@ Handles user console input, tokenizes input text, and drives the session state m
 \begin{DoxyCompactItemize}
 \item 
 \doxymbox{\hyperlink{classCommandParser_a1fd17c361d85ec13c212cbac1999b9b3}{Command\+Parser}} ()
-\begin{DoxyCompactList}\small\item\em Constructor initializing the command engine subsystem. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Constructor initializing the command engine interface. \end{DoxyCompactList}\item 
 void \doxymbox{\hyperlink{classCommandParser_af669ef32400be1e6ccf2faf8669d48ce}{run}} ()
-\begin{DoxyCompactList}\small\item\em Launches the infinite terminal line processing loop. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Launches the main text processing console loop. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
-Handles user console input, tokenizes input text, and drives the session state machine. 
+Handles user console input line tokenization and drives the multi-\/session state machine. 
 
 \label{doc-constructors}
 \Hypertarget{classCommandParser_doc-constructors}
@@ -32,7 +32,7 @@ Command\+Parser::\+\+Command\+Parser (\begin{DoxyParamCaption}{}{}\end{DoxyParam
 
 
 
-Constructor initializing the command engine subsystem. 
+Constructor initializing the command engine interface. 
 
 
 
@@ -47,7 +47,7 @@ void Command\+Parser::\+run (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})
 
 
 
-Launches the infinite terminal line processing loop. 
+Launches the main text processing console loop. 
 
 
 

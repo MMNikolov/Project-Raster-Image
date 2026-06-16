@@ -108,15 +108,15 @@ $(function(){initNavTree('CommandParser_8hpp_source.html','',''); });
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classCommandParser.html#af669ef32400be1e6ccf2faf8669d48ce">run</a>();</div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <a class="code hl_class" href="classSessionManager.html">SessionManager</a> session; </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <a class="code hl_class" href="classSessionManager.html">SessionManager</a> manager; </div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>};</div>
 </div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">#endif </span><span class="comment">// COMMAND_PARSER_HPP</span></div>
-<div class="ttc" id="aSessionManager_8hpp_html"><div class="ttname"><a href="SessionManager_8hpp.html">SessionManager.hpp</a></div><div class="ttdoc">Handles active engine state processing and image lifecycle ownership.</div></div>
-<div class="ttc" id="aclassCommandParser_html_a1fd17c361d85ec13c212cbac1999b9b3"><div class="ttname"><a href="classCommandParser.html#a1fd17c361d85ec13c212cbac1999b9b3">CommandParser::CommandParser</a></div><div class="ttdeci">CommandParser()</div><div class="ttdoc">Constructor initializing the command engine subsystem.</div><div class="ttdef"><b>Definition</b> CommandParser.cpp:3</div></div>
-<div class="ttc" id="aclassCommandParser_html_af669ef32400be1e6ccf2faf8669d48ce"><div class="ttname"><a href="classCommandParser.html#af669ef32400be1e6ccf2faf8669d48ce">CommandParser::run</a></div><div class="ttdeci">void run()</div><div class="ttdoc">Launches the infinite terminal line processing loop.</div><div class="ttdef"><b>Definition</b> CommandParser.cpp:7</div></div>
-<div class="ttc" id="aclassSessionManager_html"><div class="ttname"><a href="classSessionManager.html">SessionManager</a></div><div class="ttdef"><b>Definition</b> SessionManager.hpp:13</div></div>
+<div class="ttc" id="aSessionManager_8hpp_html"><div class="ttname"><a href="SessionManager_8hpp.html">SessionManager.hpp</a></div><div class="ttdoc">Coordinates multiple concurrent image processing workspaces and routes user commands.</div></div>
+<div class="ttc" id="aclassCommandParser_html_a1fd17c361d85ec13c212cbac1999b9b3"><div class="ttname"><a href="classCommandParser.html#a1fd17c361d85ec13c212cbac1999b9b3">CommandParser::CommandParser</a></div><div class="ttdeci">CommandParser()</div><div class="ttdoc">Constructor initializing the command engine interface.</div><div class="ttdef"><b>Definition</b> CommandParser.cpp:3</div></div>
+<div class="ttc" id="aclassCommandParser_html_af669ef32400be1e6ccf2faf8669d48ce"><div class="ttname"><a href="classCommandParser.html#af669ef32400be1e6ccf2faf8669d48ce">CommandParser::run</a></div><div class="ttdeci">void run()</div><div class="ttdoc">Launches the main text processing console loop.</div><div class="ttdef"><b>Definition</b> CommandParser.cpp:8</div></div>
+<div class="ttc" id="aclassSessionManager_html"><div class="ttname"><a href="classSessionManager.html">SessionManager</a></div><div class="ttdoc">Global state registry controller routing terminal data pipelines to focused workspace tabs.</div><div class="ttdef"><b>Definition</b> SessionManager.hpp:16</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->

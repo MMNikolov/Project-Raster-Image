@@ -77,6 +77,11 @@ public:
      */
     virtual void makeMonochrome() = 0;
 
+    virtual void rotateLeft() = 0;
+    virtual void rotateRight() = 0;
+    virtual void flipTop() = 0;
+    virtual void flipLeft() = 0;
+
     //GETTERS
 
     /**

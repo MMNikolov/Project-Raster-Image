@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['b_0',['b',['../structPixel.html#abc9f592730eddbfcb270a1974a498d78',1,'Pixel']]]
+  ['addimage_0',['addImage',['../classSession.html#a050d49df9af40cb6a5d8d511b5e2e05f',1,'Session']]]
 ];

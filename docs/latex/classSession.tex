@@ -1,0 +1,190 @@
+\doxysection{Session Class Reference}
+\hypertarget{classSession}{}\label{classSession}\index{Session@{Session}}
+
+
+Handles isolated image transformations and historical tracking for a single workspace window.  
+
+
+
+
+{\ttfamily \+\#include $<$Session.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{classSession_abab35e01a7bde2179964f3c070a5e6de}{Session}} (int session\+Id)
+\begin{DoxyCompactList}\small\item\em Constructor initializing the session with a unique identification number. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{classSession_ae7feb48f68be002e288bbab74b63afdb}{Session}} (const \doxymbox{\hyperlink{classSession}{Session}} \&other)=delete
+\item 
+\doxymbox{\hyperlink{classSession}{Session}} \& \doxymbox{\hyperlink{classSession_a9b9df432bb38141e8b3c273a98ebfc44}{operator=}} (const \doxymbox{\hyperlink{classSession}{Session}} \&other)=delete
+\item 
+\doxymbox{\hyperlink{classSession_a8753bb9dee966b7d39abc9b7237cd665}{\texorpdfstring{$\sim$}{\string~}\+Session}} ()
+\begin{DoxyCompactList}\small\item\em Destructor that deallocates all loaded images to prevent memory leaks. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{classSession_a050d49df9af40cb6a5d8d511b5e2e05f}{add\+Image}} (\doxymbox{\hyperlink{classImage}{Image}} \texorpdfstring{$\ast$}{*}img)
+\begin{DoxyCompactList}\small\item\em Appends a new image pointer into this session\textquotesingle{}s collection. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{classSession_a44a7d994d8c55973365d94da49fcf376}{make\+Negative}} ()
+\begin{DoxyCompactList}\small\item\em Applies the negative transformation to all images in this session. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{classSession_ad690821c0ba1e2999b60f24d6eda9348}{make\+Grayscale}} ()
+\begin{DoxyCompactList}\small\item\em Applies the grayscale transformation to all color images in this session. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{classSession_a87bc8a6e8c0495fbc646b3ba77f98999}{make\+Monochrome}} ()
+\begin{DoxyCompactList}\small\item\em Applies the monochrome transformation to all images in this session. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{classSession_a30b15b932b1ef6573fbafee75a6e69dd}{print\+Session\+Info}} () const
+\begin{DoxyCompactList}\small\item\em Outputs comprehensive details of all files within this session. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{classSession_a3775cf47da8f5bdd929816d6d1e2d2c3}{undo}} ()
+\begin{DoxyCompactList}\small\item\em Reverts the last transformation applied in this workspace session. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{classSession_ab615c2ae32f73fa42496233146da6f19}{redo}} ()
+\begin{DoxyCompactList}\small\item\em Re-\/applies the last undone transformation in this workspace session. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{classSession_a1a9232e627b902f1ea1701f92423fddb}{get\+Id}} () const
+\item 
+const std::\+vector$<$ \doxymbox{\hyperlink{classImage}{Image}} \texorpdfstring{$\ast$}{*} $>$ \& \doxymbox{\hyperlink{classSession_a6774642c043fc37402c37aee184f6455}{get\+Images}} () const
+\begin{DoxyCompactList}\small\item\em Provides read-\/only access to the internal image collection tracking vector. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Handles isolated image transformations and historical tracking for a single workspace window. 
+
+\label{doc-constructors}
+\Hypertarget{classSession_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classSession_abab35e01a7bde2179964f3c070a5e6de}\index{Session@{Session}!Session@{Session}}
+\index{Session@{Session}!Session@{Session}}
+\doxysubsubsection{\texorpdfstring{Session()}{Session()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classSession_abab35e01a7bde2179964f3c070a5e6de} 
+Session::\+\+Session (\begin{DoxyParamCaption}\item[{int}]{session\+Id}{}\end{DoxyParamCaption})}
+
+
+
+Constructor initializing the session with a unique identification number. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The auto-\/incremented session identification number. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classSession_ae7feb48f68be002e288bbab74b63afdb}\index{Session@{Session}!Session@{Session}}
+\index{Session@{Session}!Session@{Session}}
+\doxysubsubsection{\texorpdfstring{Session()}{Session()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classSession_ae7feb48f68be002e288bbab74b63afdb} 
+Session::\+\+Session (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{classSession}{Session}} \&}]{other}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\Hypertarget{classSession_a8753bb9dee966b7d39abc9b7237cd665}\index{Session@{Session}!````~Session@{\texorpdfstring{$\sim$}{\string~}Session}}
+\index{````~Session@{\texorpdfstring{$\sim$}{\string~}Session}!Session@{Session}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Session()}{\string~Session()}}
+{\footnotesize\ttfamily \label{classSession_a8753bb9dee966b7d39abc9b7237cd665} 
+Session::\+\texorpdfstring{$\sim$}{\string~}\+Session (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Destructor that deallocates all loaded images to prevent memory leaks. 
+
+
+
+\label{doc-func-members}
+\Hypertarget{classSession_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classSession_a050d49df9af40cb6a5d8d511b5e2e05f}\index{Session@{Session}!addImage@{addImage}}
+\index{addImage@{addImage}!Session@{Session}}
+\doxysubsubsection{\texorpdfstring{addImage()}{addImage()}}
+{\footnotesize\ttfamily \label{classSession_a050d49df9af40cb6a5d8d511b5e2e05f} 
+void Session::\+add\+Image (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{classImage}{Image}} \texorpdfstring{$\ast$}{*}}]{img}{}\end{DoxyParamCaption})}
+
+
+
+Appends a new image pointer into this session\textquotesingle{}s collection. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em img} & Polymorphic pointer to an allocated \doxylink{classImage}{Image} object. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classSession_a1a9232e627b902f1ea1701f92423fddb}\index{Session@{Session}!getId@{getId}}
+\index{getId@{getId}!Session@{Session}}
+\doxysubsubsection{\texorpdfstring{getId()}{getId()}}
+{\footnotesize\ttfamily \label{classSession_a1a9232e627b902f1ea1701f92423fddb} 
+int Session::\+get\+Id (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classSession_a6774642c043fc37402c37aee184f6455}\index{Session@{Session}!getImages@{getImages}}
+\index{getImages@{getImages}!Session@{Session}}
+\doxysubsubsection{\texorpdfstring{getImages()}{getImages()}}
+{\footnotesize\ttfamily \label{classSession_a6774642c043fc37402c37aee184f6455} 
+const std::\+vector$<$ \doxymbox{\hyperlink{classImage}{Image}} \texorpdfstring{$\ast$}{*} $>$ \& Session::\+get\+Images (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Provides read-\/only access to the internal image collection tracking vector. 
+
+\begin{DoxyReturn}{Returns}
+Const reference to the polymorphic image pointer vector. 
+\end{DoxyReturn}
+\Hypertarget{classSession_ad690821c0ba1e2999b60f24d6eda9348}\index{Session@{Session}!makeGrayscale@{makeGrayscale}}
+\index{makeGrayscale@{makeGrayscale}!Session@{Session}}
+\doxysubsubsection{\texorpdfstring{makeGrayscale()}{makeGrayscale()}}
+{\footnotesize\ttfamily \label{classSession_ad690821c0ba1e2999b60f24d6eda9348} 
+void Session::\+make\+Grayscale (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Applies the grayscale transformation to all color images in this session. 
+
+\Hypertarget{classSession_a87bc8a6e8c0495fbc646b3ba77f98999}\index{Session@{Session}!makeMonochrome@{makeMonochrome}}
+\index{makeMonochrome@{makeMonochrome}!Session@{Session}}
+\doxysubsubsection{\texorpdfstring{makeMonochrome()}{makeMonochrome()}}
+{\footnotesize\ttfamily \label{classSession_a87bc8a6e8c0495fbc646b3ba77f98999} 
+void Session::\+make\+Monochrome (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Applies the monochrome transformation to all images in this session. 
+
+\Hypertarget{classSession_a44a7d994d8c55973365d94da49fcf376}\index{Session@{Session}!makeNegative@{makeNegative}}
+\index{makeNegative@{makeNegative}!Session@{Session}}
+\doxysubsubsection{\texorpdfstring{makeNegative()}{makeNegative()}}
+{\footnotesize\ttfamily \label{classSession_a44a7d994d8c55973365d94da49fcf376} 
+void Session::\+make\+Negative (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Applies the negative transformation to all images in this session. 
+
+\Hypertarget{classSession_a9b9df432bb38141e8b3c273a98ebfc44}\index{Session@{Session}!operator=@{operator=}}
+\index{operator=@{operator=}!Session@{Session}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \label{classSession_a9b9df432bb38141e8b3c273a98ebfc44} 
+\doxymbox{\hyperlink{classSession}{Session}} \& Session::\+operator= (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{classSession}{Session}} \&}]{other}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\Hypertarget{classSession_a30b15b932b1ef6573fbafee75a6e69dd}\index{Session@{Session}!printSessionInfo@{printSessionInfo}}
+\index{printSessionInfo@{printSessionInfo}!Session@{Session}}
+\doxysubsubsection{\texorpdfstring{printSessionInfo()}{printSessionInfo()}}
+{\footnotesize\ttfamily \label{classSession_a30b15b932b1ef6573fbafee75a6e69dd} 
+void Session::\+print\+Session\+Info (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Outputs comprehensive details of all files within this session. 
+
+\Hypertarget{classSession_ab615c2ae32f73fa42496233146da6f19}\index{Session@{Session}!redo@{redo}}
+\index{redo@{redo}!Session@{Session}}
+\doxysubsubsection{\texorpdfstring{redo()}{redo()}}
+{\footnotesize\ttfamily \label{classSession_ab615c2ae32f73fa42496233146da6f19} 
+void Session::\+redo (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Re-\/applies the last undone transformation in this workspace session. 
+
+\Hypertarget{classSession_a3775cf47da8f5bdd929816d6d1e2d2c3}\index{Session@{Session}!undo@{undo}}
+\index{undo@{undo}!Session@{Session}}
+\doxysubsubsection{\texorpdfstring{undo()}{undo()}}
+{\footnotesize\ttfamily \label{classSession_a3775cf47da8f5bdd929816d6d1e2d2c3} 
+void Session::\+undo (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Reverts the last transformation applied in this workspace session. 
+
+
+
+The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}
+\item 
+Raster-\/\+Image-\/\+Manipulation/\+\+Session/\+\doxymbox{\hyperlink{Session_8hpp}{Session.\+hpp}}\item 
+Raster-\/\+Image-\/\+Manipulation/\+\+Session/\+\doxymbox{\hyperlink{Session_8cpp}{Session.\+cpp}}\end{DoxyCompactItemize}

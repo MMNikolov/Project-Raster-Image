@@ -121,8 +121,32 @@ void SessionManager::printCurrentSessionInfo() const
     }
 
     int index = findSessionIndex(this->currentActiveId);
-    std::cout << "Files in session with ID 1:\n";
+    std::cout << "Files in session with ID " << this->currentActiveId << ":\n";
     this->activeSessions[index]->printSessionInfo();
+}
+
+void SessionManager::undo()
+{
+    if (this->currentActiveId == -1)
+    {
+        std::cout << "Cant do the undo command when there are no active sessions\n";
+        return;
+    }
+    
+    int index = findSessionIndex(this->currentActiveId);
+    this->activeSessions[index]->undo();
+}
+
+void SessionManager::redo()
+{
+    if (this->currentActiveId == -1)
+    {
+        std::cout << "Cant do the redo command when there are no active sessions\n";
+        return;
+    }
+    
+    int index = findSessionIndex(this->currentActiveId);
+    this->activeSessions[index]->redo();
 }
 
 int SessionManager::findSessionIndex(int sessionId) const

@@ -125,6 +125,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a962272f69dd50f108d98dbb30285b37b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Does nothing here.  <br /></td></tr>
 <tr class="memitem:a22dd96d2741714e8b0dc44e512db61c6" id="r_a22dd96d2741714e8b0dc44e512db61c6"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a22dd96d2741714e8b0dc44e512db61c6">makeMonochrome</a> () override</td></tr>
 <tr class="memdesc:a22dd96d2741714e8b0dc44e512db61c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">makes the grayscale image purely white and black pixel filled  <br /></td></tr>
+<tr class="memitem:a87463d26eee1acb172e08d259acc0acd" id="r_a87463d26eee1acb172e08d259acc0acd"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a87463d26eee1acb172e08d259acc0acd">rotateLeft</a> () override</td></tr>
+<tr class="memitem:a8024965df52fce1479e5c89f24acbafc" id="r_a8024965df52fce1479e5c89f24acbafc"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a8024965df52fce1479e5c89f24acbafc">rotateRight</a> () override</td></tr>
+<tr class="memitem:a19fdd2c084d8dd2478a6f249f6ba2f02" id="r_a19fdd2c084d8dd2478a6f249f6ba2f02"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a19fdd2c084d8dd2478a6f249f6ba2f02">flipTop</a> () override</td></tr>
+<tr class="memitem:a52e3d45b4cc1e42b2d0d89f346674af0" id="r_a52e3d45b4cc1e42b2d0d89f346674af0"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a52e3d45b4cc1e42b2d0d89f346674af0">flipLeft</a> () override</td></tr>
 <tr class="inherit_header pub_methods_classImage"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classImage')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Member Functions inherited from <a class="el" href="classImage.html">Image</a></td></tr>
 <tr class="memitem:ab5ca0ae10da321c9e443734a87dee15e inherit pub_methods_classImage" id="r_ab5ca0ae10da321c9e443734a87dee15e"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="classImage.html#ab5ca0ae10da321c9e443734a87dee15e">Image</a> (int w, int h, const std::string &amp;filename)</td></tr>
 <tr class="memdesc:ab5ca0ae10da321c9e443734a87dee15e inherit pub_methods_classImage"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor initializing core dimensions and filename.  <br /></td></tr>
@@ -213,6 +217,60 @@ Additional Inherited Members</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>A pointer to the newly allocated polymorphic <a class="el" href="classImage.html" title="abstract base class represening a raster image">Image</a> object. </dd></dl>
 
 <p>Implements <a class="el" href="classImage.html#a7096da2078bcfb53ba7f0bd1747dc150">Image</a>.</p>
+
+</div>
+</div>
+<a id="a52e3d45b4cc1e42b2d0d89f346674af0" name="a52e3d45b4cc1e42b2d0d89f346674af0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a52e3d45b4cc1e42b2d0d89f346674af0">&#9670;&#160;</a></span>flipLeft()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PGM::flipLeft </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implements <a class="el" href="classImage.html#ae7b6af2af7ff0a037955602f9a23bac5">Image</a>.</p>
+
+</div>
+</div>
+<a id="a19fdd2c084d8dd2478a6f249f6ba2f02" name="a19fdd2c084d8dd2478a6f249f6ba2f02"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a19fdd2c084d8dd2478a6f249f6ba2f02">&#9670;&#160;</a></span>flipTop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PGM::flipTop </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implements <a class="el" href="classImage.html#a183cb2f2085ca1cfefed1de580d3aeea">Image</a>.</p>
 
 </div>
 </div>
@@ -359,6 +417,60 @@ Additional Inherited Members</h2></td></tr>
 <p>Prints the session state and format details exactly as required by the specification. </p>
 
 <p>Implements <a class="el" href="classImage.html#a997a88ec456aa24fd42660f9d4ba61cc">Image</a>.</p>
+
+</div>
+</div>
+<a id="a87463d26eee1acb172e08d259acc0acd" name="a87463d26eee1acb172e08d259acc0acd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a87463d26eee1acb172e08d259acc0acd">&#9670;&#160;</a></span>rotateLeft()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PGM::rotateLeft </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implements <a class="el" href="classImage.html#a19ca2022e9c332b442a56a9794d36d1f">Image</a>.</p>
+
+</div>
+</div>
+<a id="a8024965df52fce1479e5c89f24acbafc" name="a8024965df52fce1479e5c89f24acbafc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8024965df52fce1479e5c89f24acbafc">&#9670;&#160;</a></span>rotateRight()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PGM::rotateRight </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implements <a class="el" href="classImage.html#a0e626dfede70af2d8e18b72bcd1c23db">Image</a>.</p>
 
 </div>
 </div>

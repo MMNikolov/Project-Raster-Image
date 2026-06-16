@@ -1,9 +1,8 @@
 var searchData=
 [
-  ['r_0',['r',['../structPixel.html#a47d65d4a410f57c46746ddedd709e177',1,'Pixel']]],
-  ['run_1',['run',['../classCommandParser.html#af669ef32400be1e6ccf2faf8669d48ce',1,'CommandParser']]],
-  ['runexceptionsuite_2',['runExceptionSuite',['../TestFormatsAndFactory_8cpp.html#a899e9ef2a53b01227c6f1b302b4503f5',1,'TestFormatsAndFactory.cpp']]],
-  ['runpbmsuite_3',['runPbmSuite',['../TestFormatsAndFactory_8cpp.html#af5116cc0b5cddaa494f64bfd30df77cb',1,'TestFormatsAndFactory.cpp']]],
-  ['runpgmsuite_4',['runPgmSuite',['../TestFormatsAndFactory_8cpp.html#ad2050c40e8f4c49c14fab05071522387',1,'TestFormatsAndFactory.cpp']]],
-  ['runppmsuite_5',['runPpmSuite',['../TestFormatsAndFactory_8cpp.html#a952691c7de8a5a89ce11e97ae4e0d6ed',1,'TestFormatsAndFactory.cpp']]]
+  ['main_0',['main',['../TestFormatsAndFactory_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;TestFormatsAndFactory.cpp'],['../TestSessionManager_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;TestSessionManager.cpp']]],
+  ['makegrayscale_1',['makeGrayscale',['../classImage.html#a1b903992477c59996ecbdc66531a6217',1,'Image::makeGrayscale()'],['../classPBM.html#abdcca87870a9f002f4c056f67b96ecb7',1,'PBM::makeGrayscale()'],['../classPGM.html#a962272f69dd50f108d98dbb30285b37b',1,'PGM::makeGrayscale()'],['../classPPM.html#aece890249ac4624317814f93232ed348',1,'PPM::makeGrayscale()'],['../classSession.html#ad690821c0ba1e2999b60f24d6eda9348',1,'Session::makeGrayscale()'],['../classSessionManager.html#a894c5c053ce98521044ec1455b0fc14d',1,'SessionManager::makeGrayscale()']]],
+  ['makemonochrome_2',['makeMonochrome',['../classImage.html#af09ea6ef3e5bb5fe7f760719dbdc5113',1,'Image::makeMonochrome()'],['../classPBM.html#a072fd036e2a81b9a329ad7e3b7b4c288',1,'PBM::makeMonochrome()'],['../classPGM.html#a22dd96d2741714e8b0dc44e512db61c6',1,'PGM::makeMonochrome()'],['../classPPM.html#a22cccdf8810877675c5894d89f2ed032',1,'PPM::makeMonochrome()'],['../classSession.html#a87bc8a6e8c0495fbc646b3ba77f98999',1,'Session::makeMonochrome()'],['../classSessionManager.html#aac1e2e0591b236740da277e8ba50ccec',1,'SessionManager::makeMonochrome()']]],
+  ['makenegative_3',['makeNegative',['../classImage.html#a06ae731d5b7c0e00791f561ed98d8d69',1,'Image::makeNegative()'],['../classPBM.html#a1471cc00dfda2b2ec5deb8803523df1f',1,'PBM::makeNegative()'],['../classPGM.html#a1b7868211654b881a9bda9e554f795ce',1,'PGM::makeNegative()'],['../classPPM.html#a5ac0e83dd0da3ab1905c08b38b4613c4',1,'PPM::makeNegative()'],['../classSession.html#a44a7d994d8c55973365d94da49fcf376',1,'Session::makeNegative()'],['../classSessionManager.html#ab52d7965eee68dc46a59a953ee5031eb',1,'SessionManager::makeNegative()']]],
+  ['max_5fvalue_4',['MAX_VALUE',['../Image_8hpp.html#a4ce3e2af80a76d816ab7f8567ec4a65a',1,'Image.hpp']]]
 ];

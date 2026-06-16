@@ -34,6 +34,14 @@ virtual void \doxymbox{\hyperlink{classImage_a1b903992477c59996ecbdc66531a6217}{
 \begin{DoxyCompactList}\small\item\em Makes the image in the given session grayscale. \end{DoxyCompactList}\item 
 virtual void \doxymbox{\hyperlink{classImage_af09ea6ef3e5bb5fe7f760719dbdc5113}{make\+Monochrome}} ()=0
 \begin{DoxyCompactList}\small\item\em Makes the image in the given session monochrome. \end{DoxyCompactList}\item 
+virtual void \doxymbox{\hyperlink{classImage_a19ca2022e9c332b442a56a9794d36d1f}{rotate\+Left}} ()=0
+\item 
+virtual void \doxymbox{\hyperlink{classImage_a0e626dfede70af2d8e18b72bcd1c23db}{rotate\+Right}} ()=0
+\item 
+virtual void \doxymbox{\hyperlink{classImage_a183cb2f2085ca1cfefed1de580d3aeea}{flip\+Top}} ()=0
+\item 
+virtual void \doxymbox{\hyperlink{classImage_ae7b6af2af7ff0a037955602f9a23bac5}{flip\+Left}} ()=0
+\item 
 int \doxymbox{\hyperlink{classImage_a36bcae4838228d574738249a87dc4464}{get\+Width}} () const
 \begin{DoxyCompactList}\small\item\em Retrieves the image width. \end{DoxyCompactList}\item 
 int \doxymbox{\hyperlink{classImage_a1cd7587f88b6932b5269051d1ba08ff9}{get\+Height}} () const
@@ -118,6 +126,26 @@ Pointer to the newly cloned \doxylink{classImage}{Image} object.
 
 
 Implemented in \doxymbox{\hyperlink{classPBM_adf37e8569da7a98d1a5d2fa0a508e1ee}{PBM}}, \doxymbox{\hyperlink{classPGM_ae721c04ab0674597c58d1e0ce1ab576c}{PGM}}, and \doxymbox{\hyperlink{classPPM_a3c567ffbe74a7f6b174460f21b3e06a1}{PPM}}.
+
+\Hypertarget{classImage_ae7b6af2af7ff0a037955602f9a23bac5}\index{Image@{Image}!flipLeft@{flipLeft}}
+\index{flipLeft@{flipLeft}!Image@{Image}}
+\doxysubsubsection{\texorpdfstring{flipLeft()}{flipLeft()}}
+{\footnotesize\ttfamily \label{classImage_ae7b6af2af7ff0a037955602f9a23bac5} 
+virtual void Image::\+flip\+Left (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \doxymbox{\hyperlink{classPBM_a23030b232906134be932494d239563ae}{PBM}}, \doxymbox{\hyperlink{classPGM_a52e3d45b4cc1e42b2d0d89f346674af0}{PGM}}, and \doxymbox{\hyperlink{classPPM_aef92ea0949d2a04fedd78f15e5a3f6c2}{PPM}}.
+
+\Hypertarget{classImage_a183cb2f2085ca1cfefed1de580d3aeea}\index{Image@{Image}!flipTop@{flipTop}}
+\index{flipTop@{flipTop}!Image@{Image}}
+\doxysubsubsection{\texorpdfstring{flipTop()}{flipTop()}}
+{\footnotesize\ttfamily \label{classImage_a183cb2f2085ca1cfefed1de580d3aeea} 
+virtual void Image::\+flip\+Top (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \doxymbox{\hyperlink{classPBM_a97e282a81b9c1a9aaa360da6db9bdddd}{PBM}}, \doxymbox{\hyperlink{classPGM_a19fdd2c084d8dd2478a6f249f6ba2f02}{PGM}}, and \doxymbox{\hyperlink{classPPM_ab9f5fc47db3102a6deb5f989f10c5e59}{PPM}}.
 
 \Hypertarget{classImage_a1cd7587f88b6932b5269051d1ba08ff9}\index{Image@{Image}!getHeight@{getHeight}}
 \index{getHeight@{getHeight}!Image@{Image}}
@@ -243,6 +271,26 @@ Prints format-\/specific information for the session list.
 
 
 Implemented in \doxymbox{\hyperlink{classPBM_a49ff63007313e0069249c9b3c2876147}{PBM}}, \doxymbox{\hyperlink{classPGM_ac8c9a8c14305f7a0a38568297ff9184e}{PGM}}, and \doxymbox{\hyperlink{classPPM_a2183b4fcb9cc962e0be5cec9a8f1df0c}{PPM}}.
+
+\Hypertarget{classImage_a19ca2022e9c332b442a56a9794d36d1f}\index{Image@{Image}!rotateLeft@{rotateLeft}}
+\index{rotateLeft@{rotateLeft}!Image@{Image}}
+\doxysubsubsection{\texorpdfstring{rotateLeft()}{rotateLeft()}}
+{\footnotesize\ttfamily \label{classImage_a19ca2022e9c332b442a56a9794d36d1f} 
+virtual void Image::\+rotate\+Left (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \doxymbox{\hyperlink{classPBM_a7ae1bfb3223ed7580fbf8180a2c09ffd}{PBM}}, \doxymbox{\hyperlink{classPGM_a87463d26eee1acb172e08d259acc0acd}{PGM}}, and \doxymbox{\hyperlink{classPPM_a28f729186cdfe73302089ca4be3d4723}{PPM}}.
+
+\Hypertarget{classImage_a0e626dfede70af2d8e18b72bcd1c23db}\index{Image@{Image}!rotateRight@{rotateRight}}
+\index{rotateRight@{rotateRight}!Image@{Image}}
+\doxysubsubsection{\texorpdfstring{rotateRight()}{rotateRight()}}
+{\footnotesize\ttfamily \label{classImage_a0e626dfede70af2d8e18b72bcd1c23db} 
+virtual void Image::\+rotate\+Right (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \doxymbox{\hyperlink{classPBM_a7c613a5e222438e4037b4935511313bb}{PBM}}, \doxymbox{\hyperlink{classPGM_a8024965df52fce1479e5c89f24acbafc}{PGM}}, and \doxymbox{\hyperlink{classPPM_ab1137bad35c5616fde2109b172860587}{PPM}}.
 
 \Hypertarget{classImage_a30662edab526d0e5d611e446e3c55a3b}\index{Image@{Image}!save@{save}}
 \index{save@{save}!Image@{Image}}

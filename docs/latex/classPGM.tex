@@ -35,7 +35,15 @@ void \doxymbox{\hyperlink{classPGM_a1b7868211654b881a9bda9e554f795ce}{make\+Nega
 void \doxymbox{\hyperlink{classPGM_a962272f69dd50f108d98dbb30285b37b}{make\+Grayscale}} () override
 \begin{DoxyCompactList}\small\item\em Does nothing here. \end{DoxyCompactList}\item 
 void \doxymbox{\hyperlink{classPGM_a22dd96d2741714e8b0dc44e512db61c6}{make\+Monochrome}} () override
-\begin{DoxyCompactList}\small\item\em makes the grayscale image purely white and black pixel filled \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em makes the grayscale image purely white and black pixel filled \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{classPGM_a87463d26eee1acb172e08d259acc0acd}{rotate\+Left}} () override
+\item 
+void \doxymbox{\hyperlink{classPGM_a8024965df52fce1479e5c89f24acbafc}{rotate\+Right}} () override
+\item 
+void \doxymbox{\hyperlink{classPGM_a19fdd2c084d8dd2478a6f249f6ba2f02}{flip\+Top}} () override
+\item 
+void \doxymbox{\hyperlink{classPGM_a52e3d45b4cc1e42b2d0d89f346674af0}{flip\+Left}} () override
+\end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \doxymbox{\hyperlink{classImage}{Image}}}
 \begin{DoxyCompactItemize}
 \item 
@@ -120,6 +128,26 @@ A pointer to the newly allocated polymorphic \doxylink{classImage}{Image} object
 
 Implements \doxymbox{\hyperlink{classImage_a7096da2078bcfb53ba7f0bd1747dc150}{Image}}.
 
+\Hypertarget{classPGM_a52e3d45b4cc1e42b2d0d89f346674af0}\index{PGM@{PGM}!flipLeft@{flipLeft}}
+\index{flipLeft@{flipLeft}!PGM@{PGM}}
+\doxysubsubsection{\texorpdfstring{flipLeft()}{flipLeft()}}
+{\footnotesize\ttfamily \label{classPGM_a52e3d45b4cc1e42b2d0d89f346674af0} 
+void PGM::\+flip\+Left (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \doxymbox{\hyperlink{classImage_ae7b6af2af7ff0a037955602f9a23bac5}{Image}}.
+
+\Hypertarget{classPGM_a19fdd2c084d8dd2478a6f249f6ba2f02}\index{PGM@{PGM}!flipTop@{flipTop}}
+\index{flipTop@{flipTop}!PGM@{PGM}}
+\doxysubsubsection{\texorpdfstring{flipTop()}{flipTop()}}
+{\footnotesize\ttfamily \label{classPGM_a19fdd2c084d8dd2478a6f249f6ba2f02} 
+void PGM::\+flip\+Top (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \doxymbox{\hyperlink{classImage_a183cb2f2085ca1cfefed1de580d3aeea}{Image}}.
+
 \Hypertarget{classPGM_a0cfb7b2db240ad1c66ec8719fac443d3}\index{PGM@{PGM}!isGrayscale@{isGrayscale}}
 \index{isGrayscale@{isGrayscale}!PGM@{PGM}}
 \doxysubsubsection{\texorpdfstring{isGrayscale()}{isGrayscale()}}
@@ -192,6 +220,26 @@ Prints the session state and format details exactly as required by the specifica
 
 
 Implements \doxymbox{\hyperlink{classImage_a997a88ec456aa24fd42660f9d4ba61cc}{Image}}.
+
+\Hypertarget{classPGM_a87463d26eee1acb172e08d259acc0acd}\index{PGM@{PGM}!rotateLeft@{rotateLeft}}
+\index{rotateLeft@{rotateLeft}!PGM@{PGM}}
+\doxysubsubsection{\texorpdfstring{rotateLeft()}{rotateLeft()}}
+{\footnotesize\ttfamily \label{classPGM_a87463d26eee1acb172e08d259acc0acd} 
+void PGM::\+rotate\+Left (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \doxymbox{\hyperlink{classImage_a19ca2022e9c332b442a56a9794d36d1f}{Image}}.
+
+\Hypertarget{classPGM_a8024965df52fce1479e5c89f24acbafc}\index{PGM@{PGM}!rotateRight@{rotateRight}}
+\index{rotateRight@{rotateRight}!PGM@{PGM}}
+\doxysubsubsection{\texorpdfstring{rotateRight()}{rotateRight()}}
+{\footnotesize\ttfamily \label{classPGM_a8024965df52fce1479e5c89f24acbafc} 
+void PGM::\+rotate\+Right (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \doxymbox{\hyperlink{classImage_a0e626dfede70af2d8e18b72bcd1c23db}{Image}}.
 
 \Hypertarget{classPGM_a4e60155c449379da91abe74364a9b748}\index{PGM@{PGM}!save@{save}}
 \index{save@{save}!PGM@{PGM}}

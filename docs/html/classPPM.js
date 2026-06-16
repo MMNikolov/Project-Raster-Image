@@ -2,10 +2,14 @@ var classPPM =
 [
     [ "PPM", "classPPM.html#ada118c725a1b103ac52d5eab43e7040a", null ],
     [ "clone", "classPPM.html#a3c567ffbe74a7f6b174460f21b3e06a1", null ],
+    [ "flipLeft", "classPPM.html#aef92ea0949d2a04fedd78f15e5a3f6c2", null ],
+    [ "flipTop", "classPPM.html#ab9f5fc47db3102a6deb5f989f10c5e59", null ],
     [ "isGrayscale", "classPPM.html#a6277b4084b70e97d19ad2c1a13d0aa76", null ],
     [ "makeGrayscale", "classPPM.html#aece890249ac4624317814f93232ed348", null ],
     [ "makeMonochrome", "classPPM.html#a22cccdf8810877675c5894d89f2ed032", null ],
     [ "makeNegative", "classPPM.html#a5ac0e83dd0da3ab1905c08b38b4613c4", null ],
     [ "printSessionInfo", "classPPM.html#a2183b4fcb9cc962e0be5cec9a8f1df0c", null ],
+    [ "rotateLeft", "classPPM.html#a28f729186cdfe73302089ca4be3d4723", null ],
+    [ "rotateRight", "classPPM.html#ab1137bad35c5616fde2109b172860587", null ],
     [ "save", "classPPM.html#a5de30ddbc26ddc98aeb42f7b188c84b0", null ]
 ];

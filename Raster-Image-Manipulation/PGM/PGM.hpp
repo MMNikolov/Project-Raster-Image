@@ -66,6 +66,11 @@ public:
      */
     void makeMonochrome() override;
     
+    void rotateLeft() override;
+    void rotateRight() override;
+    void flipTop() override;
+    void flipLeft() override;
+
 private:
     int scalableValue; ///< Maximum gray value parameter parsed from the file header */
 };

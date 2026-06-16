@@ -1,8 +1,9 @@
 var searchData=
 [
-  ['g_0',['g',['../structPixel.html#aeab078b7768caf273f8fe1daffa50729',1,'Pixel']]],
-  ['getfilename_1',['getFilename',['../classSessionManager.html#a5397ebe611127be5f13ce401b2c86894',1,'SessionManager']]],
-  ['getheight_2',['getHeight',['../classImage.html#a1cd7587f88b6932b5269051d1ba08ff9',1,'Image']]],
-  ['getpixels_3',['getPixels',['../classImage.html#a827e8004aa9b7be85aa0f3003d3c4f86',1,'Image::getPixels() const'],['../classImage.html#a50610f29c821ee2b8bf53546e0e89b21',1,'Image::getPixels()']]],
-  ['getwidth_4',['getWidth',['../classImage.html#a36bcae4838228d574738249a87dc4464',1,'Image']]]
+  ['clone_0',['clone',['../classImage.html#a7096da2078bcfb53ba7f0bd1747dc150',1,'Image::clone()'],['../classPBM.html#adf37e8569da7a98d1a5d2fa0a508e1ee',1,'PBM::clone()'],['../classPGM.html#ae721c04ab0674597c58d1e0ce1ab576c',1,'PGM::clone()'],['../classPPM.html#a3c567ffbe74a7f6b174460f21b3e06a1',1,'PPM::clone()']]],
+  ['closesessionbyid_1',['closeSessionById',['../classSessionManager.html#a46c5a06807856be98438d2ec5f6f37c3',1,'SessionManager']]],
+  ['commandparser_2',['CommandParser',['../classCommandParser.html',1,'CommandParser'],['../classCommandParser.html#a1fd17c361d85ec13c212cbac1999b9b3',1,'CommandParser::CommandParser()']]],
+  ['commandparser_2ecpp_3',['CommandParser.cpp',['../CommandParser_8cpp.html',1,'']]],
+  ['commandparser_2ehpp_4',['CommandParser.hpp',['../CommandParser_8hpp.html',1,'']]],
+  ['createimage_5',['createImage',['../classImageFactory.html#a64e831c37a13ba6eb6b2fa3d6e9ebbba',1,'ImageFactory']]]
 ];

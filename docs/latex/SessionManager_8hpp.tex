@@ -2,11 +2,10 @@
 \hypertarget{SessionManager_8hpp}{}\label{SessionManager_8hpp}\index{Raster-\/Image-\/Manipulation/Session/SessionManager.hpp@{Raster-\/Image-\/Manipulation/Session/SessionManager.hpp}}
 
 
-Handles active engine state processing and image lifecycle ownership.  
+Coordinates multiple concurrent image processing workspaces and routes user commands.  
 
 
-{\ttfamily \+\#include "{}../\+\+Image/\+\+Image.\+hpp"{}}\newline
-{\ttfamily \+\#include "{}../\+\+Factory/\+\+Image\+Factory.\+hpp"{}}\newline
+{\ttfamily \+\#include "{}Session.\+hpp"{}}\newline
 Include dependency graph for Session\+Manager.\+hpp:\+
 % FIG 0
 This graph shows which files directly or indirectly include this file:\+
@@ -15,9 +14,9 @@ This graph shows which files directly or indirectly include this file:\+
 \begin{DoxyCompactItemize}
 \item 
 class \doxymbox{\hyperlink{classSessionManager}{Session\+Manager}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Global state registry controller routing terminal data pipelines to focused workspace tabs. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
-Handles active engine state processing and image lifecycle ownership. 
+Coordinates multiple concurrent image processing workspaces and routes user commands. 
 

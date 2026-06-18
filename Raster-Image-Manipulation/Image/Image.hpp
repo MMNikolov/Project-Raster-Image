@@ -77,10 +77,35 @@ public:
      */
     virtual void makeMonochrome() = 0;
 
-    virtual void rotateLeft() = 0;
-    virtual void rotateRight() = 0;
-    virtual void flipTop() = 0;
-    virtual void flipLeft() = 0;
+    /**
+     * @brief Rotates the image 90 degrees counter-clockwise.
+     * @details Allocates a temporary buffer on the heap, maps the flat 1D pixel coordinates 
+     * to their new spatial orientation, updates the internal memory buffer, and swaps the 
+     * image width and height dimensions.
+     */
+    virtual void rotateLeft();
+
+    /**
+     * @brief Rotates the image 90 degrees clockwise.
+     * @details Allocates a temporary buffer on the heap, maps the flat 1D pixel coordinates 
+     * to their new spatial orientation, updates the internal memory buffer, and swaps the 
+     * image width and height dimensions.
+     */
+    virtual void rotateRight();
+
+    /**
+     * @brief Flips the image vertically across the horizontal axis (top-to-bottom mirror).
+     * @details Reverses the row sequence in place within the flat 1D memory array without 
+     * changing the overall image width or height dimensions.
+     */
+    virtual void flipTop();
+
+    /**
+     * @brief Flips the image horizontally across the vertical axis (left-to-right mirror).
+     * @details Reverses the column elements within each individual row in place inside the 
+     * flat 1D memory array without changing the overall image dimensions.
+     */
+    virtual void flipLeft();
 
     //GETTERS
 

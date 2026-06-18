@@ -64,11 +64,7 @@ public:
      * @brief Does nothing here.
      */
     void makeMonochrome() override;
-
-    void rotateLeft() override;
-    void rotateRight() override;
-    void flipTop() override;
-    void flipLeft() override;
+    
 };
 
 #endif // PBM_HPP

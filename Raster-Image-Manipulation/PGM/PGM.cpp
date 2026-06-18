@@ -134,3 +134,4 @@ void PGM::makeMonochrome()
         this->pixelData[i] = {0, 0, 0};
     }
 }
+

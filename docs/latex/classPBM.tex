@@ -35,15 +35,7 @@ void \doxymbox{\hyperlink{classPBM_a1471cc00dfda2b2ec5deb8803523df1f}{make\+Nega
 void \doxymbox{\hyperlink{classPBM_abdcca87870a9f002f4c056f67b96ecb7}{make\+Grayscale}} () override
 \begin{DoxyCompactList}\small\item\em Does nothing here. \end{DoxyCompactList}\item 
 void \doxymbox{\hyperlink{classPBM_a072fd036e2a81b9a329ad7e3b7b4c288}{make\+Monochrome}} () override
-\begin{DoxyCompactList}\small\item\em Does nothing here. \end{DoxyCompactList}\item 
-void \doxymbox{\hyperlink{classPBM_a7ae1bfb3223ed7580fbf8180a2c09ffd}{rotate\+Left}} () override
-\item 
-void \doxymbox{\hyperlink{classPBM_a7c613a5e222438e4037b4935511313bb}{rotate\+Right}} () override
-\item 
-void \doxymbox{\hyperlink{classPBM_a97e282a81b9c1a9aaa360da6db9bdddd}{flip\+Top}} () override
-\item 
-void \doxymbox{\hyperlink{classPBM_a23030b232906134be932494d239563ae}{flip\+Left}} () override
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Does nothing here. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \doxymbox{\hyperlink{classImage}{Image}}}
 \begin{DoxyCompactItemize}
 \item 
@@ -51,6 +43,14 @@ void \doxymbox{\hyperlink{classPBM_a23030b232906134be932494d239563ae}{flip\+Left
 \begin{DoxyCompactList}\small\item\em Constructor initializing core dimensions and filename. \end{DoxyCompactList}\item 
 virtual \doxymbox{\hyperlink{classImage_ac12bacfcfa4247af6e4ff8918fe84df0}{\texorpdfstring{$\sim$}{\string~}\+Image}} ()=default
 \begin{DoxyCompactList}\small\item\em Virtual destructor for proper polymorphic cleanup. \end{DoxyCompactList}\item 
+virtual void \doxymbox{\hyperlink{classImage_ad9fb4fd4857b451e330bf37dcc6bc91d}{rotate\+Left}} ()
+\begin{DoxyCompactList}\small\item\em Rotates the image 90 degrees counter-\/clockwise. \end{DoxyCompactList}\item 
+virtual void \doxymbox{\hyperlink{classImage_a119e09b1addd48b535ddd20ff9c1f7c7}{rotate\+Right}} ()
+\begin{DoxyCompactList}\small\item\em Rotates the image 90 degrees clockwise. \end{DoxyCompactList}\item 
+virtual void \doxymbox{\hyperlink{classImage_a3fd1dcc15e88ca94c6c6cdea8eed770f}{flip\+Top}} ()
+\begin{DoxyCompactList}\small\item\em Flips the image vertically across the horizontal axis (top-\/to-\/bottom mirror). \end{DoxyCompactList}\item 
+virtual void \doxymbox{\hyperlink{classImage_a7933e291fe10ab7012d254145fa98742}{flip\+Left}} ()
+\begin{DoxyCompactList}\small\item\em Flips the image horizontally across the vertical axis (left-\/to-\/right mirror). \end{DoxyCompactList}\item 
 int \doxymbox{\hyperlink{classImage_a36bcae4838228d574738249a87dc4464}{get\+Width}} () const
 \begin{DoxyCompactList}\small\item\em Retrieves the image width. \end{DoxyCompactList}\item 
 int \doxymbox{\hyperlink{classImage_a1cd7587f88b6932b5269051d1ba08ff9}{get\+Height}} () const
@@ -128,26 +128,6 @@ A pointer to the newly allocated polymorphic \doxylink{classImage}{Image} object
 
 Implements \doxymbox{\hyperlink{classImage_a7096da2078bcfb53ba7f0bd1747dc150}{Image}}.
 
-\Hypertarget{classPBM_a23030b232906134be932494d239563ae}\index{PBM@{PBM}!flipLeft@{flipLeft}}
-\index{flipLeft@{flipLeft}!PBM@{PBM}}
-\doxysubsubsection{\texorpdfstring{flipLeft()}{flipLeft()}}
-{\footnotesize\ttfamily \label{classPBM_a23030b232906134be932494d239563ae} 
-void PBM::\+flip\+Left (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
-
-
-
-Implements \doxymbox{\hyperlink{classImage_ae7b6af2af7ff0a037955602f9a23bac5}{Image}}.
-
-\Hypertarget{classPBM_a97e282a81b9c1a9aaa360da6db9bdddd}\index{PBM@{PBM}!flipTop@{flipTop}}
-\index{flipTop@{flipTop}!PBM@{PBM}}
-\doxysubsubsection{\texorpdfstring{flipTop()}{flipTop()}}
-{\footnotesize\ttfamily \label{classPBM_a97e282a81b9c1a9aaa360da6db9bdddd} 
-void PBM::\+flip\+Top (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
-
-
-
-Implements \doxymbox{\hyperlink{classImage_a183cb2f2085ca1cfefed1de580d3aeea}{Image}}.
-
 \Hypertarget{classPBM_a54b2255440d2e7d20222d659093ff4ac}\index{PBM@{PBM}!isGrayscale@{isGrayscale}}
 \index{isGrayscale@{isGrayscale}!PBM@{PBM}}
 \doxysubsubsection{\texorpdfstring{isGrayscale()}{isGrayscale()}}
@@ -220,26 +200,6 @@ Prints the session state and format details of this file.
 
 
 Implements \doxymbox{\hyperlink{classImage_a997a88ec456aa24fd42660f9d4ba61cc}{Image}}.
-
-\Hypertarget{classPBM_a7ae1bfb3223ed7580fbf8180a2c09ffd}\index{PBM@{PBM}!rotateLeft@{rotateLeft}}
-\index{rotateLeft@{rotateLeft}!PBM@{PBM}}
-\doxysubsubsection{\texorpdfstring{rotateLeft()}{rotateLeft()}}
-{\footnotesize\ttfamily \label{classPBM_a7ae1bfb3223ed7580fbf8180a2c09ffd} 
-void PBM::\+rotate\+Left (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
-
-
-
-Implements \doxymbox{\hyperlink{classImage_a19ca2022e9c332b442a56a9794d36d1f}{Image}}.
-
-\Hypertarget{classPBM_a7c613a5e222438e4037b4935511313bb}\index{PBM@{PBM}!rotateRight@{rotateRight}}
-\index{rotateRight@{rotateRight}!PBM@{PBM}}
-\doxysubsubsection{\texorpdfstring{rotateRight()}{rotateRight()}}
-{\footnotesize\ttfamily \label{classPBM_a7c613a5e222438e4037b4935511313bb} 
-void PBM::\+rotate\+Right (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
-
-
-
-Implements \doxymbox{\hyperlink{classImage_a0e626dfede70af2d8e18b72bcd1c23db}{Image}}.
 
 \Hypertarget{classPBM_aa945ad4a32abbe9a488e0805ec0d2e94}\index{PBM@{PBM}!save@{save}}
 \index{save@{save}!PBM@{PBM}}

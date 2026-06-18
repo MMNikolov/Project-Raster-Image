@@ -35,15 +35,7 @@ void \doxymbox{\hyperlink{classPPM_a5ac0e83dd0da3ab1905c08b38b4613c4}{make\+Nega
 void \doxymbox{\hyperlink{classPPM_aece890249ac4624317814f93232ed348}{make\+Grayscale}} () override
 \begin{DoxyCompactList}\small\item\em finds the average of the three sums and assigns a single value; \end{DoxyCompactList}\item 
 void \doxymbox{\hyperlink{classPPM_a22cccdf8810877675c5894d89f2ed032}{make\+Monochrome}} () override
-\begin{DoxyCompactList}\small\item\em Makes the \doxylink{classPPM}{PPM} monochrome depending on if the pixel has a higher color channel intensity than 127. \end{DoxyCompactList}\item 
-void \doxymbox{\hyperlink{classPPM_a28f729186cdfe73302089ca4be3d4723}{rotate\+Left}} () override
-\item 
-void \doxymbox{\hyperlink{classPPM_ab1137bad35c5616fde2109b172860587}{rotate\+Right}} () override
-\item 
-void \doxymbox{\hyperlink{classPPM_ab9f5fc47db3102a6deb5f989f10c5e59}{flip\+Top}} () override
-\item 
-void \doxymbox{\hyperlink{classPPM_aef92ea0949d2a04fedd78f15e5a3f6c2}{flip\+Left}} () override
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Makes the \doxylink{classPPM}{PPM} monochrome depending on if the pixel has a higher color channel intensity than 127. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \doxymbox{\hyperlink{classImage}{Image}}}
 \begin{DoxyCompactItemize}
 \item 
@@ -51,6 +43,14 @@ void \doxymbox{\hyperlink{classPPM_aef92ea0949d2a04fedd78f15e5a3f6c2}{flip\+Left
 \begin{DoxyCompactList}\small\item\em Constructor initializing core dimensions and filename. \end{DoxyCompactList}\item 
 virtual \doxymbox{\hyperlink{classImage_ac12bacfcfa4247af6e4ff8918fe84df0}{\texorpdfstring{$\sim$}{\string~}\+Image}} ()=default
 \begin{DoxyCompactList}\small\item\em Virtual destructor for proper polymorphic cleanup. \end{DoxyCompactList}\item 
+virtual void \doxymbox{\hyperlink{classImage_ad9fb4fd4857b451e330bf37dcc6bc91d}{rotate\+Left}} ()
+\begin{DoxyCompactList}\small\item\em Rotates the image 90 degrees counter-\/clockwise. \end{DoxyCompactList}\item 
+virtual void \doxymbox{\hyperlink{classImage_a119e09b1addd48b535ddd20ff9c1f7c7}{rotate\+Right}} ()
+\begin{DoxyCompactList}\small\item\em Rotates the image 90 degrees clockwise. \end{DoxyCompactList}\item 
+virtual void \doxymbox{\hyperlink{classImage_a3fd1dcc15e88ca94c6c6cdea8eed770f}{flip\+Top}} ()
+\begin{DoxyCompactList}\small\item\em Flips the image vertically across the horizontal axis (top-\/to-\/bottom mirror). \end{DoxyCompactList}\item 
+virtual void \doxymbox{\hyperlink{classImage_a7933e291fe10ab7012d254145fa98742}{flip\+Left}} ()
+\begin{DoxyCompactList}\small\item\em Flips the image horizontally across the vertical axis (left-\/to-\/right mirror). \end{DoxyCompactList}\item 
 int \doxymbox{\hyperlink{classImage_a36bcae4838228d574738249a87dc4464}{get\+Width}} () const
 \begin{DoxyCompactList}\small\item\em Retrieves the image width. \end{DoxyCompactList}\item 
 int \doxymbox{\hyperlink{classImage_a1cd7587f88b6932b5269051d1ba08ff9}{get\+Height}} () const
@@ -128,26 +128,6 @@ A pointer to the newly allocated polymorphic \doxylink{classImage}{Image} object
 
 Implements \doxymbox{\hyperlink{classImage_a7096da2078bcfb53ba7f0bd1747dc150}{Image}}.
 
-\Hypertarget{classPPM_aef92ea0949d2a04fedd78f15e5a3f6c2}\index{PPM@{PPM}!flipLeft@{flipLeft}}
-\index{flipLeft@{flipLeft}!PPM@{PPM}}
-\doxysubsubsection{\texorpdfstring{flipLeft()}{flipLeft()}}
-{\footnotesize\ttfamily \label{classPPM_aef92ea0949d2a04fedd78f15e5a3f6c2} 
-void PPM::\+flip\+Left (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
-
-
-
-Implements \doxymbox{\hyperlink{classImage_ae7b6af2af7ff0a037955602f9a23bac5}{Image}}.
-
-\Hypertarget{classPPM_ab9f5fc47db3102a6deb5f989f10c5e59}\index{PPM@{PPM}!flipTop@{flipTop}}
-\index{flipTop@{flipTop}!PPM@{PPM}}
-\doxysubsubsection{\texorpdfstring{flipTop()}{flipTop()}}
-{\footnotesize\ttfamily \label{classPPM_ab9f5fc47db3102a6deb5f989f10c5e59} 
-void PPM::\+flip\+Top (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
-
-
-
-Implements \doxymbox{\hyperlink{classImage_a183cb2f2085ca1cfefed1de580d3aeea}{Image}}.
-
 \Hypertarget{classPPM_a6277b4084b70e97d19ad2c1a13d0aa76}\index{PPM@{PPM}!isGrayscale@{isGrayscale}}
 \index{isGrayscale@{isGrayscale}!PPM@{PPM}}
 \doxysubsubsection{\texorpdfstring{isGrayscale()}{isGrayscale()}}
@@ -220,26 +200,6 @@ Prints the session state and format details exactly as required by the specifica
 
 
 Implements \doxymbox{\hyperlink{classImage_a997a88ec456aa24fd42660f9d4ba61cc}{Image}}.
-
-\Hypertarget{classPPM_a28f729186cdfe73302089ca4be3d4723}\index{PPM@{PPM}!rotateLeft@{rotateLeft}}
-\index{rotateLeft@{rotateLeft}!PPM@{PPM}}
-\doxysubsubsection{\texorpdfstring{rotateLeft()}{rotateLeft()}}
-{\footnotesize\ttfamily \label{classPPM_a28f729186cdfe73302089ca4be3d4723} 
-void PPM::\+rotate\+Left (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
-
-
-
-Implements \doxymbox{\hyperlink{classImage_a19ca2022e9c332b442a56a9794d36d1f}{Image}}.
-
-\Hypertarget{classPPM_ab1137bad35c5616fde2109b172860587}\index{PPM@{PPM}!rotateRight@{rotateRight}}
-\index{rotateRight@{rotateRight}!PPM@{PPM}}
-\doxysubsubsection{\texorpdfstring{rotateRight()}{rotateRight()}}
-{\footnotesize\ttfamily \label{classPPM_ab1137bad35c5616fde2109b172860587} 
-void PPM::\+rotate\+Right (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
-
-
-
-Implements \doxymbox{\hyperlink{classImage_a0e626dfede70af2d8e18b72bcd1c23db}{Image}}.
 
 \Hypertarget{classPPM_a5de30ddbc26ddc98aeb42f7b188c84b0}\index{PPM@{PPM}!save@{save}}
 \index{save@{save}!PPM@{PPM}}

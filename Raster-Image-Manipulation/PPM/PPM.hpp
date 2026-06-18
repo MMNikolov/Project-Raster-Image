@@ -67,11 +67,6 @@ public:
      * @brief Makes the PPM monochrome depending on if the pixel has a higher color channel intensity than 127.
      */
     void makeMonochrome() override;
-    
-    void rotateLeft() override;
-    void rotateRight() override;
-    void flipTop() override;
-    void flipLeft() override;
 
 private:
     int maxColorValue; /**< Maximum color intensity range parsed from the header */

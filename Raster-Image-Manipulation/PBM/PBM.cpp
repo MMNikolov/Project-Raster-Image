@@ -13,26 +13,25 @@ PBM::PBM(const std::string &filename)
     {
         throw std::invalid_argument("Cant open the file in PBM");
     }
-    
+
     std::string magicNumber;
     file >> magicNumber;
     if (magicNumber != "P1")
     {
         throw std::invalid_argument("Not a valid portable bitmap");
     }
-    
+
     skipComments(file);
     if (!(file >> width >> height))
     {
         throw std::invalid_argument("Invalid dimensions");
     }
-    
+
     if (this->width <= 0 || this->height <= 0)
     {
         throw std::invalid_argument("Cant have dimensions below zero");
     }
-    
-    
+
     pixelData.resize(this->width * this->height);
 
     int val;
@@ -46,10 +45,10 @@ PBM::PBM(const std::string &filename)
         {
             throw std::invalid_argument("There cant be any pixels other than 0 or 1");
         }
-        
+
         if (val == 0)
         {
-            pixelData[i] = { 255, 255, 255}; // White
+            pixelData[i] = {255, 255, 255}; // White
         }
         else if (val == 1)
         {
@@ -65,30 +64,31 @@ void PBM::save(const std::string &filename) const
     {
         throw std::invalid_argument("Cant open the file in PBM");
     }
-    
-    file << "P1\n" << this->width << ' ' << this->height << '\n';
 
-    //we made a seperate variable consuming 4 more bytes, because through each itteration it has to do an arithmetic
-    //if we do this.width * this.height its much more inneficient
+    file << "P1\n"
+         << this->width << ' ' << this->height << '\n';
+
+    // we made a seperate variable consuming 4 more bytes, because through each itteration it has to do an arithmetic
+    // if we do this.width * this.height its much more inneficient
     int count = this->width * this->height;
     for (int i = 0; i < count; i++)
     {
-        const Pixel& pixel = this->pixelData[i];
+        const Pixel &pixel = this->pixelData[i];
 
         uint8_t intensity = (pixel.b + pixel.g + pixel.r) / 3;
 
         if (intensity > 127)
         {
-            file << '0'; // because when the inetensity gets bigger it gets closer to the 
+            file << '0'; // because when the inetensity gets bigger it gets closer to the
                          // absolute value of the white which is { 255, 255, 255 }
         }
-        else 
+        else
         {
             file << '1'; // same here when the intensity is < 127 its gets closer to {0, 0, 0}
         }
-        
-        //we read till the end of the file and when we reach it we go to the next row
-        //and when the file is not in the end still we just put a ws
+
+        // we read till the end of the file and when we reach it we go to the next row
+        // and when the file is not in the end still we just put a ws
         if ((i + 1) % width == 0)
         {
             file << '\n';
@@ -124,10 +124,9 @@ void PBM::makeNegative()
         this->pixelData[i].g = 255 - this->pixelData[i].g;
         this->pixelData[i].b = 255 - this->pixelData[i].b;
     }
-    
 }
 
-//these two do nothing
+// these two do nothing
 //------------------------------
 void PBM::makeGrayscale()
 {
@@ -139,24 +138,3 @@ void PBM::makeMonochrome()
     return;
 }
 //------------------------------
-
-void PBM::rotateLeft()
-{
-    int newWidth = this->height;
-    int newHeight = this->width;
-
-    
-}
-
-void PBM::rotateRight()
-{
-}
-
-void PBM::flipTop()
-{
-}
-
-void PBM::flipLeft()
-{
-
-}

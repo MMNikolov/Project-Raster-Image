@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['writetestasset_0',['writeTestAsset',['../TestFormatsAndFactory_8cpp.html#a32e682bcb389ebcb4a84501deac7cde8',1,'TestFormatsAndFactory.cpp']]]
+  ['undo_0',['undo',['../classSession.html#a3775cf47da8f5bdd929816d6d1e2d2c3',1,'Session::undo()'],['../classSessionManager.html#a976925a605ff60d9e628fc54d87ead9b',1,'SessionManager::undo()']]]
 ];

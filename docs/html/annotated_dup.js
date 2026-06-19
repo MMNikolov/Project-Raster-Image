@@ -1,5 +1,6 @@
 var annotated_dup =
 [
+    [ "BMP", "classBMP.html", "classBMP" ],
     [ "CommandParser", "classCommandParser.html", "classCommandParser" ],
     [ "Image", "classImage.html", "classImage" ],
     [ "ImageFactory", "classImageFactory.html", null ],

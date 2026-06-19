@@ -1,0 +1,49 @@
+\doxysection{BMP.\+hpp}
+\hypertarget{BMP_8hpp_source}{}\label{BMP_8hpp_source}\index{Raster-\/Image-\/Manipulation/BMP/BMP.hpp@{Raster-\/Image-\/Manipulation/BMP/BMP.hpp}}
+\doxymbox{\hyperlink{BMP_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#ifndef\ BMP\_HPP}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#define\ BMP\_HPP}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{Image_8hpp}{../Image/Image.hpp}}"{}}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{classBMP_a30bed0442cb09c481b607dd8445152c3}{BMP}}\ :\ \textcolor{keyword}{public}\ \doxymbox{\hyperlink{classImage_ab5ca0ae10da321c9e443734a87dee15e}{Image}}}
+\DoxyCodeLine{00016\ \{}
+\DoxyCodeLine{00017\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00023\ \ \ \ \ \doxymbox{\hyperlink{classBMP_a30bed0442cb09c481b607dd8445152c3}{BMP}}(\textcolor{keyword}{const}\ std::string\ \&filename);}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{comment}{//\ THERE\ IS\ NO\ NEED\ FOR\ A\ DESTRUCTOR\ AS\ WE\ DONT\ HAVE\ DYNAMICALLY\ ALLOCATED\ MEMORY\ TO\ WORK\ WITH}}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{classBMP_a693b221410e9a5d7d8c99656f894a774}{save}}(\textcolor{keyword}{const}\ std::string\ \&filename)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00037\ \ \ \ \ \doxymbox{\hyperlink{classBMP_a30bed0442cb09c481b607dd8445152c3}{BMP}}\ *\doxymbox{\hyperlink{classBMP_adee679b1ce2439cbfe320d5174bef030}{clone}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{classBMP_acd70935f30e4700437200a06b3393e73}{printSessionInfo}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{classBMP_a98a6bedd71803e35b4a3e7d93533f198}{isGrayscale}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{classBMP_aa52e4d66f27376119afe3c37cf787acc}{makeNegative}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{classBMP_a487fee9994740583592bb9573fc295ab}{makeGrayscale}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{classBMP_ac534c76a35fd1c49413fa62155ecef32}{makeMonochrome}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00066\ \ \ \ \ uint16\_t\ reserved1;}
+\DoxyCodeLine{00067\ \ \ \ \ uint16\_t\ reserved2;}
+\DoxyCodeLine{00068\ \ \ \ \ uint32\_t\ biXPixelsPerMeter;}
+\DoxyCodeLine{00069\ \ \ \ \ uint32\_t\ biYPixelsPerMeter;}
+\DoxyCodeLine{00070\ \ \ \ \ uint32\_t\ biClrUsed;}
+\DoxyCodeLine{00071\ \ \ \ \ uint32\_t\ biClrImportant;}
+\DoxyCodeLine{00072\ \};}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ BMP\_HPP}}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ \textcolor{comment}{//where\ I\ got\ my\ information\ from:}}
+\DoxyCodeLine{00077\ \textcolor{comment}{//\ -\/\ https://solarianprogrammer.com/2018/11/19/cpp-\/reading-\/writing-\/bmp-\/images/}}
+\DoxyCodeLine{00078\ \textcolor{comment}{//this\ is\ written\ for\ the\ C\ language,\ but\ the\ main\ idea\ is\ still\ there}}
+\DoxyCodeLine{00079\ \textcolor{comment}{//\ -\/\ https://elcharolin.wordpress.com/2018/11/28/read-\/and-\/write-\/bmp-\/files-\/in-\/c-\/c/}}
+
+\end{DoxyCode}

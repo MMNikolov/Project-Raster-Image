@@ -1,11 +1,8 @@
 var searchData=
 [
-  ['redo_0',['redo',['../classSession.html#ab615c2ae32f73fa42496233146da6f19',1,'Session::redo()'],['../classSessionManager.html#af90ce3c23d63842d22d6237f60661834',1,'SessionManager::redo()']]],
-  ['rotateleft_1',['rotateLeft',['../classImage.html#ad9fb4fd4857b451e330bf37dcc6bc91d',1,'Image']]],
-  ['rotateright_2',['rotateRight',['../classImage.html#a119e09b1addd48b535ddd20ff9c1f7c7',1,'Image']]],
-  ['run_3',['run',['../classCommandParser.html#af669ef32400be1e6ccf2faf8669d48ce',1,'CommandParser']]],
-  ['runexceptionsuite_4',['runExceptionSuite',['../TestFormatsAndFactory_8cpp.html#a899e9ef2a53b01227c6f1b302b4503f5',1,'TestFormatsAndFactory.cpp']]],
-  ['runpbmsuite_5',['runPbmSuite',['../TestFormatsAndFactory_8cpp.html#af5116cc0b5cddaa494f64bfd30df77cb',1,'TestFormatsAndFactory.cpp']]],
-  ['runpgmsuite_6',['runPgmSuite',['../TestFormatsAndFactory_8cpp.html#ad2050c40e8f4c49c14fab05071522387',1,'TestFormatsAndFactory.cpp']]],
-  ['runppmsuite_7',['runPpmSuite',['../TestFormatsAndFactory_8cpp.html#a952691c7de8a5a89ce11e97ae4e0d6ed',1,'TestFormatsAndFactory.cpp']]]
+  ['pbm_0',['PBM',['../classPBM.html#a8955dfcb9b0c9117b4b3738951fd3769',1,'PBM']]],
+  ['pgm_1',['PGM',['../classPGM.html#ae32ff656cb739394f5ccd9d5545c672a',1,'PGM']]],
+  ['ppm_2',['PPM',['../classPPM.html#ada118c725a1b103ac52d5eab43e7040a',1,'PPM']]],
+  ['printcurrentsessioninfo_3',['printCurrentSessionInfo',['../classSessionManager.html#ac9e3e86997fc379bb0450b7f5d07ae55',1,'SessionManager']]],
+  ['printsessioninfo_4',['printSessionInfo',['../classBMP.html#acd70935f30e4700437200a06b3393e73',1,'BMP::printSessionInfo()'],['../classImage.html#a997a88ec456aa24fd42660f9d4ba61cc',1,'Image::printSessionInfo()'],['../classPBM.html#a49ff63007313e0069249c9b3c2876147',1,'PBM::printSessionInfo()'],['../classPGM.html#ac8c9a8c14305f7a0a38568297ff9184e',1,'PGM::printSessionInfo()'],['../classPPM.html#a2183b4fcb9cc962e0be5cec9a8f1df0c',1,'PPM::printSessionInfo()'],['../classSession.html#a30b15b932b1ef6573fbafee75a6e69dd',1,'Session::printSessionInfo()']]]
 ];

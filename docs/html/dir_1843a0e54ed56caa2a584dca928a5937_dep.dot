@@ -11,6 +11,6 @@ digraph "Raster-Image-Manipulation/tests"
   dir_f6c76c17331fa56b76130351e4c89ecb [label="Factory", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_f6c76c17331fa56b76130351e4c89ecb.html",tooltip=""];
   dir_1843a0e54ed56caa2a584dca928a5937 [label="tests", fillcolor="#edf0f7", color="grey25", style="filled,bold", URL="dir_1843a0e54ed56caa2a584dca928a5937.html",tooltip=""];
   }
-  dir_1843a0e54ed56caa2a584dca928a5937->dir_142a1c6445c76f8fcc5bf0e68549c6bb [headlabel="1", labeldistance=1.5 headhref="dir_000008_000007.html" href="dir_000008_000007.html" color="steelblue1" fontcolor="steelblue1"];
-  dir_1843a0e54ed56caa2a584dca928a5937->dir_f6c76c17331fa56b76130351e4c89ecb [headlabel="1", labeldistance=1.5 headhref="dir_000008_000001.html" href="dir_000008_000001.html" color="steelblue1" fontcolor="steelblue1"];
+  dir_1843a0e54ed56caa2a584dca928a5937->dir_142a1c6445c76f8fcc5bf0e68549c6bb [headlabel="1", labeldistance=1.5 headhref="dir_000009_000008.html" href="dir_000009_000008.html" color="steelblue1" fontcolor="steelblue1"];
+  dir_1843a0e54ed56caa2a584dca928a5937->dir_f6c76c17331fa56b76130351e4c89ecb [headlabel="1", labeldistance=1.5 headhref="dir_000009_000002.html" href="dir_000009_000002.html" color="steelblue1" fontcolor="steelblue1"];
 }

@@ -41,7 +41,10 @@ digraph "Raster-Image-Manipulation/CLI/CommandParser.cpp"
   Node16 [id="Node000016",label="../PPM/PPM.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$PPM_8hpp.html",tooltip="Defines the concrete PPM (Portable Pixmap) image format parser and serializer."];
   Node16 -> Node5 [id="edge20_Node000016_Node000005",color="steelblue1",style="solid",tooltip=" "];
   Node16 -> Node13 [id="edge21_Node000016_Node000013",color="steelblue1",style="solid",tooltip=" "];
-  Node4 -> Node13 [id="edge22_Node000004_Node000013",color="steelblue1",style="solid",tooltip=" "];
-  Node2 -> Node17 [id="edge23_Node000002_Node000017",color="steelblue1",style="solid",tooltip=" "];
-  Node17 [id="Node000017",label="sstream",height=0.2,width=0.4,color="grey60", fillcolor="#E0E0E0", style="filled",tooltip=" "];
+  Node11 -> Node17 [id="edge22_Node000011_Node000017",color="steelblue1",style="solid",tooltip=" "];
+  Node17 [id="Node000017",label="../BMP/BMP.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$BMP_8hpp.html",tooltip="Defines the concrete BMP (Windows Bitmap) image format parser and serializer."];
+  Node17 -> Node5 [id="edge23_Node000017_Node000005",color="steelblue1",style="solid",tooltip=" "];
+  Node4 -> Node13 [id="edge24_Node000004_Node000013",color="steelblue1",style="solid",tooltip=" "];
+  Node2 -> Node18 [id="edge25_Node000002_Node000018",color="steelblue1",style="solid",tooltip=" "];
+  Node18 [id="Node000018",label="sstream",height=0.2,width=0.4,color="grey60", fillcolor="#E0E0E0", style="filled",tooltip=" "];
 }

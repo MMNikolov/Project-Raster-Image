@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['session_0',['Session',['../classSession.html',1,'']]],
-  ['sessionmanager_1',['SessionManager',['../classSessionManager.html',1,'']]]
+  ['pbm_0',['PBM',['../classPBM.html',1,'']]],
+  ['pgm_1',['PGM',['../classPGM.html',1,'']]],
+  ['pixel_2',['Pixel',['../structPixel.html',1,'']]],
+  ['ppm_3',['PPM',['../classPPM.html',1,'']]]
 ];

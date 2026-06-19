@@ -35,15 +35,16 @@ void CommandParser::run()
             {
                 std::vector<std::string> filepaths;
                 std::string path;
-                if (ss >> path)
+                while (ss >> path)
                 {
                     filepaths.push_back(path);
                 }
-
+                
                 if (filepaths.empty())
                 {
-                    throw std::invalid_argument("Missing parameters. Syntax: load <file1> <file2> ...");
+                    throw std::invalid_argument("Cannot load load the session if there are no filepaths");
                 }
+                
                 this->manager.loadSession(filepaths);
             }
             else if (command == "switch")
@@ -58,49 +59,99 @@ void CommandParser::run()
             }
             else if (command == "close")
             {
-                int targetId;
-                if (!(ss >> targetId))
+                std::string dummy;
+                if (!(ss >> dummy))
                 {
-                    throw std::invalid_argument("Missing the targetId parameter");
+                    throw std::invalid_argument("cant the read the rest of the command");
                 }
-
-                this->manager.closeSessionById(targetId);
+                this->manager.closeSessionById(-1);
             }
             else if (command == "negative")
             {
                 this->manager.makeNegative();
+                std::cout << "Negative filter transaction logged.\n";
             }
             else if (command == "monochrome")
             {
                 this->manager.makeMonochrome();
+                std::cout << "Grayscale filter transaction logged.\n";
             }
             else if (command == "grayscale")
             {
                 this->manager.makeGrayscale();
+                std::cout << "Monochrome filter transaction logged.\n";
             }
-            else if (command == "list")
+            else if (command == "rotate")
             {
-                std::string subCommand;
-                if (ss >> subCommand && subCommand == "session")
+                std::string orientation;
+                if (!(ss >> orientation))
                 {
-                    this->manager.printCurrentSessionInfo();
+                    throw std::invalid_argument("Cant read where the images are needed to rotate");
+                }
+                
+                if (orientation == "left")
+                {
+                    this->manager.rotateLeft();
+                }
+                else if (orientation == "right")
+                {
+                    this->manager.rotateRight();
                 }
                 else
                 {
-                    std::cout << "Unknown command configuration. Did you mean 'list session'?\n";
+                    throw std::invalid_argument("Cant rotate if the orientation isnt correct");
                 }
             }
-            else if (command == "session")
+            else if (command == "flip")
             {
-                std::string subCommand;
-                if (ss >> subCommand && subCommand == "info")
+                std::string orientation;
+                if (!(ss >> orientation))
                 {
-                    this->manager.printCurrentSessionInfo();
+                    throw std::invalid_argument("Cant read where the images are needed to flip");
+                }
+                
+                if (orientation == "top")
+                {
+                    this->manager.flipTop();
+                }
+                else if (orientation == "left")
+                {
+                    this->manager.flipLeft();
                 }
                 else
                 {
-                    std::cout << "Unknown command configuration. Did you mean 'session info'?\n";
+                    throw std::invalid_argument("Cant rotate if the orientation isnt correct");
                 }
+            }
+            else if (command == "undo")
+            {
+                this->manager.undo();
+            }
+            else if (command == "redo")
+            {
+                this->manager.redo();
+            }
+            else if (command == "save")
+            {
+                this->manager.save();
+            }
+            else if (command == "saveas")
+            {
+                std::string subCommand;
+                if (!(ss >> subCommand))
+                {
+                    throw std::invalid_argument("You need to tell me where to save the file if u choose the save as functionality");
+                }
+                this->manager.saveAs(subCommand);
+            }
+            else if (command == "list" || command == "session")
+            {
+                std::string subCommand;
+                if (!(ss >> subCommand))
+                {
+                    throw std::invalid_argument("Cant read the subcommand");
+                }
+                this->manager.printCurrentSessionInfo();
             }
             else if (command == "exit")
             {

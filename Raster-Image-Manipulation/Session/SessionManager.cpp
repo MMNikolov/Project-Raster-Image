@@ -125,6 +125,28 @@ void SessionManager::printCurrentSessionInfo() const
     this->activeSessions[index]->printSessionInfo();
 }
 
+void SessionManager::save()
+{
+    if (this->currentActiveId == -1)
+    {
+        throw std::invalid_argument("Cannot save when there are no active sessions open");
+    }
+    
+    int index = this->findSessionIndex(this->currentActiveId);
+    this->activeSessions[index]->save();
+}
+
+void SessionManager::saveAs(const std::string &newFilename)
+{
+    if (this->currentActiveId == -1)
+    {
+        throw std::invalid_argument("Cannot save as when there are no active sessions open");
+    }
+    
+    int index = this->findSessionIndex(this->currentActiveId);
+    this->activeSessions[index]->saveAs(newFilename);
+}
+
 void SessionManager::undo()
 {
     if (this->currentActiveId == -1)
@@ -147,6 +169,51 @@ void SessionManager::redo()
     
     int index = findSessionIndex(this->currentActiveId);
     this->activeSessions[index]->redo();
+}
+
+void SessionManager::rotateLeft()
+{
+    if (this->currentActiveId == -1)
+    {
+        throw std::invalid_argument("Cant rotate all the images to the left if there are NONE :D");
+    }
+    
+    int index = this->findSessionIndex(this->currentActiveId);
+    this->activeSessions[index]->rotateLeft();
+}
+
+void SessionManager::rotateRight()
+{
+    if (this->currentActiveId == -1)
+    {
+        throw std::invalid_argument("Cant rotate all the images that are in the active session if there are none!!");
+    }
+    
+    int index = this->findSessionIndex(this->currentActiveId);
+    this->activeSessions[index]->rotateRight();
+}
+
+void SessionManager::flipTop()
+{
+    if (this->currentActiveId == -1)
+    {
+        throw std::invalid_argument("Cannot flip the images horizontally in the active session if there are none");
+    }
+    
+    int index = this->findSessionIndex(this->currentActiveId);
+    this->activeSessions[index]->flipTop();
+}
+
+
+void SessionManager::flipLeft()
+{
+    if (this->currentActiveId == -1)
+    {
+        throw std::invalid_argument("Cannot flip the images vertically in the active session if there are none");
+    }
+    
+    int index = this->findSessionIndex(this->currentActiveId);
+    this->activeSessions[index]->flipLeft();
 }
 
 int SessionManager::findSessionIndex(int sessionId) const

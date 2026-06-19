@@ -35,5 +35,8 @@ digraph "Raster-Image-Manipulation/Session/Session.hpp"
   Node13 [id="Node000013",label="../PPM/PPM.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$PPM_8hpp.html",tooltip="Defines the concrete PPM (Portable Pixmap) image format parser and serializer."];
   Node13 -> Node2 [id="edge17_Node000013_Node000002",color="steelblue1",style="solid",tooltip=" "];
   Node13 -> Node10 [id="edge18_Node000013_Node000010",color="steelblue1",style="solid",tooltip=" "];
-  Node1 -> Node10 [id="edge19_Node000001_Node000010",color="steelblue1",style="solid",tooltip=" "];
+  Node8 -> Node14 [id="edge19_Node000008_Node000014",color="steelblue1",style="solid",tooltip=" "];
+  Node14 [id="Node000014",label="../BMP/BMP.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$BMP_8hpp.html",tooltip="Defines the concrete BMP (Windows Bitmap) image format parser and serializer."];
+  Node14 -> Node2 [id="edge20_Node000014_Node000002",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node10 [id="edge21_Node000001_Node000010",color="steelblue1",style="solid",tooltip=" "];
 }

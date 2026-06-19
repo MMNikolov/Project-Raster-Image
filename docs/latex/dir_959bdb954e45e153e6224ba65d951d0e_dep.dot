@@ -10,5 +10,5 @@ digraph "Raster-Image-Manipulation/PGM"
   dir_5e5ab9f791422ab5fca726d93cfdd1ff [label="Image", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_5e5ab9f791422ab5fca726d93cfdd1ff.html",tooltip=""];
   dir_959bdb954e45e153e6224ba65d951d0e [label="PGM", fillcolor="#edf0f7", color="grey25", style="filled,bold", URL="dir_959bdb954e45e153e6224ba65d951d0e.html",tooltip=""];
   }
-  dir_959bdb954e45e153e6224ba65d951d0e->dir_5e5ab9f791422ab5fca726d93cfdd1ff [headlabel="1", labeldistance=1.5 headhref="dir_000004_000002.html" href="dir_000004_000002.html" color="steelblue1" fontcolor="steelblue1"];
+  dir_959bdb954e45e153e6224ba65d951d0e->dir_5e5ab9f791422ab5fca726d93cfdd1ff [headlabel="1", labeldistance=1.5 headhref="dir_000005_000003.html" href="dir_000005_000003.html" color="steelblue1" fontcolor="steelblue1"];
 }

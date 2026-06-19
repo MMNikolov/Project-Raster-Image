@@ -68,6 +68,17 @@ public:
     void printCurrentSessionInfo() const;
 
     /**
+     * @brief Directs the focused active session to save all its images back to disk.
+     */
+    void save();
+
+    /**
+     * @brief Directs the focused active session to save an image to a new path.
+     * @param newFilename Target path string.
+     */
+    void saveAs(const std::string& newFilename);
+
+    /**
      * @brief Requests an undo reversion operation on the active focused workspace tracking block.
      */
     void undo();
@@ -76,6 +87,26 @@ public:
      * @brief Requests a redo recovery operation on the active focused workspace tracking block.
      */
     void redo();
+
+    /**
+     * @brief Forwards a counter-clockwise rotation request to the active session.
+     */
+    void rotateLeft();
+
+    /**
+     * @brief Forwards a clockwise rotation request to the active session.
+     */
+    void rotateRight();
+
+    /**
+     * @brief Forwards a vertical axis mirror flip request to the active session.
+     */
+    void flipTop();
+
+    /**
+     * @brief Forwards a horizontal axis mirror flip request to the active session.
+     */
+    void flipLeft();
 
 private:
     std::vector<Session *> activeSessions; /**< Collection of all concurrent workspace instances */

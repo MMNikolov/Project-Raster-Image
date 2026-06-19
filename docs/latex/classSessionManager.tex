@@ -34,10 +34,22 @@ void \doxymbox{\hyperlink{classSessionManager_aac1e2e0591b236740da277e8ba50ccec}
 \begin{DoxyCompactList}\small\item\em Forwards monochrome pixel calculation execution to the focused active session. \end{DoxyCompactList}\item 
 void \doxymbox{\hyperlink{classSessionManager_ac9e3e86997fc379bb0450b7f5d07ae55}{print\+Current\+Session\+Info}} () const
 \begin{DoxyCompactList}\small\item\em Prints format profile statistics for files inside the currently active session focus. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{classSessionManager_aa978b3850afcf3437005fd0ac58d0a6a}{save}} ()
+\begin{DoxyCompactList}\small\item\em Directs the focused active session to save all its images back to disk. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{classSessionManager_ab0f0bf4e1693e68d37d47b2b13d2c464}{save\+As}} (const std::\+string \&new\+Filename)
+\begin{DoxyCompactList}\small\item\em Directs the focused active session to save an image to a new path. \end{DoxyCompactList}\item 
 void \doxymbox{\hyperlink{classSessionManager_a976925a605ff60d9e628fc54d87ead9b}{undo}} ()
 \begin{DoxyCompactList}\small\item\em Requests an undo reversion operation on the active focused workspace tracking block. \end{DoxyCompactList}\item 
 void \doxymbox{\hyperlink{classSessionManager_af90ce3c23d63842d22d6237f60661834}{redo}} ()
-\begin{DoxyCompactList}\small\item\em Requests a redo recovery operation on the active focused workspace tracking block. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Requests a redo recovery operation on the active focused workspace tracking block. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{classSessionManager_a4839c0fe3ce1be27b59e87fb346f3087}{rotate\+Left}} ()
+\begin{DoxyCompactList}\small\item\em Forwards a counter-\/clockwise rotation request to the active session. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{classSessionManager_ae43084ceb4858d4022c24847829dda18}{rotate\+Right}} ()
+\begin{DoxyCompactList}\small\item\em Forwards a clockwise rotation request to the active session. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{classSessionManager_a02d7d43d2c8fe8a18db587ef178bbc61}{flip\+Top}} ()
+\begin{DoxyCompactList}\small\item\em Forwards a vertical axis mirror flip request to the active session. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{classSessionManager_a380417b676440c3673f815066bec3752}{flip\+Left}} ()
+\begin{DoxyCompactList}\small\item\em Forwards a horizontal axis mirror flip request to the active session. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -92,6 +104,26 @@ Closes a targeted session workspace and releases all its embedded allocations.
 {\em session\+Id} & The targeted identifier integer to terminate. \\
 \hline
 \end{DoxyParams}
+\Hypertarget{classSessionManager_a380417b676440c3673f815066bec3752}\index{SessionManager@{SessionManager}!flipLeft@{flipLeft}}
+\index{flipLeft@{flipLeft}!SessionManager@{SessionManager}}
+\doxysubsubsection{\texorpdfstring{flipLeft()}{flipLeft()}}
+{\footnotesize\ttfamily \label{classSessionManager_a380417b676440c3673f815066bec3752} 
+void Session\+Manager::\+flip\+Left (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Forwards a horizontal axis mirror flip request to the active session. 
+
+\Hypertarget{classSessionManager_a02d7d43d2c8fe8a18db587ef178bbc61}\index{SessionManager@{SessionManager}!flipTop@{flipTop}}
+\index{flipTop@{flipTop}!SessionManager@{SessionManager}}
+\doxysubsubsection{\texorpdfstring{flipTop()}{flipTop()}}
+{\footnotesize\ttfamily \label{classSessionManager_a02d7d43d2c8fe8a18db587ef178bbc61} 
+void Session\+Manager::\+flip\+Top (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Forwards a vertical axis mirror flip request to the active session. 
+
 \Hypertarget{classSessionManager_a396c9c2e863f913ae57b652568f0c44c}\index{SessionManager@{SessionManager}!loadSession@{loadSession}}
 \index{loadSession@{loadSession}!SessionManager@{SessionManager}}
 \doxysubsubsection{\texorpdfstring{loadSession()}{loadSession()}}
@@ -163,6 +195,51 @@ void Session\+Manager::\+redo (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption
 
 Requests a redo recovery operation on the active focused workspace tracking block. 
 
+\Hypertarget{classSessionManager_a4839c0fe3ce1be27b59e87fb346f3087}\index{SessionManager@{SessionManager}!rotateLeft@{rotateLeft}}
+\index{rotateLeft@{rotateLeft}!SessionManager@{SessionManager}}
+\doxysubsubsection{\texorpdfstring{rotateLeft()}{rotateLeft()}}
+{\footnotesize\ttfamily \label{classSessionManager_a4839c0fe3ce1be27b59e87fb346f3087} 
+void Session\+Manager::\+rotate\+Left (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Forwards a counter-\/clockwise rotation request to the active session. 
+
+\Hypertarget{classSessionManager_ae43084ceb4858d4022c24847829dda18}\index{SessionManager@{SessionManager}!rotateRight@{rotateRight}}
+\index{rotateRight@{rotateRight}!SessionManager@{SessionManager}}
+\doxysubsubsection{\texorpdfstring{rotateRight()}{rotateRight()}}
+{\footnotesize\ttfamily \label{classSessionManager_ae43084ceb4858d4022c24847829dda18} 
+void Session\+Manager::\+rotate\+Right (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Forwards a clockwise rotation request to the active session. 
+
+\Hypertarget{classSessionManager_aa978b3850afcf3437005fd0ac58d0a6a}\index{SessionManager@{SessionManager}!save@{save}}
+\index{save@{save}!SessionManager@{SessionManager}}
+\doxysubsubsection{\texorpdfstring{save()}{save()}}
+{\footnotesize\ttfamily \label{classSessionManager_aa978b3850afcf3437005fd0ac58d0a6a} 
+void Session\+Manager::\+save (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Directs the focused active session to save all its images back to disk. 
+
+\Hypertarget{classSessionManager_ab0f0bf4e1693e68d37d47b2b13d2c464}\index{SessionManager@{SessionManager}!saveAs@{saveAs}}
+\index{saveAs@{saveAs}!SessionManager@{SessionManager}}
+\doxysubsubsection{\texorpdfstring{saveAs()}{saveAs()}}
+{\footnotesize\ttfamily \label{classSessionManager_ab0f0bf4e1693e68d37d47b2b13d2c464} 
+void Session\+Manager::\+save\+As (\begin{DoxyParamCaption}\item[{const std::\+string \&}]{new\+Filename}{}\end{DoxyParamCaption})}
+
+
+
+Directs the focused active session to save an image to a new path. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Filename} & Target path string. \\
+\hline
+\end{DoxyParams}
 \Hypertarget{classSessionManager_a8513a09b1acbd6ebc3c8c5e5d33615e3}\index{SessionManager@{SessionManager}!switchSession@{switchSession}}
 \index{switchSession@{switchSession}!SessionManager@{SessionManager}}
 \doxysubsubsection{\texorpdfstring{switchSession()}{switchSession()}}

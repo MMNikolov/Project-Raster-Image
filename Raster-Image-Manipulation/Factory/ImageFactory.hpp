@@ -5,6 +5,7 @@
 #include "../PGM/PGM.hpp"
 #include "../PBM/PBM.hpp"
 #include "../PPM/PPM.hpp"
+#include "../BMP/BMP.hpp"
 
 class ImageFactory
 {

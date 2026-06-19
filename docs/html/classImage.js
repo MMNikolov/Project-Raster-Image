@@ -5,6 +5,7 @@ var classImage =
     [ "clone", "classImage.html#a7096da2078bcfb53ba7f0bd1747dc150", null ],
     [ "flipLeft", "classImage.html#a7933e291fe10ab7012d254145fa98742", null ],
     [ "flipTop", "classImage.html#a3fd1dcc15e88ca94c6c6cdea8eed770f", null ],
+    [ "getFilename", "classImage.html#a6c2e1b5dbe5943c50709d7d86292e116", null ],
     [ "getHeight", "classImage.html#a1cd7587f88b6932b5269051d1ba08ff9", null ],
     [ "getPixels", "classImage.html#a50610f29c821ee2b8bf53546e0e89b21", null ],
     [ "getPixels", "classImage.html#a827e8004aa9b7be85aa0f3003d3c4f86", null ],

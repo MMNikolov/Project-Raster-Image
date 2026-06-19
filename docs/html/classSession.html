@@ -115,10 +115,24 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a87bc8a6e8c0495fbc646b3ba77f98999"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies the monochrome transformation to all images in this session.  <br /></td></tr>
 <tr class="memitem:a30b15b932b1ef6573fbafee75a6e69dd" id="r_a30b15b932b1ef6573fbafee75a6e69dd"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a30b15b932b1ef6573fbafee75a6e69dd">printSessionInfo</a> () const</td></tr>
 <tr class="memdesc:a30b15b932b1ef6573fbafee75a6e69dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Outputs comprehensive details of all files within this session.  <br /></td></tr>
+<tr class="memitem:aec0dc9e097213458c68d32d7f09d8cfc" id="r_aec0dc9e097213458c68d32d7f09d8cfc"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aec0dc9e097213458c68d32d7f09d8cfc">save</a> ()</td></tr>
+<tr class="memdesc:aec0dc9e097213458c68d32d7f09d8cfc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Saves all loaded images in the session back to their original disk locations.  <br /></td></tr>
+<tr class="memitem:a8ef7c0c4a3abd9a513d0f7f0481d292d" id="r_a8ef7c0c4a3abd9a513d0f7f0481d292d"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a8ef7c0c4a3abd9a513d0f7f0481d292d">saveAs</a> (const std::string &amp;newFilename)</td></tr>
+<tr class="memdesc:a8ef7c0c4a3abd9a513d0f7f0481d292d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Saves the first image in the session to a completely new specified path.  <br /></td></tr>
 <tr class="memitem:a3775cf47da8f5bdd929816d6d1e2d2c3" id="r_a3775cf47da8f5bdd929816d6d1e2d2c3"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a3775cf47da8f5bdd929816d6d1e2d2c3">undo</a> ()</td></tr>
 <tr class="memdesc:a3775cf47da8f5bdd929816d6d1e2d2c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reverts the last transformation applied in this workspace session.  <br /></td></tr>
 <tr class="memitem:ab615c2ae32f73fa42496233146da6f19" id="r_ab615c2ae32f73fa42496233146da6f19"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ab615c2ae32f73fa42496233146da6f19">redo</a> ()</td></tr>
 <tr class="memdesc:ab615c2ae32f73fa42496233146da6f19"><td class="mdescLeft">&#160;</td><td class="mdescRight">Re-applies the last undone transformation in this workspace session.  <br /></td></tr>
+<tr class="memitem:aa17b3bedb27ec5ab4e99806e4238e3f0" id="r_aa17b3bedb27ec5ab4e99806e4238e3f0"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aa17b3bedb27ec5ab4e99806e4238e3f0">rotateLeft</a> ()</td></tr>
+<tr class="memdesc:aa17b3bedb27ec5ab4e99806e4238e3f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Queues a request to rotate the image 90 degrees counter-clockwise.  <br /></td></tr>
+<tr class="memitem:a3d633ee4b735c22dc34074921c73cc11" id="r_a3d633ee4b735c22dc34074921c73cc11"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a3d633ee4b735c22dc34074921c73cc11">rotateRight</a> ()</td></tr>
+<tr class="memdesc:a3d633ee4b735c22dc34074921c73cc11"><td class="mdescLeft">&#160;</td><td class="mdescRight">Queues a request to rotate the image 90 degrees clockwise;.  <br /></td></tr>
+<tr class="memitem:ad4bcbd3fb7f7edb422efe82ab8e7fb3c" id="r_ad4bcbd3fb7f7edb422efe82ab8e7fb3c"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ad4bcbd3fb7f7edb422efe82ab8e7fb3c">flipTop</a> ()</td></tr>
+<tr class="memdesc:ad4bcbd3fb7f7edb422efe82ab8e7fb3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Queues a request to flip the image on the horizontal axus.  <br /></td></tr>
+<tr class="memitem:ab2d626cc9bd755da05e62713039b768a" id="r_ab2d626cc9bd755da05e62713039b768a"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ab2d626cc9bd755da05e62713039b768a">flipLeft</a> ()</td></tr>
+<tr class="memdesc:ab2d626cc9bd755da05e62713039b768a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Queues a request to flip the image on the vertical axis.  <br /></td></tr>
+<tr class="memitem:a76c79cc0a74fc39f63be191e8f5f67a0" id="r_a76c79cc0a74fc39f63be191e8f5f67a0"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a76c79cc0a74fc39f63be191e8f5f67a0">bakeTransformations</a> ()</td></tr>
+<tr class="memdesc:a76c79cc0a74fc39f63be191e8f5f67a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies all optimized pending geometric transformations to the raw pixel matrices.  <br /></td></tr>
 <tr class="memitem:a1a9232e627b902f1ea1701f92423fddb" id="r_a1a9232e627b902f1ea1701f92423fddb"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a1a9232e627b902f1ea1701f92423fddb">getId</a> () const</td></tr>
 <tr class="memitem:a6774642c043fc37402c37aee184f6455" id="r_a6774642c043fc37402c37aee184f6455"><td class="memItemLeft">const std::vector&lt; <a class="el" href="classImage.html">Image</a> * &gt; &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a6774642c043fc37402c37aee184f6455">getImages</a> () const</td></tr>
 <tr class="memdesc:a6774642c043fc37402c37aee184f6455"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides read-only access to the internal image collection tracking vector.  <br /></td></tr>
@@ -218,6 +232,63 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="a76c79cc0a74fc39f63be191e8f5f67a0" name="a76c79cc0a74fc39f63be191e8f5f67a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76c79cc0a74fc39f63be191e8f5f67a0">&#9670;&#160;</a></span>bakeTransformations()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Session::bakeTransformations </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Applies all optimized pending geometric transformations to the raw pixel matrices. </p>
+
+</div>
+</div>
+<a id="ab2d626cc9bd755da05e62713039b768a" name="ab2d626cc9bd755da05e62713039b768a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2d626cc9bd755da05e62713039b768a">&#9670;&#160;</a></span>flipLeft()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Session::flipLeft </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Queues a request to flip the image on the vertical axis. </p>
+
+</div>
+</div>
+<a id="ad4bcbd3fb7f7edb422efe82ab8e7fb3c" name="ad4bcbd3fb7f7edb422efe82ab8e7fb3c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4bcbd3fb7f7edb422efe82ab8e7fb3c">&#9670;&#160;</a></span>flipTop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Session::flipTop </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Queues a request to flip the image on the horizontal axus. </p>
 
 </div>
 </div>
@@ -391,6 +462,88 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Re-applies the last undone transformation in this workspace session. </p>
+
+</div>
+</div>
+<a id="aa17b3bedb27ec5ab4e99806e4238e3f0" name="aa17b3bedb27ec5ab4e99806e4238e3f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa17b3bedb27ec5ab4e99806e4238e3f0">&#9670;&#160;</a></span>rotateLeft()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Session::rotateLeft </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Queues a request to rotate the image 90 degrees counter-clockwise. </p>
+
+</div>
+</div>
+<a id="a3d633ee4b735c22dc34074921c73cc11" name="a3d633ee4b735c22dc34074921c73cc11"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d633ee4b735c22dc34074921c73cc11">&#9670;&#160;</a></span>rotateRight()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Session::rotateRight </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Queues a request to rotate the image 90 degrees clockwise;. </p>
+
+</div>
+</div>
+<a id="aec0dc9e097213458c68d32d7f09d8cfc" name="aec0dc9e097213458c68d32d7f09d8cfc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec0dc9e097213458c68d32d7f09d8cfc">&#9670;&#160;</a></span>save()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Session::save </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Saves all loaded images in the session back to their original disk locations. </p>
+
+</div>
+</div>
+<a id="a8ef7c0c4a3abd9a513d0f7f0481d292d" name="a8ef7c0c4a3abd9a513d0f7f0481d292d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ef7c0c4a3abd9a513d0f7f0481d292d">&#9670;&#160;</a></span>saveAs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Session::saveAs </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>newFilename</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Saves the first image in the session to a completely new specified path. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">newFilename</td><td>The target output path. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

@@ -119,10 +119,22 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:aac1e2e0591b236740da277e8ba50ccec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Forwards monochrome pixel calculation execution to the focused active session.  <br /></td></tr>
 <tr class="memitem:ac9e3e86997fc379bb0450b7f5d07ae55" id="r_ac9e3e86997fc379bb0450b7f5d07ae55"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ac9e3e86997fc379bb0450b7f5d07ae55">printCurrentSessionInfo</a> () const</td></tr>
 <tr class="memdesc:ac9e3e86997fc379bb0450b7f5d07ae55"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints format profile statistics for files inside the currently active session focus.  <br /></td></tr>
+<tr class="memitem:aa978b3850afcf3437005fd0ac58d0a6a" id="r_aa978b3850afcf3437005fd0ac58d0a6a"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aa978b3850afcf3437005fd0ac58d0a6a">save</a> ()</td></tr>
+<tr class="memdesc:aa978b3850afcf3437005fd0ac58d0a6a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Directs the focused active session to save all its images back to disk.  <br /></td></tr>
+<tr class="memitem:ab0f0bf4e1693e68d37d47b2b13d2c464" id="r_ab0f0bf4e1693e68d37d47b2b13d2c464"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ab0f0bf4e1693e68d37d47b2b13d2c464">saveAs</a> (const std::string &amp;newFilename)</td></tr>
+<tr class="memdesc:ab0f0bf4e1693e68d37d47b2b13d2c464"><td class="mdescLeft">&#160;</td><td class="mdescRight">Directs the focused active session to save an image to a new path.  <br /></td></tr>
 <tr class="memitem:a976925a605ff60d9e628fc54d87ead9b" id="r_a976925a605ff60d9e628fc54d87ead9b"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a976925a605ff60d9e628fc54d87ead9b">undo</a> ()</td></tr>
 <tr class="memdesc:a976925a605ff60d9e628fc54d87ead9b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Requests an undo reversion operation on the active focused workspace tracking block.  <br /></td></tr>
 <tr class="memitem:af90ce3c23d63842d22d6237f60661834" id="r_af90ce3c23d63842d22d6237f60661834"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#af90ce3c23d63842d22d6237f60661834">redo</a> ()</td></tr>
 <tr class="memdesc:af90ce3c23d63842d22d6237f60661834"><td class="mdescLeft">&#160;</td><td class="mdescRight">Requests a redo recovery operation on the active focused workspace tracking block.  <br /></td></tr>
+<tr class="memitem:a4839c0fe3ce1be27b59e87fb346f3087" id="r_a4839c0fe3ce1be27b59e87fb346f3087"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a4839c0fe3ce1be27b59e87fb346f3087">rotateLeft</a> ()</td></tr>
+<tr class="memdesc:a4839c0fe3ce1be27b59e87fb346f3087"><td class="mdescLeft">&#160;</td><td class="mdescRight">Forwards a counter-clockwise rotation request to the active session.  <br /></td></tr>
+<tr class="memitem:ae43084ceb4858d4022c24847829dda18" id="r_ae43084ceb4858d4022c24847829dda18"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ae43084ceb4858d4022c24847829dda18">rotateRight</a> ()</td></tr>
+<tr class="memdesc:ae43084ceb4858d4022c24847829dda18"><td class="mdescLeft">&#160;</td><td class="mdescRight">Forwards a clockwise rotation request to the active session.  <br /></td></tr>
+<tr class="memitem:a02d7d43d2c8fe8a18db587ef178bbc61" id="r_a02d7d43d2c8fe8a18db587ef178bbc61"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a02d7d43d2c8fe8a18db587ef178bbc61">flipTop</a> ()</td></tr>
+<tr class="memdesc:a02d7d43d2c8fe8a18db587ef178bbc61"><td class="mdescLeft">&#160;</td><td class="mdescRight">Forwards a vertical axis mirror flip request to the active session.  <br /></td></tr>
+<tr class="memitem:a380417b676440c3673f815066bec3752" id="r_a380417b676440c3673f815066bec3752"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a380417b676440c3673f815066bec3752">flipLeft</a> ()</td></tr>
+<tr class="memdesc:a380417b676440c3673f815066bec3752"><td class="mdescLeft">&#160;</td><td class="mdescRight">Forwards a horizontal axis mirror flip request to the active session.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Global state registry controller routing terminal data pipelines to focused workspace tabs. </p>
@@ -213,6 +225,44 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="a380417b676440c3673f815066bec3752" name="a380417b676440c3673f815066bec3752"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a380417b676440c3673f815066bec3752">&#9670;&#160;</a></span>flipLeft()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SessionManager::flipLeft </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Forwards a horizontal axis mirror flip request to the active session. </p>
+
+</div>
+</div>
+<a id="a02d7d43d2c8fe8a18db587ef178bbc61" name="a02d7d43d2c8fe8a18db587ef178bbc61"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02d7d43d2c8fe8a18db587ef178bbc61">&#9670;&#160;</a></span>flipTop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SessionManager::flipTop </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Forwards a vertical axis mirror flip request to the active session. </p>
 
 </div>
 </div>
@@ -358,6 +408,88 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Requests a redo recovery operation on the active focused workspace tracking block. </p>
+
+</div>
+</div>
+<a id="a4839c0fe3ce1be27b59e87fb346f3087" name="a4839c0fe3ce1be27b59e87fb346f3087"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4839c0fe3ce1be27b59e87fb346f3087">&#9670;&#160;</a></span>rotateLeft()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SessionManager::rotateLeft </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Forwards a counter-clockwise rotation request to the active session. </p>
+
+</div>
+</div>
+<a id="ae43084ceb4858d4022c24847829dda18" name="ae43084ceb4858d4022c24847829dda18"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae43084ceb4858d4022c24847829dda18">&#9670;&#160;</a></span>rotateRight()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SessionManager::rotateRight </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Forwards a clockwise rotation request to the active session. </p>
+
+</div>
+</div>
+<a id="aa978b3850afcf3437005fd0ac58d0a6a" name="aa978b3850afcf3437005fd0ac58d0a6a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa978b3850afcf3437005fd0ac58d0a6a">&#9670;&#160;</a></span>save()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SessionManager::save </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Directs the focused active session to save all its images back to disk. </p>
+
+</div>
+</div>
+<a id="ab0f0bf4e1693e68d37d47b2b13d2c464" name="ab0f0bf4e1693e68d37d47b2b13d2c464"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab0f0bf4e1693e68d37d47b2b13d2c464">&#9670;&#160;</a></span>saveAs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SessionManager::saveAs </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>newFilename</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Directs the focused active session to save an image to a new path. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">newFilename</td><td>Target path string. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

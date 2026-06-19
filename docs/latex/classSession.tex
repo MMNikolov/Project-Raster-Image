@@ -30,10 +30,24 @@ void \doxymbox{\hyperlink{classSession_a87bc8a6e8c0495fbc646b3ba77f98999}{make\+
 \begin{DoxyCompactList}\small\item\em Applies the monochrome transformation to all images in this session. \end{DoxyCompactList}\item 
 void \doxymbox{\hyperlink{classSession_a30b15b932b1ef6573fbafee75a6e69dd}{print\+Session\+Info}} () const
 \begin{DoxyCompactList}\small\item\em Outputs comprehensive details of all files within this session. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{classSession_aec0dc9e097213458c68d32d7f09d8cfc}{save}} ()
+\begin{DoxyCompactList}\small\item\em Saves all loaded images in the session back to their original disk locations. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{classSession_a8ef7c0c4a3abd9a513d0f7f0481d292d}{save\+As}} (const std::\+string \&new\+Filename)
+\begin{DoxyCompactList}\small\item\em Saves the first image in the session to a completely new specified path. \end{DoxyCompactList}\item 
 void \doxymbox{\hyperlink{classSession_a3775cf47da8f5bdd929816d6d1e2d2c3}{undo}} ()
 \begin{DoxyCompactList}\small\item\em Reverts the last transformation applied in this workspace session. \end{DoxyCompactList}\item 
 void \doxymbox{\hyperlink{classSession_ab615c2ae32f73fa42496233146da6f19}{redo}} ()
 \begin{DoxyCompactList}\small\item\em Re-\/applies the last undone transformation in this workspace session. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{classSession_aa17b3bedb27ec5ab4e99806e4238e3f0}{rotate\+Left}} ()
+\begin{DoxyCompactList}\small\item\em Queues a request to rotate the image 90 degrees counter-\/clockwise. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{classSession_a3d633ee4b735c22dc34074921c73cc11}{rotate\+Right}} ()
+\begin{DoxyCompactList}\small\item\em Queues a request to rotate the image 90 degrees clockwise;. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{classSession_ad4bcbd3fb7f7edb422efe82ab8e7fb3c}{flip\+Top}} ()
+\begin{DoxyCompactList}\small\item\em Queues a request to flip the image on the horizontal axus. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{classSession_ab2d626cc9bd755da05e62713039b768a}{flip\+Left}} ()
+\begin{DoxyCompactList}\small\item\em Queues a request to flip the image on the vertical axis. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{classSession_a76c79cc0a74fc39f63be191e8f5f67a0}{bake\+Transformations}} ()
+\begin{DoxyCompactList}\small\item\em Applies all optimized pending geometric transformations to the raw pixel matrices. \end{DoxyCompactList}\item 
 int \doxymbox{\hyperlink{classSession_a1a9232e627b902f1ea1701f92423fddb}{get\+Id}} () const
 \item 
 const std::\+vector$<$ \doxymbox{\hyperlink{classImage}{Image}} \texorpdfstring{$\ast$}{*} $>$ \& \doxymbox{\hyperlink{classSession_a6774642c043fc37402c37aee184f6455}{get\+Images}} () const
@@ -97,6 +111,36 @@ Appends a new image pointer into this session\textquotesingle{}s collection.
 {\em img} & Polymorphic pointer to an allocated \doxylink{classImage}{Image} object. \\
 \hline
 \end{DoxyParams}
+\Hypertarget{classSession_a76c79cc0a74fc39f63be191e8f5f67a0}\index{Session@{Session}!bakeTransformations@{bakeTransformations}}
+\index{bakeTransformations@{bakeTransformations}!Session@{Session}}
+\doxysubsubsection{\texorpdfstring{bakeTransformations()}{bakeTransformations()}}
+{\footnotesize\ttfamily \label{classSession_a76c79cc0a74fc39f63be191e8f5f67a0} 
+void Session::\+bake\+Transformations (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Applies all optimized pending geometric transformations to the raw pixel matrices. 
+
+\Hypertarget{classSession_ab2d626cc9bd755da05e62713039b768a}\index{Session@{Session}!flipLeft@{flipLeft}}
+\index{flipLeft@{flipLeft}!Session@{Session}}
+\doxysubsubsection{\texorpdfstring{flipLeft()}{flipLeft()}}
+{\footnotesize\ttfamily \label{classSession_ab2d626cc9bd755da05e62713039b768a} 
+void Session::\+flip\+Left (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Queues a request to flip the image on the vertical axis. 
+
+\Hypertarget{classSession_ad4bcbd3fb7f7edb422efe82ab8e7fb3c}\index{Session@{Session}!flipTop@{flipTop}}
+\index{flipTop@{flipTop}!Session@{Session}}
+\doxysubsubsection{\texorpdfstring{flipTop()}{flipTop()}}
+{\footnotesize\ttfamily \label{classSession_ad4bcbd3fb7f7edb422efe82ab8e7fb3c} 
+void Session::\+flip\+Top (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Queues a request to flip the image on the horizontal axus. 
+
 \Hypertarget{classSession_a1a9232e627b902f1ea1701f92423fddb}\index{Session@{Session}!getId@{getId}}
 \index{getId@{getId}!Session@{Session}}
 \doxysubsubsection{\texorpdfstring{getId()}{getId()}}
@@ -172,6 +216,51 @@ void Session::\+redo (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
 Re-\/applies the last undone transformation in this workspace session. 
 
+\Hypertarget{classSession_aa17b3bedb27ec5ab4e99806e4238e3f0}\index{Session@{Session}!rotateLeft@{rotateLeft}}
+\index{rotateLeft@{rotateLeft}!Session@{Session}}
+\doxysubsubsection{\texorpdfstring{rotateLeft()}{rotateLeft()}}
+{\footnotesize\ttfamily \label{classSession_aa17b3bedb27ec5ab4e99806e4238e3f0} 
+void Session::\+rotate\+Left (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Queues a request to rotate the image 90 degrees counter-\/clockwise. 
+
+\Hypertarget{classSession_a3d633ee4b735c22dc34074921c73cc11}\index{Session@{Session}!rotateRight@{rotateRight}}
+\index{rotateRight@{rotateRight}!Session@{Session}}
+\doxysubsubsection{\texorpdfstring{rotateRight()}{rotateRight()}}
+{\footnotesize\ttfamily \label{classSession_a3d633ee4b735c22dc34074921c73cc11} 
+void Session::\+rotate\+Right (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Queues a request to rotate the image 90 degrees clockwise;. 
+
+\Hypertarget{classSession_aec0dc9e097213458c68d32d7f09d8cfc}\index{Session@{Session}!save@{save}}
+\index{save@{save}!Session@{Session}}
+\doxysubsubsection{\texorpdfstring{save()}{save()}}
+{\footnotesize\ttfamily \label{classSession_aec0dc9e097213458c68d32d7f09d8cfc} 
+void Session::\+save (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Saves all loaded images in the session back to their original disk locations. 
+
+\Hypertarget{classSession_a8ef7c0c4a3abd9a513d0f7f0481d292d}\index{Session@{Session}!saveAs@{saveAs}}
+\index{saveAs@{saveAs}!Session@{Session}}
+\doxysubsubsection{\texorpdfstring{saveAs()}{saveAs()}}
+{\footnotesize\ttfamily \label{classSession_a8ef7c0c4a3abd9a513d0f7f0481d292d} 
+void Session::\+save\+As (\begin{DoxyParamCaption}\item[{const std::\+string \&}]{new\+Filename}{}\end{DoxyParamCaption})}
+
+
+
+Saves the first image in the session to a completely new specified path. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Filename} & The target output path. \\
+\hline
+\end{DoxyParams}
 \Hypertarget{classSession_a3775cf47da8f5bdd929816d6d1e2d2c3}\index{Session@{Session}!undo@{undo}}
 \index{undo@{undo}!Session@{Session}}
 \doxysubsubsection{\texorpdfstring{undo()}{undo()}}

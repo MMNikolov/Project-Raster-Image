@@ -139,8 +139,14 @@ public:
      */
     static void skipComments(std::ifstream& filename);
 
+    /**
+     * @brief Retrieves the original filename of the image resource.
+     * @return The source file path string.
+     */
+    std::string getFilename() const { return originalFilename; }
+
     // We use protected so that the "children" can inherit the traits that the abstract class possesses
-    // had to watch a lot of videos to understand how to work with string, because for now we hvae been working with char* only
+    // Has to read a lot of documentation on how to work with std::string for cleaner work flow, because till this moment we have been working only with char*
 protected:
 
     int width; /**< Image width in pixels */

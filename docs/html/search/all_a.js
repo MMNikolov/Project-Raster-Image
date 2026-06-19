@@ -13,5 +13,5 @@ var searchData=
   ['ppm_2ecpp_10',['PPM.cpp',['../PPM_8cpp.html',1,'']]],
   ['ppm_2ehpp_11',['PPM.hpp',['../PPM_8hpp.html',1,'']]],
   ['printcurrentsessioninfo_12',['printCurrentSessionInfo',['../classSessionManager.html#ac9e3e86997fc379bb0450b7f5d07ae55',1,'SessionManager']]],
-  ['printsessioninfo_13',['printSessionInfo',['../classImage.html#a997a88ec456aa24fd42660f9d4ba61cc',1,'Image::printSessionInfo()'],['../classPBM.html#a49ff63007313e0069249c9b3c2876147',1,'PBM::printSessionInfo()'],['../classPGM.html#ac8c9a8c14305f7a0a38568297ff9184e',1,'PGM::printSessionInfo()'],['../classPPM.html#a2183b4fcb9cc962e0be5cec9a8f1df0c',1,'PPM::printSessionInfo()'],['../classSession.html#a30b15b932b1ef6573fbafee75a6e69dd',1,'Session::printSessionInfo()']]]
+  ['printsessioninfo_13',['printSessionInfo',['../classBMP.html#acd70935f30e4700437200a06b3393e73',1,'BMP::printSessionInfo()'],['../classImage.html#a997a88ec456aa24fd42660f9d4ba61cc',1,'Image::printSessionInfo()'],['../classPBM.html#a49ff63007313e0069249c9b3c2876147',1,'PBM::printSessionInfo()'],['../classPGM.html#ac8c9a8c14305f7a0a38568297ff9184e',1,'PGM::printSessionInfo()'],['../classPPM.html#a2183b4fcb9cc962e0be5cec9a8f1df0c',1,'PPM::printSessionInfo()'],['../classSession.html#a30b15b932b1ef6573fbafee75a6e69dd',1,'Session::printSessionInfo()']]]
 ];

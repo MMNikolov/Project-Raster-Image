@@ -56,16 +56,18 @@
 \DoxyCodeLine{00135\ }
 \DoxyCodeLine{00140\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{classImage_a9951c40759db74a5536f88a033bf725f}{skipComments}}(std::ifstream\&\ filename);}
 \DoxyCodeLine{00141\ }
-\DoxyCodeLine{00142\ \ \ \ \ \textcolor{comment}{//\ We\ use\ protected\ so\ that\ the\ "{}children"{}\ can\ inherit\ the\ traits\ that\ the\ abstract\ class\ possesses}}
-\DoxyCodeLine{00143\ \ \ \ \ \textcolor{comment}{//\ had\ to\ watch\ a\ lot\ of\ videos\ to\ understand\ how\ to\ work\ with\ string,\ because\ for\ now\ we\ hvae\ been\ working\ with\ char*\ only}}
-\DoxyCodeLine{00144\ \textcolor{keyword}{protected}:}
-\DoxyCodeLine{00145\ }
-\DoxyCodeLine{00146\ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{classImage_ab8d12f635013c04159cd4d3d972bac88}{width}};\ }
-\DoxyCodeLine{00147\ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{classImage_a51df43db420c9c0b57536cb2dd36de5c}{height}};\ }
-\DoxyCodeLine{00148\ \ \ \ \ std::string\ \doxymbox{\hyperlink{classImage_a7d470cbdccf2c3e4971b03a8dca38ae7}{originalFilename}};\ }
-\DoxyCodeLine{00149\ \ \ \ \ std::vector<Pixel>\ \doxymbox{\hyperlink{classImage_afdcb0becb5c16b16736675825a0f8545}{pixelData}};\ }
-\DoxyCodeLine{00150\ \};}
+\DoxyCodeLine{00146\ \ \ \ \ std::string\ \doxymbox{\hyperlink{classImage_a6c2e1b5dbe5943c50709d7d86292e116}{getFilename}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{classImage_a7d470cbdccf2c3e4971b03a8dca38ae7}{originalFilename}};\ \}}
+\DoxyCodeLine{00147\ }
+\DoxyCodeLine{00148\ \ \ \ \ \textcolor{comment}{//\ We\ use\ protected\ so\ that\ the\ "{}children"{}\ can\ inherit\ the\ traits\ that\ the\ abstract\ class\ possesses}}
+\DoxyCodeLine{00149\ \ \ \ \ \textcolor{comment}{//\ Has\ to\ read\ a\ lot\ of\ documentation\ on\ how\ to\ work\ with\ std::string\ for\ cleaner\ work\ flow,\ because\ till\ this\ moment\ we\ have\ been\ working\ only\ with\ char*}}
+\DoxyCodeLine{00150\ \textcolor{keyword}{protected}:}
 \DoxyCodeLine{00151\ }
-\DoxyCodeLine{00152\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//IMAGE\_HPP}}
+\DoxyCodeLine{00152\ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{classImage_ab8d12f635013c04159cd4d3d972bac88}{width}};\ }
+\DoxyCodeLine{00153\ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{classImage_a51df43db420c9c0b57536cb2dd36de5c}{height}};\ }
+\DoxyCodeLine{00154\ \ \ \ \ std::string\ \doxymbox{\hyperlink{classImage_a7d470cbdccf2c3e4971b03a8dca38ae7}{originalFilename}};\ }
+\DoxyCodeLine{00155\ \ \ \ \ std::vector<Pixel>\ \doxymbox{\hyperlink{classImage_afdcb0becb5c16b16736675825a0f8545}{pixelData}};\ }
+\DoxyCodeLine{00156\ \};}
+\DoxyCodeLine{00157\ }
+\DoxyCodeLine{00158\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//IMAGE\_HPP}}
 
 \end{DoxyCode}

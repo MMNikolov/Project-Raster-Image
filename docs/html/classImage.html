@@ -138,6 +138,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a827e8004aa9b7be85aa0f3003d3c4f86"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides read-only access to the pixel data.  <br /></td></tr>
 <tr class="memitem:a50610f29c821ee2b8bf53546e0e89b21" id="r_a50610f29c821ee2b8bf53546e0e89b21"><td class="memItemLeft">std::vector&lt; <a class="el" href="structPixel.html">Pixel</a> &gt; &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a50610f29c821ee2b8bf53546e0e89b21">getPixels</a> ()</td></tr>
 <tr class="memdesc:a50610f29c821ee2b8bf53546e0e89b21"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides mutable access to the pixel data.  <br /></td></tr>
+<tr class="memitem:a6c2e1b5dbe5943c50709d7d86292e116" id="r_a6c2e1b5dbe5943c50709d7d86292e116"><td class="memItemLeft">std::string&#160;</td><td class="memItemRight"><a class="el" href="#a6c2e1b5dbe5943c50709d7d86292e116">getFilename</a> () const</td></tr>
+<tr class="memdesc:a6c2e1b5dbe5943c50709d7d86292e116"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the original filename of the image resource.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -153,7 +155,7 @@ Protected Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>abstract base class represening a raster image </p>
-<p>This class represents the polymorphic interface for all specific image formats (e.g. <a class="el" href="classPPM.html" title="Concrete class handling P3 ASCII Portable Pixmap files.">PPM</a> - Portable Pixmap Format | <a class="el" href="classPGM.html" title="Concrete class handling P2 ASCII Portable Graymap files.">PGM</a> - portable Grey map | <a class="el" href="classPBM.html" title="Concrete class handling P1 ASCII PBM files.">PBM</a> - Portable BitMap | BMP - Bitmap) It encapsulates the core data (width, height and pixels) and defines virtual methods that derived classes must implement Architectural Note: The <span class="tt"><a class="el" href="#afdcb0becb5c16b16736675825a0f8545">pixelData</a></span> is stored in a 1D vector rather than a 2D array This boosts performance when applying transformations to large images </p>
+<p>This class represents the polymorphic interface for all specific image formats (e.g. <a class="el" href="classPPM.html" title="Concrete class handling P3 ASCII Portable Pixmap files.">PPM</a> - Portable Pixmap Format | <a class="el" href="classPGM.html" title="Concrete class handling P2 ASCII Portable Graymap files.">PGM</a> - portable Grey map | <a class="el" href="classPBM.html" title="Concrete class handling P1 ASCII PBM files.">PBM</a> - Portable BitMap | <a class="el" href="classBMP.html" title="Concrete class handling uncompressed 24-bit true color Windows Bitmap files.">BMP</a> - Bitmap) It encapsulates the core data (width, height and pixels) and defines virtual methods that derived classes must implement Architectural Note: The <span class="tt"><a class="el" href="#afdcb0becb5c16b16736675825a0f8545">pixelData</a></span> is stored in a 1D vector rather than a 2D array This boosts performance when applying transformations to large images </p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ab5ca0ae10da321c9e443734a87dee15e" name="ab5ca0ae10da321c9e443734a87dee15e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab5ca0ae10da321c9e443734a87dee15e">&#9670;&#160;</a></span>Image()</h2>
@@ -245,7 +247,7 @@ Protected Attributes</h2></td></tr>
 <p>Creates a deep copy of the image (Prototype pattern). </p>
 <dl class="section return"><dt>Returns</dt><dd>Pointer to the newly cloned <a class="el" href="classImage.html" title="abstract base class represening a raster image">Image</a> object. </dd></dl>
 
-<p>Implemented in <a class="el" href="classPBM.html#adf37e8569da7a98d1a5d2fa0a508e1ee">PBM</a>, <a class="el" href="classPGM.html#ae721c04ab0674597c58d1e0ce1ab576c">PGM</a>, and <a class="el" href="classPPM.html#a3c567ffbe74a7f6b174460f21b3e06a1">PPM</a>.</p>
+<p>Implemented in <a class="el" href="classBMP.html#adee679b1ce2439cbfe320d5174bef030">BMP</a>, <a class="el" href="classPBM.html#adf37e8569da7a98d1a5d2fa0a508e1ee">PBM</a>, <a class="el" href="classPGM.html#ae721c04ab0674597c58d1e0ce1ab576c">PGM</a>, and <a class="el" href="classPPM.html#a3c567ffbe74a7f6b174460f21b3e06a1">PPM</a>.</p>
 
 </div>
 </div>
@@ -302,6 +304,34 @@ Protected Attributes</h2></td></tr>
 
 <p>Flips the image vertically across the horizontal axis (top-to-bottom mirror). </p>
 <p>Reverses the row sequence in place within the flat 1D memory array without changing the overall image width or height dimensions. </p>
+
+</div>
+</div>
+<a id="a6c2e1b5dbe5943c50709d7d86292e116" name="a6c2e1b5dbe5943c50709d7d86292e116"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c2e1b5dbe5943c50709d7d86292e116">&#9670;&#160;</a></span>getFilename()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Image::getFilename </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Retrieves the original filename of the image resource. </p>
+<dl class="section return"><dt>Returns</dt><dd>The source file path string. </dd></dl>
 
 </div>
 </div>
@@ -443,7 +473,7 @@ Protected Attributes</h2></td></tr>
 <p>Checks if the image contains only grayscale pixels. </p>
 <dl class="section return"><dt>Returns</dt><dd>True if grayscale, false otherwise. </dd></dl>
 
-<p>Implemented in <a class="el" href="classPBM.html#a54b2255440d2e7d20222d659093ff4ac">PBM</a>, <a class="el" href="classPGM.html#a0cfb7b2db240ad1c66ec8719fac443d3">PGM</a>, and <a class="el" href="classPPM.html#a6277b4084b70e97d19ad2c1a13d0aa76">PPM</a>.</p>
+<p>Implemented in <a class="el" href="classBMP.html#a98a6bedd71803e35b4a3e7d93533f198">BMP</a>, <a class="el" href="classPBM.html#a54b2255440d2e7d20222d659093ff4ac">PBM</a>, <a class="el" href="classPGM.html#a0cfb7b2db240ad1c66ec8719fac443d3">PGM</a>, and <a class="el" href="classPPM.html#a6277b4084b70e97d19ad2c1a13d0aa76">PPM</a>.</p>
 
 </div>
 </div>
@@ -472,7 +502,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Makes the image in the given session grayscale. </p>
 
-<p>Implemented in <a class="el" href="classPBM.html#abdcca87870a9f002f4c056f67b96ecb7">PBM</a>, <a class="el" href="classPGM.html#a962272f69dd50f108d98dbb30285b37b">PGM</a>, and <a class="el" href="classPPM.html#aece890249ac4624317814f93232ed348">PPM</a>.</p>
+<p>Implemented in <a class="el" href="classBMP.html#a487fee9994740583592bb9573fc295ab">BMP</a>, <a class="el" href="classPBM.html#abdcca87870a9f002f4c056f67b96ecb7">PBM</a>, <a class="el" href="classPGM.html#a962272f69dd50f108d98dbb30285b37b">PGM</a>, and <a class="el" href="classPPM.html#aece890249ac4624317814f93232ed348">PPM</a>.</p>
 
 </div>
 </div>
@@ -501,7 +531,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Makes the image in the given session monochrome. </p>
 
-<p>Implemented in <a class="el" href="classPBM.html#a072fd036e2a81b9a329ad7e3b7b4c288">PBM</a>, <a class="el" href="classPGM.html#a22dd96d2741714e8b0dc44e512db61c6">PGM</a>, and <a class="el" href="classPPM.html#a22cccdf8810877675c5894d89f2ed032">PPM</a>.</p>
+<p>Implemented in <a class="el" href="classBMP.html#ac534c76a35fd1c49413fa62155ecef32">BMP</a>, <a class="el" href="classPBM.html#a072fd036e2a81b9a329ad7e3b7b4c288">PBM</a>, <a class="el" href="classPGM.html#a22dd96d2741714e8b0dc44e512db61c6">PGM</a>, and <a class="el" href="classPPM.html#a22cccdf8810877675c5894d89f2ed032">PPM</a>.</p>
 
 </div>
 </div>
@@ -530,7 +560,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Inverts the color intensities of the active image pixels. </p>
 
-<p>Implemented in <a class="el" href="classPBM.html#a1471cc00dfda2b2ec5deb8803523df1f">PBM</a>, <a class="el" href="classPGM.html#a1b7868211654b881a9bda9e554f795ce">PGM</a>, and <a class="el" href="classPPM.html#a5ac0e83dd0da3ab1905c08b38b4613c4">PPM</a>.</p>
+<p>Implemented in <a class="el" href="classBMP.html#aa52e4d66f27376119afe3c37cf787acc">BMP</a>, <a class="el" href="classPBM.html#a1471cc00dfda2b2ec5deb8803523df1f">PBM</a>, <a class="el" href="classPGM.html#a1b7868211654b881a9bda9e554f795ce">PGM</a>, and <a class="el" href="classPPM.html#a5ac0e83dd0da3ab1905c08b38b4613c4">PPM</a>.</p>
 
 </div>
 </div>
@@ -559,7 +589,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Prints format-specific information for the session list. </p>
 
-<p>Implemented in <a class="el" href="classPBM.html#a49ff63007313e0069249c9b3c2876147">PBM</a>, <a class="el" href="classPGM.html#ac8c9a8c14305f7a0a38568297ff9184e">PGM</a>, and <a class="el" href="classPPM.html#a2183b4fcb9cc962e0be5cec9a8f1df0c">PPM</a>.</p>
+<p>Implemented in <a class="el" href="classBMP.html#acd70935f30e4700437200a06b3393e73">BMP</a>, <a class="el" href="classPBM.html#a49ff63007313e0069249c9b3c2876147">PBM</a>, <a class="el" href="classPGM.html#ac8c9a8c14305f7a0a38568297ff9184e">PGM</a>, and <a class="el" href="classPPM.html#a2183b4fcb9cc962e0be5cec9a8f1df0c">PPM</a>.</p>
 
 </div>
 </div>
@@ -650,7 +680,7 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="classPBM.html#aa945ad4a32abbe9a488e0805ec0d2e94">PBM</a>, <a class="el" href="classPGM.html#a4e60155c449379da91abe74364a9b748">PGM</a>, and <a class="el" href="classPPM.html#a5de30ddbc26ddc98aeb42f7b188c84b0">PPM</a>.</p>
+<p>Implemented in <a class="el" href="classBMP.html#a693b221410e9a5d7d8c99656f894a774">BMP</a>, <a class="el" href="classPBM.html#aa945ad4a32abbe9a488e0805ec0d2e94">PBM</a>, <a class="el" href="classPGM.html#a4e60155c449379da91abe74364a9b748">PGM</a>, and <a class="el" href="classPPM.html#a5de30ddbc26ddc98aeb42f7b188c84b0">PPM</a>.</p>
 
 </div>
 </div>

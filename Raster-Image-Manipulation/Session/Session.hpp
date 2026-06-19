@@ -11,6 +11,18 @@
 #include <iostream>
 
 /**
+ * @enum Operations
+ * @brief Represents the supported geometric transformations for lazy evaluation.
+ */
+enum class Operations
+{
+    ROTATE_LEFT = 0,
+    ROTATE_RIGHT = 1,
+    FLIP_TOP = 2,
+    FLIP_LEFT = 3
+};
+
+/**
  * @class Session
  * @brief Handles isolated image transformations and historical tracking for a single workspace window.
  */
@@ -58,6 +70,17 @@ public:
      */
     void printSessionInfo() const;
 
+    /**
+     * @brief Saves all loaded images in the session back to their original disk locations.
+     */
+    void save();
+
+    /**
+     * @brief Saves the first image in the session to a completely new specified path.
+     * @param newFilename The target output path.
+     */
+    void saveAs(const std::string& newFilename);
+
     //UNDO AND REDO FUNCTIONALITIES
 
     /**
@@ -70,6 +93,31 @@ public:
      */
     void redo();
 
+    /**
+     * @brief Queues a request to rotate the image 90 degrees counter-clockwise.
+     */
+    void rotateLeft();
+
+    /**
+     * @brief Queues a request to rotate the image 90 degrees clockwise;
+     */
+    void rotateRight();
+
+    /**
+     * @brief Queues a request to flip the image on the horizontal axus
+     */
+    void flipTop();
+
+    /**
+     * @brief Queues a request to flip the image on the vertical axis
+     */
+    void flipLeft();
+
+    /**
+     * @brief Applies all optimized pending geometric transformations to the raw pixel matrices.
+     */
+    void bakeTransformations();
+
     // GETTERS
     int getId() const { return sessionId; }
 
@@ -80,14 +128,15 @@ public:
     const std::vector<Image*>& getImages() const { return loadedImages; }
 
 private:
-    int sessionId;                      /**< Unique session identification number */
-    std::vector<Image*> loadedImages;   /**< Collection of image resources in this workspace */
-    size_t count;                       /**< Helper tracker counting total active images */
+    int sessionId;                                  /**< Unique session identification number */
+    std::vector<Image*> loadedImages;               /**< Collection of image resources in this workspace */
+    size_t count;                                   /**< Helper tracker counting total active images */
 
     //UNDO AND REDO FUNCTIONALITIES 
     std::vector<std::vector<Image*>> undoHistory;   /**< History stack tracking deep copies for undo actions */
     std::vector<std::vector<Image*>> redoHistory;   /**< History stack tracking deep copies for redo actions */
 
+    std::vector<Operations> pendingOps;             /**< Queue of deferred operations awaiting physical execution */
 private:
     /**
      * @brief Fully deallocates all embedded image memory and clears out state vector tracking grids.
@@ -105,6 +154,12 @@ private:
      * @param images Targeted tracking array to scrub and reset.
      */
     void clearImageVector(std::vector<Image*>& images);
+
+    /**
+     * @brief Analyzes incoming commands in real-time and eliminates redundant consecutive operations.
+     * @param newOp The incoming operation to be evaluated.
+     */
+    void applyOptimizedOp(Operations newOp); 
 };
 
 #endif // SESSION_HPP

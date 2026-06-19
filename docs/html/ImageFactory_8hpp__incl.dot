@@ -32,4 +32,7 @@ digraph "Raster-Image-Manipulation/Factory/ImageFactory.hpp"
   Node12 [id="Node000012",label="../PPM/PPM.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$PPM_8hpp.html",tooltip="Defines the concrete PPM (Portable Pixmap) image format parser and serializer."];
   Node12 -> Node2 [id="edge15_Node000012_Node000002",color="steelblue1",style="solid",tooltip=" "];
   Node12 -> Node9 [id="edge16_Node000012_Node000009",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node13 [id="edge17_Node000001_Node000013",color="steelblue1",style="solid",tooltip=" "];
+  Node13 [id="Node000013",label="../BMP/BMP.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$BMP_8hpp.html",tooltip="Defines the concrete BMP (Windows Bitmap) image format parser and serializer."];
+  Node13 -> Node2 [id="edge18_Node000013_Node000002",color="steelblue1",style="solid",tooltip=" "];
 }

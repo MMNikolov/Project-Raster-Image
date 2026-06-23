@@ -132,7 +132,7 @@ void PPM::makeGrayscale()
     
     for (int i = 0; i < size; i++)
     {
-        u_int8_t average = static_cast<u_int8_t>((this->pixelData[i].r + this->pixelData[i].b + this->pixelData[i].g) / 3);
+        uint8_t average = static_cast<uint8_t>((this->pixelData[i].r + this->pixelData[i].b + this->pixelData[i].g) / 3);
         this->pixelData[i] = {average, average, average};
     }
     
@@ -144,7 +144,7 @@ void PPM::makeMonochrome()
     
     for (int i = 0; i < size; i++)
     {
-        u_int8_t average = static_cast<u_int8_t>((this->pixelData[i].r + this->pixelData[i].b + this->pixelData[i].g) / 3);
+        uint8_t average = static_cast<uint8_t>((this->pixelData[i].r + this->pixelData[i].b + this->pixelData[i].g) / 3);
 
         //we chose 127, beacuase this is the threshhold of when the pixel can be identified as a black or white pixel
         if (average > 127)

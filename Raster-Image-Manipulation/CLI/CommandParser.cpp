@@ -2,8 +2,7 @@
 
 CommandParser::CommandParser()
     : manager()
-{
-}
+{}
 
 void CommandParser::run()
 {
@@ -143,6 +142,18 @@ void CommandParser::run()
                     throw std::invalid_argument("You need to tell me where to save the file if u choose the save as functionality");
                 }
                 this->manager.saveAs(subCommand);
+            }
+            else if (command == "paste")
+            {
+                std::string sourcePath, destinationPath;
+                int posX, posY;
+                if (!(ss >> sourcePath >> destinationPath >> posX >> posY))
+                {
+                    throw std::invalid_argument("couldnt read what was the source and what was the destionation path");
+                }
+                
+                this->manager.paste(sourcePath, destinationPath, posX, posY);
+                std::cout << "Sub-image embedded successfuly!\n";
             }
             else if (command == "list" || command == "session")
             {

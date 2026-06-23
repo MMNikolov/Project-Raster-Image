@@ -107,6 +107,20 @@ public:
      */
     virtual void flipLeft();
 
+    /**
+     * @brief Helper function to skip Netpbm style comment lines during file parsing.
+     * @param file The active input file stream.
+     */
+    static void skipComments(std::ifstream& filename);
+
+    /**
+     * @brief Stitches pixel blocks from a source image into this image matrix.
+     * @param source Pointer to the polymorphic source image to copy from.
+     * @param posX The horizontal coordinate offset (top-left column entry point).
+     * @param posY The vertical coordinate offset (top-left row entry point).
+     */
+    void paste(const Image* source, int posX, int posY);
+
     //GETTERS
 
     /**
@@ -132,12 +146,6 @@ public:
      * @return Reference to the 1D pixel vector.
      */
     std::vector<Pixel>& getPixels() { return pixelData; }
-
-    /**
-     * @brief Helper function to skip Netpbm style comment lines during file parsing.
-     * @param file The active input file stream.
-     */
-    static void skipComments(std::ifstream& filename);
 
     /**
      * @brief Retrieves the original filename of the image resource.

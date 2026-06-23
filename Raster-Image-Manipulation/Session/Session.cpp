@@ -115,15 +115,33 @@ void Session::save()
     {
         throw std::invalid_argument("There is nothing to save my guy...");
     }
-    
+
     this->bakeTransformations();
+
+    std::time_t now = std::time(nullptr);
+    char timeBuf[20];
+    std::strftime(timeBuf, sizeof(timeBuf), "%Y%m%d_%H%M%S", std::localtime(&now));
+    std::string timestamp(timeBuf); 
 
     for (size_t i = 0; i < this->count; i++)
     {
-        this->loadedImages[i]->save(this->loadedImages[i]->getFilename());
-        std::cout << "Sucessfully save the image: " << this->loadedImages[i]->getFilename() << '\n';
+        std::string originalName = this->loadedImages[i]->getFilename();
+
+        size_t dotPosition = originalName.find_last_of('.');
+        std::string newFileName;
+
+        if (dotPosition != std::string::npos)
+        {
+            newFileName = originalName.substr(0, dotPosition) + timestamp + originalName.substr(dotPosition);
+        }
+        else
+        {
+            newFileName = originalName + timestamp;
+        }
+
+        this->loadedImages[i]->save(newFileName);
+        std::cout << "Successfully saved the image: " << newFileName << '\n';
     }
-    
 }
 
 void Session::saveAs(const std::string &newFilename)
@@ -132,16 +150,68 @@ void Session::saveAs(const std::string &newFilename)
     {
         throw std::invalid_argument("there is nothing to save as my guy... :D");
     }
-    
+
     if (newFilename.empty())
     {
         throw std::invalid_argument("Cant save into the nothingness");
     }
-    
+
     this->bakeTransformations();
 
     this->loadedImages[0]->save(newFilename);
     std::cout << "Successfully saved state as: " << newFilename << "\n";
+}
+
+void Session::paste(const std::string &srcPath, const std::string &destPath, int posX, int posY)
+{
+    if (this->count <= 0)
+    {
+        throw std::invalid_argument("There need to be an image to paste cmon man...");
+    }
+
+    Image *targetDestination = nullptr;
+    for (size_t i = 0; i < count; i++)
+    {
+        if (this->loadedImages[i]->getFilename() == destPath)
+        {
+            targetDestination = this->loadedImages[i];
+            break;
+        }
+    }
+
+    if (!targetDestination)
+    {
+        throw std::invalid_argument("There wasnt a target destionation where the paste funcitonality will work");
+    }
+
+    this->bakeTransformations();
+    this->undoHistory.push_back(cloneCurrentState());
+
+    size_t redoHistorySize = this->redoHistory.size();
+    for (size_t i = 0; i < redoHistorySize; i++)
+    {
+        clearImageVector(this->redoHistory[i]);
+    }
+    this->redoHistory.clear();
+
+    Image *sourceImage = nullptr;
+    try
+    {
+        sourceImage = ImageFactory::createImage(srcPath);
+        targetDestination->paste(sourceImage, posX, posY);
+
+        delete sourceImage;
+    }
+    catch (const std::exception &e)
+    {
+        // we are rethrowing the exception... my favorite thing to do
+        if (sourceImage)
+        {
+            delete sourceImage;
+        }
+        std::cerr << e.what() << '\n';
+        throw;
+    }
 }
 
 void Session::undo()
@@ -197,21 +267,21 @@ void Session::bakeTransformations()
         {
             switch (pendingOps[j])
             {
-                case (Operations)0:
-                    this->loadedImages[i]->rotateLeft();
-                    break;
-                case (Operations)1:
-                    this->loadedImages[i]->rotateRight();
-                    break;
-                case (Operations)2:
-                    this->loadedImages[i]->flipTop();
-                    break;
-                case (Operations)3:
-                    this->loadedImages[i]->flipLeft();
-                    break;
-                default:
-                    throw std::invalid_argument("Dont have such an operation, there is an error somewhere");
-                    break;
+            case (Operations)0:
+                this->loadedImages[i]->rotateLeft();
+                break;
+            case (Operations)1:
+                this->loadedImages[i]->rotateRight();
+                break;
+            case (Operations)2:
+                this->loadedImages[i]->flipTop();
+                break;
+            case (Operations)3:
+                this->loadedImages[i]->flipLeft();
+                break;
+            default:
+                throw std::invalid_argument("Dont have such an operation, there is an error somewhere");
+                break;
             }
         }
     }

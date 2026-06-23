@@ -79,6 +79,13 @@ public:
     void saveAs(const std::string& newFilename);
 
     /**
+     * @brief Looks up the target destination file and applies the sub-image embedding logic.
+     */
+    void paste(const std::string& srcPath, const std::string& destPath, int posX, int posY);
+
+    //REDO AND UNDO FUNCTIONALITIES
+
+    /**
      * @brief Requests an undo reversion operation on the active focused workspace tracking block.
      */
     void undo();
@@ -87,6 +94,8 @@ public:
      * @brief Requests a redo recovery operation on the active focused workspace tracking block.
      */
     void redo();
+
+    //ROTATE AND FLIP FUNCTIONALITIES
 
     /**
      * @brief Forwards a counter-clockwise rotation request to the active session.

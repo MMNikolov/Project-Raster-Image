@@ -9,6 +9,7 @@
 #include "../Image/Image.hpp"
 #include "../Factory/ImageFactory.hpp"
 #include <iostream>
+#include <ctime>
 
 /**
  * @enum Operations
@@ -81,6 +82,11 @@ public:
      */
     void saveAs(const std::string& newFilename);
 
+    /**
+     * @brief Looks up the target destination file and applies the sub-image embedding logic.
+     */
+    void paste(const std::string& srcPath, const std::string& destPath, int posX, int posY);
+
     //UNDO AND REDO FUNCTIONALITIES
 
     /**
@@ -92,6 +98,8 @@ public:
      * @brief Re-applies the last undone transformation in this workspace session.
      */
     void redo();
+
+    // ROTATING AND FLIPPING FUNCTIONALITIES
 
     /**
      * @brief Queues a request to rotate the image 90 degrees counter-clockwise.
@@ -112,6 +120,8 @@ public:
      * @brief Queues a request to flip the image on the vertical axis
      */
     void flipLeft();
+
+    // APPLIES THE ALREADY OPTIMIZED FUNCTION FOR THE ROTATE AND FLIP GIMICS
 
     /**
      * @brief Applies all optimized pending geometric transformations to the raw pixel matrices.

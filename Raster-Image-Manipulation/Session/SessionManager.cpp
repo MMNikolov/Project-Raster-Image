@@ -54,7 +54,12 @@ void SessionManager::switchSession(int sessionId)
 }
 
 void SessionManager::closeSessionById(int sessionId)
-{
+{   
+    if (sessionId == -1)
+    {
+        sessionId = this->currentActiveId;
+    }
+    
     int index = findSessionIndex(sessionId);
     if (index == -1)
     {
@@ -145,6 +150,17 @@ void SessionManager::saveAs(const std::string &newFilename)
     
     int index = this->findSessionIndex(this->currentActiveId);
     this->activeSessions[index]->saveAs(newFilename);
+}
+
+void SessionManager::paste(const std::string &srcPath, const std::string &destPath, int posX, int posY)
+{
+    if (this->currentActiveId == -1)
+    {
+        throw std::invalid_argument("Cannot paste when there are no active sessions open");
+    }
+    
+    int index = this->findSessionIndex(this->currentActiveId);
+    this->activeSessions[index]->paste(srcPath, destPath, posX, posY);
 }
 
 void SessionManager::undo()

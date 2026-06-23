@@ -1,0 +1,8 @@
+P2
+# 4x4 grayscale gradient transition
+4 4
+255
+0   85  170 255
+85  170 255 0
+170 255 0   85
+255 0   85  170

@@ -18,6 +18,7 @@ digraph "Raster-Image-Manipulation"
   dir_142a1c6445c76f8fcc5bf0e68549c6bb [label="Session", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_142a1c6445c76f8fcc5bf0e68549c6bb.html",tooltip=""];
   dir_1843a0e54ed56caa2a584dca928a5937 [label="tests", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_1843a0e54ed56caa2a584dca928a5937.html",tooltip=""];
   }
+  dir_ce7819007512a113987216c94ce8e8e1->dir_7311f3317f7bede515847b3ca118b6ef [headlabel="1", labeldistance=1.5 headhref="dir_000007_000001.html" href="dir_000007_000001.html" color="steelblue1" fontcolor="steelblue1"];
   dir_0e498affc31cb5d7fa6d311eccf65dde->dir_5e5ab9f791422ab5fca726d93cfdd1ff [headlabel="1", labeldistance=1.5 headhref="dir_000000_000003.html" href="dir_000000_000003.html" color="steelblue1" fontcolor="steelblue1"];
   dir_7311f3317f7bede515847b3ca118b6ef->dir_142a1c6445c76f8fcc5bf0e68549c6bb [headlabel="1", labeldistance=1.5 headhref="dir_000001_000008.html" href="dir_000001_000008.html" color="steelblue1" fontcolor="steelblue1"];
   dir_f6c76c17331fa56b76130351e4c89ecb->dir_0e498affc31cb5d7fa6d311eccf65dde [headlabel="1", labeldistance=1.5 headhref="dir_000002_000000.html" href="dir_000002_000000.html" color="steelblue1" fontcolor="steelblue1"];

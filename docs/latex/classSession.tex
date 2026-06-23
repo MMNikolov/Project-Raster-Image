@@ -22,6 +22,8 @@ Handles isolated image transformations and historical tracking for a single work
 \begin{DoxyCompactList}\small\item\em Destructor that deallocates all loaded images to prevent memory leaks. \end{DoxyCompactList}\item 
 void \doxymbox{\hyperlink{classSession_a050d49df9af40cb6a5d8d511b5e2e05f}{add\+Image}} (\doxymbox{\hyperlink{classImage}{Image}} \texorpdfstring{$\ast$}{*}img)
 \begin{DoxyCompactList}\small\item\em Appends a new image pointer into this session\textquotesingle{}s collection. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{classSession_a6c41e2cde8ed70875c4b8af80a12e35b}{add\+By\+Filename}} (const std::\+string \&filename)
+\begin{DoxyCompactList}\small\item\em Appends an image into the session by loading it from a disk path. \end{DoxyCompactList}\item 
 void \doxymbox{\hyperlink{classSession_a44a7d994d8c55973365d94da49fcf376}{make\+Negative}} ()
 \begin{DoxyCompactList}\small\item\em Applies the negative transformation to all images in this session. \end{DoxyCompactList}\item 
 void \doxymbox{\hyperlink{classSession_ad690821c0ba1e2999b60f24d6eda9348}{make\+Grayscale}} ()
@@ -31,9 +33,11 @@ void \doxymbox{\hyperlink{classSession_a87bc8a6e8c0495fbc646b3ba77f98999}{make\+
 void \doxymbox{\hyperlink{classSession_a30b15b932b1ef6573fbafee75a6e69dd}{print\+Session\+Info}} () const
 \begin{DoxyCompactList}\small\item\em Outputs comprehensive details of all files within this session. \end{DoxyCompactList}\item 
 void \doxymbox{\hyperlink{classSession_aec0dc9e097213458c68d32d7f09d8cfc}{save}} ()
-\begin{DoxyCompactList}\small\item\em Saves all loaded images in the session back to their original disk locations. \end{DoxyCompactList}\item 
-void \doxymbox{\hyperlink{classSession_a8ef7c0c4a3abd9a513d0f7f0481d292d}{save\+As}} (const std::\+string \&new\+Filename)
+\begin{DoxyCompactList}\small\item\em Saves all loaded images in the session back to their original disk locations with a timestamp. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{classSession_af985089be7b3af8ab562481094fe3a20}{save\+As}} (const std::\+string \&original\+Filename, const std::\+string \&new\+Filename)
 \begin{DoxyCompactList}\small\item\em Saves the first image in the session to a completely new specified path. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{classSession_a52bb2847ea5aed4cb329cc493a75e31c}{paste}} (const std::\+string \&src\+Path, const std::\+string \&dest\+Path, int posX, int posY)
+\begin{DoxyCompactList}\small\item\em Looks up the target destination file and applies the sub-\/image embedding logic. \end{DoxyCompactList}\item 
 void \doxymbox{\hyperlink{classSession_a3775cf47da8f5bdd929816d6d1e2d2c3}{undo}} ()
 \begin{DoxyCompactList}\small\item\em Reverts the last transformation applied in this workspace session. \end{DoxyCompactList}\item 
 void \doxymbox{\hyperlink{classSession_ab615c2ae32f73fa42496233146da6f19}{redo}} ()
@@ -49,7 +53,7 @@ void \doxymbox{\hyperlink{classSession_ab2d626cc9bd755da05e62713039b768a}{flip\+
 void \doxymbox{\hyperlink{classSession_a76c79cc0a74fc39f63be191e8f5f67a0}{bake\+Transformations}} ()
 \begin{DoxyCompactList}\small\item\em Applies all optimized pending geometric transformations to the raw pixel matrices. \end{DoxyCompactList}\item 
 int \doxymbox{\hyperlink{classSession_a1a9232e627b902f1ea1701f92423fddb}{get\+Id}} () const
-\item 
+\begin{DoxyCompactList}\small\item\em Gets the unique session identification key. \end{DoxyCompactList}\item 
 const std::\+vector$<$ \doxymbox{\hyperlink{classImage}{Image}} \texorpdfstring{$\ast$}{*} $>$ \& \doxymbox{\hyperlink{classSession_a6774642c043fc37402c37aee184f6455}{get\+Images}} () const
 \begin{DoxyCompactList}\small\item\em Provides read-\/only access to the internal image collection tracking vector. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
@@ -72,9 +76,14 @@ Constructor initializing the session with a unique identification number.
 
 
 \begin{DoxyParams}{Parameters}
-{\em id} & The auto-\/incremented session identification number. \\
+{\em session\+Id} & The auto-\/incremented session identification number. \\
 \hline
 \end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std::\+invalid\+\_\+argument} & If the provided session\+Id is negative. \\
+\hline
+\end{DoxyExceptions}
 \Hypertarget{classSession_ae7feb48f68be002e288bbab74b63afdb}\index{Session@{Session}!Session@{Session}}
 \index{Session@{Session}!Session@{Session}}
 \doxysubsubsection{\texorpdfstring{Session()}{Session()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
@@ -96,6 +105,26 @@ Destructor that deallocates all loaded images to prevent memory leaks.
 \label{doc-func-members}
 \Hypertarget{classSession_doc-func-members}
 \doxysubsection{Member Function Documentation}
+\Hypertarget{classSession_a6c41e2cde8ed70875c4b8af80a12e35b}\index{Session@{Session}!addByFilename@{addByFilename}}
+\index{addByFilename@{addByFilename}!Session@{Session}}
+\doxysubsubsection{\texorpdfstring{addByFilename()}{addByFilename()}}
+{\footnotesize\ttfamily \label{classSession_a6c41e2cde8ed70875c4b8af80a12e35b} 
+void Session::\+add\+By\+Filename (\begin{DoxyParamCaption}\item[{const std::\+string \&}]{filename}{}\end{DoxyParamCaption})}
+
+
+
+Appends an image into the session by loading it from a disk path. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & String containing the destination file path. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std::\+invalid\+\_\+argument} & If the file cannot be opened or parsed. \\
+\hline
+\end{DoxyExceptions}
 \Hypertarget{classSession_a050d49df9af40cb6a5d8d511b5e2e05f}\index{Session@{Session}!addImage@{addImage}}
 \index{addImage@{addImage}!Session@{Session}}
 \doxysubsubsection{\texorpdfstring{addImage()}{addImage()}}
@@ -111,6 +140,11 @@ Appends a new image pointer into this session\textquotesingle{}s collection.
 {\em img} & Polymorphic pointer to an allocated \doxylink{classImage}{Image} object. \\
 \hline
 \end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std::\+invalid\+\_\+argument} & If the provided image pointer is null. \\
+\hline
+\end{DoxyExceptions}
 \Hypertarget{classSession_a76c79cc0a74fc39f63be191e8f5f67a0}\index{Session@{Session}!bakeTransformations@{bakeTransformations}}
 \index{bakeTransformations@{bakeTransformations}!Session@{Session}}
 \doxysubsubsection{\texorpdfstring{bakeTransformations()}{bakeTransformations()}}
@@ -147,6 +181,13 @@ Queues a request to flip the image on the horizontal axus.
 {\footnotesize\ttfamily \label{classSession_a1a9232e627b902f1ea1701f92423fddb} 
 int Session::\+get\+Id (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
+
+
+Gets the unique session identification key. 
+
+\begin{DoxyReturn}{Returns}
+Integer workspace identifier. 
+\end{DoxyReturn}
 \Hypertarget{classSession_a6774642c043fc37402c37aee184f6455}\index{Session@{Session}!getImages@{getImages}}
 \index{getImages@{getImages}!Session@{Session}}
 \doxysubsubsection{\texorpdfstring{getImages()}{getImages()}}
@@ -170,6 +211,11 @@ void Session::\+make\+Grayscale (\begin{DoxyParamCaption}{}{}\end{DoxyParamCapti
 
 Applies the grayscale transformation to all color images in this session. 
 
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std::\+invalid\+\_\+argument} & If there are no images loaded in the session. \\
+\hline
+\end{DoxyExceptions}
 \Hypertarget{classSession_a87bc8a6e8c0495fbc646b3ba77f98999}\index{Session@{Session}!makeMonochrome@{makeMonochrome}}
 \index{makeMonochrome@{makeMonochrome}!Session@{Session}}
 \doxysubsubsection{\texorpdfstring{makeMonochrome()}{makeMonochrome()}}
@@ -180,6 +226,11 @@ void Session::\+make\+Monochrome (\begin{DoxyParamCaption}{}{}\end{DoxyParamCapt
 
 Applies the monochrome transformation to all images in this session. 
 
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std::\+invalid\+\_\+argument} & If there are no images loaded in the session. \\
+\hline
+\end{DoxyExceptions}
 \Hypertarget{classSession_a44a7d994d8c55973365d94da49fcf376}\index{Session@{Session}!makeNegative@{makeNegative}}
 \index{makeNegative@{makeNegative}!Session@{Session}}
 \doxysubsubsection{\texorpdfstring{makeNegative()}{makeNegative()}}
@@ -190,12 +241,43 @@ void Session::\+make\+Negative (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaptio
 
 Applies the negative transformation to all images in this session. 
 
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std::\+invalid\+\_\+argument} & If there are no images loaded in the session. \\
+\hline
+\end{DoxyExceptions}
 \Hypertarget{classSession_a9b9df432bb38141e8b3c273a98ebfc44}\index{Session@{Session}!operator=@{operator=}}
 \index{operator=@{operator=}!Session@{Session}}
 \doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
 {\footnotesize\ttfamily \label{classSession_a9b9df432bb38141e8b3c273a98ebfc44} 
 \doxymbox{\hyperlink{classSession}{Session}} \& Session::\+operator= (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{classSession}{Session}} \&}]{other}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
 
+\Hypertarget{classSession_a52bb2847ea5aed4cb329cc493a75e31c}\index{Session@{Session}!paste@{paste}}
+\index{paste@{paste}!Session@{Session}}
+\doxysubsubsection{\texorpdfstring{paste()}{paste()}}
+{\footnotesize\ttfamily \label{classSession_a52bb2847ea5aed4cb329cc493a75e31c} 
+void Session::\+paste (\begin{DoxyParamCaption}\item[{const std::\+string \&}]{src\+Path}{, }\item[{const std::\+string \&}]{dest\+Path}{, }\item[{int}]{posX}{, }\item[{int}]{posY}{}\end{DoxyParamCaption})}
+
+
+
+Looks up the target destination file and applies the sub-\/image embedding logic. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em src\+Path} & Path to the source patch image. \\
+\hline
+{\em dest\+Path} & Path to the destination target image currently in the workspace. \\
+\hline
+{\em posX} & The horizontal starting coordinate pixel offset. \\
+\hline
+{\em posY} & The vertical starting coordinate pixel offset. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std::\+invalid\+\_\+argument} & If coordinates are invalid or images cannot be found. \\
+\hline
+\end{DoxyExceptions}
 \Hypertarget{classSession_a30b15b932b1ef6573fbafee75a6e69dd}\index{Session@{Session}!printSessionInfo@{printSessionInfo}}
 \index{printSessionInfo@{printSessionInfo}!Session@{Session}}
 \doxysubsubsection{\texorpdfstring{printSessionInfo()}{printSessionInfo()}}
@@ -244,13 +326,18 @@ void Session::\+save (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
 
 
-Saves all loaded images in the session back to their original disk locations. 
+Saves all loaded images in the session back to their original disk locations with a timestamp. 
 
-\Hypertarget{classSession_a8ef7c0c4a3abd9a513d0f7f0481d292d}\index{Session@{Session}!saveAs@{saveAs}}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std::\+invalid\+\_\+argument} & If there are no images available to save. \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{classSession_af985089be7b3af8ab562481094fe3a20}\index{Session@{Session}!saveAs@{saveAs}}
 \index{saveAs@{saveAs}!Session@{Session}}
 \doxysubsubsection{\texorpdfstring{saveAs()}{saveAs()}}
-{\footnotesize\ttfamily \label{classSession_a8ef7c0c4a3abd9a513d0f7f0481d292d} 
-void Session::\+save\+As (\begin{DoxyParamCaption}\item[{const std::\+string \&}]{new\+Filename}{}\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{classSession_af985089be7b3af8ab562481094fe3a20} 
+void Session::\+save\+As (\begin{DoxyParamCaption}\item[{const std::\+string \&}]{original\+Filename}{, }\item[{const std::\+string \&}]{new\+Filename}{}\end{DoxyParamCaption})}
 
 
 
@@ -261,6 +348,11 @@ Saves the first image in the session to a completely new specified path.
 {\em new\+Filename} & The target output path. \\
 \hline
 \end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std::\+invalid\+\_\+argument} & If the session is empty or the provided path is blank. \\
+\hline
+\end{DoxyExceptions}
 \Hypertarget{classSession_a3775cf47da8f5bdd929816d6d1e2d2c3}\index{Session@{Session}!undo@{undo}}
 \index{undo@{undo}!Session@{Session}}
 \doxysubsubsection{\texorpdfstring{undo()}{undo()}}

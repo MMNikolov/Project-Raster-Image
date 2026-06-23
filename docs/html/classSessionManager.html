@@ -101,12 +101,14 @@ $(function(){initNavTree('classSessionManager.html','','classSessionManager-memb
 Public Member Functions</h2></td></tr>
 <tr class="memitem:acc0ba9a385a5d78b9602d5ecb0525006" id="r_acc0ba9a385a5d78b9602d5ecb0525006"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#acc0ba9a385a5d78b9602d5ecb0525006">SessionManager</a> ()</td></tr>
 <tr class="memdesc:acc0ba9a385a5d78b9602d5ecb0525006"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor initializing the session registry with an inactive default state.  <br /></td></tr>
-<tr class="memitem:acf9860a47b8c54e5f13210715e784621" id="r_acf9860a47b8c54e5f13210715e784621"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#acf9860a47b8c54e5f13210715e784621">~SessionManager</a> ()</td></tr>
-<tr class="memdesc:acf9860a47b8c54e5f13210715e784621"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor guaranteeing deallocation of all active sessions and their images.  <br /></td></tr>
 <tr class="memitem:ab82682c10235caa7e3de64a48d2a71d2" id="r_ab82682c10235caa7e3de64a48d2a71d2"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ab82682c10235caa7e3de64a48d2a71d2">SessionManager</a> (const <a class="el" href="classSessionManager.html">SessionManager</a> &amp;other)=delete</td></tr>
 <tr class="memitem:ae13bd61f8819d0d6dc8b95347c972327" id="r_ae13bd61f8819d0d6dc8b95347c972327"><td class="memItemLeft"><a class="el" href="classSessionManager.html">SessionManager</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#ae13bd61f8819d0d6dc8b95347c972327">operator=</a> (const <a class="el" href="classSessionManager.html">SessionManager</a> &amp;other)=delete</td></tr>
+<tr class="memitem:acf9860a47b8c54e5f13210715e784621" id="r_acf9860a47b8c54e5f13210715e784621"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#acf9860a47b8c54e5f13210715e784621">~SessionManager</a> ()</td></tr>
+<tr class="memdesc:acf9860a47b8c54e5f13210715e784621"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor guaranteeing deallocation of all active sessions and their images.  <br /></td></tr>
 <tr class="memitem:a396c9c2e863f913ae57b652568f0c44c" id="r_a396c9c2e863f913ae57b652568f0c44c"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a396c9c2e863f913ae57b652568f0c44c">loadSession</a> (const std::vector&lt; std::string &gt; &amp;filepaths)</td></tr>
 <tr class="memdesc:a396c9c2e863f913ae57b652568f0c44c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Spawns a new <a class="el" href="classSession.html" title="Handles isolated image transformations and historical tracking for a single workspace window.">Session</a> container, loads all target file paths, and switches focus to it.  <br /></td></tr>
+<tr class="memitem:ab454de157d5f3b1cefb88a191e1ab0b2" id="r_ab454de157d5f3b1cefb88a191e1ab0b2"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ab454de157d5f3b1cefb88a191e1ab0b2">addImagetoActiveSession</a> (const std::string &amp;filename)</td></tr>
+<tr class="memdesc:ab454de157d5f3b1cefb88a191e1ab0b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Appends a new file into the currently focused active workspace session.  <br /></td></tr>
 <tr class="memitem:a8513a09b1acbd6ebc3c8c5e5d33615e3" id="r_a8513a09b1acbd6ebc3c8c5e5d33615e3"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a8513a09b1acbd6ebc3c8c5e5d33615e3">switchSession</a> (int sessionId)</td></tr>
 <tr class="memdesc:a8513a09b1acbd6ebc3c8c5e5d33615e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shifts active focus to a different loaded session workspace by its unique ID.  <br /></td></tr>
 <tr class="memitem:a46c5a06807856be98438d2ec5f6f37c3" id="r_a46c5a06807856be98438d2ec5f6f37c3"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a46c5a06807856be98438d2ec5f6f37c3">closeSessionById</a> (int sessionId)</td></tr>
@@ -121,8 +123,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:ac9e3e86997fc379bb0450b7f5d07ae55"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints format profile statistics for files inside the currently active session focus.  <br /></td></tr>
 <tr class="memitem:aa978b3850afcf3437005fd0ac58d0a6a" id="r_aa978b3850afcf3437005fd0ac58d0a6a"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aa978b3850afcf3437005fd0ac58d0a6a">save</a> ()</td></tr>
 <tr class="memdesc:aa978b3850afcf3437005fd0ac58d0a6a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Directs the focused active session to save all its images back to disk.  <br /></td></tr>
-<tr class="memitem:ab0f0bf4e1693e68d37d47b2b13d2c464" id="r_ab0f0bf4e1693e68d37d47b2b13d2c464"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ab0f0bf4e1693e68d37d47b2b13d2c464">saveAs</a> (const std::string &amp;newFilename)</td></tr>
-<tr class="memdesc:ab0f0bf4e1693e68d37d47b2b13d2c464"><td class="mdescLeft">&#160;</td><td class="mdescRight">Directs the focused active session to save an image to a new path.  <br /></td></tr>
+<tr class="memitem:a261c4cd524a958b3fb9f471708431458" id="r_a261c4cd524a958b3fb9f471708431458"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a261c4cd524a958b3fb9f471708431458">saveAs</a> (const std::string &amp;originalFilename, const std::string &amp;newFilename)</td></tr>
+<tr class="memdesc:a261c4cd524a958b3fb9f471708431458"><td class="mdescLeft">&#160;</td><td class="mdescRight">Directs the focused active session to save an image to a new path.  <br /></td></tr>
+<tr class="memitem:ad058e0c7ef47595a269a4ef764760613" id="r_ad058e0c7ef47595a269a4ef764760613"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ad058e0c7ef47595a269a4ef764760613">paste</a> (const std::string &amp;srcPath, const std::string &amp;destPath, int posX, int posY)</td></tr>
+<tr class="memdesc:ad058e0c7ef47595a269a4ef764760613"><td class="mdescLeft">&#160;</td><td class="mdescRight">Directs the active session to embed a patch image into a targeted workspace image.  <br /></td></tr>
 <tr class="memitem:a976925a605ff60d9e628fc54d87ead9b" id="r_a976925a605ff60d9e628fc54d87ead9b"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a976925a605ff60d9e628fc54d87ead9b">undo</a> ()</td></tr>
 <tr class="memdesc:a976925a605ff60d9e628fc54d87ead9b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Requests an undo reversion operation on the active focused workspace tracking block.  <br /></td></tr>
 <tr class="memitem:af90ce3c23d63842d22d6237f60661834" id="r_af90ce3c23d63842d22d6237f60661834"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#af90ce3c23d63842d22d6237f60661834">redo</a> ()</td></tr>
@@ -158,25 +162,6 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="acf9860a47b8c54e5f13210715e784621" name="acf9860a47b8c54e5f13210715e784621"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acf9860a47b8c54e5f13210715e784621">&#9670;&#160;</a></span>~SessionManager()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">SessionManager::~SessionManager </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Destructor guaranteeing deallocation of all active sessions and their images. </p>
-
-</div>
-</div>
 <a id="ab82682c10235caa7e3de64a48d2a71d2" name="ab82682c10235caa7e3de64a48d2a71d2"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab82682c10235caa7e3de64a48d2a71d2">&#9670;&#160;</a></span>SessionManager() <span class="overload">[2/2]</span></h2>
 
@@ -202,7 +187,57 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="acf9860a47b8c54e5f13210715e784621" name="acf9860a47b8c54e5f13210715e784621"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf9860a47b8c54e5f13210715e784621">&#9670;&#160;</a></span>~SessionManager()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SessionManager::~SessionManager </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Destructor guaranteeing deallocation of all active sessions and their images. </p>
+
+</div>
+</div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="ab454de157d5f3b1cefb88a191e1ab0b2" name="ab454de157d5f3b1cefb88a191e1ab0b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab454de157d5f3b1cefb88a191e1ab0b2">&#9670;&#160;</a></span>addImagetoActiveSession()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SessionManager::addImagetoActiveSession </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>filename</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Appends a new file into the currently focused active workspace session. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filename</td><td>Name of the file path string to load. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::invalid_argument</td><td>If no session is currently active. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a46c5a06807856be98438d2ec5f6f37c3" name="a46c5a06807856be98438d2ec5f6f37c3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a46c5a06807856be98438d2ec5f6f37c3">&#9670;&#160;</a></span>closeSessionById()</h2>
 
@@ -222,6 +257,12 @@ Public Member Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">sessionId</td><td>The targeted identifier integer to terminate. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::invalid_argument</td><td>If the target session ID cannot be resolved. </td></tr>
   </table>
   </dd>
 </dl>
@@ -373,6 +414,48 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="ad058e0c7ef47595a269a4ef764760613" name="ad058e0c7ef47595a269a4ef764760613"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad058e0c7ef47595a269a4ef764760613">&#9670;&#160;</a></span>paste()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SessionManager::paste </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>srcPath</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>destPath</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>posX</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>posY</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Directs the active session to embed a patch image into a targeted workspace image. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">srcPath</td><td>Path to the source patch file. </td></tr>
+    <tr><td class="paramname">destPath</td><td>Path to the targeted workspace background image. </td></tr>
+    <tr><td class="paramname">posX</td><td>Coordinate column destination point offset. </td></tr>
+    <tr><td class="paramname">posY</td><td>Coordinate row destination point offset. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="ac9e3e86997fc379bb0450b7f5d07ae55" name="ac9e3e86997fc379bb0450b7f5d07ae55"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac9e3e86997fc379bb0450b7f5d07ae55">&#9670;&#160;</a></span>printCurrentSessionInfo()</h2>
 
@@ -468,8 +551,8 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ab0f0bf4e1693e68d37d47b2b13d2c464" name="ab0f0bf4e1693e68d37d47b2b13d2c464"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab0f0bf4e1693e68d37d47b2b13d2c464">&#9670;&#160;</a></span>saveAs()</h2>
+<a id="a261c4cd524a958b3fb9f471708431458" name="a261c4cd524a958b3fb9f471708431458"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a261c4cd524a958b3fb9f471708431458">&#9670;&#160;</a></span>saveAs()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -477,8 +560,12 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">void SessionManager::saveAs </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>newFilename</em></span></td><td>)</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>originalFilename</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>newFilename</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -512,6 +599,12 @@ Public Member Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">sessionId</td><td>The targeted identifier integer. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::invalid_argument</td><td>If the requested session ID is not found in the collection. </td></tr>
   </table>
   </dd>
 </dl>

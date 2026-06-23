@@ -6,7 +6,7 @@ digraph "Raster-Image-Manipulation/Factory/ImageFactory.cpp"
   node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
   Node1 [id="Node000001",label="Raster-Image-Manipulation\l/Factory/ImageFactory.cpp",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
   Node1 -> Node2 [id="edge1_Node000001_Node000002",color="steelblue1",style="solid",tooltip=" "];
-  Node2 [id="Node000002",label="ImageFactory.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ImageFactory_8hpp.html",tooltip=" "];
+  Node2 [id="Node000002",label="ImageFactory.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ImageFactory_8hpp.html",tooltip="Defines the ImageFactory class for generating polymorphic image objects."];
   Node2 -> Node3 [id="edge2_Node000002_Node000003",color="steelblue1",style="solid",tooltip=" "];
   Node3 [id="Node000003",label="../Image/Image.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$Image_8hpp.html",tooltip="Defines the abstract base class for all raster image formats."];
   Node3 -> Node4 [id="edge3_Node000003_Node000004",color="steelblue1",style="solid",tooltip=" "];

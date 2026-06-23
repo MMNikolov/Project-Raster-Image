@@ -14,53 +14,61 @@
 \DoxyCodeLine{00017\ \textcolor{keyword}{public}:}
 \DoxyCodeLine{00021\ \ \ \ \ \doxymbox{\hyperlink{classSessionManager_acc0ba9a385a5d78b9602d5ecb0525006}{SessionManager}}();}
 \DoxyCodeLine{00022\ }
-\DoxyCodeLine{00026\ \ \ \ \ \doxymbox{\hyperlink{classSessionManager_acf9860a47b8c54e5f13210715e784621}{\string~SessionManager}}();}
-\DoxyCodeLine{00027\ }
-\DoxyCodeLine{00028\ \ \ \ \ \textcolor{comment}{//\ Disable\ copy\ semantics\ to\ protect\ ownership\ of\ deep\ session\ pointer\ buffers}}
-\DoxyCodeLine{00029\ \ \ \ \ \doxymbox{\hyperlink{classSessionManager_ab82682c10235caa7e3de64a48d2a71d2}{SessionManager}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{classSessionManager_acc0ba9a385a5d78b9602d5ecb0525006}{SessionManager}}\ \&other)\ =\ \textcolor{keyword}{delete};}
-\DoxyCodeLine{00030\ \ \ \ \ \doxymbox{\hyperlink{classSessionManager_acc0ba9a385a5d78b9602d5ecb0525006}{SessionManager}}\ \&\doxymbox{\hyperlink{classSessionManager_ae13bd61f8819d0d6dc8b95347c972327}{operator=}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{classSessionManager_acc0ba9a385a5d78b9602d5ecb0525006}{SessionManager}}\ \&other)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{comment}{//\ Disable\ copy\ semantics}}
+\DoxyCodeLine{00024\ \ \ \ \ \doxymbox{\hyperlink{classSessionManager_ab82682c10235caa7e3de64a48d2a71d2}{SessionManager}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{classSessionManager_acc0ba9a385a5d78b9602d5ecb0525006}{SessionManager}}\ \&other)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00025\ \ \ \ \ \doxymbox{\hyperlink{classSessionManager_acc0ba9a385a5d78b9602d5ecb0525006}{SessionManager}}\ \&\doxymbox{\hyperlink{classSessionManager_ae13bd61f8819d0d6dc8b95347c972327}{operator=}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{classSessionManager_acc0ba9a385a5d78b9602d5ecb0525006}{SessionManager}}\ \&other)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00030\ \ \ \ \ \doxymbox{\hyperlink{classSessionManager_acf9860a47b8c54e5f13210715e784621}{\string~SessionManager}}();}
 \DoxyCodeLine{00031\ }
 \DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{classSessionManager_a396c9c2e863f913ae57b652568f0c44c}{loadSession}}(\textcolor{keyword}{const}\ std::vector<std::string>\ \&filepaths);}
 \DoxyCodeLine{00037\ }
-\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{classSessionManager_a8513a09b1acbd6ebc3c8c5e5d33615e3}{switchSession}}(\textcolor{keywordtype}{int}\ sessionId);}
-\DoxyCodeLine{00043\ }
-\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{classSessionManager_a46c5a06807856be98438d2ec5f6f37c3}{closeSessionById}}(\textcolor{keywordtype}{int}\ sessionId);}
-\DoxyCodeLine{00049\ }
-\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{classSessionManager_ab52d7965eee68dc46a59a953ee5031eb}{makeNegative}}();}
-\DoxyCodeLine{00054\ }
-\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{classSessionManager_a894c5c053ce98521044ec1455b0fc14d}{makeGrayscale}}();}
-\DoxyCodeLine{00059\ }
-\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{classSessionManager_aac1e2e0591b236740da277e8ba50ccec}{makeMonochrome}}();}
-\DoxyCodeLine{00064\ }
-\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{classSessionManager_ac9e3e86997fc379bb0450b7f5d07ae55}{printCurrentSessionInfo}}()\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00069\ }
-\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{classSessionManager_aa978b3850afcf3437005fd0ac58d0a6a}{save}}();}
-\DoxyCodeLine{00074\ }
-\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{classSessionManager_ab0f0bf4e1693e68d37d47b2b13d2c464}{saveAs}}(\textcolor{keyword}{const}\ std::string\&\ newFilename);}
-\DoxyCodeLine{00080\ }
-\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{classSessionManager_a976925a605ff60d9e628fc54d87ead9b}{undo}}();}
-\DoxyCodeLine{00085\ }
-\DoxyCodeLine{00089\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{classSessionManager_af90ce3c23d63842d22d6237f60661834}{redo}}();}
-\DoxyCodeLine{00090\ }
-\DoxyCodeLine{00094\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{classSessionManager_a4839c0fe3ce1be27b59e87fb346f3087}{rotateLeft}}();}
-\DoxyCodeLine{00095\ }
-\DoxyCodeLine{00099\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{classSessionManager_ae43084ceb4858d4022c24847829dda18}{rotateRight}}();}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{classSessionManager_ab454de157d5f3b1cefb88a191e1ab0b2}{addImagetoActiveSession}}(\textcolor{keyword}{const}\ std::string\&\ filename);}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{classSessionManager_a8513a09b1acbd6ebc3c8c5e5d33615e3}{switchSession}}(\textcolor{keywordtype}{int}\ sessionId);}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{classSessionManager_a46c5a06807856be98438d2ec5f6f37c3}{closeSessionById}}(\textcolor{keywordtype}{int}\ sessionId);}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{classSessionManager_ab52d7965eee68dc46a59a953ee5031eb}{makeNegative}}();}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{classSessionManager_a894c5c053ce98521044ec1455b0fc14d}{makeGrayscale}}();}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{classSessionManager_aac1e2e0591b236740da277e8ba50ccec}{makeMonochrome}}();}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{classSessionManager_ac9e3e86997fc379bb0450b7f5d07ae55}{printCurrentSessionInfo}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{classSessionManager_aa978b3850afcf3437005fd0ac58d0a6a}{save}}();}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{classSessionManager_a261c4cd524a958b3fb9f471708431458}{saveAs}}(\textcolor{keyword}{const}\ std::string\ \&originalFilename,\ \textcolor{keyword}{const}\ std::string\ \&newFilename);}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00097\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{classSessionManager_ad058e0c7ef47595a269a4ef764760613}{paste}}(\textcolor{keyword}{const}\ std::string\&\ srcPath,\ \textcolor{keyword}{const}\ std::string\&\ destPath,\ \textcolor{keywordtype}{int}\ posX,\ \textcolor{keywordtype}{int}\ posY);}
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00099\ \ \ \ \ \textcolor{comment}{//REDO\ AND\ UNDO\ FUNCTIONALITIES}}
 \DoxyCodeLine{00100\ }
-\DoxyCodeLine{00104\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{classSessionManager_a02d7d43d2c8fe8a18db587ef178bbc61}{flipTop}}();}
+\DoxyCodeLine{00104\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{classSessionManager_a976925a605ff60d9e628fc54d87ead9b}{undo}}();}
 \DoxyCodeLine{00105\ }
-\DoxyCodeLine{00109\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{classSessionManager_a380417b676440c3673f815066bec3752}{flipLeft}}();}
+\DoxyCodeLine{00109\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{classSessionManager_af90ce3c23d63842d22d6237f60661834}{redo}}();}
 \DoxyCodeLine{00110\ }
-\DoxyCodeLine{00111\ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00112\ \ \ \ \ std::vector<Session\ *>\ activeSessions;\ }
-\DoxyCodeLine{00113\ \ \ \ \ \textcolor{keywordtype}{int}\ currentActiveId;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00114\ \ \ \ \ \textcolor{keywordtype}{int}\ idCounter;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00115\ }
-\DoxyCodeLine{00116\ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00122\ \ \ \ \ \textcolor{keywordtype}{int}\ findSessionIndex(\textcolor{keywordtype}{int}\ sessionId)\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00123\ }
-\DoxyCodeLine{00127\ \ \ \ \ \textcolor{keywordtype}{void}\ free();}
-\DoxyCodeLine{00128\ \};}
-\DoxyCodeLine{00129\ }
-\DoxyCodeLine{00130\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ SESSION\_MANAGER\_HPP}}
+\DoxyCodeLine{00111\ \ \ \ \ \textcolor{comment}{//ROTATE\ AND\ FLIP\ FUNCTIONALITIES}}
+\DoxyCodeLine{00112\ }
+\DoxyCodeLine{00116\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{classSessionManager_a4839c0fe3ce1be27b59e87fb346f3087}{rotateLeft}}();}
+\DoxyCodeLine{00117\ }
+\DoxyCodeLine{00121\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{classSessionManager_ae43084ceb4858d4022c24847829dda18}{rotateRight}}();}
+\DoxyCodeLine{00122\ }
+\DoxyCodeLine{00126\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{classSessionManager_a02d7d43d2c8fe8a18db587ef178bbc61}{flipTop}}();}
+\DoxyCodeLine{00127\ }
+\DoxyCodeLine{00131\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{classSessionManager_a380417b676440c3673f815066bec3752}{flipLeft}}();}
+\DoxyCodeLine{00132\ }
+\DoxyCodeLine{00133\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00134\ \ \ \ \ std::vector<Session\ *>\ activeSessions;\ }
+\DoxyCodeLine{00135\ \ \ \ \ \textcolor{keywordtype}{int}\ currentActiveId;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00136\ \ \ \ \ \textcolor{keywordtype}{int}\ idCounter;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00137\ }
+\DoxyCodeLine{00138\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00144\ \ \ \ \ \textcolor{keywordtype}{int}\ findSessionIndex(\textcolor{keywordtype}{int}\ sessionId)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00145\ }
+\DoxyCodeLine{00149\ \ \ \ \ \textcolor{keywordtype}{void}\ free();}
+\DoxyCodeLine{00150\ \};}
+\DoxyCodeLine{00151\ }
+\DoxyCodeLine{00152\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ SESSION\_MANAGER\_HPP}}
 
 \end{DoxyCode}

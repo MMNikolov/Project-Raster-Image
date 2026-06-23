@@ -22,7 +22,6 @@
  * The `pixelData` is stored in a 1D vector rather than a 2D array
  * This boosts performance when applying transformations to large images
  */
-
 class Image
 {
 public:
@@ -157,10 +156,10 @@ public:
     // Has to read a lot of documentation on how to work with std::string for cleaner work flow, because till this moment we have been working only with char*
 protected:
 
-    int width; /**< Image width in pixels */
-    int height; /**< Image height in pixels */
-    std::string originalFilename; /**< The source file name of the image */
-    std::vector<Pixel> pixelData; /**< 1D array of pixels representing the 2D image */
+    int width;                        /**< Image width in pixels */
+    int height;                       /**< Image height in pixels */
+    std::string originalFilename;     /**< The source file name of the image */
+    std::vector<Pixel> pixelData;     /**< 1D array of pixels representing the 2D image */
 };
 
 #endif //IMAGE_HPP

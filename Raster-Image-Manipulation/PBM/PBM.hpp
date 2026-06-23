@@ -18,14 +18,14 @@
 class PBM : public Image
 {
 public:
-/**
+    /**
      * @brief Constructor that opens and parses a PBM file from disk.
      * @param filename Path to the source .pbm file.
      * @throws std::invalid_argument If the file cannot be opened or contains invalid formatting.
      */
     PBM(const std::string& filename);
 
-    //no need for a destrcutor
+    //no need for a destrcutor as we are not working with dynamic memory and the compilator will make its own
     //~PBM();
 
     //overriden methods
@@ -64,7 +64,6 @@ public:
      * @brief Does nothing here.
      */
     void makeMonochrome() override;
-    
 };
 
 #endif // PBM_HPP

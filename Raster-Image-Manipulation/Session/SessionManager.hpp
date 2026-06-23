@@ -20,14 +20,14 @@ public:
      */
     SessionManager();
 
+    // Disable copy semantics
+    SessionManager(const SessionManager &other) = delete;
+    SessionManager &operator=(const SessionManager &other) = delete;
+
     /**
      * @brief Destructor guaranteeing deallocation of all active sessions and their images.
      */
     ~SessionManager();
-
-    // Disable copy semantics to protect ownership of deep session pointer buffers
-    SessionManager(const SessionManager &other) = delete;
-    SessionManager &operator=(const SessionManager &other) = delete;
 
     /**
      * @brief Spawns a new Session container, loads all target file paths, and switches focus to it.
@@ -36,14 +36,23 @@ public:
     void loadSession(const std::vector<std::string> &filepaths);
 
     /**
+     * @brief Appends a new file into the currently focused active workspace session.
+     * @param filename Name of the file path string to load.
+     * @throws std::invalid_argument If no session is currently active.
+     */
+    void addImagetoActiveSession(const std::string& filename);
+
+    /**
      * @brief Shifts active focus to a different loaded session workspace by its unique ID.
      * @param sessionId The targeted identifier integer.
+     * @throws std::invalid_argument If the requested session ID is not found in the collection.
      */
     void switchSession(int sessionId);
 
     /**
      * @brief Closes a targeted session workspace and releases all its embedded allocations.
      * @param sessionId The targeted identifier integer to terminate.
+     * @throws std::invalid_argument If the target session ID cannot be resolved.
      */
     void closeSessionById(int sessionId);
 
@@ -76,10 +85,14 @@ public:
      * @brief Directs the focused active session to save an image to a new path.
      * @param newFilename Target path string.
      */
-    void saveAs(const std::string& newFilename);
+    void saveAs(const std::string &originalFilename, const std::string &newFilename);
 
     /**
-     * @brief Looks up the target destination file and applies the sub-image embedding logic.
+     * @brief Directs the active session to embed a patch image into a targeted workspace image.
+     * @param srcPath Path to the source patch file.
+     * @param destPath Path to the targeted workspace background image.
+     * @param posX Coordinate column destination point offset.
+     * @param posY Coordinate row destination point offset.
      */
     void paste(const std::string& srcPath, const std::string& destPath, int posX, int posY);
 

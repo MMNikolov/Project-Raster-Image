@@ -26,7 +26,8 @@ public:
      */
     PPM(const std::string& filename);
 
-    //no destructor
+    //no destructor because the compilator will take care of it and we are not working with a dynamic memory
+    //~PPM()
 
     //overriden methods
 
@@ -69,7 +70,7 @@ public:
     void makeMonochrome() override;
 
 private:
-    int maxColorValue; /**< Maximum color intensity range parsed from the header */
+    int maxColorValue;      /**< Maximum color intensity range parsed from the header */
 };
 
 #endif //PPM_HPP

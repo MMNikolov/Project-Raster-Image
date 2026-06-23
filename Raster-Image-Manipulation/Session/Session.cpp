@@ -27,6 +27,15 @@ void Session::addImage(Image *img)
     this->count++;
 }
 
+void Session::addByFilename(const std::string &filename)
+{
+    Image* img = ImageFactory::createImage(filename);
+
+    this->loadedImages.push_back(img);
+
+    std::cout << "Image " << filename << " added to the active session successfully.\n";
+}
+
 void Session::makeNegative()
 {
     if (this->count <= 0)
@@ -144,22 +153,38 @@ void Session::save()
     }
 }
 
-void Session::saveAs(const std::string &newFilename)
+void Session::saveAs(const std::string &originalFilename, const std::string &newFilename)
 {
     if (this->count <= 0)
     {
-        throw std::invalid_argument("there is nothing to save as my guy... :D");
+        throw std::invalid_argument("There is nothing to save in this session.");
     }
-
     if (newFilename.empty())
     {
-        throw std::invalid_argument("Cant save into the nothingness");
+        throw std::invalid_argument("Destination path cannot be empty.");
     }
 
     this->bakeTransformations();
 
-    this->loadedImages[0]->save(newFilename);
-    std::cout << "Successfully saved state as: " << newFilename << "\n";
+    // Look up the specific image object by matching its original file name string
+    Image* targetImage = nullptr;
+    for (size_t i = 0; i < this->count; i++)
+    {
+        if (this->loadedImages[i]->getFilename() == originalFilename)
+        {
+            targetImage = this->loadedImages[i];
+            break;
+        }
+    }
+
+    if (!targetImage)
+    {
+        throw std::invalid_argument("Target image file not found in the active session.");
+    }
+
+    // Call the correct polymorphic serialization routine
+    targetImage->save(newFilename);
+    std::cout << "Successfully saved state of " << originalFilename << " as: " << newFilename << "\n";
 }
 
 void Session::paste(const std::string &srcPath, const std::string &destPath, int posX, int posY)

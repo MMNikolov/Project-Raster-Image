@@ -1,0 +1,7 @@
+P1
+# 4x4 monochrome checkerboard pattern
+4 4
+1 0 1 0
+0 1 0 1
+1 0 1 0
+0 1 0 1

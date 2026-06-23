@@ -14,6 +14,7 @@ var classImage =
     [ "makeGrayscale", "classImage.html#a1b903992477c59996ecbdc66531a6217", null ],
     [ "makeMonochrome", "classImage.html#af09ea6ef3e5bb5fe7f760719dbdc5113", null ],
     [ "makeNegative", "classImage.html#a06ae731d5b7c0e00791f561ed98d8d69", null ],
+    [ "paste", "classImage.html#a9fddb97e7f1a48cd04dac75956bbc756", null ],
     [ "printSessionInfo", "classImage.html#a997a88ec456aa24fd42660f9d4ba61cc", null ],
     [ "rotateLeft", "classImage.html#ad9fb4fd4857b451e330bf37dcc6bc91d", null ],
     [ "rotateRight", "classImage.html#a119e09b1addd48b535ddd20ff9c1f7c7", null ],

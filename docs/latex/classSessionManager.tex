@@ -14,14 +14,16 @@ Global state registry controller routing terminal data pipelines to focused work
 \item 
 \doxymbox{\hyperlink{classSessionManager_acc0ba9a385a5d78b9602d5ecb0525006}{Session\+Manager}} ()
 \begin{DoxyCompactList}\small\item\em Constructor initializing the session registry with an inactive default state. \end{DoxyCompactList}\item 
-\doxymbox{\hyperlink{classSessionManager_acf9860a47b8c54e5f13210715e784621}{\texorpdfstring{$\sim$}{\string~}\+Session\+Manager}} ()
-\begin{DoxyCompactList}\small\item\em Destructor guaranteeing deallocation of all active sessions and their images. \end{DoxyCompactList}\item 
 \doxymbox{\hyperlink{classSessionManager_ab82682c10235caa7e3de64a48d2a71d2}{Session\+Manager}} (const \doxymbox{\hyperlink{classSessionManager}{Session\+Manager}} \&other)=delete
 \item 
 \doxymbox{\hyperlink{classSessionManager}{Session\+Manager}} \& \doxymbox{\hyperlink{classSessionManager_ae13bd61f8819d0d6dc8b95347c972327}{operator=}} (const \doxymbox{\hyperlink{classSessionManager}{Session\+Manager}} \&other)=delete
 \item 
+\doxymbox{\hyperlink{classSessionManager_acf9860a47b8c54e5f13210715e784621}{\texorpdfstring{$\sim$}{\string~}\+Session\+Manager}} ()
+\begin{DoxyCompactList}\small\item\em Destructor guaranteeing deallocation of all active sessions and their images. \end{DoxyCompactList}\item 
 void \doxymbox{\hyperlink{classSessionManager_a396c9c2e863f913ae57b652568f0c44c}{load\+Session}} (const std::\+vector$<$ std::\+string $>$ \&filepaths)
 \begin{DoxyCompactList}\small\item\em Spawns a new \doxylink{classSession}{Session} container, loads all target file paths, and switches focus to it. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{classSessionManager_ab454de157d5f3b1cefb88a191e1ab0b2}{add\+Imageto\+Active\+Session}} (const std::\+string \&filename)
+\begin{DoxyCompactList}\small\item\em Appends a new file into the currently focused active workspace session. \end{DoxyCompactList}\item 
 void \doxymbox{\hyperlink{classSessionManager_a8513a09b1acbd6ebc3c8c5e5d33615e3}{switch\+Session}} (int session\+Id)
 \begin{DoxyCompactList}\small\item\em Shifts active focus to a different loaded session workspace by its unique ID. \end{DoxyCompactList}\item 
 void \doxymbox{\hyperlink{classSessionManager_a46c5a06807856be98438d2ec5f6f37c3}{close\+Session\+By\+Id}} (int session\+Id)
@@ -36,8 +38,10 @@ void \doxymbox{\hyperlink{classSessionManager_ac9e3e86997fc379bb0450b7f5d07ae55}
 \begin{DoxyCompactList}\small\item\em Prints format profile statistics for files inside the currently active session focus. \end{DoxyCompactList}\item 
 void \doxymbox{\hyperlink{classSessionManager_aa978b3850afcf3437005fd0ac58d0a6a}{save}} ()
 \begin{DoxyCompactList}\small\item\em Directs the focused active session to save all its images back to disk. \end{DoxyCompactList}\item 
-void \doxymbox{\hyperlink{classSessionManager_ab0f0bf4e1693e68d37d47b2b13d2c464}{save\+As}} (const std::\+string \&new\+Filename)
+void \doxymbox{\hyperlink{classSessionManager_a261c4cd524a958b3fb9f471708431458}{save\+As}} (const std::\+string \&original\+Filename, const std::\+string \&new\+Filename)
 \begin{DoxyCompactList}\small\item\em Directs the focused active session to save an image to a new path. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{classSessionManager_ad058e0c7ef47595a269a4ef764760613}{paste}} (const std::\+string \&src\+Path, const std::\+string \&dest\+Path, int posX, int posY)
+\begin{DoxyCompactList}\small\item\em Directs the active session to embed a patch image into a targeted workspace image. \end{DoxyCompactList}\item 
 void \doxymbox{\hyperlink{classSessionManager_a976925a605ff60d9e628fc54d87ead9b}{undo}} ()
 \begin{DoxyCompactList}\small\item\em Requests an undo reversion operation on the active focused workspace tracking block. \end{DoxyCompactList}\item 
 void \doxymbox{\hyperlink{classSessionManager_af90ce3c23d63842d22d6237f60661834}{redo}} ()
@@ -68,6 +72,12 @@ Session\+Manager::\+\+Session\+Manager (\begin{DoxyParamCaption}{}{}\end{DoxyPar
 
 Constructor initializing the session registry with an inactive default state. 
 
+\Hypertarget{classSessionManager_ab82682c10235caa7e3de64a48d2a71d2}\index{SessionManager@{SessionManager}!SessionManager@{SessionManager}}
+\index{SessionManager@{SessionManager}!SessionManager@{SessionManager}}
+\doxysubsubsection{\texorpdfstring{SessionManager()}{SessionManager()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classSessionManager_ab82682c10235caa7e3de64a48d2a71d2} 
+Session\+Manager::\+\+Session\+Manager (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{classSessionManager}{Session\+Manager}} \&}]{other}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
 \Hypertarget{classSessionManager_acf9860a47b8c54e5f13210715e784621}\index{SessionManager@{SessionManager}!````~SessionManager@{\texorpdfstring{$\sim$}{\string~}SessionManager}}
 \index{````~SessionManager@{\texorpdfstring{$\sim$}{\string~}SessionManager}!SessionManager@{SessionManager}}
 \doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}SessionManager()}{\string~SessionManager()}}
@@ -78,17 +88,31 @@ Session\+Manager::\+\texorpdfstring{$\sim$}{\string~}\+Session\+Manager (\begin{
 
 Destructor guaranteeing deallocation of all active sessions and their images. 
 
-\Hypertarget{classSessionManager_ab82682c10235caa7e3de64a48d2a71d2}\index{SessionManager@{SessionManager}!SessionManager@{SessionManager}}
-\index{SessionManager@{SessionManager}!SessionManager@{SessionManager}}
-\doxysubsubsection{\texorpdfstring{SessionManager()}{SessionManager()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily \label{classSessionManager_ab82682c10235caa7e3de64a48d2a71d2} 
-Session\+Manager::\+\+Session\+Manager (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{classSessionManager}{Session\+Manager}} \&}]{other}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
-
 
 
 \label{doc-func-members}
 \Hypertarget{classSessionManager_doc-func-members}
 \doxysubsection{Member Function Documentation}
+\Hypertarget{classSessionManager_ab454de157d5f3b1cefb88a191e1ab0b2}\index{SessionManager@{SessionManager}!addImagetoActiveSession@{addImagetoActiveSession}}
+\index{addImagetoActiveSession@{addImagetoActiveSession}!SessionManager@{SessionManager}}
+\doxysubsubsection{\texorpdfstring{addImagetoActiveSession()}{addImagetoActiveSession()}}
+{\footnotesize\ttfamily \label{classSessionManager_ab454de157d5f3b1cefb88a191e1ab0b2} 
+void Session\+Manager::\+add\+Imageto\+Active\+Session (\begin{DoxyParamCaption}\item[{const std::\+string \&}]{filename}{}\end{DoxyParamCaption})}
+
+
+
+Appends a new file into the currently focused active workspace session. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & Name of the file path string to load. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std::\+invalid\+\_\+argument} & If no session is currently active. \\
+\hline
+\end{DoxyExceptions}
 \Hypertarget{classSessionManager_a46c5a06807856be98438d2ec5f6f37c3}\index{SessionManager@{SessionManager}!closeSessionById@{closeSessionById}}
 \index{closeSessionById@{closeSessionById}!SessionManager@{SessionManager}}
 \doxysubsubsection{\texorpdfstring{closeSessionById()}{closeSessionById()}}
@@ -104,6 +128,11 @@ Closes a targeted session workspace and releases all its embedded allocations.
 {\em session\+Id} & The targeted identifier integer to terminate. \\
 \hline
 \end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std::\+invalid\+\_\+argument} & If the target session ID cannot be resolved. \\
+\hline
+\end{DoxyExceptions}
 \Hypertarget{classSessionManager_a380417b676440c3673f815066bec3752}\index{SessionManager@{SessionManager}!flipLeft@{flipLeft}}
 \index{flipLeft@{flipLeft}!SessionManager@{SessionManager}}
 \doxysubsubsection{\texorpdfstring{flipLeft()}{flipLeft()}}
@@ -175,6 +204,27 @@ Forwards negative pixel calculation execution to the focused active session.
 {\footnotesize\ttfamily \label{classSessionManager_ae13bd61f8819d0d6dc8b95347c972327} 
 \doxymbox{\hyperlink{classSessionManager}{Session\+Manager}} \& Session\+Manager::\+operator= (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{classSessionManager}{Session\+Manager}} \&}]{other}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
 
+\Hypertarget{classSessionManager_ad058e0c7ef47595a269a4ef764760613}\index{SessionManager@{SessionManager}!paste@{paste}}
+\index{paste@{paste}!SessionManager@{SessionManager}}
+\doxysubsubsection{\texorpdfstring{paste()}{paste()}}
+{\footnotesize\ttfamily \label{classSessionManager_ad058e0c7ef47595a269a4ef764760613} 
+void Session\+Manager::\+paste (\begin{DoxyParamCaption}\item[{const std::\+string \&}]{src\+Path}{, }\item[{const std::\+string \&}]{dest\+Path}{, }\item[{int}]{posX}{, }\item[{int}]{posY}{}\end{DoxyParamCaption})}
+
+
+
+Directs the active session to embed a patch image into a targeted workspace image. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em src\+Path} & Path to the source patch file. \\
+\hline
+{\em dest\+Path} & Path to the targeted workspace background image. \\
+\hline
+{\em posX} & Coordinate column destination point offset. \\
+\hline
+{\em posY} & Coordinate row destination point offset. \\
+\hline
+\end{DoxyParams}
 \Hypertarget{classSessionManager_ac9e3e86997fc379bb0450b7f5d07ae55}\index{SessionManager@{SessionManager}!printCurrentSessionInfo@{printCurrentSessionInfo}}
 \index{printCurrentSessionInfo@{printCurrentSessionInfo}!SessionManager@{SessionManager}}
 \doxysubsubsection{\texorpdfstring{printCurrentSessionInfo()}{printCurrentSessionInfo()}}
@@ -225,11 +275,11 @@ void Session\+Manager::\+save (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption
 
 Directs the focused active session to save all its images back to disk. 
 
-\Hypertarget{classSessionManager_ab0f0bf4e1693e68d37d47b2b13d2c464}\index{SessionManager@{SessionManager}!saveAs@{saveAs}}
+\Hypertarget{classSessionManager_a261c4cd524a958b3fb9f471708431458}\index{SessionManager@{SessionManager}!saveAs@{saveAs}}
 \index{saveAs@{saveAs}!SessionManager@{SessionManager}}
 \doxysubsubsection{\texorpdfstring{saveAs()}{saveAs()}}
-{\footnotesize\ttfamily \label{classSessionManager_ab0f0bf4e1693e68d37d47b2b13d2c464} 
-void Session\+Manager::\+save\+As (\begin{DoxyParamCaption}\item[{const std::\+string \&}]{new\+Filename}{}\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{classSessionManager_a261c4cd524a958b3fb9f471708431458} 
+void Session\+Manager::\+save\+As (\begin{DoxyParamCaption}\item[{const std::\+string \&}]{original\+Filename}{, }\item[{const std::\+string \&}]{new\+Filename}{}\end{DoxyParamCaption})}
 
 
 
@@ -255,6 +305,11 @@ Shifts active focus to a different loaded session workspace by its unique ID.
 {\em session\+Id} & The targeted identifier integer. \\
 \hline
 \end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std::\+invalid\+\_\+argument} & If the requested session ID is not found in the collection. \\
+\hline
+\end{DoxyExceptions}
 \Hypertarget{classSessionManager_a976925a605ff60d9e628fc54d87ead9b}\index{SessionManager@{SessionManager}!undo@{undo}}
 \index{undo@{undo}!SessionManager@{SessionManager}}
 \doxysubsubsection{\texorpdfstring{undo()}{undo()}}

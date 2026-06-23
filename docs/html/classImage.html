@@ -130,6 +130,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a3fd1dcc15e88ca94c6c6cdea8eed770f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flips the image vertically across the horizontal axis (top-to-bottom mirror).  <br /></td></tr>
 <tr class="memitem:a7933e291fe10ab7012d254145fa98742" id="r_a7933e291fe10ab7012d254145fa98742"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a7933e291fe10ab7012d254145fa98742">flipLeft</a> ()</td></tr>
 <tr class="memdesc:a7933e291fe10ab7012d254145fa98742"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flips the image horizontally across the vertical axis (left-to-right mirror).  <br /></td></tr>
+<tr class="memitem:a9fddb97e7f1a48cd04dac75956bbc756" id="r_a9fddb97e7f1a48cd04dac75956bbc756"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a9fddb97e7f1a48cd04dac75956bbc756">paste</a> (const <a class="el" href="classImage.html">Image</a> *source, int posX, int posY)</td></tr>
+<tr class="memdesc:a9fddb97e7f1a48cd04dac75956bbc756"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stitches pixel blocks from a source image into this image matrix.  <br /></td></tr>
 <tr class="memitem:a36bcae4838228d574738249a87dc4464" id="r_a36bcae4838228d574738249a87dc4464"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a36bcae4838228d574738249a87dc4464">getWidth</a> () const</td></tr>
 <tr class="memdesc:a36bcae4838228d574738249a87dc4464"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the image width.  <br /></td></tr>
 <tr class="memitem:a1cd7587f88b6932b5269051d1ba08ff9" id="r_a1cd7587f88b6932b5269051d1ba08ff9"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a1cd7587f88b6932b5269051d1ba08ff9">getHeight</a> () const</td></tr>
@@ -561,6 +563,42 @@ Protected Attributes</h2></td></tr>
 <p>Inverts the color intensities of the active image pixels. </p>
 
 <p>Implemented in <a class="el" href="classBMP.html#aa52e4d66f27376119afe3c37cf787acc">BMP</a>, <a class="el" href="classPBM.html#a1471cc00dfda2b2ec5deb8803523df1f">PBM</a>, <a class="el" href="classPGM.html#a1b7868211654b881a9bda9e554f795ce">PGM</a>, and <a class="el" href="classPPM.html#a5ac0e83dd0da3ab1905c08b38b4613c4">PPM</a>.</p>
+
+</div>
+</div>
+<a id="a9fddb97e7f1a48cd04dac75956bbc756" name="a9fddb97e7f1a48cd04dac75956bbc756"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9fddb97e7f1a48cd04dac75956bbc756">&#9670;&#160;</a></span>paste()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Image::paste </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classImage.html">Image</a> *</td>          <td class="paramname"><span class="paramname"><em>source</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>posX</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>posY</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Stitches pixel blocks from a source image into this image matrix. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">source</td><td>Pointer to the polymorphic source image to copy from. </td></tr>
+    <tr><td class="paramname">posX</td><td>The horizontal coordinate offset (top-left column entry point). </td></tr>
+    <tr><td class="paramname">posY</td><td>The vertical coordinate offset (top-left row entry point). </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

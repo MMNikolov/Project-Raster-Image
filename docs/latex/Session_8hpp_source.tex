@@ -10,81 +10,91 @@
 \DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{Image_8hpp}{../Image/Image.hpp}}"{}}}
 \DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{ImageFactory_8hpp}{../Factory/ImageFactory.hpp}}"{}}}
 \DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <iostream>}}
-\DoxyCodeLine{00012\ }
-\DoxyCodeLine{00017\ \textcolor{keyword}{enum\ class}\ \doxymbox{\hyperlink{Session_8hpp_a2a7f3aedd8da7db99fbf987014326d12}{Operations}}}
-\DoxyCodeLine{00018\ \{}
-\DoxyCodeLine{00019\ \ \ \ \ \doxymbox{\hyperlink{Session_8hpp_a2a7f3aedd8da7db99fbf987014326d12a5d167d235f5a8880ec432fc13206106f}{ROTATE\_LEFT}}\ =\ 0,}
-\DoxyCodeLine{00020\ \ \ \ \ \doxymbox{\hyperlink{Session_8hpp_a2a7f3aedd8da7db99fbf987014326d12a17ac59a0d27b38c77bd02f3bcefd5728}{ROTATE\_RIGHT}}\ =\ 1,}
-\DoxyCodeLine{00021\ \ \ \ \ \doxymbox{\hyperlink{Session_8hpp_a2a7f3aedd8da7db99fbf987014326d12ac58d1bfd1f4b455ca43fc2f439c4c6c4}{FLIP\_TOP}}\ =\ 2,}
-\DoxyCodeLine{00022\ \ \ \ \ \doxymbox{\hyperlink{Session_8hpp_a2a7f3aedd8da7db99fbf987014326d12a520855d42c07756c4d3a4740ab6520bd}{FLIP\_LEFT}}\ =\ 3}
-\DoxyCodeLine{00023\ \};}
-\DoxyCodeLine{00024\ }
-\DoxyCodeLine{00029\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{classSession_abab35e01a7bde2179964f3c070a5e6de}{Session}}}
-\DoxyCodeLine{00030\ \{}
-\DoxyCodeLine{00031\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00036\ \ \ \ \ \doxymbox{\hyperlink{classSession_abab35e01a7bde2179964f3c070a5e6de}{Session}}(\textcolor{keywordtype}{int}\ sessionId);}
-\DoxyCodeLine{00037\ }
-\DoxyCodeLine{00038\ \ \ \ \ \textcolor{comment}{//disable\ copy\ semantic}}
-\DoxyCodeLine{00039\ \ \ \ \ \doxymbox{\hyperlink{classSession_ae7feb48f68be002e288bbab74b63afdb}{Session}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{classSession_abab35e01a7bde2179964f3c070a5e6de}{Session}}\&\ other)\ =\ \textcolor{keyword}{delete};}
-\DoxyCodeLine{00040\ \ \ \ \ \doxymbox{\hyperlink{classSession_abab35e01a7bde2179964f3c070a5e6de}{Session}}\&\ \doxymbox{\hyperlink{classSession_a9b9df432bb38141e8b3c273a98ebfc44}{operator=}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{classSession_abab35e01a7bde2179964f3c070a5e6de}{Session}}\&\ other)\ =\ \textcolor{keyword}{delete};}
-\DoxyCodeLine{00041\ }
-\DoxyCodeLine{00045\ \ \ \ \ \doxymbox{\hyperlink{classSession_a8753bb9dee966b7d39abc9b7237cd665}{\string~Session}}();}
-\DoxyCodeLine{00046\ }
-\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{classSession_a050d49df9af40cb6a5d8d511b5e2e05f}{addImage}}(\doxymbox{\hyperlink{classImage}{Image}}*\ img);}
-\DoxyCodeLine{00052\ }
-\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{classSession_a44a7d994d8c55973365d94da49fcf376}{makeNegative}}();}
-\DoxyCodeLine{00057\ }
-\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{classSession_ad690821c0ba1e2999b60f24d6eda9348}{makeGrayscale}}();}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <ctime>}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{enum\ class}\ \doxymbox{\hyperlink{Session_8hpp_a2a7f3aedd8da7db99fbf987014326d12}{Operations}}}
+\DoxyCodeLine{00019\ \{}
+\DoxyCodeLine{00020\ \ \ \ \ \doxymbox{\hyperlink{Session_8hpp_a2a7f3aedd8da7db99fbf987014326d12a5d167d235f5a8880ec432fc13206106f}{ROTATE\_LEFT}}\ =\ 0,}
+\DoxyCodeLine{00021\ \ \ \ \ \doxymbox{\hyperlink{Session_8hpp_a2a7f3aedd8da7db99fbf987014326d12a17ac59a0d27b38c77bd02f3bcefd5728}{ROTATE\_RIGHT}}\ =\ 1,}
+\DoxyCodeLine{00022\ \ \ \ \ \doxymbox{\hyperlink{Session_8hpp_a2a7f3aedd8da7db99fbf987014326d12ac58d1bfd1f4b455ca43fc2f439c4c6c4}{FLIP\_TOP}}\ =\ 2,}
+\DoxyCodeLine{00023\ \ \ \ \ \doxymbox{\hyperlink{Session_8hpp_a2a7f3aedd8da7db99fbf987014326d12a520855d42c07756c4d3a4740ab6520bd}{FLIP\_LEFT}}\ =\ 3}
+\DoxyCodeLine{00024\ \};}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00030\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{classSession_abab35e01a7bde2179964f3c070a5e6de}{Session}}}
+\DoxyCodeLine{00031\ \{}
+\DoxyCodeLine{00032\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00038\ \ \ \ \ \doxymbox{\hyperlink{classSession_abab35e01a7bde2179964f3c070a5e6de}{Session}}(\textcolor{keywordtype}{int}\ sessionId);}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{comment}{//disable\ copy\ semantic}}
+\DoxyCodeLine{00041\ \ \ \ \ \doxymbox{\hyperlink{classSession_ae7feb48f68be002e288bbab74b63afdb}{Session}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{classSession_abab35e01a7bde2179964f3c070a5e6de}{Session}}\&\ other)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00042\ \ \ \ \ \doxymbox{\hyperlink{classSession_abab35e01a7bde2179964f3c070a5e6de}{Session}}\&\ \doxymbox{\hyperlink{classSession_a9b9df432bb38141e8b3c273a98ebfc44}{operator=}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{classSession_abab35e01a7bde2179964f3c070a5e6de}{Session}}\&\ other)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00047\ \ \ \ \ \doxymbox{\hyperlink{classSession_a8753bb9dee966b7d39abc9b7237cd665}{\string~Session}}();}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{classSession_a050d49df9af40cb6a5d8d511b5e2e05f}{addImage}}(\doxymbox{\hyperlink{classImage}{Image}}*\ img);}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{classSession_a6c41e2cde8ed70875c4b8af80a12e35b}{addByFilename}}(\textcolor{keyword}{const}\ std::string\&\ filename);}
 \DoxyCodeLine{00062\ }
-\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{classSession_a87bc8a6e8c0495fbc646b3ba77f98999}{makeMonochrome}}();}
-\DoxyCodeLine{00067\ }
-\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{classSession_a30b15b932b1ef6573fbafee75a6e69dd}{printSessionInfo}}()\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00072\ }
-\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{classSession_aec0dc9e097213458c68d32d7f09d8cfc}{save}}();}
-\DoxyCodeLine{00077\ }
-\DoxyCodeLine{00082\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{classSession_a8ef7c0c4a3abd9a513d0f7f0481d292d}{saveAs}}(\textcolor{keyword}{const}\ std::string\&\ newFilename);}
-\DoxyCodeLine{00083\ }
-\DoxyCodeLine{00084\ \ \ \ \ \textcolor{comment}{//UNDO\ AND\ REDO\ FUNCTIONALITIES}}
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{classSession_a44a7d994d8c55973365d94da49fcf376}{makeNegative}}();}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{classSession_ad690821c0ba1e2999b60f24d6eda9348}{makeGrayscale}}();}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{classSession_a87bc8a6e8c0495fbc646b3ba77f98999}{makeMonochrome}}();}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{classSession_a30b15b932b1ef6573fbafee75a6e69dd}{printSessionInfo}}()\ \textcolor{keyword}{const};}
 \DoxyCodeLine{00085\ }
-\DoxyCodeLine{00089\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{classSession_a3775cf47da8f5bdd929816d6d1e2d2c3}{undo}}();}
-\DoxyCodeLine{00090\ }
-\DoxyCodeLine{00094\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{classSession_ab615c2ae32f73fa42496233146da6f19}{redo}}();}
-\DoxyCodeLine{00095\ }
-\DoxyCodeLine{00099\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{classSession_aa17b3bedb27ec5ab4e99806e4238e3f0}{rotateLeft}}();}
-\DoxyCodeLine{00100\ }
-\DoxyCodeLine{00104\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{classSession_a3d633ee4b735c22dc34074921c73cc11}{rotateRight}}();}
-\DoxyCodeLine{00105\ }
-\DoxyCodeLine{00109\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{classSession_ad4bcbd3fb7f7edb422efe82ab8e7fb3c}{flipTop}}();}
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{classSession_aec0dc9e097213458c68d32d7f09d8cfc}{save}}();}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00097\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{classSession_af985089be7b3af8ab562481094fe3a20}{saveAs}}(\textcolor{keyword}{const}\ std::string\ \&originalFilename,\ \textcolor{keyword}{const}\ std::string\ \&newFilename);}
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00107\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{classSession_a52bb2847ea5aed4cb329cc493a75e31c}{paste}}(\textcolor{keyword}{const}\ std::string\&\ srcPath,\ \textcolor{keyword}{const}\ std::string\&\ destPath,\ \textcolor{keywordtype}{int}\ posX,\ \textcolor{keywordtype}{int}\ posY);}
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00109\ \ \ \ \ \textcolor{comment}{//UNDO\ AND\ REDO\ FUNCTIONALITIES}}
 \DoxyCodeLine{00110\ }
-\DoxyCodeLine{00114\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{classSession_ab2d626cc9bd755da05e62713039b768a}{flipLeft}}();}
+\DoxyCodeLine{00114\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{classSession_a3775cf47da8f5bdd929816d6d1e2d2c3}{undo}}();}
 \DoxyCodeLine{00115\ }
-\DoxyCodeLine{00119\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{classSession_a76c79cc0a74fc39f63be191e8f5f67a0}{bakeTransformations}}();}
+\DoxyCodeLine{00119\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{classSession_ab615c2ae32f73fa42496233146da6f19}{redo}}();}
 \DoxyCodeLine{00120\ }
-\DoxyCodeLine{00121\ \ \ \ \ \textcolor{comment}{//\ GETTERS}}
-\DoxyCodeLine{00122\ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{classSession_a1a9232e627b902f1ea1701f92423fddb}{getId}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ sessionId;\ \}}
-\DoxyCodeLine{00123\ }
-\DoxyCodeLine{00128\ \ \ \ \ \textcolor{keyword}{const}\ std::vector<Image*>\&\ \doxymbox{\hyperlink{classSession_a6774642c043fc37402c37aee184f6455}{getImages}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ loadedImages;\ \}}
-\DoxyCodeLine{00129\ }
-\DoxyCodeLine{00130\ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00131\ \ \ \ \ \textcolor{keywordtype}{int}\ sessionId;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00132\ \ \ \ \ std::vector<Image*>\ loadedImages;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00133\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ count;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00134\ }
-\DoxyCodeLine{00135\ \ \ \ \ \textcolor{comment}{//UNDO\ AND\ REDO\ FUNCTIONALITIES\ }}
-\DoxyCodeLine{00136\ \ \ \ \ std::vector<std::vector<Image*>>\ undoHistory;\ \ \ }
-\DoxyCodeLine{00137\ \ \ \ \ std::vector<std::vector<Image*>>\ redoHistory;\ \ \ }
-\DoxyCodeLine{00138\ }
-\DoxyCodeLine{00139\ \ \ \ \ std::vector<Operations>\ pendingOps;\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00140\ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00144\ \ \ \ \ \textcolor{keywordtype}{void}\ free();}
-\DoxyCodeLine{00145\ }
-\DoxyCodeLine{00150\ \ \ \ \ std::vector<Image*>\ cloneCurrentState()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00121\ \ \ \ \ \textcolor{comment}{//\ ROTATING\ AND\ FLIPPING\ FUNCTIONALITIES}}
+\DoxyCodeLine{00122\ }
+\DoxyCodeLine{00126\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{classSession_aa17b3bedb27ec5ab4e99806e4238e3f0}{rotateLeft}}();}
+\DoxyCodeLine{00127\ }
+\DoxyCodeLine{00131\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{classSession_a3d633ee4b735c22dc34074921c73cc11}{rotateRight}}();}
+\DoxyCodeLine{00132\ }
+\DoxyCodeLine{00136\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{classSession_ad4bcbd3fb7f7edb422efe82ab8e7fb3c}{flipTop}}();}
+\DoxyCodeLine{00137\ }
+\DoxyCodeLine{00141\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{classSession_ab2d626cc9bd755da05e62713039b768a}{flipLeft}}();}
+\DoxyCodeLine{00142\ }
+\DoxyCodeLine{00143\ \ \ \ \ \textcolor{comment}{//\ APPLIES\ THE\ ALREADY\ OPTIMIZED\ FUNCTION\ FOR\ THE\ ROTATE\ AND\ FLIP\ GIMICS}}
+\DoxyCodeLine{00144\ }
+\DoxyCodeLine{00148\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{classSession_a76c79cc0a74fc39f63be191e8f5f67a0}{bakeTransformations}}();}
+\DoxyCodeLine{00149\ }
+\DoxyCodeLine{00150\ \ \ \ \ \textcolor{comment}{//\ GETTERS}}
 \DoxyCodeLine{00151\ }
-\DoxyCodeLine{00156\ \ \ \ \ \textcolor{keywordtype}{void}\ clearImageVector(std::vector<Image*>\&\ images);}
+\DoxyCodeLine{00156\ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{classSession_a1a9232e627b902f1ea1701f92423fddb}{getId}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ sessionId;\ \}}
 \DoxyCodeLine{00157\ }
-\DoxyCodeLine{00162\ \ \ \ \ \textcolor{keywordtype}{void}\ applyOptimizedOp(\doxymbox{\hyperlink{Session_8hpp_a2a7f3aedd8da7db99fbf987014326d12}{Operations}}\ newOp);\ }
-\DoxyCodeLine{00163\ \};}
-\DoxyCodeLine{00164\ }
-\DoxyCodeLine{00165\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ SESSION\_HPP}}
+\DoxyCodeLine{00162\ \ \ \ \ \textcolor{keyword}{const}\ std::vector<Image*>\&\ \doxymbox{\hyperlink{classSession_a6774642c043fc37402c37aee184f6455}{getImages}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ loadedImages;\ \}}
+\DoxyCodeLine{00163\ }
+\DoxyCodeLine{00164\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00165\ \ \ \ \ \textcolor{keywordtype}{int}\ sessionId;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00166\ \ \ \ \ std::vector<Image*>\ loadedImages;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00167\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ count;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00168\ }
+\DoxyCodeLine{00169\ \ \ \ \ \textcolor{comment}{//UNDO\ AND\ REDO\ FUNCTIONALITIES\ }}
+\DoxyCodeLine{00170\ \ \ \ \ std::vector<std::vector<Image*>>\ undoHistory;\ \ \ }
+\DoxyCodeLine{00171\ \ \ \ \ std::vector<std::vector<Image*>>\ redoHistory;\ \ \ }
+\DoxyCodeLine{00172\ }
+\DoxyCodeLine{00173\ \ \ \ \ std::vector<Operations>\ pendingOps;\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00174\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00178\ \ \ \ \ \textcolor{keywordtype}{void}\ free();}
+\DoxyCodeLine{00179\ }
+\DoxyCodeLine{00184\ \ \ \ \ std::vector<Image*>\ cloneCurrentState()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00185\ }
+\DoxyCodeLine{00190\ \ \ \ \ \textcolor{keywordtype}{void}\ clearImageVector(std::vector<Image*>\&\ images);}
+\DoxyCodeLine{00191\ }
+\DoxyCodeLine{00196\ \ \ \ \ \textcolor{keywordtype}{void}\ applyOptimizedOp(\doxymbox{\hyperlink{Session_8hpp_a2a7f3aedd8da7db99fbf987014326d12}{Operations}}\ newOp);\ }
+\DoxyCodeLine{00197\ \};}
+\DoxyCodeLine{00198\ }
+\DoxyCodeLine{00199\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ SESSION\_HPP}}
 
 \end{DoxyCode}

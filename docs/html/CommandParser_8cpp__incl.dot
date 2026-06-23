@@ -24,7 +24,7 @@ digraph "Raster-Image-Manipulation/CLI/CommandParser.cpp"
   Node9 -> Node10 [id="edge9_Node000009_Node000010",color="steelblue1",style="solid",tooltip=" "];
   Node10 [id="Node000010",label="cstdint",height=0.2,width=0.4,color="grey60", fillcolor="#E0E0E0", style="filled",tooltip=" "];
   Node4 -> Node11 [id="edge10_Node000004_Node000011",color="steelblue1",style="solid",tooltip=" "];
-  Node11 [id="Node000011",label="../Factory/ImageFactory.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ImageFactory_8hpp.html",tooltip=" "];
+  Node11 [id="Node000011",label="../Factory/ImageFactory.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ImageFactory_8hpp.html",tooltip="Defines the ImageFactory class for generating polymorphic image objects."];
   Node11 -> Node5 [id="edge11_Node000011_Node000005",color="steelblue1",style="solid",tooltip=" "];
   Node11 -> Node12 [id="edge12_Node000011_Node000012",color="steelblue1",style="solid",tooltip=" "];
   Node12 [id="Node000012",label="../PGM/PGM.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$PGM_8hpp.html",tooltip="Defines the concrete PGM (Portable Graymap) image format parser and serializer."];
@@ -45,6 +45,8 @@ digraph "Raster-Image-Manipulation/CLI/CommandParser.cpp"
   Node17 [id="Node000017",label="../BMP/BMP.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$BMP_8hpp.html",tooltip="Defines the concrete BMP (Windows Bitmap) image format parser and serializer."];
   Node17 -> Node5 [id="edge23_Node000017_Node000005",color="steelblue1",style="solid",tooltip=" "];
   Node4 -> Node13 [id="edge24_Node000004_Node000013",color="steelblue1",style="solid",tooltip=" "];
-  Node2 -> Node18 [id="edge25_Node000002_Node000018",color="steelblue1",style="solid",tooltip=" "];
-  Node18 [id="Node000018",label="sstream",height=0.2,width=0.4,color="grey60", fillcolor="#E0E0E0", style="filled",tooltip=" "];
+  Node4 -> Node18 [id="edge25_Node000004_Node000018",color="steelblue1",style="solid",tooltip=" "];
+  Node18 [id="Node000018",label="ctime",height=0.2,width=0.4,color="grey60", fillcolor="#E0E0E0", style="filled",tooltip=" "];
+  Node2 -> Node19 [id="edge26_Node000002_Node000019",color="steelblue1",style="solid",tooltip=" "];
+  Node19 [id="Node000019",label="sstream",height=0.2,width=0.4,color="grey60", fillcolor="#E0E0E0", style="filled",tooltip=" "];
 }

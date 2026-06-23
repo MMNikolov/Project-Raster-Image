@@ -26,7 +26,8 @@ public:
      */
     PGM(const std::string& filename);
 
-    //No need for a destructor as the std::string manages memory automatically
+    //No need for a destructor as the std::string manages memory automatically and the compilator will take care of it
+    //~PGM()
 
     /**
      * @brief Saves the current grayscale image state back to disk in P2 ASCII format.
@@ -67,7 +68,7 @@ public:
     void makeMonochrome() override;
 
 private:
-    int scalableValue; ///< Maximum gray value parameter parsed from the file header */
+    int scalableValue;      ///< Maximum gray value parameter parsed from the file header */
 };
 
 #endif // PGM_HPP

@@ -107,28 +107,29 @@ $(function(){initNavTree('PGM_8hpp_source.html','',''); });
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="keyword">public</span>:</div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <a class="code hl_function" href="classPGM.html#ae32ff656cb739394f5ccd9d5545c672a">PGM</a>(<span class="keyword">const</span> std::string&amp; filename);</div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="comment">//No need for a destructor as the std::string manages memory automatically</span></div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span></div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classPGM.html#a4e60155c449379da91abe74364a9b748">save</a>(<span class="keyword">const</span> std::string&amp; filename) <span class="keyword">const override</span>;</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span></div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <a class="code hl_function" href="classPGM.html#ae32ff656cb739394f5ccd9d5545c672a">PGM</a>* <a class="code hl_function" href="classPGM.html#ae721c04ab0674597c58d1e0ce1ab576c">clone</a>() <span class="keyword">const override</span>;</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span></div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classPGM.html#ac8c9a8c14305f7a0a38568297ff9184e">printSessionInfo</a>() <span class="keyword">const override</span>;</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span></div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classPGM.html#a0cfb7b2db240ad1c66ec8719fac443d3">isGrayscale</a>() <span class="keyword">const override</span>;</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span></div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classPGM.html#a1b7868211654b881a9bda9e554f795ce">makeNegative</a>() <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span></div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classPGM.html#a962272f69dd50f108d98dbb30285b37b">makeGrayscale</a>() <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span></div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classPGM.html#a22dd96d2741714e8b0dc44e512db61c6">makeMonochrome</a>() <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <span class="keywordtype">int</span> scalableValue; </div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>};</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="comment">//No need for a destructor as the std::string manages memory automatically and the compilator will take care of it</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="comment">//~PGM()</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classPGM.html#a4e60155c449379da91abe74364a9b748">save</a>(<span class="keyword">const</span> std::string&amp; filename) <span class="keyword">const override</span>;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <a class="code hl_function" href="classPGM.html#ae32ff656cb739394f5ccd9d5545c672a">PGM</a>* <a class="code hl_function" href="classPGM.html#ae721c04ab0674597c58d1e0ce1ab576c">clone</a>() <span class="keyword">const override</span>;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classPGM.html#ac8c9a8c14305f7a0a38568297ff9184e">printSessionInfo</a>() <span class="keyword">const override</span>;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classPGM.html#a0cfb7b2db240ad1c66ec8719fac443d3">isGrayscale</a>() <span class="keyword">const override</span>;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classPGM.html#a1b7868211654b881a9bda9e554f795ce">makeNegative</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classPGM.html#a962272f69dd50f108d98dbb30285b37b">makeGrayscale</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classPGM.html#a22dd96d2741714e8b0dc44e512db61c6">makeMonochrome</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    <span class="keywordtype">int</span> scalableValue;      </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>};</div>
 </div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span><span class="preprocessor">#endif </span><span class="comment">// PGM_HPP</span></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span><span class="preprocessor">#endif </span><span class="comment">// PGM_HPP</span></div>
 <div class="ttc" id="aImage_8hpp_html"><div class="ttname"><a href="Image_8hpp.html">Image.hpp</a></div><div class="ttdoc">Defines the abstract base class for all raster image formats.</div></div>
 <div class="ttc" id="aclassImage_html_ab5ca0ae10da321c9e443734a87dee15e"><div class="ttname"><a href="classImage.html#ab5ca0ae10da321c9e443734a87dee15e">Image::Image</a></div><div class="ttdeci">Image(int w, int h, const std::string &amp;filename)</div><div class="ttdoc">Constructor initializing core dimensions and filename.</div><div class="ttdef"><b>Definition</b> Image.cpp:3</div></div>
 <div class="ttc" id="aclassPGM_html_a0cfb7b2db240ad1c66ec8719fac443d3"><div class="ttname"><a href="classPGM.html#a0cfb7b2db240ad1c66ec8719fac443d3">PGM::isGrayscale</a></div><div class="ttdeci">bool isGrayscale() const override</div><div class="ttdoc">Identifies if the format is grayscale.</div><div class="ttdef"><b>Definition</b> PGM.cpp:97</div></div>

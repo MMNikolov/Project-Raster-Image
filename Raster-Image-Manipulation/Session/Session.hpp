@@ -32,7 +32,8 @@ class Session
 public:
     /**
      * @brief Constructor initializing the session with a unique identification number.
-     * @param id The auto-incremented session identification number.
+     * @param sessionId The auto-incremented session identification number.
+     * @throws std::invalid_argument If the provided sessionId is negative.
      */
     Session(int sessionId);
 
@@ -48,21 +49,32 @@ public:
     /**
      * @brief Appends a new image pointer into this session's collection.
      * @param img Polymorphic pointer to an allocated Image object.
+     * @throws std::invalid_argument If the provided image pointer is null.
      */
     void addImage(Image* img);
 
     /**
+     * @brief Appends an image into the session by loading it from a disk path.
+     * @param filename String containing the destination file path.
+     * @throws std::invalid_argument If the file cannot be opened or parsed.
+     */
+    void addByFilename(const std::string& filename);
+
+    /**
      * @brief Applies the negative transformation to all images in this session.
+     * @throws std::invalid_argument If there are no images loaded in the session.
      */
     void makeNegative();
 
     /**
      * @brief Applies the grayscale transformation to all color images in this session.
+     * @throws std::invalid_argument If there are no images loaded in the session.
      */
     void makeGrayscale();
 
     /**
      * @brief Applies the monochrome transformation to all images in this session.
+     * @throws std::invalid_argument If there are no images loaded in the session.
      */
     void makeMonochrome();
 
@@ -72,18 +84,25 @@ public:
     void printSessionInfo() const;
 
     /**
-     * @brief Saves all loaded images in the session back to their original disk locations.
+     * @brief Saves all loaded images in the session back to their original disk locations with a timestamp.
+     * @throws std::invalid_argument If there are no images available to save.
      */
     void save();
 
     /**
      * @brief Saves the first image in the session to a completely new specified path.
      * @param newFilename The target output path.
+     * @throws std::invalid_argument If the session is empty or the provided path is blank.
      */
-    void saveAs(const std::string& newFilename);
+    void saveAs(const std::string &originalFilename, const std::string &newFilename);
 
     /**
      * @brief Looks up the target destination file and applies the sub-image embedding logic.
+     * @param srcPath Path to the source patch image.
+     * @param destPath Path to the destination target image currently in the workspace.
+     * @param posX The horizontal starting coordinate pixel offset.
+     * @param posY The vertical starting coordinate pixel offset.
+     * @throws std::invalid_argument If coordinates are invalid or images cannot be found.
      */
     void paste(const std::string& srcPath, const std::string& destPath, int posX, int posY);
 
@@ -129,6 +148,11 @@ public:
     void bakeTransformations();
 
     // GETTERS
+
+    /**
+     * @brief Gets the unique session identification key.
+     * @return Integer workspace identifier.
+     */
     int getId() const { return sessionId; }
 
     /**

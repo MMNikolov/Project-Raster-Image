@@ -2,14 +2,22 @@
 \hypertarget{classImageFactory}{}\label{classImageFactory}\index{ImageFactory@{ImageFactory}}
 
 
+Implements the Factory Method pattern to instantiate concrete image subclasses.  
+
+
+
+
 {\ttfamily \+\#include $<$Image\+Factory.\+hpp$>$}
 
 \doxysubsubsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 static \doxymbox{\hyperlink{classImage}{Image}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{classImageFactory_a64e831c37a13ba6eb6b2fa3d6e9ebbba}{create\+Image}} (const std::\+string \&filename)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Creates a concrete \doxylink{classImage}{Image} instance by analyzing file format magic numbers. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+Implements the Factory Method pattern to instantiate concrete image subclasses. 
 
 \label{doc-func-members}
 \Hypertarget{classImageFactory_doc-func-members}
@@ -20,6 +28,23 @@ static \doxymbox{\hyperlink{classImage}{Image}} \texorpdfstring{$\ast$}{*} \doxy
 {\footnotesize\ttfamily \label{classImageFactory_a64e831c37a13ba6eb6b2fa3d6e9ebbba} 
 \doxymbox{\hyperlink{classImage}{Image}} \texorpdfstring{$\ast$}{*} Image\+Factory::\+create\+Image (\begin{DoxyParamCaption}\item[{const std::\+string \&}]{filename}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
+
+
+Creates a concrete \doxylink{classImage}{Image} instance by analyzing file format magic numbers. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & Path to the image file to be loaded. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to a dynamically allocated concrete \doxylink{classImage}{Image} object (\doxylink{classPPM}{PPM}, \doxylink{classPGM}{PGM}, \doxylink{classPBM}{PBM}, or \doxylink{classBMP}{BMP}). 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std::\+invalid\+\_\+argument} & If the file fails to open or contains an invalid magic identifier. \\
+\hline
+\end{DoxyExceptions}
 
 
 The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}

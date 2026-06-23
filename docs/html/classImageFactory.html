@@ -92,13 +92,19 @@ $(function(){initNavTree('classImageFactory.html','','classImageFactory-members'
 </div><!--header-->
 <div class="contents">
 
+<p>Implements the Factory Method pattern to instantiate concrete image subclasses.  
+ <a href="#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="ImageFactory_8hpp_source.html">ImageFactory.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a64e831c37a13ba6eb6b2fa3d6e9ebbba" id="r_a64e831c37a13ba6eb6b2fa3d6e9ebbba"><td class="memItemLeft">static <a class="el" href="classImage.html">Image</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a64e831c37a13ba6eb6b2fa3d6e9ebbba">createImage</a> (const std::string &amp;filename)</td></tr>
+<tr class="memdesc:a64e831c37a13ba6eb6b2fa3d6e9ebbba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a concrete <a class="el" href="classImage.html" title="abstract base class represening a raster image">Image</a> instance by analyzing file format magic numbers.  <br /></td></tr>
 </table>
-<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Implements the Factory Method pattern to instantiate concrete image subclasses. </p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
 <a id="a64e831c37a13ba6eb6b2fa3d6e9ebbba" name="a64e831c37a13ba6eb6b2fa3d6e9ebbba"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a64e831c37a13ba6eb6b2fa3d6e9ebbba">&#9670;&#160;</a></span>createImage()</h2>
 
@@ -121,6 +127,21 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Creates a concrete <a class="el" href="classImage.html" title="abstract base class represening a raster image">Image</a> instance by analyzing file format magic numbers. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filename</td><td>Path to the image file to be loaded. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A pointer to a dynamically allocated concrete <a class="el" href="classImage.html" title="abstract base class represening a raster image">Image</a> object (<a class="el" href="classPPM.html" title="Concrete class handling P3 ASCII Portable Pixmap files.">PPM</a>, <a class="el" href="classPGM.html" title="Concrete class handling P2 ASCII Portable Graymap files.">PGM</a>, <a class="el" href="classPBM.html" title="Concrete class handling P1 ASCII PBM files.">PBM</a>, or <a class="el" href="classBMP.html" title="Concrete class handling uncompressed 24-bit true color Windows Bitmap files.">BMP</a>). </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::invalid_argument</td><td>If the file fails to open or contains an invalid magic identifier. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

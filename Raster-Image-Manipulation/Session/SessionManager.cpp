@@ -42,6 +42,17 @@ void SessionManager::loadSession(const std::vector<std::string> &filepaths)
     idCounter++;
 }
 
+void SessionManager::addImagetoActiveSession(const std::string &filename)
+{
+    if (this->currentActiveId == -1)
+    {
+        throw std::invalid_argument("There has to be an active session to add image to it");
+    }
+    
+    int index = this->findSessionIndex(currentActiveId);
+    this->activeSessions[index]->addByFilename(filename);
+}
+
 void SessionManager::switchSession(int sessionId)
 {
     if (findSessionIndex(sessionId) == -1)
@@ -141,7 +152,7 @@ void SessionManager::save()
     this->activeSessions[index]->save();
 }
 
-void SessionManager::saveAs(const std::string &newFilename)
+void SessionManager::saveAs(const std::string &originalFilename, const std::string &newFilename)
 {
     if (this->currentActiveId == -1)
     {
@@ -149,7 +160,7 @@ void SessionManager::saveAs(const std::string &newFilename)
     }
     
     int index = this->findSessionIndex(this->currentActiveId);
-    this->activeSessions[index]->saveAs(newFilename);
+    this->activeSessions[index]->saveAs(originalFilename, newFilename);
 }
 
 void SessionManager::paste(const std::string &srcPath, const std::string &destPath, int posX, int posY)

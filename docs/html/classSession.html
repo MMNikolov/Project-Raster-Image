@@ -107,6 +107,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a8753bb9dee966b7d39abc9b7237cd665"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor that deallocates all loaded images to prevent memory leaks.  <br /></td></tr>
 <tr class="memitem:a050d49df9af40cb6a5d8d511b5e2e05f" id="r_a050d49df9af40cb6a5d8d511b5e2e05f"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a050d49df9af40cb6a5d8d511b5e2e05f">addImage</a> (<a class="el" href="classImage.html">Image</a> *img)</td></tr>
 <tr class="memdesc:a050d49df9af40cb6a5d8d511b5e2e05f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Appends a new image pointer into this session's collection.  <br /></td></tr>
+<tr class="memitem:a6c41e2cde8ed70875c4b8af80a12e35b" id="r_a6c41e2cde8ed70875c4b8af80a12e35b"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a6c41e2cde8ed70875c4b8af80a12e35b">addByFilename</a> (const std::string &amp;filename)</td></tr>
+<tr class="memdesc:a6c41e2cde8ed70875c4b8af80a12e35b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Appends an image into the session by loading it from a disk path.  <br /></td></tr>
 <tr class="memitem:a44a7d994d8c55973365d94da49fcf376" id="r_a44a7d994d8c55973365d94da49fcf376"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a44a7d994d8c55973365d94da49fcf376">makeNegative</a> ()</td></tr>
 <tr class="memdesc:a44a7d994d8c55973365d94da49fcf376"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies the negative transformation to all images in this session.  <br /></td></tr>
 <tr class="memitem:ad690821c0ba1e2999b60f24d6eda9348" id="r_ad690821c0ba1e2999b60f24d6eda9348"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ad690821c0ba1e2999b60f24d6eda9348">makeGrayscale</a> ()</td></tr>
@@ -116,9 +118,11 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a30b15b932b1ef6573fbafee75a6e69dd" id="r_a30b15b932b1ef6573fbafee75a6e69dd"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a30b15b932b1ef6573fbafee75a6e69dd">printSessionInfo</a> () const</td></tr>
 <tr class="memdesc:a30b15b932b1ef6573fbafee75a6e69dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Outputs comprehensive details of all files within this session.  <br /></td></tr>
 <tr class="memitem:aec0dc9e097213458c68d32d7f09d8cfc" id="r_aec0dc9e097213458c68d32d7f09d8cfc"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aec0dc9e097213458c68d32d7f09d8cfc">save</a> ()</td></tr>
-<tr class="memdesc:aec0dc9e097213458c68d32d7f09d8cfc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Saves all loaded images in the session back to their original disk locations.  <br /></td></tr>
-<tr class="memitem:a8ef7c0c4a3abd9a513d0f7f0481d292d" id="r_a8ef7c0c4a3abd9a513d0f7f0481d292d"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a8ef7c0c4a3abd9a513d0f7f0481d292d">saveAs</a> (const std::string &amp;newFilename)</td></tr>
-<tr class="memdesc:a8ef7c0c4a3abd9a513d0f7f0481d292d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Saves the first image in the session to a completely new specified path.  <br /></td></tr>
+<tr class="memdesc:aec0dc9e097213458c68d32d7f09d8cfc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Saves all loaded images in the session back to their original disk locations with a timestamp.  <br /></td></tr>
+<tr class="memitem:af985089be7b3af8ab562481094fe3a20" id="r_af985089be7b3af8ab562481094fe3a20"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#af985089be7b3af8ab562481094fe3a20">saveAs</a> (const std::string &amp;originalFilename, const std::string &amp;newFilename)</td></tr>
+<tr class="memdesc:af985089be7b3af8ab562481094fe3a20"><td class="mdescLeft">&#160;</td><td class="mdescRight">Saves the first image in the session to a completely new specified path.  <br /></td></tr>
+<tr class="memitem:a52bb2847ea5aed4cb329cc493a75e31c" id="r_a52bb2847ea5aed4cb329cc493a75e31c"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a52bb2847ea5aed4cb329cc493a75e31c">paste</a> (const std::string &amp;srcPath, const std::string &amp;destPath, int posX, int posY)</td></tr>
+<tr class="memdesc:a52bb2847ea5aed4cb329cc493a75e31c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Looks up the target destination file and applies the sub-image embedding logic.  <br /></td></tr>
 <tr class="memitem:a3775cf47da8f5bdd929816d6d1e2d2c3" id="r_a3775cf47da8f5bdd929816d6d1e2d2c3"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a3775cf47da8f5bdd929816d6d1e2d2c3">undo</a> ()</td></tr>
 <tr class="memdesc:a3775cf47da8f5bdd929816d6d1e2d2c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reverts the last transformation applied in this workspace session.  <br /></td></tr>
 <tr class="memitem:ab615c2ae32f73fa42496233146da6f19" id="r_ab615c2ae32f73fa42496233146da6f19"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ab615c2ae32f73fa42496233146da6f19">redo</a> ()</td></tr>
@@ -134,6 +138,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a76c79cc0a74fc39f63be191e8f5f67a0" id="r_a76c79cc0a74fc39f63be191e8f5f67a0"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a76c79cc0a74fc39f63be191e8f5f67a0">bakeTransformations</a> ()</td></tr>
 <tr class="memdesc:a76c79cc0a74fc39f63be191e8f5f67a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies all optimized pending geometric transformations to the raw pixel matrices.  <br /></td></tr>
 <tr class="memitem:a1a9232e627b902f1ea1701f92423fddb" id="r_a1a9232e627b902f1ea1701f92423fddb"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a1a9232e627b902f1ea1701f92423fddb">getId</a> () const</td></tr>
+<tr class="memdesc:a1a9232e627b902f1ea1701f92423fddb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the unique session identification key.  <br /></td></tr>
 <tr class="memitem:a6774642c043fc37402c37aee184f6455" id="r_a6774642c043fc37402c37aee184f6455"><td class="memItemLeft">const std::vector&lt; <a class="el" href="classImage.html">Image</a> * &gt; &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a6774642c043fc37402c37aee184f6455">getImages</a> () const</td></tr>
 <tr class="memdesc:a6774642c043fc37402c37aee184f6455"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides read-only access to the internal image collection tracking vector.  <br /></td></tr>
 </table>
@@ -158,7 +163,13 @@ Public Member Functions</h2></td></tr>
 <p>Constructor initializing the session with a unique identification number. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">id</td><td>The auto-incremented session identification number. </td></tr>
+    <tr><td class="paramname">sessionId</td><td>The auto-incremented session identification number. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::invalid_argument</td><td>If the provided sessionId is negative. </td></tr>
   </table>
   </dd>
 </dl>
@@ -210,6 +221,37 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="a6c41e2cde8ed70875c4b8af80a12e35b" name="a6c41e2cde8ed70875c4b8af80a12e35b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c41e2cde8ed70875c4b8af80a12e35b">&#9670;&#160;</a></span>addByFilename()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Session::addByFilename </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>filename</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Appends an image into the session by loading it from a disk path. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filename</td><td>String containing the destination file path. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::invalid_argument</td><td>If the file cannot be opened or parsed. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a050d49df9af40cb6a5d8d511b5e2e05f" name="a050d49df9af40cb6a5d8d511b5e2e05f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a050d49df9af40cb6a5d8d511b5e2e05f">&#9670;&#160;</a></span>addImage()</h2>
 
@@ -229,6 +271,12 @@ Public Member Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">img</td><td>Polymorphic pointer to an allocated <a class="el" href="classImage.html" title="abstract base class represening a raster image">Image</a> object. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::invalid_argument</td><td>If the provided image pointer is null. </td></tr>
   </table>
   </dd>
 </dl>
@@ -315,6 +363,9 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Gets the unique session identification key. </p>
+<dl class="section return"><dt>Returns</dt><dd>Integer workspace identifier. </dd></dl>
+
 </div>
 </div>
 <a id="a6774642c043fc37402c37aee184f6455" name="a6774642c043fc37402c37aee184f6455"></a>
@@ -361,6 +412,12 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Applies the grayscale transformation to all color images in this session. </p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::invalid_argument</td><td>If there are no images loaded in the session. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -380,6 +437,12 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Applies the monochrome transformation to all images in this session. </p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::invalid_argument</td><td>If there are no images loaded in the session. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -399,6 +462,12 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Applies the negative transformation to all images in this session. </p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::invalid_argument</td><td>If there are no images loaded in the session. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -424,6 +493,54 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="a52bb2847ea5aed4cb329cc493a75e31c" name="a52bb2847ea5aed4cb329cc493a75e31c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a52bb2847ea5aed4cb329cc493a75e31c">&#9670;&#160;</a></span>paste()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Session::paste </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>srcPath</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>destPath</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>posX</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>posY</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Looks up the target destination file and applies the sub-image embedding logic. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">srcPath</td><td>Path to the source patch image. </td></tr>
+    <tr><td class="paramname">destPath</td><td>Path to the destination target image currently in the workspace. </td></tr>
+    <tr><td class="paramname">posX</td><td>The horizontal starting coordinate pixel offset. </td></tr>
+    <tr><td class="paramname">posY</td><td>The vertical starting coordinate pixel offset. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::invalid_argument</td><td>If coordinates are invalid or images cannot be found. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -518,12 +635,18 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Saves all loaded images in the session back to their original disk locations. </p>
+<p>Saves all loaded images in the session back to their original disk locations with a timestamp. </p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::invalid_argument</td><td>If there are no images available to save. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
-<a id="a8ef7c0c4a3abd9a513d0f7f0481d292d" name="a8ef7c0c4a3abd9a513d0f7f0481d292d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8ef7c0c4a3abd9a513d0f7f0481d292d">&#9670;&#160;</a></span>saveAs()</h2>
+<a id="af985089be7b3af8ab562481094fe3a20" name="af985089be7b3af8ab562481094fe3a20"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af985089be7b3af8ab562481094fe3a20">&#9670;&#160;</a></span>saveAs()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -531,8 +654,12 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">void Session::saveAs </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>newFilename</em></span></td><td>)</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>originalFilename</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>newFilename</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -541,6 +668,12 @@ Public Member Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">newFilename</td><td>The target output path. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::invalid_argument</td><td>If the session is empty or the provided path is blank. </td></tr>
   </table>
   </dd>
 </dl>

@@ -1,0 +1,17 @@
+<map id="Session::bakeTransformations" name="Session::bakeTransformations">
+<area shape="rect" id="Node000001" title="Applies all optimized pending geometric transformations to the raw pixel matrices." alt="" coords="237,157,435,184"/>
+<area shape="rect" id="Node000002" href="$classSession.html#a6c41e2cde8ed70875c4b8af80a12e35b" title="Appends an image into the session by loading it from a disk path." alt="" coords="14,5,180,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="310,146,258,96,224,69,187,46,163,35,161,30,190,42,227,65,261,92,315,146"/>
+<area shape="rect" id="Node000003" href="$classSession.html#ad690821c0ba1e2999b60f24d6eda9348" title="Applies the grayscale transformation to all color images in this session." alt="" coords="13,56,181,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="296,150,246,124,188,97,155,86,154,81,190,92,248,119,301,149"/>
+<area shape="rect" id="Node000004" href="$classSession.html#a87bc8a6e8c0495fbc646b3ba77f98999" title="Applies the monochrome transformation to all images in this session." alt="" coords="5,107,189,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="252,155,164,137,163,131,257,152"/>
+<area shape="rect" id="Node000005" href="$classSession.html#a44a7d994d8c55973365d94da49fcf376" title="Applies the negative transformation to all images in this session." alt="" coords="17,157,177,184"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="218,172,178,173,177,168,223,169"/>
+<area shape="rect" id="Node000006" href="$classSession.html#a52bb2847ea5aed4cb329cc493a75e31c" title="Looks up the target destination file and applies the sub&#45;image embedding logic." alt="" coords="43,208,151,235"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="253,190,153,212,151,207,257,186"/>
+<area shape="rect" id="Node000007" href="$classSession.html#aec0dc9e097213458c68d32d7f09d8cfc" title="Saves all loaded images in the session back to their original disk locations with a timestamp." alt="" coords="45,259,149,285"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="301,191,248,222,190,249,151,262,149,257,188,244,246,217,296,193"/>
+<area shape="rect" id="Node000008" href="$classSession.html#af985089be7b3af8ab562481094fe3a20" title="Saves the first image in the session to a completely new specified path." alt="" coords="37,309,157,336"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="315,194,261,249,227,276,190,300,158,313,157,308,187,295,224,272,258,245,310,197"/>
+</map>

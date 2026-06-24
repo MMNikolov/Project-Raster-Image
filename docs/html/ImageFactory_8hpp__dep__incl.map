@@ -1,0 +1,23 @@
+<map id="Raster&#45;Image&#45;Manipulation/Factory/ImageFactory.hpp" name="Raster&#45;Image&#45;Manipulation/Factory/ImageFactory.hpp">
+<area shape="rect" id="Node000001" title="Defines the ImageFactory class for generating polymorphic image objects." alt="" coords="212,5,389,48"/>
+<area shape="rect" id="Node000002" href="$ImageFactory_8cpp.html" title=" " alt="" coords="11,96,188,139"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="238,57,148,97,145,93,241,53"/>
+<area shape="rect" id="Node000003" href="$Session_8hpp.html" title="Management container for a group of images loaded inside a single workspace session." alt="" coords="212,96,389,139"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="302,61,303,97,298,95,300,66"/>
+<area shape="rect" id="Node000011" href="$TestFormatsAndFactory_8cpp.html" title="Comprehensive verification framework for image formats and runtime generation." alt="" coords="414,96,636,139"/>
+<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="367,51,475,95,470,96,367,57"/>
+<area shape="rect" id="Node000004" href="$Session_8cpp.html" title=" " alt="" coords="105,187,283,229"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="263,150,221,188,217,184,266,147"/>
+<area shape="rect" id="Node000005" href="$SessionManager_8hpp.html" title="Coordinates multiple concurrent image processing workspaces and routes user commands." alt="" coords="307,187,505,229"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="337,146,384,186,379,186,336,152"/>
+<area shape="rect" id="Node000006" href="$CommandParser_8hpp.html" title="Defines the interactive command&#45;line interface parser for the multi&#45;session image engine." alt="" coords="105,277,283,320"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="340,237,245,279,243,274,345,235"/>
+<area shape="rect" id="Node000009" href="$SessionManager_8cpp.html" title=" " alt="" coords="307,277,505,320"/>
+<area shape="poly" id="edge8_Node000005_Node000009" title=" " alt="" coords="408,243,408,278,404,276,404,247"/>
+<area shape="rect" id="Node000010" href="$TestSessionManager_8cpp.html" title="Advanced verification framework stress&#45;testing SessionManager state transitions." alt="" coords="529,277,734,320"/>
+<area shape="poly" id="edge9_Node000005_Node000010" title=" " alt="" coords="473,233,581,276,576,277,473,238"/>
+<area shape="rect" id="Node000007" href="$CommandParser_8cpp.html" title=" " alt="" coords="5,368,183,411"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="162,329,119,370,116,365,157,331"/>
+<area shape="rect" id="Node000008" href="$main_8cpp.html" title=" " alt="" coords="207,368,384,411"/>
+<area shape="poly" id="edge7_Node000006_Node000008" title=" " alt="" coords="230,328,274,368,269,367,228,333"/>
+</map>

@@ -1,0 +1,19 @@
+<map id="runPbmSuite" name="runPbmSuite">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,132,102,159"/>
+<area shape="rect" id="Node000002" href="$classImage.html#a7096da2078bcfb53ba7f0bd1747dc150" title="Creates a deep copy of the image (Prototype pattern)." alt="" coords="192,5,288,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="62,130,96,87,121,62,148,42,179,30,175,33,151,46,124,66,100,90,66,133"/>
+<area shape="rect" id="Node000004" href="$classImageFactory.html#a64e831c37a13ba6eb6b2fa3d6e9ebbba" title="Creates a concrete Image instance by analyzing file format magic numbers." alt="" coords="150,56,331,83"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="76,129,149,92,170,86,166,90,151,97,79,134"/>
+<area shape="rect" id="Node000006" href="$classImage.html#a1cd7587f88b6932b5269051d1ba08ff9" title="Retrieves the image height." alt="" coords="180,107,301,133"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="101,136,166,129,162,132,103,141"/>
+<area shape="rect" id="Node000007" href="$classImage.html#a36bcae4838228d574738249a87dc4464" title="Retrieves the image width." alt="" coords="182,157,299,184"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="102,149,169,159,164,162,103,154"/>
+<area shape="rect" id="Node000008" href="$classImage.html#aa147c240bc2e886751768b2a3e38ff66" title="Checks if the image contains only grayscale pixels." alt="" coords="173,208,308,235"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="78,157,151,194,171,202,165,203,149,198,77,162"/>
+<area shape="rect" id="Node000009" href="$TestFormatsAndFactory_8cpp.html#a32e682bcb389ebcb4a84501deac7cde8" title=" " alt="" coords="186,259,294,285"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="65,156,100,201,124,224,151,244,174,257,168,257,148,249,121,228,96,204,63,162"/>
+<area shape="rect" id="Node000003" href="$classImage.html#ab5ca0ae10da321c9e443734a87dee15e" title="Constructor initializing core dimensions and filename." alt="" coords="405,5,506,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="288,16,392,17,387,20,290,21"/>
+<area shape="rect" id="Node000005" href="$classImage.html#a9951c40759db74a5536f88a033bf725f" title="Helper function to skip Netpbm style comment lines during file parsing." alt="" coords="379,56,532,83"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="331,67,366,69,361,70,332,72"/>
+</map>

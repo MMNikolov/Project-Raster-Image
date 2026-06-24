@@ -1,0 +1,19 @@
+<map id="Raster&#45;Image&#45;Manipulation/PPM/PPM.cpp" name="Raster&#45;Image&#45;Manipulation/PPM/PPM.cpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="129,5,307,48"/>
+<area shape="rect" id="Node000002" href="$PPM_8hpp.html" title="Defines the concrete PPM (Portable Pixmap) image format parser and serializer." alt="" coords="180,96,256,123"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="219,46,221,81,215,79,217,51"/>
+<area shape="rect" id="Node000003" href="$Image_8hpp.html" title="Defines the abstract base class for all raster image formats." alt="" coords="88,171,222,197"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="209,121,178,161,174,157,205,125"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="246,171,318,197"/>
+<area shape="poly" id="edge8_Node000002_Node000009" title=" " alt="" coords="230,121,263,159,258,159,229,126"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="5,245,63,272"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="133,200,70,239,67,235,135,196"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="87,245,141,272"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="150,196,131,234,126,230,146,200"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="165,245,231,272"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="164,195,186,232,180,232,162,200"/>
+<area shape="rect" id="Node000007" href="$Pixel_8hpp.html" title="Defines the atomic Pixel structure used across the image manipulation project." alt="" coords="254,245,342,272"/>
+<area shape="poly" id="edge6_Node000003_Node000007" title=" " alt="" coords="181,195,262,237,257,239,180,201"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="268,320,328,347"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="300,271,300,306,296,303,296,274"/>
+</map>

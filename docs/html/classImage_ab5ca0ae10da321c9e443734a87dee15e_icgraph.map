@@ -1,0 +1,31 @@
+<map id="Image::Image" name="Image::Image">
+<area shape="rect" id="Node000001" title="Constructor initializing core dimensions and filename." alt="" coords="479,157,581,184"/>
+<area shape="rect" id="Node000002" href="$classBMP.html#a30bed0442cb09c481b607dd8445152c3" title="Constructor that opens, validates, and parses a BMP file from disk." alt="" coords="302,5,389,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="512,143,479,94,456,68,430,46,410,36,390,29,389,23,412,31,433,42,460,64,483,91,517,144"/>
+<area shape="rect" id="Node000004" href="$classImage.html#a7096da2078bcfb53ba7f0bd1747dc150" title="Creates a deep copy of the image (Prototype pattern)." alt="" coords="297,56,393,83"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="501,147,469,122,430,97,394,83,394,77,433,92,472,118,506,147"/>
+<area shape="rect" id="Node000007" href="$classImage.html#af09ea6ef3e5bb5fe7f760719dbdc5113" title="Makes the image in the given session monochrome." alt="" coords="259,107,431,133"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="462,153,396,136,396,131,467,152"/>
+<area shape="rect" id="Node000008" href="$classImage.html#a9fddb97e7f1a48cd04dac75956bbc756" title="Stitches pixel blocks from a source image into this image matrix." alt="" coords="296,157,394,184"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="462,171,395,173,394,168,467,170"/>
+<area shape="rect" id="Node000010" href="$classPBM.html#a8955dfcb9b0c9117b4b3738951fd3769" title="Constructor that opens and parses a PBM file from disk." alt="" coords="302,208,389,235"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="462,189,390,212,389,207,467,188"/>
+<area shape="rect" id="Node000012" href="$classPGM.html#ae32ff656cb739394f5ccd9d5545c672a" title="Constructor that opens and parses a PGM file from disk." alt="" coords="300,259,390,285"/>
+<area shape="poly" id="edge11_Node000001_Node000012" title=" " alt="" coords="506,193,472,224,433,249,391,265,390,260,430,244,469,219,501,196"/>
+<area shape="rect" id="Node000014" href="$classPPM.html#ada118c725a1b103ac52d5eab43e7040a" title="Constructor that opens, validates, and parses a PPM file from disk." alt="" coords="302,309,389,336"/>
+<area shape="poly" id="edge13_Node000001_Node000014" title=" " alt="" coords="517,196,483,250,460,277,433,300,412,311,390,318,389,313,410,306,430,295,456,273,479,247,512,199"/>
+<area shape="rect" id="Node000003" href="$classBMP.html#adee679b1ce2439cbfe320d5174bef030" title="Clones the current BMP object using a deep copy (Prototype Pattern)." alt="" coords="112,5,202,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="284,20,203,21,201,16,288,17"/>
+<area shape="rect" id="Node000005" href="$TestFormatsAndFactory_8cpp.html#af5116cc0b5cddaa494f64bfd30df77cb" title=" " alt="" coords="109,56,205,83"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="279,71,206,72,205,67,283,68"/>
+<area shape="rect" id="Node000006" href="$TestFormatsAndFactory_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,56,55,83"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="91,71,57,72,54,67,95,67"/>
+<area shape="rect" id="Node000009" href="$classSession.html#a52bb2847ea5aed4cb329cc493a75e31c" title="Looks up the target destination file and applies the sub&#45;image embedding logic." alt="" coords="103,157,211,184"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="278,172,212,173,210,168,283,170"/>
+<area shape="rect" id="Node000011" href="$classPBM.html#adf37e8569da7a98d1a5d2fa0a508e1ee" title="Clones the current PBM object using a deep copy (Prototype Pattern). This will be useful for the poly..." alt="" coords="112,208,202,235"/>
+<area shape="poly" id="edge10_Node000010_Node000011" title=" " alt="" coords="284,222,202,224,201,219,289,220"/>
+<area shape="rect" id="Node000013" href="$classPGM.html#ae721c04ab0674597c58d1e0ce1ab576c" title="Clones the current PGM object using a deep copy (Prototype Pattern)." alt="" coords="112,259,202,285"/>
+<area shape="poly" id="edge12_Node000012_Node000013" title=" " alt="" coords="282,273,202,275,202,269,288,271"/>
+<area shape="rect" id="Node000015" href="$classPPM.html#a3c567ffbe74a7f6b174460f21b3e06a1" title="Clones the current PPM object using a deep copy (Prototype Pattern)." alt="" coords="112,309,202,336"/>
+<area shape="poly" id="edge14_Node000014_Node000015" title=" " alt="" coords="284,323,202,325,202,320,289,323"/>
+</map>

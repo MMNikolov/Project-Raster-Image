@@ -1,0 +1,7 @@
+<map id="Session::addImage" name="Session::addImage">
+<area shape="rect" id="Node000001" title="Appends a new image pointer into this session&#39;s collection." alt="" coords="251,31,384,57"/>
+<area shape="rect" id="Node000002" href="$classSession.html#a6c41e2cde8ed70875c4b8af80a12e35b" title="Appends an image into the session by loading it from a disk path." alt="" coords="21,5,187,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="233,35,188,31,187,26,238,34"/>
+<area shape="rect" id="Node000003" href="$classSessionManager.html#a396c9c2e863f913ae57b652568f0c44c" title="Spawns a new Session container, loads all target file paths, and switches focus to it." alt="" coords="5,56,203,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="233,54,204,60,203,55,238,53"/>
+</map>

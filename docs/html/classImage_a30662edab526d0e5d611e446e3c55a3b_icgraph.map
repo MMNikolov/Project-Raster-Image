@@ -1,0 +1,5 @@
+<map id="Image::save" name="Image::save">
+<area shape="rect" id="Node000001" title="Saves the image to disk." alt="" coords="174,5,267,32"/>
+<area shape="rect" id="Node000002" href="$classSession.html#af985089be7b3af8ab562481094fe3a20" title="Saves the first image in the session to a completely new specified path." alt="" coords="5,5,126,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="156,19,126,21,126,16,161,18"/>
+</map>

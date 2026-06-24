@@ -1,0 +1,5 @@
+<map id="ImageFactory::createImage" name="ImageFactory::createImage">
+<area shape="rect" id="Node000001" title="Creates a concrete Image instance by analyzing file format magic numbers." alt="" coords="5,5,187,32"/>
+<area shape="rect" id="Node000002" href="$classImage.html#a9951c40759db74a5536f88a033bf725f" title="Helper function to skip Netpbm style comment lines during file parsing." alt="" coords="235,5,388,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="187,16,222,19,217,19,187,21"/>
+</map>

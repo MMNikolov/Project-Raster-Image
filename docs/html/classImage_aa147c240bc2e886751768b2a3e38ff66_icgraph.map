@@ -1,0 +1,10 @@
+<map id="Image::isGrayscale" name="Image::isGrayscale">
+<area shape="rect" id="Node000001" title="Checks if the image contains only grayscale pixels." alt="" coords="247,31,381,57"/>
+<area shape="rect" id="Node000002" href="$TestFormatsAndFactory_8cpp.html#af5116cc0b5cddaa494f64bfd30df77cb" title=" " alt="" coords="103,5,199,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="229,31,200,29,200,23,234,31"/>
+<area shape="rect" id="Node000004" href="$TestFormatsAndFactory_8cpp.html#a952691c7de8a5a89ce11e97ae4e0d6ed" title=" " alt="" coords="103,56,199,83"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="234,56,200,64,199,59,229,57"/>
+<area shape="rect" id="Node000003" href="$TestFormatsAndFactory_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,31,55,57"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="85,34,56,41,54,36,89,30"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="85,57,55,52,55,46,90,55"/>
+</map>

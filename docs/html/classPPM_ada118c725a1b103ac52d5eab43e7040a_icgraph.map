@@ -1,0 +1,5 @@
+<map id="PPM::PPM" name="PPM::PPM">
+<area shape="rect" id="Node000001" title="Constructor that opens, validates, and parses a PPM file from disk." alt="" coords="143,5,230,32"/>
+<area shape="rect" id="Node000002" href="$classPPM.html#a3c567ffbe74a7f6b174460f21b3e06a1" title="Clones the current PPM object using a deep copy (Prototype Pattern)." alt="" coords="5,5,95,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="125,19,95,21,95,16,130,18"/>
+</map>

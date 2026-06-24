@@ -1,0 +1,7 @@
+<map id="BMP::clone" name="BMP::clone">
+<area shape="rect" id="Node000001" title="Clones the current BMP object using a deep copy (Prototype Pattern)." alt="" coords="5,5,95,32"/>
+<area shape="rect" id="Node000002" href="$classBMP.html#a30bed0442cb09c481b607dd8445152c3" title="Constructor that opens, validates, and parses a BMP file from disk." alt="" coords="143,5,230,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="95,16,129,18,124,19,95,21"/>
+<area shape="rect" id="Node000003" href="$classImage.html#ab5ca0ae10da321c9e443734a87dee15e" title="Constructor initializing core dimensions and filename." alt="" coords="278,5,379,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="230,16,265,19,260,19,230,21"/>
+</map>

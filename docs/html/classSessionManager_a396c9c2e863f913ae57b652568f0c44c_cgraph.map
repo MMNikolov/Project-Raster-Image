@@ -1,0 +1,9 @@
+<map id="SessionManager::loadSession" name="SessionManager::loadSession">
+<area shape="rect" id="Node000001" title="Spawns a new Session container, loads all target file paths, and switches focus to it." alt="" coords="5,31,203,57"/>
+<area shape="rect" id="Node000002" href="$classSession.html#a050d49df9af40cb6a5d8d511b5e2e05f" title="Appends a new image pointer into this session&#39;s collection." alt="" coords="275,5,408,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="203,31,262,27,257,28,204,36"/>
+<area shape="rect" id="Node000003" href="$classImageFactory.html#a64e831c37a13ba6eb6b2fa3d6e9ebbba" title="Creates a concrete Image instance by analyzing file format magic numbers." alt="" coords="251,56,432,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="203,52,238,58,233,58,203,57"/>
+<area shape="rect" id="Node000004" href="$classImage.html#a9951c40759db74a5536f88a033bf725f" title="Helper function to skip Netpbm style comment lines during file parsing." alt="" coords="480,56,633,83"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="432,67,468,69,462,69,432,72"/>
+</map>

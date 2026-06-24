@@ -1,0 +1,5 @@
+<map id="PBM::PBM" name="PBM::PBM">
+<area shape="rect" id="Node000001" title="Constructor that opens and parses a PBM file from disk." alt="" coords="143,5,230,32"/>
+<area shape="rect" id="Node000002" href="$classPBM.html#adf37e8569da7a98d1a5d2fa0a508e1ee" title="Clones the current PBM object using a deep copy (Prototype Pattern). This will be useful for the poly..." alt="" coords="5,5,95,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="125,19,95,21,95,16,130,18"/>
+</map>

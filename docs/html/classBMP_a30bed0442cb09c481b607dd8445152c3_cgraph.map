@@ -1,0 +1,5 @@
+<map id="BMP::BMP" name="BMP::BMP">
+<area shape="rect" id="Node000001" title="Constructor that opens, validates, and parses a BMP file from disk." alt="" coords="5,5,93,32"/>
+<area shape="rect" id="Node000002" href="$classImage.html#ab5ca0ae10da321c9e443734a87dee15e" title="Constructor initializing core dimensions and filename." alt="" coords="141,5,242,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="93,16,128,18,122,19,93,21"/>
+</map>

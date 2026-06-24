@@ -1,0 +1,7 @@
+<map id="Session::saveAs" name="Session::saveAs">
+<area shape="rect" id="Node000001" title="Saves the first image in the session to a completely new specified path." alt="" coords="5,31,126,57"/>
+<area shape="rect" id="Node000002" href="$classSession.html#a76c79cc0a74fc39f63be191e8f5f67a0" title="Applies all optimized pending geometric transformations to the raw pixel matrices." alt="" coords="174,5,372,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="125,34,161,32,155,33,127,39"/>
+<area shape="rect" id="Node000003" href="$classImage.html#a30662edab526d0e5d611e446e3c55a3b" title="Saves the image to disk." alt="" coords="226,56,320,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="126,49,213,61,208,63,126,54"/>
+</map>

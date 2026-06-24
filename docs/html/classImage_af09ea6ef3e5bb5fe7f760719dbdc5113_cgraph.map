@@ -1,0 +1,5 @@
+<map id="Image::makeMonochrome" name="Image::makeMonochrome">
+<area shape="rect" id="Node000001" title="Makes the image in the given session monochrome." alt="" coords="5,5,178,32"/>
+<area shape="rect" id="Node000002" href="$classImage.html#ab5ca0ae10da321c9e443734a87dee15e" title="Constructor initializing core dimensions and filename." alt="" coords="226,5,327,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="178,16,213,19,207,19,178,21"/>
+</map>

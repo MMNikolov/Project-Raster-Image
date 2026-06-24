@@ -1,0 +1,5 @@
+<map id="Session::makeGrayscale" name="Session::makeGrayscale">
+<area shape="rect" id="Node000001" title="Applies the grayscale transformation to all color images in this session." alt="" coords="5,5,173,32"/>
+<area shape="rect" id="Node000002" href="$classSession.html#a76c79cc0a74fc39f63be191e8f5f67a0" title="Applies all optimized pending geometric transformations to the raw pixel matrices." alt="" coords="221,5,419,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="173,16,208,19,202,19,173,21"/>
+</map>

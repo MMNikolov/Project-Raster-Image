@@ -1,0 +1,35 @@
+<map id="Raster&#45;Image&#45;Manipulation/Factory/ImageFactory.cpp" name="Raster&#45;Image&#45;Manipulation/Factory/ImageFactory.cpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="169,5,346,48"/>
+<area shape="rect" id="Node000002" href="$ImageFactory_8hpp.html" title="Defines the ImageFactory class for generating polymorphic image objects." alt="" coords="195,96,320,123"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="259,46,260,81,255,79,257,51"/>
+<area shape="rect" id="Node000003" href="$Image_8hpp.html" title="Defines the abstract base class for all raster image formats." alt="" coords="191,245,325,272"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="232,125,215,139,197,156,186,176,185,186,188,196,203,217,223,236,218,236,199,221,183,198,180,186,181,174,193,153,212,135,236,121"/>
+<area shape="rect" id="Node000009" href="$PGM_8hpp.html" title="Defines the concrete PGM (Portable Graymap) image format parser and serializer." alt="" coords="486,171,608,197"/>
+<area shape="poly" id="edge8_Node000002_Node000009" title=" " alt="" coords="308,121,484,165,479,168,308,126"/>
+<area shape="rect" id="Node000012" href="$PBM_8hpp.html" title="Defines the concrete PBM (Portable BitMap) image format parser and serializer." alt="" coords="342,171,462,197"/>
+<area shape="poly" id="edge12_Node000002_Node000012" title=" " alt="" coords="283,121,365,162,360,164,283,126"/>
+<area shape="rect" id="Node000013" href="$PPM_8hpp.html" title="Defines the concrete PPM (Portable Pixmap) image format parser and serializer." alt="" coords="198,171,318,197"/>
+<area shape="poly" id="edge15_Node000002_Node000013" title=" " alt="" coords="259,121,260,156,255,154,257,126"/>
+<area shape="rect" id="Node000014" href="$BMP_8hpp.html" title="Defines the concrete BMP (Windows Bitmap) image format parser and serializer." alt="" coords="5,171,124,197"/>
+<area shape="poly" id="edge18_Node000002_Node000014" title=" " alt="" coords="223,125,114,167,111,163,226,121"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="108,320,165,347"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="234,274,172,314,169,309,239,271"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="190,320,243,347"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="253,271,233,308,229,305,249,274"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="268,320,333,347"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="266,270,288,307,283,306,264,275"/>
+<area shape="rect" id="Node000007" href="$Pixel_8hpp.html" title="Defines the atomic Pixel structure used across the image manipulation project." alt="" coords="357,320,444,347"/>
+<area shape="poly" id="edge6_Node000003_Node000007" title=" " alt="" coords="283,270,365,312,359,313,282,275"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="370,395,431,421"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="402,345,403,381,398,377,399,349"/>
+<area shape="poly" id="edge9_Node000009_Node000003" title=" " alt="" coords="494,199,324,244,322,239,499,197"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="366,245,438,272"/>
+<area shape="poly" id="edge10_Node000009_Node000010" title=" " alt="" coords="524,197,442,240,440,236,519,199"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="518,245,577,272"/>
+<area shape="poly" id="edge11_Node000009_Node000011" title=" " alt="" coords="549,196,549,231,545,228,546,200"/>
+<area shape="poly" id="edge13_Node000012_Node000003" title=" " alt="" coords="374,199,298,240,296,236,379,197"/>
+<area shape="poly" id="edge14_Node000012_Node000010" title=" " alt="" coords="403,196,404,231,399,228,400,200"/>
+<area shape="poly" id="edge16_Node000013_Node000003" title=" " alt="" coords="259,196,260,231,255,229,257,200"/>
+<area shape="poly" id="edge17_Node000013_Node000010" title=" " alt="" coords="283,195,365,237,360,238,283,201"/>
+<area shape="poly" id="edge19_Node000014_Node000003" title=" " alt="" coords="98,195,212,238,208,241,98,201"/>
+</map>

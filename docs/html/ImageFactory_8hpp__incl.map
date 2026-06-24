@@ -1,0 +1,33 @@
+<map id="Raster&#45;Image&#45;Manipulation/Factory/ImageFactory.hpp" name="Raster&#45;Image&#45;Manipulation/Factory/ImageFactory.hpp">
+<area shape="rect" id="Node000001" title="Defines the ImageFactory class for generating polymorphic image objects." alt="" coords="169,5,346,48"/>
+<area shape="rect" id="Node000002" href="$Image_8hpp.html" title="Defines the abstract base class for all raster image formats." alt="" coords="191,171,325,197"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="224,51,205,71,188,97,186,115,193,131,207,147,225,162,219,162,203,150,189,134,181,115,183,95,201,68,228,47"/>
+<area shape="rect" id="Node000008" href="$PGM_8hpp.html" title="Defines the concrete PGM (Portable Graymap) image format parser and serializer." alt="" coords="486,96,608,123"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="332,46,489,90,484,92,332,51"/>
+<area shape="rect" id="Node000011" href="$PBM_8hpp.html" title="Defines the concrete PBM (Portable BitMap) image format parser and serializer." alt="" coords="342,96,462,123"/>
+<area shape="poly" id="edge11_Node000001_Node000011" title=" " alt="" coords="295,46,369,87,363,89,295,51"/>
+<area shape="rect" id="Node000012" href="$PPM_8hpp.html" title="Defines the concrete PPM (Portable Pixmap) image format parser and serializer." alt="" coords="198,96,318,123"/>
+<area shape="poly" id="edge14_Node000001_Node000012" title=" " alt="" coords="259,46,260,81,255,79,257,51"/>
+<area shape="rect" id="Node000013" href="$BMP_8hpp.html" title="Defines the concrete BMP (Windows Bitmap) image format parser and serializer." alt="" coords="5,96,124,123"/>
+<area shape="poly" id="edge17_Node000001_Node000013" title=" " alt="" coords="207,51,110,92,107,87,210,46"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="108,245,165,272"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="234,199,172,239,169,235,239,196"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="190,245,243,272"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="253,196,233,234,229,230,249,200"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="268,245,333,272"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="266,195,288,233,283,231,264,200"/>
+<area shape="rect" id="Node000006" href="$Pixel_8hpp.html" title="Defines the atomic Pixel structure used across the image manipulation project." alt="" coords="357,245,444,272"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="283,195,365,237,359,238,282,201"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="370,320,431,347"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="402,271,403,306,398,303,399,274"/>
+<area shape="poly" id="edge8_Node000008_Node000002" title=" " alt="" coords="494,124,324,169,322,164,499,122"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="366,171,438,197"/>
+<area shape="poly" id="edge9_Node000008_Node000009" title=" " alt="" coords="524,122,442,166,440,161,519,124"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="518,171,577,197"/>
+<area shape="poly" id="edge10_Node000008_Node000010" title=" " alt="" coords="549,121,549,156,545,154,546,125"/>
+<area shape="poly" id="edge12_Node000011_Node000002" title=" " alt="" coords="374,125,298,166,296,161,379,122"/>
+<area shape="poly" id="edge13_Node000011_Node000009" title=" " alt="" coords="403,121,404,156,399,154,400,125"/>
+<area shape="poly" id="edge15_Node000012_Node000002" title=" " alt="" coords="259,121,260,156,255,154,257,126"/>
+<area shape="poly" id="edge16_Node000012_Node000009" title=" " alt="" coords="283,121,365,163,360,164,283,126"/>
+<area shape="poly" id="edge18_Node000013_Node000002" title=" " alt="" coords="98,121,212,163,208,166,98,126"/>
+</map>

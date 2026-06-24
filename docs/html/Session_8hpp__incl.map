@@ -1,0 +1,39 @@
+<map id="Raster&#45;Image&#45;Manipulation/Session/Session.hpp" name="Raster&#45;Image&#45;Manipulation/Session/Session.hpp">
+<area shape="rect" id="Node000001" title="Management container for a group of images loaded inside a single workspace session." alt="" coords="417,5,594,48"/>
+<area shape="rect" id="Node000002" href="$Image_8hpp.html" title="Defines the abstract base class for all raster image formats." alt="" coords="101,245,235,272"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="415,42,306,62,184,90,127,108,78,127,39,149,14,172,9,184,9,194,14,204,23,213,51,228,88,241,84,244,49,233,20,217,10,207,4,196,4,183,10,169,36,145,75,123,125,103,183,85,305,57,419,39"/>
+<area shape="rect" id="Node000008" href="$ImageFactory_8hpp.html" title="Defines the ImageFactory class for generating polymorphic image objects." alt="" coords="220,96,405,123"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="454,50,358,92,355,87,458,47"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="377,245,448,272"/>
+<area shape="poly" id="edge21_Node000001_Node000010" title=" " alt="" coords="533,46,568,76,599,115,610,136,616,157,615,178,605,199,582,216,546,230,464,251,462,246,545,225,580,211,601,196,610,177,610,158,605,138,594,118,564,80,532,51"/>
+<area shape="rect" id="Node000015" title=" " alt="" coords="666,96,719,123"/>
+<area shape="poly" id="edge22_Node000001_Node000015" title=" " alt="" coords="554,46,654,90,648,91,554,51"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="18,320,76,347"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="146,275,83,314,80,309,149,270"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="100,320,154,347"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="163,271,144,308,139,305,159,275"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="178,320,244,347"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="176,270,198,307,193,306,175,275"/>
+<area shape="rect" id="Node000006" href="$Pixel_8hpp.html" title="Defines the atomic Pixel structure used across the image manipulation project." alt="" coords="267,320,355,347"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="193,270,275,312,270,313,193,275"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="281,395,341,421"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="313,345,313,381,309,377,309,349"/>
+<area shape="poly" id="edge8_Node000008_Node000002" title=" " alt="" coords="217,119,161,128,104,138,57,153,39,162,28,172,22,183,21,193,26,202,34,210,61,226,97,239,92,242,59,231,31,215,21,205,16,194,16,182,23,169,36,158,54,148,103,133,160,122,221,116"/>
+<area shape="rect" id="Node000009" href="$PGM_8hpp.html" title="Defines the concrete PGM (Portable Graymap) image format parser and serializer." alt="" coords="468,171,591,197"/>
+<area shape="poly" id="edge9_Node000008_Node000009" title=" " alt="" coords="350,121,480,164,475,166,350,126"/>
+<area shape="rect" id="Node000012" href="$PBM_8hpp.html" title="Defines the concrete PBM (Portable BitMap) image format parser and serializer." alt="" coords="324,171,444,197"/>
+<area shape="poly" id="edge13_Node000008_Node000012" title=" " alt="" coords="325,121,364,159,358,160,324,126"/>
+<area shape="rect" id="Node000013" href="$PPM_8hpp.html" title="Defines the concrete PPM (Portable Pixmap) image format parser and serializer." alt="" coords="180,171,300,197"/>
+<area shape="poly" id="edge16_Node000008_Node000013" title=" " alt="" coords="298,125,265,161,261,158,302,121"/>
+<area shape="rect" id="Node000014" href="$BMP_8hpp.html" title="Defines the concrete BMP (Windows Bitmap) image format parser and serializer." alt="" coords="37,171,155,197"/>
+<area shape="poly" id="edge19_Node000008_Node000014" title=" " alt="" coords="273,125,150,168,147,163,276,121"/>
+<area shape="poly" id="edge10_Node000009_Node000002" title=" " alt="" coords="466,200,247,244,246,239,470,196"/>
+<area shape="poly" id="edge11_Node000009_Node000010" title=" " alt="" coords="511,197,447,239,444,235,507,199"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="500,245,559,272"/>
+<area shape="poly" id="edge12_Node000009_Node000011" title=" " alt="" coords="531,196,532,231,527,228,528,200"/>
+<area shape="poly" id="edge14_Node000012_Node000002" title=" " alt="" coords="344,200,221,242,219,238,349,196"/>
+<area shape="poly" id="edge15_Node000012_Node000010" title=" " alt="" coords="390,195,404,232,399,230,388,200"/>
+<area shape="poly" id="edge17_Node000013_Node000002" title=" " alt="" coords="226,200,193,236,189,232,230,196"/>
+<area shape="poly" id="edge18_Node000013_Node000010" title=" " alt="" coords="270,195,371,238,366,240,270,201"/>
+<area shape="poly" id="edge20_Node000014_Node000002" title=" " alt="" coords="109,195,148,234,143,235,109,201"/>
+</map>

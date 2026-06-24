@@ -1,0 +1,9 @@
+<map id="runExceptionSuite" name="runExceptionSuite">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,31,133,57"/>
+<area shape="rect" id="Node000002" href="$classImageFactory.html#a64e831c37a13ba6eb6b2fa3d6e9ebbba" title="Creates a concrete Image instance by analyzing file format magic numbers." alt="" coords="181,5,362,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="132,33,168,31,163,33,133,39"/>
+<area shape="rect" id="Node000004" href="$TestFormatsAndFactory_8cpp.html#a32e682bcb389ebcb4a84501deac7cde8" title=" " alt="" coords="217,56,326,83"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="133,49,205,60,199,61,133,55"/>
+<area shape="rect" id="Node000003" href="$classImage.html#a9951c40759db74a5536f88a033bf725f" title="Helper function to skip Netpbm style comment lines during file parsing." alt="" coords="410,5,563,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="362,16,398,18,392,19,362,21"/>
+</map>

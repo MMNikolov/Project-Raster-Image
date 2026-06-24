@@ -1,0 +1,11 @@
+<map id="Session::addByFilename" name="Session::addByFilename">
+<area shape="rect" id="Node000001" title="Appends an image into the session by loading it from a disk path." alt="" coords="5,56,172,83"/>
+<area shape="rect" id="Node000002" href="$classSession.html#a050d49df9af40cb6a5d8d511b5e2e05f" title="Appends a new image pointer into this session&#39;s collection." alt="" coords="252,5,386,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="152,53,242,35,238,37,153,58"/>
+<area shape="rect" id="Node000003" href="$classSession.html#a76c79cc0a74fc39f63be191e8f5f67a0" title="Applies all optimized pending geometric transformations to the raw pixel matrices." alt="" coords="220,56,418,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="172,67,207,69,201,70,172,72"/>
+<area shape="rect" id="Node000004" href="$classImageFactory.html#a64e831c37a13ba6eb6b2fa3d6e9ebbba" title="Creates a concrete Image instance by analyzing file format magic numbers." alt="" coords="228,107,410,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="153,81,242,102,237,104,152,86"/>
+<area shape="rect" id="Node000005" href="$classImage.html#a9951c40759db74a5536f88a033bf725f" title="Helper function to skip Netpbm style comment lines during file parsing." alt="" coords="466,107,619,133"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="410,117,453,120,448,120,410,123"/>
+</map>

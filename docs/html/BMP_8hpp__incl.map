@@ -1,0 +1,15 @@
+<map id="Raster&#45;Image&#45;Manipulation/BMP/BMP.hpp" name="Raster&#45;Image&#45;Manipulation/BMP/BMP.hpp">
+<area shape="rect" id="Node000001" title="Defines the concrete BMP (Windows Bitmap) image format parser and serializer." alt="" coords="67,5,244,48"/>
+<area shape="rect" id="Node000002" href="$Image_8hpp.html" title="Defines the abstract base class for all raster image formats." alt="" coords="88,96,222,123"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="156,46,158,81,153,79,154,51"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,171,63,197"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="133,126,70,164,67,160,135,121"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="87,171,141,197"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="150,121,131,159,126,156,146,125"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="165,171,231,197"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="164,121,186,157,180,157,162,126"/>
+<area shape="rect" id="Node000006" href="$Pixel_8hpp.html" title="Defines the atomic Pixel structure used across the image manipulation project." alt="" coords="254,171,342,197"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="181,121,262,162,257,164,180,126"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="268,245,328,272"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="300,196,300,231,296,228,296,200"/>
+</map>

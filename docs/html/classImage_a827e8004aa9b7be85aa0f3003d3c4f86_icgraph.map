@@ -1,0 +1,11 @@
+<map id="Image::getPixels" name="Image::getPixels">
+<area shape="rect" id="Node000001" title="Provides read&#45;only access to the pixel data." alt="" coords="307,31,426,57"/>
+<area shape="rect" id="Node000002" href="$classImage.html#a9fddb97e7f1a48cd04dac75956bbc756" title="Stitches pixel blocks from a source image into this image matrix." alt="" coords="162,5,259,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="289,32,259,29,259,24,294,32"/>
+<area shape="rect" id="Node000004" href="$TestFormatsAndFactory_8cpp.html#ad2050c40e8f4c49c14fab05071522387" title=" " alt="" coords="162,56,258,83"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="294,56,259,64,258,59,289,57"/>
+<area shape="rect" id="Node000003" href="$classSession.html#a52bb2847ea5aed4cb329cc493a75e31c" title="Looks up the target destination file and applies the sub&#45;image embedding logic." alt="" coords="5,5,114,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="144,20,115,21,114,16,149,18"/>
+<area shape="rect" id="Node000005" href="$TestFormatsAndFactory_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="35,56,84,83"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="144,70,85,72,84,67,149,68"/>
+</map>

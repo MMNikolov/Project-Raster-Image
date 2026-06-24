@@ -1,0 +1,5 @@
+<map id="SessionManager::saveAllUnsaved" name="SessionManager::saveAllUnsaved">
+<area shape="rect" id="Node000001" title="Automatically saves all sessions that currently contain unsaved modifications." alt="" coords="5,5,227,32"/>
+<area shape="rect" id="Node000002" href="$classSessionManager.html#a42803ab3ad472dfae52c4f218f91e190" title="Checks if any of the currently tracked sessions contain unsaved work." alt="" coords="275,5,527,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="227,16,262,19,257,19,227,21"/>
+</map>

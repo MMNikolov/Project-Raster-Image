@@ -1,0 +1,5 @@
+<map id="Session::makeMonochrome" name="Session::makeMonochrome">
+<area shape="rect" id="Node000001" title="Applies the monochrome transformation to all images in this session." alt="" coords="5,5,189,32"/>
+<area shape="rect" id="Node000002" href="$classSession.html#a76c79cc0a74fc39f63be191e8f5f67a0" title="Applies all optimized pending geometric transformations to the raw pixel matrices." alt="" coords="237,5,435,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="189,16,224,19,218,19,189,21"/>
+</map>

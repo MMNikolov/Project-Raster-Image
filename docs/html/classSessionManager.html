@@ -139,6 +139,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a02d7d43d2c8fe8a18db587ef178bbc61"><td class="mdescLeft">&#160;</td><td class="mdescRight">Forwards a vertical axis mirror flip request to the active session.  <br /></td></tr>
 <tr class="memitem:a380417b676440c3673f815066bec3752" id="r_a380417b676440c3673f815066bec3752"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a380417b676440c3673f815066bec3752">flipLeft</a> ()</td></tr>
 <tr class="memdesc:a380417b676440c3673f815066bec3752"><td class="mdescLeft">&#160;</td><td class="mdescRight">Forwards a horizontal axis mirror flip request to the active session.  <br /></td></tr>
+<tr class="memitem:a42803ab3ad472dfae52c4f218f91e190" id="r_a42803ab3ad472dfae52c4f218f91e190"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a42803ab3ad472dfae52c4f218f91e190">hasAnyUnsavedWork</a> () const</td></tr>
+<tr class="memdesc:a42803ab3ad472dfae52c4f218f91e190"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if any of the currently tracked sessions contain unsaved work.  <br /></td></tr>
+<tr class="memitem:af915013ec324753c42ccb890566fa261" id="r_af915013ec324753c42ccb890566fa261"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#af915013ec324753c42ccb890566fa261">saveAllUnsaved</a> ()</td></tr>
+<tr class="memdesc:af915013ec324753c42ccb890566fa261"><td class="mdescLeft">&#160;</td><td class="mdescRight">Automatically saves all sessions that currently contain unsaved modifications.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Global state registry controller routing terminal data pipelines to focused workspace tabs. </p>
@@ -304,6 +308,26 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Forwards a vertical axis mirror flip request to the active session. </p>
+
+</div>
+</div>
+<a id="a42803ab3ad472dfae52c4f218f91e190" name="a42803ab3ad472dfae52c4f218f91e190"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a42803ab3ad472dfae52c4f218f91e190">&#9670;&#160;</a></span>hasAnyUnsavedWork()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SessionManager::hasAnyUnsavedWork </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Checks if any of the currently tracked sessions contain unsaved work. </p>
+<dl class="section return"><dt>Returns</dt><dd>True if at least one session has unsaved modifications. </dd></dl>
 
 </div>
 </div>
@@ -548,6 +572,25 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Directs the focused active session to save all its images back to disk. </p>
+
+</div>
+</div>
+<a id="af915013ec324753c42ccb890566fa261" name="af915013ec324753c42ccb890566fa261"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af915013ec324753c42ccb890566fa261">&#9670;&#160;</a></span>saveAllUnsaved()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SessionManager::saveAllUnsaved </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Automatically saves all sessions that currently contain unsaved modifications. </p>
 
 </div>
 </div>

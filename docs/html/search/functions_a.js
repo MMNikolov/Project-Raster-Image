@@ -1,11 +1,9 @@
 var searchData=
 [
-  ['redo_0',['redo',['../classSession.html#ab615c2ae32f73fa42496233146da6f19',1,'Session::redo()'],['../classSessionManager.html#af90ce3c23d63842d22d6237f60661834',1,'SessionManager::redo()']]],
-  ['rotateleft_1',['rotateLeft',['../classImage.html#ad9fb4fd4857b451e330bf37dcc6bc91d',1,'Image::rotateLeft()'],['../classSession.html#aa17b3bedb27ec5ab4e99806e4238e3f0',1,'Session::rotateLeft()'],['../classSessionManager.html#a4839c0fe3ce1be27b59e87fb346f3087',1,'SessionManager::rotateLeft()']]],
-  ['rotateright_2',['rotateRight',['../classImage.html#a119e09b1addd48b535ddd20ff9c1f7c7',1,'Image::rotateRight()'],['../classSession.html#a3d633ee4b735c22dc34074921c73cc11',1,'Session::rotateRight()'],['../classSessionManager.html#ae43084ceb4858d4022c24847829dda18',1,'SessionManager::rotateRight()']]],
-  ['run_3',['run',['../classCommandParser.html#af669ef32400be1e6ccf2faf8669d48ce',1,'CommandParser']]],
-  ['runexceptionsuite_4',['runExceptionSuite',['../TestFormatsAndFactory_8cpp.html#a899e9ef2a53b01227c6f1b302b4503f5',1,'TestFormatsAndFactory.cpp']]],
-  ['runpbmsuite_5',['runPbmSuite',['../TestFormatsAndFactory_8cpp.html#af5116cc0b5cddaa494f64bfd30df77cb',1,'TestFormatsAndFactory.cpp']]],
-  ['runpgmsuite_6',['runPgmSuite',['../TestFormatsAndFactory_8cpp.html#ad2050c40e8f4c49c14fab05071522387',1,'TestFormatsAndFactory.cpp']]],
-  ['runppmsuite_7',['runPpmSuite',['../TestFormatsAndFactory_8cpp.html#a952691c7de8a5a89ce11e97ae4e0d6ed',1,'TestFormatsAndFactory.cpp']]]
+  ['paste_0',['paste',['../classImage.html#a9fddb97e7f1a48cd04dac75956bbc756',1,'Image::paste()'],['../classSession.html#a52bb2847ea5aed4cb329cc493a75e31c',1,'Session::paste()'],['../classSessionManager.html#ad058e0c7ef47595a269a4ef764760613',1,'SessionManager::paste()']]],
+  ['pbm_1',['PBM',['../classPBM.html#a8955dfcb9b0c9117b4b3738951fd3769',1,'PBM']]],
+  ['pgm_2',['PGM',['../classPGM.html#ae32ff656cb739394f5ccd9d5545c672a',1,'PGM']]],
+  ['ppm_3',['PPM',['../classPPM.html#ada118c725a1b103ac52d5eab43e7040a',1,'PPM']]],
+  ['printcurrentsessioninfo_4',['printCurrentSessionInfo',['../classSessionManager.html#ac9e3e86997fc379bb0450b7f5d07ae55',1,'SessionManager']]],
+  ['printsessioninfo_5',['printSessionInfo',['../classBMP.html#acd70935f30e4700437200a06b3393e73',1,'BMP::printSessionInfo()'],['../classImage.html#a997a88ec456aa24fd42660f9d4ba61cc',1,'Image::printSessionInfo()'],['../classPBM.html#a49ff63007313e0069249c9b3c2876147',1,'PBM::printSessionInfo()'],['../classPGM.html#ac8c9a8c14305f7a0a38568297ff9184e',1,'PGM::printSessionInfo()'],['../classPPM.html#a2183b4fcb9cc962e0be5cec9a8f1df0c',1,'PPM::printSessionInfo()'],['../classSession.html#a30b15b932b1ef6573fbafee75a6e69dd',1,'Session::printSessionInfo()']]]
 ];

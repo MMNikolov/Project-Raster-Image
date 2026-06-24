@@ -7,6 +7,7 @@ var classSessionManager =
     [ "closeSessionById", "classSessionManager.html#a46c5a06807856be98438d2ec5f6f37c3", null ],
     [ "flipLeft", "classSessionManager.html#a380417b676440c3673f815066bec3752", null ],
     [ "flipTop", "classSessionManager.html#a02d7d43d2c8fe8a18db587ef178bbc61", null ],
+    [ "hasAnyUnsavedWork", "classSessionManager.html#a42803ab3ad472dfae52c4f218f91e190", null ],
     [ "loadSession", "classSessionManager.html#a396c9c2e863f913ae57b652568f0c44c", null ],
     [ "makeGrayscale", "classSessionManager.html#a894c5c053ce98521044ec1455b0fc14d", null ],
     [ "makeMonochrome", "classSessionManager.html#aac1e2e0591b236740da277e8ba50ccec", null ],
@@ -18,6 +19,7 @@ var classSessionManager =
     [ "rotateLeft", "classSessionManager.html#a4839c0fe3ce1be27b59e87fb346f3087", null ],
     [ "rotateRight", "classSessionManager.html#ae43084ceb4858d4022c24847829dda18", null ],
     [ "save", "classSessionManager.html#aa978b3850afcf3437005fd0ac58d0a6a", null ],
+    [ "saveAllUnsaved", "classSessionManager.html#af915013ec324753c42ccb890566fa261", null ],
     [ "saveAs", "classSessionManager.html#a261c4cd524a958b3fb9f471708431458", null ],
     [ "switchSession", "classSessionManager.html#a8513a09b1acbd6ebc3c8c5e5d33615e3", null ],
     [ "undo", "classSessionManager.html#a976925a605ff60d9e628fc54d87ead9b", null ]

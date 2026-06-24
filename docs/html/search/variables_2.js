@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['height_0',['height',['../classImage.html#a51df43db420c9c0b57536cb2dd36de5c',1,'Image']]]
+  ['g_0',['g',['../structPixel.html#aeab078b7768caf273f8fe1daffa50729',1,'Pixel']]],
+  ['green_1',['GREEN',['../CommandParser_8cpp.html#ace790543ffe3663a896a5f074bd2a3ef',1,'CommandParser.cpp']]]
 ];

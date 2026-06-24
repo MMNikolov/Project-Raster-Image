@@ -53,7 +53,11 @@ void \doxymbox{\hyperlink{classSessionManager_ae43084ceb4858d4022c24847829dda18}
 void \doxymbox{\hyperlink{classSessionManager_a02d7d43d2c8fe8a18db587ef178bbc61}{flip\+Top}} ()
 \begin{DoxyCompactList}\small\item\em Forwards a vertical axis mirror flip request to the active session. \end{DoxyCompactList}\item 
 void \doxymbox{\hyperlink{classSessionManager_a380417b676440c3673f815066bec3752}{flip\+Left}} ()
-\begin{DoxyCompactList}\small\item\em Forwards a horizontal axis mirror flip request to the active session. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Forwards a horizontal axis mirror flip request to the active session. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{classSessionManager_a42803ab3ad472dfae52c4f218f91e190}{has\+Any\+Unsaved\+Work}} () const
+\begin{DoxyCompactList}\small\item\em Checks if any of the currently tracked sessions contain unsaved work. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{classSessionManager_af915013ec324753c42ccb890566fa261}{save\+All\+Unsaved}} ()
+\begin{DoxyCompactList}\small\item\em Automatically saves all sessions that currently contain unsaved modifications. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -153,6 +157,19 @@ void Session\+Manager::\+flip\+Top (\begin{DoxyParamCaption}{}{}\end{DoxyParamCa
 
 Forwards a vertical axis mirror flip request to the active session. 
 
+\Hypertarget{classSessionManager_a42803ab3ad472dfae52c4f218f91e190}\index{SessionManager@{SessionManager}!hasAnyUnsavedWork@{hasAnyUnsavedWork}}
+\index{hasAnyUnsavedWork@{hasAnyUnsavedWork}!SessionManager@{SessionManager}}
+\doxysubsubsection{\texorpdfstring{hasAnyUnsavedWork()}{hasAnyUnsavedWork()}}
+{\footnotesize\ttfamily \label{classSessionManager_a42803ab3ad472dfae52c4f218f91e190} 
+bool Session\+Manager::\+has\+Any\+Unsaved\+Work (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Checks if any of the currently tracked sessions contain unsaved work. 
+
+\begin{DoxyReturn}{Returns}
+True if at least one session has unsaved modifications. 
+\end{DoxyReturn}
 \Hypertarget{classSessionManager_a396c9c2e863f913ae57b652568f0c44c}\index{SessionManager@{SessionManager}!loadSession@{loadSession}}
 \index{loadSession@{loadSession}!SessionManager@{SessionManager}}
 \doxysubsubsection{\texorpdfstring{loadSession()}{loadSession()}}
@@ -274,6 +291,16 @@ void Session\+Manager::\+save (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption
 
 
 Directs the focused active session to save all its images back to disk. 
+
+\Hypertarget{classSessionManager_af915013ec324753c42ccb890566fa261}\index{SessionManager@{SessionManager}!saveAllUnsaved@{saveAllUnsaved}}
+\index{saveAllUnsaved@{saveAllUnsaved}!SessionManager@{SessionManager}}
+\doxysubsubsection{\texorpdfstring{saveAllUnsaved()}{saveAllUnsaved()}}
+{\footnotesize\ttfamily \label{classSessionManager_af915013ec324753c42ccb890566fa261} 
+void Session\+Manager::\+save\+All\+Unsaved (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Automatically saves all sessions that currently contain unsaved modifications. 
 
 \Hypertarget{classSessionManager_a261c4cd524a958b3fb9f471708431458}\index{SessionManager@{SessionManager}!saveAs@{saveAs}}
 \index{saveAs@{saveAs}!SessionManager@{SessionManager}}

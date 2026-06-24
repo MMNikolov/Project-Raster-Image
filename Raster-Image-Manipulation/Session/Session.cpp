@@ -1,7 +1,7 @@
 #include "Session.hpp"
 
 Session::Session(int sessionId)
-    : loadedImages(), count(0)
+    : loadedImages(), count(0), unsavedChanges(false)
 {
     if (sessionId < 0)
     {
@@ -29,9 +29,12 @@ void Session::addImage(Image *img)
 
 void Session::addByFilename(const std::string &filename)
 {
+    // за да спазим напълно изискванията
+    this->bakeTransformations();
+
     Image* img = ImageFactory::createImage(filename);
 
-    this->loadedImages.push_back(img);
+    this->addImage(img);
 
     std::cout << "Image " << filename << " added to the active session successfully.\n";
 }
@@ -58,6 +61,7 @@ void Session::makeNegative()
     {
         this->loadedImages[i]->makeNegative();
     }
+    this->unsavedChanges = true;
 }
 
 void Session::makeGrayscale()
@@ -82,6 +86,7 @@ void Session::makeGrayscale()
     {
         this->loadedImages[i]->makeGrayscale();
     }
+    this->unsavedChanges = true;
 }
 
 void Session::makeMonochrome()
@@ -106,12 +111,11 @@ void Session::makeMonochrome()
     {
         this->loadedImages[i]->makeMonochrome();
     }
+    this->unsavedChanges = true;
 }
 
 void Session::printSessionInfo() const
 {
-    std::cout << "Files in session with ID " << sessionId << ":\n";
-
     for (size_t i = 0; i < this->count; i++)
     {
         this->loadedImages[i]->printSessionInfo();
@@ -123,6 +127,20 @@ void Session::save()
     if (this->count <= 0)
     {
         throw std::invalid_argument("There is nothing to save my guy...");
+    }
+
+    // Добавяме това: ако има чакащи трансформации, пазим текущото състояние за undo
+    // Пропусната функционалност
+    if (!this->pendingOps.empty())
+    {
+        this->undoHistory.push_back(cloneCurrentState());
+
+        size_t redoSize = this->redoHistory.size();
+        for (size_t i = 0; i < redoSize; i++)
+        {
+            clearImageVector(this->redoHistory[i]);
+        }
+        this->redoHistory.clear();
     }
 
     this->bakeTransformations();
@@ -141,7 +159,7 @@ void Session::save()
 
         if (dotPosition != std::string::npos)
         {
-            newFileName = originalName.substr(0, dotPosition) + timestamp + originalName.substr(dotPosition);
+            newFileName = originalName.substr(0, dotPosition) + '-' + timestamp + originalName.substr(dotPosition);
         }
         else
         {
@@ -151,6 +169,7 @@ void Session::save()
         this->loadedImages[i]->save(newFileName);
         std::cout << "Successfully saved the image: " << newFileName << '\n';
     }
+    this->unsavedChanges = false;
 }
 
 void Session::saveAs(const std::string &originalFilename, const std::string &newFilename)
@@ -164,9 +183,21 @@ void Session::saveAs(const std::string &originalFilename, const std::string &new
         throw std::invalid_argument("Destination path cannot be empty.");
     }
 
+    // правим същото и за saveAS
+    if (!this->pendingOps.empty())
+    {
+        this->undoHistory.push_back(cloneCurrentState());
+
+        size_t redoSize = this->redoHistory.size();
+        for (size_t i = 0; i < redoSize; i++)
+        {
+            clearImageVector(this->redoHistory[i]);
+        }
+        this->redoHistory.clear();
+    }
+
     this->bakeTransformations();
 
-    // Look up the specific image object by matching its original file name string
     Image* targetImage = nullptr;
     for (size_t i = 0; i < this->count; i++)
     {
@@ -182,9 +213,9 @@ void Session::saveAs(const std::string &originalFilename, const std::string &new
         throw std::invalid_argument("Target image file not found in the active session.");
     }
 
-    // Call the correct polymorphic serialization routine
     targetImage->save(newFilename);
     std::cout << "Successfully saved state of " << originalFilename << " as: " << newFilename << "\n";
+    this->unsavedChanges = false;
 }
 
 void Session::paste(const std::string &srcPath, const std::string &destPath, int posX, int posY)
@@ -237,6 +268,7 @@ void Session::paste(const std::string &srcPath, const std::string &destPath, int
         std::cerr << e.what() << '\n';
         throw;
     }
+    this->unsavedChanges = true;
 }
 
 void Session::undo()
@@ -254,6 +286,8 @@ void Session::undo()
     this->count = this->loadedImages.size();
 
     this->pendingOps.clear();
+
+    this->unsavedChanges = true;
 }
 
 void Session::redo()
@@ -271,6 +305,8 @@ void Session::redo()
     this->count = this->loadedImages.size();
 
     this->pendingOps.clear();
+
+    this->unsavedChanges = true;
 }
 
 void Session::rotateLeft() { applyOptimizedOp(Operations::ROTATE_LEFT); }
@@ -339,6 +375,7 @@ std::vector<Image *> Session::cloneCurrentState() const
     std::vector<Image *> newImages;
     // this function allocates (reserves) memory
     // allocates exactly the amount of memory we need for the new Image
+    // quality of life sugar :D
     newImages.reserve(this->count);
 
     for (size_t i = 0; i < this->count; i++)

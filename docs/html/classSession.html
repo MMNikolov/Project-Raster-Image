@@ -137,6 +137,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:ab2d626cc9bd755da05e62713039b768a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Queues a request to flip the image on the vertical axis.  <br /></td></tr>
 <tr class="memitem:a76c79cc0a74fc39f63be191e8f5f67a0" id="r_a76c79cc0a74fc39f63be191e8f5f67a0"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a76c79cc0a74fc39f63be191e8f5f67a0">bakeTransformations</a> ()</td></tr>
 <tr class="memdesc:a76c79cc0a74fc39f63be191e8f5f67a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies all optimized pending geometric transformations to the raw pixel matrices.  <br /></td></tr>
+<tr class="memitem:ab05f967ec101af6fe95dd4c8dcac69f0" id="r_ab05f967ec101af6fe95dd4c8dcac69f0"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ab05f967ec101af6fe95dd4c8dcac69f0">hasUnsavedChanges</a> () const</td></tr>
+<tr class="memdesc:ab05f967ec101af6fe95dd4c8dcac69f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the session contains any unsaved image modifications.  <br /></td></tr>
 <tr class="memitem:a1a9232e627b902f1ea1701f92423fddb" id="r_a1a9232e627b902f1ea1701f92423fddb"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a1a9232e627b902f1ea1701f92423fddb">getId</a> () const</td></tr>
 <tr class="memdesc:a1a9232e627b902f1ea1701f92423fddb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the unique session identification key.  <br /></td></tr>
 <tr class="memitem:a6774642c043fc37402c37aee184f6455" id="r_a6774642c043fc37402c37aee184f6455"><td class="memItemLeft">const std::vector&lt; <a class="el" href="classImage.html">Image</a> * &gt; &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a6774642c043fc37402c37aee184f6455">getImages</a> () const</td></tr>
@@ -393,6 +395,34 @@ Public Member Functions</h2></td></tr>
 
 <p>Provides read-only access to the internal image collection tracking vector. </p>
 <dl class="section return"><dt>Returns</dt><dd>Const reference to the polymorphic image pointer vector. </dd></dl>
+
+</div>
+</div>
+<a id="ab05f967ec101af6fe95dd4c8dcac69f0" name="ab05f967ec101af6fe95dd4c8dcac69f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab05f967ec101af6fe95dd4c8dcac69f0">&#9670;&#160;</a></span>hasUnsavedChanges()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Session::hasUnsavedChanges </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Checks if the session contains any unsaved image modifications. </p>
+<dl class="section return"><dt>Returns</dt><dd>True if there are unsaved operations or pending lazy transformations. </dd></dl>
 
 </div>
 </div>

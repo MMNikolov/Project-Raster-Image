@@ -130,6 +130,18 @@ public:
      */
     void flipLeft();
 
+    // UNSAVED WORK FUNCTIONALITY
+    /**
+     * @brief Checks if any of the currently tracked sessions contain unsaved work.
+     * @return True if at least one session has unsaved modifications.
+     */
+    bool hasAnyUnsavedWork() const;
+
+    /**
+     * @brief Automatically saves all sessions that currently contain unsaved modifications.
+     */
+    void saveAllUnsaved();
+
 private:
     std::vector<Session *> activeSessions; /**< Collection of all concurrent workspace instances */
     int currentActiveId;                   /**< ID of the session currently focused (-1 if none exist) */

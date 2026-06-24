@@ -1,5 +1,12 @@
 #include "CommandParser.hpp"
 
+const std::string RESET = "\033[0m";
+const std::string BOLD = "\033[1m";
+const std::string GREEN = "\033[32m";
+const std::string CYAN = "\033[36m";
+const std::string RED = "\033[31m";
+const std::string YELLOW = "\033[33m";
+
 CommandParser::CommandParser()
     : manager()
 {
@@ -12,7 +19,7 @@ void CommandParser::run()
 
     while (true)
     {
-        std::cout << "<Image-engine> ";
+        std::cout << BOLD << GREEN << "<Image-engine> " << RESET;
         if (!std::getline(std::cin, line))
         {
             break;
@@ -46,7 +53,6 @@ void CommandParser::run()
                 }
 
                 this->manager.loadSession(filepaths);
-                std::cout << "Successfully loaded the files\n";
             }
             else if (command == "add")
             {
@@ -58,7 +64,6 @@ void CommandParser::run()
                 }
 
                 this->manager.addImagetoActiveSession(path);
-                std::cout << "Added image transaction completed.\n";
             }
             else if (command == "switch")
             {
@@ -72,11 +77,6 @@ void CommandParser::run()
             }
             else if (command == "close")
             {
-                std::string dummy;
-                if (!(ss >> dummy))
-                {
-                    throw std::invalid_argument("cant the read the rest of the command");
-                }
                 this->manager.closeSessionById(-1);
             }
             else if (command == "negative")
@@ -87,12 +87,12 @@ void CommandParser::run()
             else if (command == "monochrome")
             {
                 this->manager.makeMonochrome();
-                std::cout << "Grayscale filter transaction logged.\n";
+                std::cout << "Monochrome filter transaction logged.\n";
             }
             else if (command == "grayscale")
             {
                 this->manager.makeGrayscale();
-                std::cout << "Monochrome filter transaction logged.\n";
+                std::cout << "Grayscale filter transaction logged.\n";
             }
             else if (command == "rotate")
             {
@@ -143,7 +143,7 @@ void CommandParser::run()
             else if (command == "undo")
             {
                 this->manager.undo();
-                std::cout << "Sucessful\n";
+                std::cout << "Successful\n";
             }
             else if (command == "redo")
             {
@@ -153,7 +153,6 @@ void CommandParser::run()
             else if (command == "save")
             {
                 this->manager.save();
-                std::cout << "Image saved successfully in the current file\n";
             }
             else if (command == "saveas")
             {
@@ -187,6 +186,19 @@ void CommandParser::run()
             }
             else if (command == "exit")
             {
+                if (this->manager.hasAnyUnsavedWork())
+                {
+                    std::cout << "Session contains unsaved work. Save it now (y/n)?\n<Image-engine> ";
+                    std::string response;
+                    if (std::getline(std::cin, response))
+                    {
+                        if (response == "y" || response == "Y" || response.empty())
+                        {
+                            this->manager.saveAllUnsaved();
+                        }
+                    }
+                }
+
                 std::cout << "leaving the session? Goodbye :D\n";
                 break;
             }
@@ -197,7 +209,7 @@ void CommandParser::run()
         }
         catch (const std::exception &e)
         {
-            std::cerr << "Session aborted: " << e.what() << '\n';
+            std::cerr << BOLD << RED << "Session aborted: " << RESET << RED << e.what() << RESET << '\n';
         }
     }
 }

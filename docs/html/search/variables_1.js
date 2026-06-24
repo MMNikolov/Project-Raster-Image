@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['g_0',['g',['../structPixel.html#aeab078b7768caf273f8fe1daffa50729',1,'Pixel']]]
+  ['cyan_0',['CYAN',['../CommandParser_8cpp.html#ac1965adc92c3076b04d6cd16f36e8f77',1,'CommandParser.cpp']]]
 ];

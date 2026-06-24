@@ -10,6 +10,7 @@ var classSession =
     [ "flipTop", "classSession.html#ad4bcbd3fb7f7edb422efe82ab8e7fb3c", null ],
     [ "getId", "classSession.html#a1a9232e627b902f1ea1701f92423fddb", null ],
     [ "getImages", "classSession.html#a6774642c043fc37402c37aee184f6455", null ],
+    [ "hasUnsavedChanges", "classSession.html#ab05f967ec101af6fe95dd4c8dcac69f0", null ],
     [ "makeGrayscale", "classSession.html#ad690821c0ba1e2999b60f24d6eda9348", null ],
     [ "makeMonochrome", "classSession.html#a87bc8a6e8c0495fbc646b3ba77f98999", null ],
     [ "makeNegative", "classSession.html#a44a7d994d8c55973365d94da49fcf376", null ],

@@ -69,32 +69,37 @@
 \DoxyCodeLine{00144\ }
 \DoxyCodeLine{00148\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{classSession_a76c79cc0a74fc39f63be191e8f5f67a0}{bakeTransformations}}();}
 \DoxyCodeLine{00149\ }
-\DoxyCodeLine{00150\ \ \ \ \ \textcolor{comment}{//\ GETTERS}}
-\DoxyCodeLine{00151\ }
-\DoxyCodeLine{00156\ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{classSession_a1a9232e627b902f1ea1701f92423fddb}{getId}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ sessionId;\ \}}
-\DoxyCodeLine{00157\ }
-\DoxyCodeLine{00162\ \ \ \ \ \textcolor{keyword}{const}\ std::vector<Image*>\&\ \doxymbox{\hyperlink{classSession_a6774642c043fc37402c37aee184f6455}{getImages}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ loadedImages;\ \}}
-\DoxyCodeLine{00163\ }
-\DoxyCodeLine{00164\ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00165\ \ \ \ \ \textcolor{keywordtype}{int}\ sessionId;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00166\ \ \ \ \ std::vector<Image*>\ loadedImages;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00167\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ count;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00168\ }
-\DoxyCodeLine{00169\ \ \ \ \ \textcolor{comment}{//UNDO\ AND\ REDO\ FUNCTIONALITIES\ }}
-\DoxyCodeLine{00170\ \ \ \ \ std::vector<std::vector<Image*>>\ undoHistory;\ \ \ }
-\DoxyCodeLine{00171\ \ \ \ \ std::vector<std::vector<Image*>>\ redoHistory;\ \ \ }
-\DoxyCodeLine{00172\ }
-\DoxyCodeLine{00173\ \ \ \ \ std::vector<Operations>\ pendingOps;\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00174\ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00178\ \ \ \ \ \textcolor{keywordtype}{void}\ free();}
+\DoxyCodeLine{00150\ \ \ \ \ \textcolor{comment}{//\ HAS\ UNSAVED\ CHANGES\ FUNCTIONALITY}}
+\DoxyCodeLine{00155\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{classSession_ab05f967ec101af6fe95dd4c8dcac69f0}{hasUnsavedChanges}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ unsavedChanges\ ||\ !pendingOps.empty();\ \}}
+\DoxyCodeLine{00156\ }
+\DoxyCodeLine{00157\ \ \ \ \ \textcolor{comment}{//\ GETTERS}}
+\DoxyCodeLine{00158\ }
+\DoxyCodeLine{00163\ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{classSession_a1a9232e627b902f1ea1701f92423fddb}{getId}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ sessionId;\ \}}
+\DoxyCodeLine{00164\ }
+\DoxyCodeLine{00169\ \ \ \ \ \textcolor{keyword}{const}\ std::vector<Image*>\&\ \doxymbox{\hyperlink{classSession_a6774642c043fc37402c37aee184f6455}{getImages}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ loadedImages;\ \}}
+\DoxyCodeLine{00170\ }
+\DoxyCodeLine{00171\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00172\ \ \ \ \ \textcolor{keywordtype}{int}\ sessionId;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00173\ \ \ \ \ std::vector<Image*>\ loadedImages;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00174\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ count;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00175\ }
+\DoxyCodeLine{00176\ \ \ \ \ \textcolor{comment}{//UNDO\ AND\ REDO\ FUNCTIONALITIES\ }}
+\DoxyCodeLine{00177\ \ \ \ \ std::vector<std::vector<Image*>>\ undoHistory;\ \ \ }
+\DoxyCodeLine{00178\ \ \ \ \ std::vector<std::vector<Image*>>\ redoHistory;\ \ \ }
 \DoxyCodeLine{00179\ }
-\DoxyCodeLine{00184\ \ \ \ \ std::vector<Image*>\ cloneCurrentState()\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00185\ }
-\DoxyCodeLine{00190\ \ \ \ \ \textcolor{keywordtype}{void}\ clearImageVector(std::vector<Image*>\&\ images);}
-\DoxyCodeLine{00191\ }
-\DoxyCodeLine{00196\ \ \ \ \ \textcolor{keywordtype}{void}\ applyOptimizedOp(\doxymbox{\hyperlink{Session_8hpp_a2a7f3aedd8da7db99fbf987014326d12}{Operations}}\ newOp);\ }
-\DoxyCodeLine{00197\ \};}
-\DoxyCodeLine{00198\ }
-\DoxyCodeLine{00199\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ SESSION\_HPP}}
+\DoxyCodeLine{00180\ \ \ \ \ std::vector<Operations>\ pendingOps;\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00181\ }
+\DoxyCodeLine{00182\ \ \ \ \ \textcolor{keywordtype}{bool}\ unsavedChanges;\ }
+\DoxyCodeLine{00183\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00187\ \ \ \ \ \textcolor{keywordtype}{void}\ free();}
+\DoxyCodeLine{00188\ }
+\DoxyCodeLine{00193\ \ \ \ \ std::vector<Image*>\ cloneCurrentState()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00194\ }
+\DoxyCodeLine{00199\ \ \ \ \ \textcolor{keywordtype}{void}\ clearImageVector(std::vector<Image*>\&\ images);}
+\DoxyCodeLine{00200\ }
+\DoxyCodeLine{00205\ \ \ \ \ \textcolor{keywordtype}{void}\ applyOptimizedOp(\doxymbox{\hyperlink{Session_8hpp_a2a7f3aedd8da7db99fbf987014326d12}{Operations}}\ newOp);\ }
+\DoxyCodeLine{00206\ \};}
+\DoxyCodeLine{00207\ }
+\DoxyCodeLine{00208\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ SESSION\_HPP}}
 
 \end{DoxyCode}

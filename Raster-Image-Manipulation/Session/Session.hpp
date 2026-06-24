@@ -147,6 +147,13 @@ public:
      */
     void bakeTransformations();
 
+    // HAS UNSAVED CHANGES FUNCTIONALITY
+    /**
+     * @brief Checks if the session contains any unsaved image modifications.
+     * @return True if there are unsaved operations or pending lazy transformations.
+     */
+    bool hasUnsavedChanges() const { return unsavedChanges || !pendingOps.empty(); }
+
     // GETTERS
 
     /**
@@ -171,6 +178,8 @@ private:
     std::vector<std::vector<Image*>> redoHistory;   /**< History stack tracking deep copies for redo actions */
 
     std::vector<Operations> pendingOps;             /**< Queue of deferred operations awaiting physical execution */
+
+    bool unsavedChanges; /**< Flag tracking if the session data has changed since the last save operation */
 private:
     /**
      * @brief Fully deallocates all embedded image memory and clears out state vector tracking grids.

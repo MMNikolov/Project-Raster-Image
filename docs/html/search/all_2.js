@@ -5,5 +5,6 @@ var searchData=
   ['commandparser_2',['CommandParser',['../classCommandParser.html',1,'CommandParser'],['../classCommandParser.html#a1fd17c361d85ec13c212cbac1999b9b3',1,'CommandParser::CommandParser()']]],
   ['commandparser_2ecpp_3',['CommandParser.cpp',['../CommandParser_8cpp.html',1,'']]],
   ['commandparser_2ehpp_4',['CommandParser.hpp',['../CommandParser_8hpp.html',1,'']]],
-  ['createimage_5',['createImage',['../classImageFactory.html#a64e831c37a13ba6eb6b2fa3d6e9ebbba',1,'ImageFactory']]]
+  ['createimage_5',['createImage',['../classImageFactory.html#a64e831c37a13ba6eb6b2fa3d6e9ebbba',1,'ImageFactory']]],
+  ['cyan_6',['CYAN',['../CommandParser_8cpp.html#ac1965adc92c3076b04d6cd16f36e8f77',1,'CommandParser.cpp']]]
 ];

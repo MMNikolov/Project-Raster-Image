@@ -68,6 +68,10 @@ void SessionManager::closeSessionById(int sessionId)
 {   
     if (sessionId == -1)
     {
+        if (this->currentActiveId == -1)
+        {
+            throw std::invalid_argument("Cannot close a session when there are no active sessions open.");
+        }
         sessionId = this->currentActiveId;
     }
     
@@ -178,8 +182,8 @@ void SessionManager::undo()
 {
     if (this->currentActiveId == -1)
     {
-        std::cout << "Cant do the undo command when there are no active sessions\n";
-        return;
+        
+        throw std::invalid_argument("Cannot execute undo when there are no active sessions open.");
     }
     
     int index = findSessionIndex(this->currentActiveId);
@@ -190,8 +194,7 @@ void SessionManager::redo()
 {
     if (this->currentActiveId == -1)
     {
-        std::cout << "Cant do the redo command when there are no active sessions\n";
-        return;
+        throw std::invalid_argument("Cannot execute redo when there are no active sessions open.");
     }
     
     int index = findSessionIndex(this->currentActiveId);
@@ -241,6 +244,37 @@ void SessionManager::flipLeft()
     
     int index = this->findSessionIndex(this->currentActiveId);
     this->activeSessions[index]->flipLeft();
+}
+
+bool SessionManager::hasAnyUnsavedWork() const
+{
+    size_t sessionCount = this->activeSessions.size();
+    for (size_t i = 0; i < sessionCount; i++)
+    {
+        if (this->activeSessions[i]->hasUnsavedChanges() == true)
+        {
+            return true;
+        }
+    }
+    
+    return false;
+}
+
+void SessionManager::saveAllUnsaved()
+{
+    if (!hasAnyUnsavedWork())
+    {
+        return;
+    }
+    
+    size_t sessionCount = this->activeSessions.size();
+    for (size_t i = 0; i < sessionCount; i++)
+    {
+        if (this->activeSessions[i]->hasUnsavedChanges())
+        {
+            this->activeSessions[i]->save();
+        }
+    }
 }
 
 int SessionManager::findSessionIndex(int sessionId) const

@@ -52,6 +52,8 @@ void \doxymbox{\hyperlink{classSession_ab2d626cc9bd755da05e62713039b768a}{flip\+
 \begin{DoxyCompactList}\small\item\em Queues a request to flip the image on the vertical axis. \end{DoxyCompactList}\item 
 void \doxymbox{\hyperlink{classSession_a76c79cc0a74fc39f63be191e8f5f67a0}{bake\+Transformations}} ()
 \begin{DoxyCompactList}\small\item\em Applies all optimized pending geometric transformations to the raw pixel matrices. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{classSession_ab05f967ec101af6fe95dd4c8dcac69f0}{has\+Unsaved\+Changes}} () const
+\begin{DoxyCompactList}\small\item\em Checks if the session contains any unsaved image modifications. \end{DoxyCompactList}\item 
 int \doxymbox{\hyperlink{classSession_a1a9232e627b902f1ea1701f92423fddb}{get\+Id}} () const
 \begin{DoxyCompactList}\small\item\em Gets the unique session identification key. \end{DoxyCompactList}\item 
 const std::\+vector$<$ \doxymbox{\hyperlink{classImage}{Image}} \texorpdfstring{$\ast$}{*} $>$ \& \doxymbox{\hyperlink{classSession_a6774642c043fc37402c37aee184f6455}{get\+Images}} () const
@@ -200,6 +202,19 @@ Provides read-\/only access to the internal image collection tracking vector.
 
 \begin{DoxyReturn}{Returns}
 Const reference to the polymorphic image pointer vector. 
+\end{DoxyReturn}
+\Hypertarget{classSession_ab05f967ec101af6fe95dd4c8dcac69f0}\index{Session@{Session}!hasUnsavedChanges@{hasUnsavedChanges}}
+\index{hasUnsavedChanges@{hasUnsavedChanges}!Session@{Session}}
+\doxysubsubsection{\texorpdfstring{hasUnsavedChanges()}{hasUnsavedChanges()}}
+{\footnotesize\ttfamily \label{classSession_ab05f967ec101af6fe95dd4c8dcac69f0} 
+bool Session::\+has\+Unsaved\+Changes (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Checks if the session contains any unsaved image modifications. 
+
+\begin{DoxyReturn}{Returns}
+True if there are unsaved operations or pending lazy transformations. 
 \end{DoxyReturn}
 \Hypertarget{classSession_ad690821c0ba1e2999b60f24d6eda9348}\index{Session@{Session}!makeGrayscale@{makeGrayscale}}
 \index{makeGrayscale@{makeGrayscale}!Session@{Session}}

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['pixeldata_0',['pixelData',['../classImage.html#afdcb0becb5c16b16736675825a0f8545',1,'Image']]]
+  ['originalfilename_0',['originalFilename',['../classImage.html#a7d470cbdccf2c3e4971b03a8dca38ae7',1,'Image']]]
 ];

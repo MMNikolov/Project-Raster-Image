@@ -58,17 +58,22 @@
 \DoxyCodeLine{00127\ }
 \DoxyCodeLine{00131\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{classSessionManager_a380417b676440c3673f815066bec3752}{flipLeft}}();}
 \DoxyCodeLine{00132\ }
-\DoxyCodeLine{00133\ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00134\ \ \ \ \ std::vector<Session\ *>\ activeSessions;\ }
-\DoxyCodeLine{00135\ \ \ \ \ \textcolor{keywordtype}{int}\ currentActiveId;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00136\ \ \ \ \ \textcolor{keywordtype}{int}\ idCounter;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00137\ }
-\DoxyCodeLine{00138\ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00144\ \ \ \ \ \textcolor{keywordtype}{int}\ findSessionIndex(\textcolor{keywordtype}{int}\ sessionId)\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00145\ }
-\DoxyCodeLine{00149\ \ \ \ \ \textcolor{keywordtype}{void}\ free();}
-\DoxyCodeLine{00150\ \};}
-\DoxyCodeLine{00151\ }
-\DoxyCodeLine{00152\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ SESSION\_MANAGER\_HPP}}
+\DoxyCodeLine{00133\ \ \ \ \ \textcolor{comment}{//\ UNSAVED\ WORK\ FUNCTIONALITY}}
+\DoxyCodeLine{00138\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{classSessionManager_a42803ab3ad472dfae52c4f218f91e190}{hasAnyUnsavedWork}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00139\ }
+\DoxyCodeLine{00143\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{classSessionManager_af915013ec324753c42ccb890566fa261}{saveAllUnsaved}}();}
+\DoxyCodeLine{00144\ }
+\DoxyCodeLine{00145\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00146\ \ \ \ \ std::vector<Session\ *>\ activeSessions;\ }
+\DoxyCodeLine{00147\ \ \ \ \ \textcolor{keywordtype}{int}\ currentActiveId;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00148\ \ \ \ \ \textcolor{keywordtype}{int}\ idCounter;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00149\ }
+\DoxyCodeLine{00150\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00156\ \ \ \ \ \textcolor{keywordtype}{int}\ findSessionIndex(\textcolor{keywordtype}{int}\ sessionId)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00157\ }
+\DoxyCodeLine{00161\ \ \ \ \ \textcolor{keywordtype}{void}\ free();}
+\DoxyCodeLine{00162\ \};}
+\DoxyCodeLine{00163\ }
+\DoxyCodeLine{00164\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ SESSION\_MANAGER\_HPP}}
 
 \end{DoxyCode}
